@@ -8,16 +8,19 @@ SC_MODULE(ModuleDouble) {
 	sc_event event_Aack;
 	sc_event event_Back;
 
+	sc_uint<2> decide = 0;
+
 	SC_CTOR(ModuleDouble) {
 		SC_THREAD(ModuleDouble_thread_A);
 		SC_THREAD(ModuleDouble_thread_B);
 		SC_METHOD(ModuleDouble_method_A);
+		dont_initialize();
+		sensitive << event_A << event_B;
 	}
 
 	void ModuleDouble_thread_A(void)
 	{
 		while (1) {
-			// wait(3, SC_MS); // Wait 3 ms
 			event_A.notify();
 			wait(3, SC_MS, event_Aack);
 		}
@@ -28,7 +31,6 @@ SC_MODULE(ModuleDouble) {
 		int counter = 0;
 
 		while (1) {
-			// wait(2, SC_MS);
 			event_B.notify();
 			wait(2, SC_MS, event_Back);
 		}
@@ -37,6 +39,24 @@ SC_MODULE(ModuleDouble) {
 	void ModuleDouble_method_A(void)
 	{
 
+		switch (decide)
+		{
+		case 0:
+			next_trigger(event_B);
+			event_Aack.notify();
+			std::cout << "Event A trigger - ";
+			decide = 1;
+			break;
+
+		case 1:
+			next_trigger(event_A);
+			event_Back.notify();
+			std::cout << "Event B trigger - ";
+			decide = 0;
+		default:
+			break;
+		}
+		std::cout << "Current simulation time:  " << sc_time_stamp() << std::endl;
 	}
 };
 #endif
