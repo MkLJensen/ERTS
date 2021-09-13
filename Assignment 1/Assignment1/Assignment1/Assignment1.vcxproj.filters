@@ -20,10 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ModuleSingle_Part1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ModuleDouble_Part2.h">
+    <ClInclude Include="ModuleSingle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
