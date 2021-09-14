@@ -42,19 +42,17 @@ public:
 				wait(CLK.posedge_event());
 			}
 
+
+			// Write data to file
+			outputTXT << data.read() << " ";
+			wait(CLK.posedge_event());
+			outputTXT << data.read() << " ";
+
 			// Set rdy to false
 			ready.write(false);
 
-			// Write data to file
-			for (size_t i = 0; i < 2; i++)
-			{
-				outputTXT << data.read() << " ";
-				wait(CLK.posedge_event());
-			}
 			outputTXT << std::endl;
 			std::cout << "Data read" << std::endl;
-
-			// Wait for a new positive clock event
 			wait(CLK.posedge_event());
 		}
 	}

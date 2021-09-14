@@ -5,9 +5,7 @@
 
 SC_MODULE(Top)
 {
-
 	sc_clock clock;
-
 	sc_signal<bool> ready_sig;
 	sc_signal<bool> data_valid_sig;
 	sc_signal<sc_uint<ERROR_BITS>> err_sig;
@@ -18,7 +16,6 @@ SC_MODULE(Top)
 	Slave *pSlave;
 
 	sc_trace_file *tf;
-
 
 	SC_CTOR(Top): clock("clock", sc_time(CLK_PERIOD, SC_NS)), ready_sig("Slave_Ready"),
 		data_valid_sig("Data_Valid"),
@@ -48,6 +45,7 @@ SC_MODULE(Top)
 		pMaster->ready(ready_sig);
 		pSlave->ready(ready_sig);
 
+		remove("WaveForm.vcd");
 		tf = sc_create_vcd_trace_file("WaveForm");
 		tf->set_time_unit(1, SC_NS);
 		sc_trace(tf, clock, "CLK");

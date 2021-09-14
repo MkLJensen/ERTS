@@ -40,7 +40,7 @@ public:
 			}
 			std::cout << "Data written" << std::endl;
 
-			counter++;
+			counter+=2;
 			if (counter > 6)
 			{
 				counter = 0;
