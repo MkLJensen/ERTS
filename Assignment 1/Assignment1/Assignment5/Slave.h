@@ -8,11 +8,12 @@ public:
 	sc_in_clk CLK;
 
 	// Ports
-	sc_out<bool> ready;
-	sc_in<bool> valid;
-	sc_in<sc_uint<ERROR_BITS>> error;
-	sc_in<sc_uint<DATA_BITS>> data;
-	sc_in<sc_uint<CHANNEL_BITS>> ch_out;
+	sc_out<sc_logic> ready;
+	sc_in<sc_logic> valid;
+	sc_in<sc_logic> reset;
+	sc_in<sc_int<ERROR_BITS>> error;
+	sc_in<sc_int<DATA_BITS>> data;
+	sc_in<sc_int<CHANNEL_BITS>> ch_out;
 
 	ofstream outputTXT;
 
@@ -29,33 +30,37 @@ public:
 		outputTXT.close();
 	}
 
+
+
 	void SlaveThread()
 	{
 		while (1)
 		{
-			// Send ready signal
-			ready.write(true);
-
-			// Wait for valid 
-			while (valid.read() == false)
+			if (reset == SC_LOGIC_0)
 			{
-				wait(CLK.posedge_event());
-			}
+				// Send ready signal
+				ready.write(true);
 
-			// Set rdy to false
-			ready.write(false);
+				// Wait for valid 
+				while (valid.read() == false)
+				{
+					wait(CLK.posedge_event());
+				}
 
-			// Write data to file
-			for (size_t i = 0; i < 2; i++)
-			{
+
+				// Write data to file
 				outputTXT << data.read() << " ";
 				wait(CLK.posedge_event());
-			}
-			outputTXT << std::endl;
-			std::cout << "Data read" << std::endl;
+				outputTXT << data.read() << " ";
 
-			// Wait for a new positive clock event
-			wait(CLK.posedge_event());
+				// Set rdy to false
+				ready.write(false);
+
+				outputTXT << std::endl;
+				std::cout << "Data read" << std::endl;
+				wait(CLK.posedge_event());
+			}
+			else wait(CLK.posedge_event());
 		}
 	}
 
