@@ -13,9 +13,9 @@ public:
 	sc_out<sc_logic> valid; // Valid signal
 
 	// Channel, error and data ports ST bus
-	sc_out<sc_int<CHANNEL_BITS> > channel;
-	sc_out<sc_int<ERROR_BITS> > error;
-	sc_out<sc_int<DATA_BITS> > data;
+	sc_out<sc_uint<CHANNEL_BITS> > channel;
+	sc_out<sc_uint<ERROR_BITS> > error;
+	sc_out<sc_uint<DATA_BITS> > data;
 
 	void write(const T & value)
 	{

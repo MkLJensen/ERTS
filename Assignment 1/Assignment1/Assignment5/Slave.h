@@ -11,9 +11,9 @@ public:
 	sc_out<sc_logic> ready;
 	sc_in<sc_logic> valid;
 	sc_in<sc_logic> reset;
-	sc_in<sc_int<ERROR_BITS>> error;
-	sc_in<sc_int<DATA_BITS>> data;
-	sc_in<sc_int<CHANNEL_BITS>> ch_out;
+	sc_in<sc_uint<ERROR_BITS>> error;
+	sc_in<sc_uint<DATA_BITS>> data;
+	sc_in<sc_uint<CHANNEL_BITS>> ch_out;
 
 	ofstream outputTXT;
 
@@ -39,7 +39,7 @@ public:
 			if (reset == SC_LOGIC_0)
 			{
 				// Send ready signal
-				ready.write(true);
+				ready.write(SC_LOGIC_1);
 
 				// Wait for valid 
 				while (valid.read() == false)
@@ -54,7 +54,7 @@ public:
 				outputTXT << data.read() << " ";
 
 				// Set rdy to false
-				ready.write(false);
+				ready.write(SC_LOGIC_0);
 
 				outputTXT << std::endl;
 				std::cout << "Data read" << std::endl;

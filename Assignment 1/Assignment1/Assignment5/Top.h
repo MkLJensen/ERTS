@@ -7,15 +7,16 @@
 SC_MODULE(Top)
 {
 	sc_clock clock;
+	sc_signal<sc_logic> reset_sig;
 	sc_signal<sc_logic> ready_sig;
 	sc_signal<sc_logic> valid_sig;
-	sc_signal<sc_int<ERROR_BITS>> err_sig;
-	sc_signal<sc_int<DATA_BITS>> data_sig;
-	sc_signal<sc_int<CHANNEL_BITS>> channel_sig;
+	sc_signal<sc_uint<ERROR_BITS>> err_sig;
+	sc_signal<sc_uint<DATA_BITS>> data_sig;
+	sc_signal<sc_uint<CHANNEL_BITS>> channel_sig;
 
 	Master *pMaster;
 	Slave *pSlave;
-	InAdapter<int> *pInAdapter;
+	InAdapter<sc_uint<8>> *pInAdapter;
 
 	sc_trace_file *tf;
 
@@ -30,9 +31,12 @@ SC_MODULE(Top)
 
 		pMaster = new Master("Master");
 		pSlave = new Slave("Slave");
-		pInAdapter = new InAdapter<int>("InAdapter");
+		pInAdapter = new InAdapter<sc_uint<8>>("InAdapter");
 
 		pMaster->out(*pInAdapter);
+
+		pSlave->reset(reset_sig);
+		pInAdapter->reset(reset_sig);
 
 		pInAdapter->channel(channel_sig);
 		pSlave->ch_out(channel_sig);
@@ -61,6 +65,8 @@ SC_MODULE(Top)
 		sc_trace(tf, data_sig, "data");
 		sc_trace(tf, err_sig, "error");
 		sc_trace(tf, channel_sig, "channel");
+
+		reset_sig.write(SC_LOGIC_0);
 	}
 
 	~Top()
