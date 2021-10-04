@@ -7,10 +7,10 @@ SC_MODULE(ADVIOS) {
 	//Ports
 	sc_in <bool> clk;
 	sc_in <bool> reset;
-	sc_in<sc_uint<NUM_BITS>> ctrl;
-	sc_in<sc_uint<NUM_BITS>> inSwitch;
+	sc_in<sc_uint<NUM_BITS> > ctrl;
+	sc_in<sc_uint<NUM_BITS> > inSwitch;
 
-	sc_out<sc_uint<NUM_BITS>> out;
+	sc_out<sc_uint<NUM_BITS> > outLeds;
 
 	//Variables
 	sc_uint<NUM_BITS> switchs;
@@ -20,8 +20,8 @@ SC_MODULE(ADVIOS) {
 	sc_signal<bool> sec_pulse;
 
 	//Process Declaration
-	void led_Controller();
-	void periodic_Incrementer();
+	void led_Controller(void);
+	void periodic_Incrementer(void);
 
 	//Constructor
 	SC_CTOR(ADVIOS) {

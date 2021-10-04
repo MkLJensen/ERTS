@@ -14,8 +14,6 @@ SC_MODULE(ModuleSingle) {
 
 	void ModuleSingle_thread(void)
 	{
-		int counter = 0;
-
 		while (1) {
 			wait(2, SC_MS);
 			methodCall.notify();

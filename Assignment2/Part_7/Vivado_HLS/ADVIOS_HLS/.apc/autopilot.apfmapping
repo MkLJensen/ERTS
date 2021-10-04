@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="ADVIOS.cpp" path="C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\SystemC_IPCORE_Part7\SystemC_IPCORE_Part7\ADVIOS.cpp"/>
+    <originFiles name="ADVIOS.h" path="C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\SystemC_IPCORE_Part7\SystemC_IPCORE_Part7\ADVIOS.h"/>
+  </source>
+  <testbench>
+    <originFiles name="ADVIOS_testBench.cpp" path="C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\SystemC_IPCORE_Part7\SystemC_IPCORE_Part7\ADVIOS_testBench.cpp"/>
+    <originFiles name="tb_driver.cpp" path="C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\SystemC_IPCORE_Part7\SystemC_IPCORE_Part7\tb_driver.cpp"/>
+    <originFiles name="tb_driver.h" path="C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\SystemC_IPCORE_Part7\SystemC_IPCORE_Part7\tb_driver.h"/>
+    <originFiles name="tb_init.cpp" path="C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\SystemC_IPCORE_Part7\SystemC_IPCORE_Part7\tb_init.cpp"/>
+    <originFiles name="tb_init.h" path="C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\SystemC_IPCORE_Part7\SystemC_IPCORE_Part7\tb_init.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

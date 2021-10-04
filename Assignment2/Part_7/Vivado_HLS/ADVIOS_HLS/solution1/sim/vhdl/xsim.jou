@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Oct  4 10:37:22 2021
+# Process ID: 12548
+# Current directory: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/ADVIOS/xsim_script.tcl}
+# Log file: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/xsim.log
+# Journal file: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/ADVIOS/xsim_script.tcl
+source ADVIOS.tcl

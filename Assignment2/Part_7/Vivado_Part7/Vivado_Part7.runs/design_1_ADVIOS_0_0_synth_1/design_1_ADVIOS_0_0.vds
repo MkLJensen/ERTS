@@ -1,0 +1,454 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Oct  1 16:53:10 2021
+# Process ID: 14732
+# Current directory: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.runs/design_1_ADVIOS_0_0_synth_1
+# Command line: vivado.exe -log design_1_ADVIOS_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_ADVIOS_0_0.tcl
+# Log file: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.runs/design_1_ADVIOS_0_0_synth_1/design_1_ADVIOS_0_0.vds
+# Journal file: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.runs/design_1_ADVIOS_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_ADVIOS_0_0.tcl -notrace
+Command: synth_design -top design_1_ADVIOS_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12000 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 307.320 ; gain = 79.172
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_ADVIOS_0_0' [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ip/design_1_ADVIOS_0_0/synth/design_1_ADVIOS_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'advios_top' [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/advios_top.v:9]
+	Parameter C_S_AXI_SLV0_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_SLV0_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter RESET_ACTIVE_LOW bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ADVIOS' [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS.v:12]
+INFO: [Synth 8-638] synthesizing module 'ADVIOS_periodic_Incrementer' [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_periodic_Incrementer.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 4'b0001 
+	Parameter ap_ST_fsm_state2 bound to: 4'b0010 
+	Parameter ap_ST_fsm_state3 bound to: 4'b0100 
+	Parameter ap_ST_fsm_state4 bound to: 4'b1000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_periodic_Incrementer.v:44]
+WARNING: [Synth 8-6014] Unused sequential element sec_pulse_ap_vld_reg was removed.  [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_periodic_Incrementer.v:107]
+INFO: [Synth 8-256] done synthesizing module 'ADVIOS_periodic_Incrementer' (1#1) [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_periodic_Incrementer.v:10]
+INFO: [Synth 8-638] synthesizing module 'ADVIOS_led_Controller' [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_led_Controller.v:10]
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_led_Controller.v:49]
+WARNING: [Synth 8-6014] Unused sequential element ADVIOS_switchs_V_ap_vld_reg was removed.  [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_led_Controller.v:87]
+INFO: [Synth 8-256] done synthesizing module 'ADVIOS_led_Controller' (2#1) [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_led_Controller.v:10]
+INFO: [Synth 8-256] done synthesizing module 'ADVIOS' (3#1) [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS.v:12]
+INFO: [Synth 8-638] synthesizing module 'ADVIOS_slv0_if' [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_slv0_if.v:9]
+	Parameter C_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_BITS bound to: 5 - type: integer 
+	Parameter ADDR_CTRL_CTRL bound to: 5'b10000 
+	Parameter ADDR_CTRL_DATA_0 bound to: 5'b10100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_slv0_if.v:172]
+INFO: [Synth 8-256] done synthesizing module 'ADVIOS_slv0_if' (4#1) [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_slv0_if.v:9]
+INFO: [Synth 8-638] synthesizing module 'ADVIOS_reset_if' [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_reset_if.v:10]
+	Parameter RESET_ACTIVE_LOW bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ADVIOS_reset_if' (5#1) [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_reset_if.v:10]
+INFO: [Synth 8-256] done synthesizing module 'advios_top' (6#1) [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/advios_top.v:9]
+INFO: [Synth 8-256] done synthesizing module 'design_1_ADVIOS_0_0' (7#1) [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ip/design_1_ADVIOS_0_0/synth/design_1_ADVIOS_0_0.v:57]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[31]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[30]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[29]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[28]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[27]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[26]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[25]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[24]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[23]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[22]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[21]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[20]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[19]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[18]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[17]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[16]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[15]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[14]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[13]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[12]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[11]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[10]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[9]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[8]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[7]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[6]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[5]
+WARNING: [Synth 8-3331] design ADVIOS_slv0_if has unconnected port WDATA[4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 346.645 ; gain = 118.496
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 346.645 ; gain = 118.496
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ip/design_1_ADVIOS_0_0/constraints/ADVIOS_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ip/design_1_ADVIOS_0_0/constraints/ADVIOS_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.runs/design_1_ADVIOS_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.runs/design_1_ADVIOS_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 652.613 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.runs/design_1_ADVIOS_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-6014] Unused sequential element t_V_fu_92_reg was removed.  [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_periodic_Incrementer.v:67]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "tmp_fu_137_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_3_fu_150_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "rdata" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ADVIOS_periodic_Incrementer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     28 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+Module ADVIOS_led_Controller 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module ADVIOS 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ADVIOS_slv0_if 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "ADVIOS_slv0_if_U/rdata" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element ADVIOS_U/grp_ADVIOS_periodic_Incrementer_fu_80/t_V_fu_92_reg was removed.  [c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ipshared/acfd/hdl/verilog/ADVIOS_periodic_Incrementer.v:67]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[31]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[30]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[29]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[28]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[27]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[26]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[25]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[24]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[23]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[22]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[21]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[20]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[19]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[18]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[17]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[16]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[15]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[14]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[13]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[12]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[11]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[10]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[9]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[8]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[7]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[6]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[5]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WDATA[4]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WSTRB[3]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WSTRB[2]
+WARNING: [Synth 8-3331] design advios_top has unconnected port s_axi_slv0_WSTRB[1]
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[4]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[5]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[6]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[7]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[8]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[9]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[10]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[11]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[12]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[13]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[14]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[15]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[16]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[17]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[18]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[19]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[20]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[21]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[22]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[23]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[24]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[25]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[26]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[27]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[28]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[29]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ADVIOS_slv0_if_U/rdata_reg[30]' (FDRE) to 'inst/ADVIOS_slv0_if_U/rdata_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ADVIOS_slv0_if_U/rdata_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (ADVIOS_U/grp_ADVIOS_periodic_Incrementer_fu_80/ap_CS_fsm_reg[0]) is unused and will be removed from module advios_top.
+WARNING: [Synth 8-3332] Sequential element (ADVIOS_U/grp_ADVIOS_led_Controller_fu_104/ap_CS_fsm_reg[1]) is unused and will be removed from module advios_top.
+WARNING: [Synth 8-3332] Sequential element (ADVIOS_U/grp_ADVIOS_led_Controller_fu_104/ap_CS_fsm_reg[0]) is unused and will be removed from module advios_top.
+WARNING: [Synth 8-3332] Sequential element (ADVIOS_slv0_if_U/rdata_reg[31]) is unused and will be removed from module advios_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:15 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:15 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:18 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:18 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:18 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:18 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:01:18 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:01:18 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     7|
+|2     |LUT1   |    31|
+|3     |LUT2   |     9|
+|4     |LUT3   |    11|
+|5     |LUT4   |     9|
+|6     |LUT5   |     3|
+|7     |LUT6   |     5|
+|8     |FDRE   |    57|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------------------+----------------------------+------+
+|      |Instance                                    |Module                      |Cells |
++------+--------------------------------------------+----------------------------+------+
+|1     |top                                         |                            |   132|
+|2     |  inst                                      |advios_top                  |   132|
+|3     |    ADVIOS_U                                |ADVIOS                      |    94|
+|4     |      grp_ADVIOS_led_Controller_fu_104      |ADVIOS_led_Controller       |     2|
+|5     |      grp_ADVIOS_periodic_Incrementer_fu_80 |ADVIOS_periodic_Incrementer |    80|
+|6     |    ADVIOS_slv0_if_U                        |ADVIOS_slv0_if              |    38|
++------+--------------------------------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:18 . Memory (MB): peak = 652.613 ; gain = 424.465
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:01:01 . Memory (MB): peak = 652.613 ; gain = 118.496
+Synthesis Optimization Complete : Time (s): cpu = 00:01:10 ; elapsed = 00:01:18 . Memory (MB): peak = 652.613 ; gain = 424.465
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+61 Infos, 67 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:01:22 . Memory (MB): peak = 652.613 ; gain = 425.090
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.runs/design_1_ADVIOS_0_0_synth_1/design_1_ADVIOS_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ip/design_1_ADVIOS_0_0/design_1_ADVIOS_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.runs/design_1_ADVIOS_0_0_synth_1/design_1_ADVIOS_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 652.613 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  1 16:54:45 2021...
