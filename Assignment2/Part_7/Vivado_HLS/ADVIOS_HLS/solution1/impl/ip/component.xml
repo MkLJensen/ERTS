@@ -782,8 +782,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Advios</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2110011541</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-10-01T13:41:18Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2110041044</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-10-04T08:44:46Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2017.2</xilinx:xilinxVersion>

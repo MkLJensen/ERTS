@@ -1,0 +1,8 @@
+   Build using "C:/Xilinx/Vivado_HLS/2017.2/msys/bin/g++.exe"
+   Compiling ADVIOS.cpp
+   Compiling ADVIOS_led_Controller.cpp
+   Compiling ADVIOS_periodic_Incrementer.cpp
+   Compiling ADVIOS_testBench.cpp
+   Compiling tb_driver.cpp
+   Compiling tb_init.cpp
+   Generating cosim.sc.exe

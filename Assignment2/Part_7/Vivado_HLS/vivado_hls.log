@@ -1,0 +1,19 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'jespe' on host 'desktop-ifl7hb3' (Windows NT_amd64 version 6.2) on Mon Oct 04 10:44:32 +0200 2021
+INFO: [HLS 200-10] In directory 'C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS'
+INFO: [HLS 200-10] Opening project 'C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1ns.
+WARNING: [HLS 200-40] Cannot find library 'C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'.
+INFO: [HLS 200-10] Setting target device to 'xc7z010clg400-1'
+INFO: [IMPL 213-8] Exporting RTL as an IP in IP-XACT.
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  4 10:44:46 2021...

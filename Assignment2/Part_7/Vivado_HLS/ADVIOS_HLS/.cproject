@@ -25,7 +25,6 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.2145978340" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.281246328" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.78847194" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/etc"/>
@@ -43,7 +42,6 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.1924691057" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.1633957547" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1864709680" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/etc"/>
@@ -115,7 +113,6 @@
 								<option id="gnu.cpp.compiler.exe.release.option.optimization.level.400331692" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.release.option.debugging.level.1216488642" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1387016212" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/etc"/>
@@ -128,7 +125,6 @@
 								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.exe.release.option.optimization.level.1479227377" name="Optimization Level" superClass="gnu.c.compiler.exe.release.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.release.option.debugging.level.1150644468" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.581242032" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="C:/Xilinx/Vivado_HLS/2017.2/include/etc"/>

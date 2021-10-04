@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_ext_xsim.xml'  majorVersion='1' minorVersion='0' timeStamp='Mon Oct  4 10:37:28 2021'>
+<webTalkData  fileName='usage_statistics_ext_xsim.xml'  majorVersion='1' minorVersion='0' timeStamp='Mon Oct  4 10:44:17 2021'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="1909853" description="" />
-  <keyValuePair key="date_generated" value="Mon Oct  4 10:37:27 2021" description="" />
+  <keyValuePair key="date_generated" value="Mon Oct  4 10:44:16 2021" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="XSIM v2017.2 (64-bit)" description="" />
-  <keyValuePair key="project_id" value="5ff2e3bb-2442-46dd-a235-515e592777a5" description="" />
+  <keyValuePair key="project_id" value="874ec422-b15e-4a04-9d55-7bb8773d3321" description="" />
   <keyValuePair key="project_iteration" value="2" description="" />
   <keyValuePair key="random_id" value="ae72d27b89f25833a6ba927f55ed868b" description="" />
   <keyValuePair key="registration_id" value="ae72d27b89f25833a6ba927f55ed868b" description="" />
@@ -36,7 +36,7 @@
   <section name="usage" level="2" order="2" description="">
    <keyValuePair key="iteration" value="0" description="" />
    <keyValuePair key="runtime" value="156 ns" description="" />
-   <keyValuePair key="simulation_memory" value="6772_KB" description="" />
+   <keyValuePair key="simulation_memory" value="6752_KB" description="" />
    <keyValuePair key="simulation_time" value="0.03_sec" description="" />
   </section>
  </section>

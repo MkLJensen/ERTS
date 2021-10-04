@@ -1,0 +1,20 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS_testBench.cpp in debug mode
+   Compiling ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/tb_driver.cpp in debug mode
+   Generating csim.exe
+INFO: Simulating
+
+Info: (I804) /IEEE_Std_1666/deprecated: all waits except wait() and wait(N)
+             are deprecated for SC_CTHREAD, use an SC_THREAD instead
+Test passed !
+
+Info: (I804) /IEEE_Std_1666/deprecated: You can turn off warnings about
+             IEEE 1666 deprecated features by placing this method call as the
+             first statement in your sc_main() function:
+
+  sc_report_handler::set_actions("/IEEE_Std_1666/deprecated", SC_DO_NOTHING);
+
+
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

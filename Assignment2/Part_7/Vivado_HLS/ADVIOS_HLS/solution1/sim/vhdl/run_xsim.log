@@ -1,0 +1,157 @@
+Note: VCD trace timescale unit is set by user to 1.000000e-012 sec.
+Note: VCD trace timescale unit is set by user to 1.000000e-012 sec.
+Note: VCD trace timescale unit is set by user to 1.000000e-012 sec.
+INFO: Simulating
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 0 s
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 0 s
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 0 s
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 0 s
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 0 s
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 0 s
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 0 s
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 0 s
+
+Info: (I804) /IEEE_Std_1666/deprecated: all waits except wait() and wait(N)
+             are deprecated for SC_CTHREAD, use an SC_THREAD instead
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 0 s
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 0 s
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 0 s
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 0 s
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 5 ns
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 5 ns
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 5 ns
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 5 ns
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 10 ns
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 10 ns
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 10 ns
+
+Warning: (W212) sc_logic value 'X' cannot be converted to bool
+In file: ../../../../../src/sysc/datatypes/bit/sc_logic.cpp:94
+In process: U_dut.signal_connection @ 10 ns
+Test passed !
+
+Info: (I804) /IEEE_Std_1666/deprecated: You can turn off warnings about
+             IEEE 1666 deprecated features by placing this method call as the
+             first statement in your sc_main() function:
+
+  sc_report_handler::set_actions("/IEEE_Std_1666/deprecated", SC_DO_NOTHING);
+
+
+
+C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS\ADVIOS_HLS\solution1\sim\vhdl>call C:/Xilinx/Vivado/2017.2/bin/xelab xil_defaultlib.AUTOTB_TOP -prj ADVIOS.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile "C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s ADVIOS  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.AUTOTB_TOP -prj ADVIOS.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile C:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s ADVIOS 
+Multi-threading is on. Using 6 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/AESL_sim_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/ADVIOS.autotb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity AUTOTB_TOP
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/ADVIOS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ADVIOS
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/ADVIOS_led_Controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ADVIOS_led_Controller
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/ADVIOS_periodic_Incrementer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ADVIOS_periodic_Incrementer
+Starting static elaboration
+WARNING: [VRFC 10-1303] range is empty (null range) [/proj/xhdhdstaff/saikatb/verific_integ/data/vhdl/src/ieee_2008/numeric_std-body.vhdl:3476]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.aesl_sim_components
+Compiling architecture behav of entity xil_defaultlib.ADVIOS_periodic_Incrementer [advios_periodic_incrementer_defa...]
+Compiling architecture behav of entity xil_defaultlib.ADVIOS_led_Controller [advios_led_controller_default]
+Compiling architecture behav of entity xil_defaultlib.ADVIOS [advios_default]
+Compiling architecture behavior of entity xil_defaultlib.autotb_top
+Built simulation snapshot ADVIOS
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/xsim.dir/ADVIOS/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Oct  4 10:44:11 2021...
+
+****** xsim v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/ADVIOS/xsim_script.tcl
+# xsim {ADVIOS} -autoloadwcfg -tclbatch {ADVIOS.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source ADVIOS.tcl
+## run all
+Note: simulation done!
+Time: 156 ns  Iteration: 0  Process: /AUTOTB_TOP/proc_tv_out  File: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/ADVIOS.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 156 ns  Iteration: 0  Process: /AUTOTB_TOP/proc_tv_out  File: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/ADVIOS.autotb.vhd
+$finish called at time : 156 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Oct  4 10:44:19 2021...

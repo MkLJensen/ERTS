@@ -28,7 +28,6 @@ void tb_driver::capture()
 
 	if (outLed.read() != 0x00)
 	{
-		std::cout << "LED read " << outLed.read() << std::endl;
 		retval = -3;
 	}
 

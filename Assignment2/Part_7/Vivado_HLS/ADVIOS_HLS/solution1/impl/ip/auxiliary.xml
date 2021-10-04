@@ -4,5 +4,5 @@
   <xd:arg xd:name="inSwitch" xd:originalName="inSwitch" xd:direction="in" xd:interfaceRef="inSwitch" xd:busTypeRef="register" xd:handshakeRef="ap_none"/>
   <xd:arg xd:name="outLeds" xd:originalName="outLeds" xd:direction="out" xd:interfaceRef="outLeds" xd:busTypeRef="register" xd:handshakeRef="ap_none"/>
   <xd:latencyEstimates xd:best-case="0" xd:worst-case="5" xd:average-case="3"/>
-  <xd:resourceEstimates xd:LUT="162" xd:FF="150" xd:BRAM="0" xd:DSP="0"/>
+  <xd:resourceEstimates xd:LUT="183" xd:FF="154" xd:BRAM="0" xd:DSP="0"/>
 </xd:acceleratorMap>

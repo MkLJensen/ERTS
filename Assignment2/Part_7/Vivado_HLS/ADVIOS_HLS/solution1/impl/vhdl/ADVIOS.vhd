@@ -22,7 +22,7 @@ end;
 architecture behav of ADVIOS is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "ADVIOS,hls_ip_2017_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z010clg400-1,HLS_INPUT_CLOCK=8.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.330000,HLS_SYN_LAT=3,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=150,HLS_SYN_LUT=162}";
+    "ADVIOS,hls_ip_2017_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z010clg400-1,HLS_INPUT_CLOCK=8.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.330000,HLS_SYN_LAT=3,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=154,HLS_SYN_LUT=183}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
@@ -37,8 +37,6 @@ architecture behav of ADVIOS is
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V : STD_LOGIC_VECTOR (27 downto 0);
     signal grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V_ap_vld : STD_LOGIC;
-    signal grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_sec_counter_V_o : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_sec_counter_V_o_ap_vld : STD_LOGIC;
     signal grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse : STD_LOGIC;
     signal grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse_ap_vld : STD_LOGIC;
     signal grp_ADVIOS_led_Controller_fu_104_outLeds : STD_LOGIC_VECTOR (3 downto 0);
@@ -49,9 +47,13 @@ architecture behav of ADVIOS is
     signal grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V_ap_vld : STD_LOGIC;
     signal grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o : STD_LOGIC_VECTOR (3 downto 0);
     signal grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o_ap_vld : STD_LOGIC;
+    signal grp_ADVIOS_led_Controller_fu_104_sec_pulse_i : STD_LOGIC;
+    signal grp_ADVIOS_led_Controller_fu_104_sec_pulse_o : STD_LOGIC;
+    signal grp_ADVIOS_led_Controller_fu_104_sec_pulse_o_ap_vld : STD_LOGIC;
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal ADVIOS_sec_counter_V : STD_LOGIC_VECTOR (3 downto 0);
+    signal sec_pulse : STD_LOGIC_VECTOR (0 downto 0);
 
     component ADVIOS_periodic_Incrementer IS
     port (
@@ -59,9 +61,6 @@ architecture behav of ADVIOS is
         ap_rst : IN STD_LOGIC;
         ADVIOS_count_V : OUT STD_LOGIC_VECTOR (27 downto 0);
         ADVIOS_count_V_ap_vld : OUT STD_LOGIC;
-        ADVIOS_sec_counter_V_i : IN STD_LOGIC_VECTOR (3 downto 0);
-        ADVIOS_sec_counter_V_o : OUT STD_LOGIC_VECTOR (3 downto 0);
-        ADVIOS_sec_counter_V_o_ap_vld : OUT STD_LOGIC;
         sec_pulse : OUT STD_LOGIC;
         sec_pulse_ap_vld : OUT STD_LOGIC );
     end component;
@@ -81,7 +80,10 @@ architecture behav of ADVIOS is
         ADVIOS_control_V_ap_vld : OUT STD_LOGIC;
         ADVIOS_sec_counter_V_i : IN STD_LOGIC_VECTOR (3 downto 0);
         ADVIOS_sec_counter_V_o : OUT STD_LOGIC_VECTOR (3 downto 0);
-        ADVIOS_sec_counter_V_o_ap_vld : OUT STD_LOGIC );
+        ADVIOS_sec_counter_V_o_ap_vld : OUT STD_LOGIC;
+        sec_pulse_i : IN STD_LOGIC;
+        sec_pulse_o : OUT STD_LOGIC;
+        sec_pulse_o_ap_vld : OUT STD_LOGIC );
     end component;
 
 
@@ -93,9 +95,6 @@ begin
         ap_rst => reset,
         ADVIOS_count_V => grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V,
         ADVIOS_count_V_ap_vld => grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V_ap_vld,
-        ADVIOS_sec_counter_V_i => ADVIOS_sec_counter_V,
-        ADVIOS_sec_counter_V_o => grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_sec_counter_V_o,
-        ADVIOS_sec_counter_V_o_ap_vld => grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_sec_counter_V_o_ap_vld,
         sec_pulse => grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse,
         sec_pulse_ap_vld => grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse_ap_vld);
 
@@ -113,7 +112,10 @@ begin
         ADVIOS_control_V_ap_vld => grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V_ap_vld,
         ADVIOS_sec_counter_V_i => ADVIOS_sec_counter_V,
         ADVIOS_sec_counter_V_o => grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o,
-        ADVIOS_sec_counter_V_o_ap_vld => grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o_ap_vld);
+        ADVIOS_sec_counter_V_o_ap_vld => grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o_ap_vld,
+        sec_pulse_i => grp_ADVIOS_led_Controller_fu_104_sec_pulse_i,
+        sec_pulse_o => grp_ADVIOS_led_Controller_fu_104_sec_pulse_o,
+        sec_pulse_o_ap_vld => grp_ADVIOS_led_Controller_fu_104_sec_pulse_o_ap_vld);
 
 
 
@@ -124,8 +126,6 @@ begin
         if (clk'event and clk =  '1') then
             if ((ap_const_logic_1 = grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o_ap_vld)) then 
                 ADVIOS_sec_counter_V <= grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o;
-            elsif ((ap_const_logic_1 = grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_sec_counter_V_o_ap_vld)) then 
-                ADVIOS_sec_counter_V <= grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_sec_counter_V_o;
             end if; 
         end if;
     end process;
@@ -140,7 +140,20 @@ begin
         end if;
     end process;
 
+
+    sec_pulse_assign_proc : process(clk)
+    begin
+        if (clk'event and clk =  '1') then
+            if ((ap_const_logic_1 = grp_ADVIOS_led_Controller_fu_104_sec_pulse_o_ap_vld)) then 
+                sec_pulse <= (0=>grp_ADVIOS_led_Controller_fu_104_sec_pulse_o, others=>'-');
+            elsif ((ap_const_logic_1 = grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse_ap_vld)) then 
+                sec_pulse <= (0=>grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse, others=>'-');
+            end if; 
+        end if;
+    end process;
+
     ADVIOS_ssdm_threa_load_fu_128_p1 <= ap_const_lv1_0;
     ap_CS_fsm <= ap_const_lv2_0;
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
+    grp_ADVIOS_led_Controller_fu_104_sec_pulse_i <= sec_pulse(0);
 end behav;
