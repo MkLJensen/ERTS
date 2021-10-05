@@ -73,14 +73,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 3 \
-    name ADVIOS_switchs_V \
+    name advios_switchs_V \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_ADVIOS_switchs_V \
+    corename dc_advios_switchs_V \
     op interface \
-    ports { ADVIOS_switchs_V { O 4 vector } ADVIOS_switchs_V_ap_vld { O 1 bit } } \
+    ports { advios_switchs_V { O 4 vector } advios_switchs_V_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -88,14 +88,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4 \
-    name ADVIOS_control_V \
+    name advios_control_V \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_ADVIOS_control_V \
+    corename dc_advios_control_V \
     op interface \
-    ports { ADVIOS_control_V { O 4 vector } ADVIOS_control_V_ap_vld { O 1 bit } } \
+    ports { advios_control_V { O 4 vector } advios_control_V_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -103,14 +103,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 5 \
-    name ADVIOS_sec_counter_V \
+    name advios_sec_counter_V \
     type other \
     dir IO \
     reset_level 1 \
     sync_rst true \
-    corename dc_ADVIOS_sec_counter_V \
+    corename dc_advios_sec_counter_V \
     op interface \
-    ports { ADVIOS_sec_counter_V_i { I 4 vector } ADVIOS_sec_counter_V_o { O 4 vector } ADVIOS_sec_counter_V_o_ap_vld { O 1 bit } } \
+    ports { advios_sec_counter_V_i { I 4 vector } advios_sec_counter_V_o { O 4 vector } advios_sec_counter_V_o_ap_vld { O 1 bit } } \
 } "
 }
 

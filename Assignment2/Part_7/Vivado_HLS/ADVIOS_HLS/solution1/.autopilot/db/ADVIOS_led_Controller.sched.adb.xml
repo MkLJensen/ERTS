@@ -1,4 +1,4 @@
-<stg><name>ADVIOS::led_Controller</name>
+<stg><name>advios::led_Controller</name>
 
 
 <trans_list>
@@ -133,7 +133,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %o
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_switchs_V), !map !100
+_ZN7_ap_sc_7sc_core4waitEi.exit:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_switchs_V), !map !100
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -148,7 +148,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %A
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_control_V), !map !104
+_ZN7_ap_sc_7sc_core4waitEi.exit:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_control_V), !map !104
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -163,7 +163,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %A
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="28">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %ADVIOS_count_V), !map !108
+_ZN7_ap_sc_7sc_core4waitEi.exit:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %advios_count_V), !map !108
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -178,7 +178,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %
 
 <Node id="20" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_sec_counter_V), !map !112
+_ZN7_ap_sc_7sc_core4waitEi.exit:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_sec_counter_V), !map !112
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -424,7 +424,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:23  br label %0
 
 <Node id="37" bw="0" op_0_bw="0" op_1_bw="4" op_2_bw="4">
 <![CDATA[
-:1  call void @_ssdm_op_Write.ap_auto.i4P(i4* %ADVIOS_switchs_V, i4 %val_V)
+:1  call void @_ssdm_op_Write.ap_auto.i4P(i4* %advios_switchs_V, i4 %val_V)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -454,7 +454,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:23  br label %0
 
 <Node id="39" bw="0" op_0_bw="0" op_1_bw="4" op_2_bw="4">
 <![CDATA[
-:3  call void @_ssdm_op_Write.ap_auto.i4P(i4* %ADVIOS_control_V, i4 %val_V_2)
+:3  call void @_ssdm_op_Write.ap_auto.i4P(i4* %advios_control_V, i4 %val_V_2)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -500,10 +500,10 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:23  br label %0
 
 <Node id="43" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-:0  %ADVIOS_sec_counter_V_1 = call i4 @_ssdm_op_Read.ap_auto.i4P(i4* %ADVIOS_sec_counter_V)
+:0  %advios_sec_counter_V_1 = call i4 @_ssdm_op_Read.ap_auto.i4P(i4* %advios_sec_counter_V)
 
 ]]></Node>
-<StgValue><ssdm name="ADVIOS_sec_counter_V_1"/></StgValue>
+<StgValue><ssdm name="advios_sec_counter_V_1"/></StgValue>
 </operation>
 
 <operation id="36" st_id="3" stage="1" lat="1">
@@ -516,7 +516,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:23  br label %0
 
 <Node id="44" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-:1  %tmp_2 = add i4 %ADVIOS_sec_counter_V_1, 1
+:1  %tmp_2 = add i4 %advios_sec_counter_V_1, 1
 
 ]]></Node>
 <StgValue><ssdm name="tmp_2"/></StgValue>
@@ -532,7 +532,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:23  br label %0
 
 <Node id="45" bw="0" op_0_bw="0" op_1_bw="4" op_2_bw="4">
 <![CDATA[
-:2  call void @_ssdm_op_Write.ap_auto.i4P(i4* %ADVIOS_sec_counter_V, i4 %tmp_2)
+:2  call void @_ssdm_op_Write.ap_auto.i4P(i4* %advios_sec_counter_V, i4 %tmp_2)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -694,7 +694,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:23  br label %0
 
 <Node id="59" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-:0  %v_V_1 = call i4 @_ssdm_op_Read.ap_auto.i4P(i4* %ADVIOS_sec_counter_V)
+:0  %v_V_1 = call i4 @_ssdm_op_Read.ap_auto.i4P(i4* %advios_sec_counter_V)
 
 ]]></Node>
 <StgValue><ssdm name="v_V_1"/></StgValue>
@@ -745,7 +745,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:23  br label %0
 
 <Node id="63" bw="0" op_0_bw="0" op_1_bw="4" op_2_bw="4">
 <![CDATA[
-:0  call void @_ssdm_op_Write.ap_auto.i4P(i4* %ADVIOS_sec_counter_V, i4 0)
+:0  call void @_ssdm_op_Write.ap_auto.i4P(i4* %advios_sec_counter_V, i4 0)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

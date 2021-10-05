@@ -5,47 +5,47 @@
 // 
 // ===========================================================
 
-#include "ADVIOS_periodic_Incrementer.h"
+#include "advios_periodic_Incrementer.h"
 #include "AESL_pkg.h"
 
 using namespace std;
 
 namespace ap_rtl {
 
-const sc_logic ADVIOS_periodic_Incrementer::ap_const_logic_1 = sc_dt::Log_1;
-const sc_logic ADVIOS_periodic_Incrementer::ap_const_logic_0 = sc_dt::Log_0;
-const sc_lv<4> ADVIOS_periodic_Incrementer::ap_ST_fsm_state1 = "1";
-const sc_lv<4> ADVIOS_periodic_Incrementer::ap_ST_fsm_state2 = "10";
-const sc_lv<4> ADVIOS_periodic_Incrementer::ap_ST_fsm_state3 = "100";
-const sc_lv<4> ADVIOS_periodic_Incrementer::ap_ST_fsm_state4 = "1000";
-const sc_lv<32> ADVIOS_periodic_Incrementer::ap_const_lv32_2 = "10";
-const sc_lv<28> ADVIOS_periodic_Incrementer::ap_const_lv28_0 = "0000000000000000000000000000";
-const sc_lv<32> ADVIOS_periodic_Incrementer::ap_const_lv32_1 = "1";
-const sc_lv<1> ADVIOS_periodic_Incrementer::ap_const_lv1_0 = "0";
-const sc_lv<1> ADVIOS_periodic_Incrementer::ap_const_lv1_1 = "1";
-const sc_lv<32> ADVIOS_periodic_Incrementer::ap_const_lv32_3 = "11";
-const sc_lv<28> ADVIOS_periodic_Incrementer::ap_const_lv28_1 = "1";
-const sc_lv<28> ADVIOS_periodic_Incrementer::ap_const_lv28_5F5E0FF = "101111101011110000011111111";
-const bool ADVIOS_periodic_Incrementer::ap_const_boolean_1 = true;
+const sc_logic advios_periodic_Incrementer::ap_const_logic_1 = sc_dt::Log_1;
+const sc_logic advios_periodic_Incrementer::ap_const_logic_0 = sc_dt::Log_0;
+const sc_lv<4> advios_periodic_Incrementer::ap_ST_fsm_state1 = "1";
+const sc_lv<4> advios_periodic_Incrementer::ap_ST_fsm_state2 = "10";
+const sc_lv<4> advios_periodic_Incrementer::ap_ST_fsm_state3 = "100";
+const sc_lv<4> advios_periodic_Incrementer::ap_ST_fsm_state4 = "1000";
+const sc_lv<32> advios_periodic_Incrementer::ap_const_lv32_2 = "10";
+const sc_lv<28> advios_periodic_Incrementer::ap_const_lv28_0 = "0000000000000000000000000000";
+const sc_lv<32> advios_periodic_Incrementer::ap_const_lv32_1 = "1";
+const sc_lv<1> advios_periodic_Incrementer::ap_const_lv1_0 = "0";
+const sc_lv<1> advios_periodic_Incrementer::ap_const_lv1_1 = "1";
+const sc_lv<32> advios_periodic_Incrementer::ap_const_lv32_3 = "11";
+const sc_lv<28> advios_periodic_Incrementer::ap_const_lv28_1 = "1";
+const sc_lv<28> advios_periodic_Incrementer::ap_const_lv28_5F5E0FF = "101111101011110000011111111";
+const bool advios_periodic_Incrementer::ap_const_boolean_1 = true;
 
-ADVIOS_periodic_Incrementer::ADVIOS_periodic_Incrementer(sc_module_name name) : sc_module(name), mVcdFile(0) {
+advios_periodic_Incrementer::advios_periodic_Incrementer(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
     sensitive << ( ap_clk.pos() );
 
-    SC_METHOD(thread_ADVIOS_count_V);
+    SC_METHOD(thread_advios_count_V);
     sensitive << ( tmp_1_reg_139 );
     sensitive << ( ap_CS_fsm_state3 );
-    sensitive << ( ADVIOS_count_V_assig_fu_114_p2 );
+    sensitive << ( advios_count_V_assig_fu_114_p2 );
     sensitive << ( ap_CS_fsm_state4 );
 
-    SC_METHOD(thread_ADVIOS_count_V_ap_vld);
+    SC_METHOD(thread_advios_count_V_ap_vld);
     sensitive << ( tmp_1_reg_139 );
     sensitive << ( ap_CS_fsm_state3 );
     sensitive << ( ap_CS_fsm_state4 );
 
-    SC_METHOD(thread_ADVIOS_count_V_assig_fu_114_p2);
+    SC_METHOD(thread_advios_count_V_assig_fu_114_p2);
     sensitive << ( t_V_fu_86 );
 
     SC_METHOD(thread_ap_CS_fsm_state2);
@@ -75,7 +75,7 @@ ADVIOS_periodic_Incrementer::ADVIOS_periodic_Incrementer(sc_module_name name) : 
     ap_CS_fsm = "0001";
     static int apTFileNum = 0;
     stringstream apTFilenSS;
-    apTFilenSS << "ADVIOS_periodic_Incrementer_sc_trace_" << apTFileNum ++;
+    apTFilenSS << "advios_periodic_Incrementer_sc_trace_" << apTFileNum ++;
     string apTFn = apTFilenSS.str();
     mVcdFile = sc_create_vcd_trace_file(apTFn.c_str());
     mVcdFile->set_time_unit(1, SC_PS);
@@ -83,8 +83,8 @@ ADVIOS_periodic_Incrementer::ADVIOS_periodic_Incrementer(sc_module_name name) : 
 #ifdef __HLS_TRACE_LEVEL_PORT_HIER__
     sc_trace(mVcdFile, ap_clk, "(port)ap_clk");
     sc_trace(mVcdFile, ap_rst, "(port)ap_rst");
-    sc_trace(mVcdFile, ADVIOS_count_V, "(port)ADVIOS_count_V");
-    sc_trace(mVcdFile, ADVIOS_count_V_ap_vld, "(port)ADVIOS_count_V_ap_vld");
+    sc_trace(mVcdFile, advios_count_V, "(port)advios_count_V");
+    sc_trace(mVcdFile, advios_count_V_ap_vld, "(port)advios_count_V_ap_vld");
     sc_trace(mVcdFile, sec_pulse, "(port)sec_pulse");
     sc_trace(mVcdFile, sec_pulse_ap_vld, "(port)sec_pulse_ap_vld");
 #endif
@@ -95,7 +95,7 @@ ADVIOS_periodic_Incrementer::ADVIOS_periodic_Incrementer(sc_module_name name) : 
     sc_trace(mVcdFile, ap_CS_fsm_state3, "ap_CS_fsm_state3");
     sc_trace(mVcdFile, t_V_fu_86, "t_V_fu_86");
     sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
-    sc_trace(mVcdFile, ADVIOS_count_V_assig_fu_114_p2, "ADVIOS_count_V_assig_fu_114_p2");
+    sc_trace(mVcdFile, advios_count_V_assig_fu_114_p2, "advios_count_V_assig_fu_114_p2");
     sc_trace(mVcdFile, ap_CS_fsm_state4, "ap_CS_fsm_state4");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
@@ -103,13 +103,13 @@ ADVIOS_periodic_Incrementer::ADVIOS_periodic_Incrementer(sc_module_name name) : 
     }
 }
 
-ADVIOS_periodic_Incrementer::~ADVIOS_periodic_Incrementer() {
+advios_periodic_Incrementer::~advios_periodic_Incrementer() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
 }
 
-void ADVIOS_periodic_Incrementer::thread_ap_clk_no_reset_() {
+void advios_periodic_Incrementer::thread_ap_clk_no_reset_() {
     if ( ap_rst.read() == ap_const_logic_1) {
         ap_CS_fsm = ap_ST_fsm_state1;
     } else {
@@ -117,7 +117,7 @@ void ADVIOS_periodic_Incrementer::thread_ap_clk_no_reset_() {
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && 
          esl_seteq<1,1,1>(tmp_1_fu_121_p2.read(), ap_const_lv1_0))) {
-        t_V_fu_86 = ADVIOS_count_V_assig_fu_114_p2.read();
+        t_V_fu_86 = advios_count_V_assig_fu_114_p2.read();
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()) || 
                 (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && 
                  esl_seteq<1,1,1>(tmp_1_fu_121_p2.read(), ap_const_lv1_1)))) {
@@ -128,48 +128,48 @@ void ADVIOS_periodic_Incrementer::thread_ap_clk_no_reset_() {
     }
 }
 
-void ADVIOS_periodic_Incrementer::thread_ADVIOS_count_V() {
+void advios_periodic_Incrementer::thread_advios_count_V() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
          esl_seteq<1,1,1>(tmp_1_reg_139.read(), ap_const_lv1_1))) {
-        ADVIOS_count_V = ap_const_lv28_0;
+        advios_count_V = ap_const_lv28_0;
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read())) {
-        ADVIOS_count_V = ADVIOS_count_V_assig_fu_114_p2.read();
+        advios_count_V = advios_count_V_assig_fu_114_p2.read();
     } else {
-        ADVIOS_count_V = "XXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        advios_count_V = "XXXXXXXXXXXXXXXXXXXXXXXXXXXX";
     }
 }
 
-void ADVIOS_periodic_Incrementer::thread_ADVIOS_count_V_ap_vld() {
+void advios_periodic_Incrementer::thread_advios_count_V_ap_vld() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) || 
          (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
           esl_seteq<1,1,1>(tmp_1_reg_139.read(), ap_const_lv1_1)))) {
-        ADVIOS_count_V_ap_vld = ap_const_logic_1;
+        advios_count_V_ap_vld = ap_const_logic_1;
     } else {
-        ADVIOS_count_V_ap_vld = ap_const_logic_0;
+        advios_count_V_ap_vld = ap_const_logic_0;
     }
 }
 
-void ADVIOS_periodic_Incrementer::thread_ADVIOS_count_V_assig_fu_114_p2() {
-    ADVIOS_count_V_assig_fu_114_p2 = (!t_V_fu_86.read().is_01() || !ap_const_lv28_1.is_01())? sc_lv<28>(): (sc_biguint<28>(t_V_fu_86.read()) + sc_biguint<28>(ap_const_lv28_1));
+void advios_periodic_Incrementer::thread_advios_count_V_assig_fu_114_p2() {
+    advios_count_V_assig_fu_114_p2 = (!t_V_fu_86.read().is_01() || !ap_const_lv28_1.is_01())? sc_lv<28>(): (sc_biguint<28>(t_V_fu_86.read()) + sc_biguint<28>(ap_const_lv28_1));
 }
 
-void ADVIOS_periodic_Incrementer::thread_ap_CS_fsm_state2() {
+void advios_periodic_Incrementer::thread_ap_CS_fsm_state2() {
     ap_CS_fsm_state2 = ap_CS_fsm.read()[1];
 }
 
-void ADVIOS_periodic_Incrementer::thread_ap_CS_fsm_state3() {
+void advios_periodic_Incrementer::thread_ap_CS_fsm_state3() {
     ap_CS_fsm_state3 = ap_CS_fsm.read()[2];
 }
 
-void ADVIOS_periodic_Incrementer::thread_ap_CS_fsm_state4() {
+void advios_periodic_Incrementer::thread_ap_CS_fsm_state4() {
     ap_CS_fsm_state4 = ap_CS_fsm.read()[3];
 }
 
-void ADVIOS_periodic_Incrementer::thread_sec_pulse() {
+void advios_periodic_Incrementer::thread_sec_pulse() {
     sec_pulse =  (sc_logic) (ap_const_lv1_1[0]);
 }
 
-void ADVIOS_periodic_Incrementer::thread_sec_pulse_ap_vld() {
+void advios_periodic_Incrementer::thread_sec_pulse_ap_vld() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
          esl_seteq<1,1,1>(tmp_1_reg_139.read(), ap_const_lv1_1))) {
         sec_pulse_ap_vld = ap_const_logic_1;
@@ -178,11 +178,11 @@ void ADVIOS_periodic_Incrementer::thread_sec_pulse_ap_vld() {
     }
 }
 
-void ADVIOS_periodic_Incrementer::thread_tmp_1_fu_121_p2() {
+void advios_periodic_Incrementer::thread_tmp_1_fu_121_p2() {
     tmp_1_fu_121_p2 = (!t_V_fu_86.read().is_01() || !ap_const_lv28_5F5E0FF.is_01())? sc_lv<1>(): (sc_biguint<28>(t_V_fu_86.read()) > sc_biguint<28>(ap_const_lv28_5F5E0FF));
 }
 
-void ADVIOS_periodic_Incrementer::thread_ap_NS_fsm() {
+void advios_periodic_Incrementer::thread_ap_NS_fsm() {
     switch (ap_CS_fsm.read().to_uint64()) {
         case 1 : 
             ap_NS_fsm = ap_ST_fsm_state2;

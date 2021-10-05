@@ -1,4 +1,4 @@
-<stg><name>ADVIOS::periodic_Incrementer</name>
+<stg><name>advios::periodic_Incrementer</name>
 
 
 <trans_list>
@@ -133,7 +133,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit2:5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit2:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_switchs_V), !map !100
+_ZN7_ap_sc_7sc_core4waitEi.exit2:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_switchs_V), !map !100
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -148,7 +148,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit2:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit2:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_control_V), !map !104
+_ZN7_ap_sc_7sc_core4waitEi.exit2:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_control_V), !map !104
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -163,7 +163,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit2:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="28">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit2:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %ADVIOS_count_V), !map !108
+_ZN7_ap_sc_7sc_core4waitEi.exit2:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %advios_count_V), !map !108
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -178,7 +178,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit2:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* 
 
 <Node id="20" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit2:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_sec_counter_V), !map !112
+_ZN7_ap_sc_7sc_core4waitEi.exit2:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_sec_counter_V), !map !112
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -358,7 +358,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit2:20  call void (...)* @_ssdm_op_SpecIFCore(i4* %
 
 <Node id="32" bw="0" op_0_bw="0" op_1_bw="28" op_2_bw="28">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit2:21  call void @_ssdm_op_Write.ap_auto.i28P(i28* %ADVIOS_count_V, i28 0)
+_ZN7_ap_sc_7sc_core4waitEi.exit2:21  call void @_ssdm_op_Write.ap_auto.i28P(i28* %advios_count_V, i28 0)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -484,10 +484,10 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:1  call void (...)* @_ssdm_op_Wait(i32 1) nounwi
 
 <Node id="41" bw="28" op_0_bw="28" op_1_bw="28">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit:2  %ADVIOS_count_V_assig = add i28 %t_V_1, 1
+_ZN7_ap_sc_7sc_core4waitEi.exit:2  %advios_count_V_assig = add i28 %t_V_1, 1
 
 ]]></Node>
-<StgValue><ssdm name="ADVIOS_count_V_assig"/></StgValue>
+<StgValue><ssdm name="advios_count_V_assig"/></StgValue>
 </operation>
 
 <operation id="35" st_id="3" stage="1" lat="1">
@@ -499,7 +499,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:2  %ADVIOS_count_V_assig = add i28 %t_V_1, 1
 
 <Node id="42" bw="0" op_0_bw="0" op_1_bw="28" op_2_bw="28">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit:3  call void @_ssdm_op_Write.ap_auto.i28P(i28* %ADVIOS_count_V, i28 %ADVIOS_count_V_assig)
+_ZN7_ap_sc_7sc_core4waitEi.exit:3  call void @_ssdm_op_Write.ap_auto.i28P(i28* %advios_count_V, i28 %advios_count_V_assig)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -545,7 +545,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:5  br i1 %tmp_1, label %0, label %_ZN7_ap_sc_7sc
 
 <Node id="46" bw="0" op_0_bw="28" op_1_bw="28">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre:0  store i28 %ADVIOS_count_V_assig, i28* %t_V
+_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre:0  store i28 %advios_count_V_assig, i28* %t_V
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -612,7 +612,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre:1  br label %_ZN7_ap_sc_7sc_core4wa
 
 <Node id="50" bw="0" op_0_bw="0" op_1_bw="28" op_2_bw="28">
 <![CDATA[
-:1  call void @_ssdm_op_Write.ap_auto.i28P(i28* %ADVIOS_count_V, i28 0)
+:1  call void @_ssdm_op_Write.ap_auto.i28P(i28* %advios_count_V, i28 0)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>

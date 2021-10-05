@@ -9,18 +9,18 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity ADVIOS_periodic_Incrementer is
+entity advios_periodic_Incrementer is
 port (
     ap_clk : IN STD_LOGIC;
     ap_rst : IN STD_LOGIC;
-    ADVIOS_count_V : OUT STD_LOGIC_VECTOR (27 downto 0);
-    ADVIOS_count_V_ap_vld : OUT STD_LOGIC;
+    advios_count_V : OUT STD_LOGIC_VECTOR (27 downto 0);
+    advios_count_V_ap_vld : OUT STD_LOGIC;
     sec_pulse : OUT STD_LOGIC;
     sec_pulse_ap_vld : OUT STD_LOGIC );
 end;
 
 
-architecture behav of ADVIOS_periodic_Incrementer is 
+architecture behav of advios_periodic_Incrementer is 
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
@@ -47,7 +47,7 @@ architecture behav of ADVIOS_periodic_Incrementer is
     signal t_V_fu_86 : STD_LOGIC_VECTOR (27 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal ADVIOS_count_V_assig_fu_114_p2 : STD_LOGIC_VECTOR (27 downto 0);
+    signal advios_count_V_assig_fu_114_p2 : STD_LOGIC_VECTOR (27 downto 0);
     signal ap_CS_fsm_state4 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (3 downto 0);
@@ -74,7 +74,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_CS_fsm_state3) and (tmp_1_fu_121_p2 = ap_const_lv1_0))) then 
-                t_V_fu_86 <= ADVIOS_count_V_assig_fu_114_p2;
+                t_V_fu_86 <= advios_count_V_assig_fu_114_p2;
             elsif (((ap_const_logic_1 = ap_CS_fsm_state2) or ((ap_const_logic_1 = ap_CS_fsm_state3) and (tmp_1_fu_121_p2 = ap_const_lv1_1)))) then 
                 t_V_fu_86 <= ap_const_lv28_0;
             end if; 
@@ -105,28 +105,28 @@ begin
         end case;
     end process;
 
-    ADVIOS_count_V_assign_proc : process(tmp_1_reg_139, ap_CS_fsm_state3, ADVIOS_count_V_assig_fu_114_p2, ap_CS_fsm_state4)
+    advios_count_V_assign_proc : process(tmp_1_reg_139, ap_CS_fsm_state3, advios_count_V_assig_fu_114_p2, ap_CS_fsm_state4)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state4) and (tmp_1_reg_139 = ap_const_lv1_1))) then 
-            ADVIOS_count_V <= ap_const_lv28_0;
+            advios_count_V <= ap_const_lv28_0;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-            ADVIOS_count_V <= ADVIOS_count_V_assig_fu_114_p2;
+            advios_count_V <= advios_count_V_assig_fu_114_p2;
         else 
-            ADVIOS_count_V <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+            advios_count_V <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
 
-    ADVIOS_count_V_ap_vld_assign_proc : process(tmp_1_reg_139, ap_CS_fsm_state3, ap_CS_fsm_state4)
+    advios_count_V_ap_vld_assign_proc : process(tmp_1_reg_139, ap_CS_fsm_state3, ap_CS_fsm_state4)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state3) or ((ap_const_logic_1 = ap_CS_fsm_state4) and (tmp_1_reg_139 = ap_const_lv1_1)))) then 
-            ADVIOS_count_V_ap_vld <= ap_const_logic_1;
+            advios_count_V_ap_vld <= ap_const_logic_1;
         else 
-            ADVIOS_count_V_ap_vld <= ap_const_logic_0;
+            advios_count_V_ap_vld <= ap_const_logic_0;
         end if; 
     end process;
 
-    ADVIOS_count_V_assig_fu_114_p2 <= std_logic_vector(unsigned(t_V_fu_86) + unsigned(ap_const_lv28_1));
+    advios_count_V_assig_fu_114_p2 <= std_logic_vector(unsigned(t_V_fu_86) + unsigned(ap_const_lv28_1));
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
     ap_CS_fsm_state4 <= ap_CS_fsm(3);

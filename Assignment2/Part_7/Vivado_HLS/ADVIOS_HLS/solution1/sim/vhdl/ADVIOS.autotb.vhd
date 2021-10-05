@@ -24,7 +24,7 @@ signal inSwitch :  STD_LOGIC_VECTOR (3 DOWNTO 0);
 signal outLeds :  STD_LOGIC_VECTOR (3 DOWNTO 0);
 
 file AESL_errlog : TEXT;
-component ADVIOS is
+component advios is
 port (
     clk :  IN STD_LOGIC;
     reset :  IN STD_LOGIC;
@@ -34,7 +34,7 @@ port (
 end component;
 
 begin
-    DUT_INST : component ADVIOS
+    DUT_INST : component advios
     port map (
         clk =>  AESL_clock,
         reset =>  reset,
@@ -56,20 +56,20 @@ variable AESL_errline: LINE;
     ----initialize with data on first cycle
     AESL_cycleNo := 0;
         file_open(AESL_errlog,  "err.log", WRITE_MODE);
-        file_open(AESL_mTv,  "ADVIOS.hdltvin.dat", READ_MODE);
+        file_open(AESL_mTv,  "advios.hdltvin.dat", READ_MODE);
         esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
         if AESL_token(1 to 1) /=  "[" then
-        write(AESL_errline, string'("Illegal tv format of file ADVIOS.hdltvin.dat"));
+        write(AESL_errline, string'("Illegal tv format of file advios.hdltvin.dat"));
         writeline(AESL_errlog, AESL_errline);
-            assert false report "Illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+            assert false report "Illegal tv format of file advios.hdltvin.dat" severity note;
             assert false report "ERROR: Simulation using HLS TB failed." severity failure;
         end if;
         esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
         if AESL_token(1 to 1) /= "]" then
         if AESL_token(1 to 1) /=  "{" then
-        write(AESL_errline, string'("Illegal tv format of file ADVIOS.hdltvin.dat"));
+        write(AESL_errline, string'("Illegal tv format of file advios.hdltvin.dat"));
         writeline(AESL_errlog, AESL_errline);
-            assert false report "Illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+            assert false report "Illegal tv format of file advios.hdltvin.dat" severity note;
             assert false report "ERROR: Simulation using HLS TB failed." severity failure;
         end if;
     
@@ -78,9 +78,9 @@ variable AESL_errline: LINE;
                 if AESL_token(2 to 5 + 1) =  "reset" and AESL_token(5 + 2) = '"' then
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     if AESL_token(1 to 1) /=  ":" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
@@ -90,17 +90,17 @@ variable AESL_errline: LINE;
                     if AESL_token(1 to 1) =  "," then
                         esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     elsif AESL_token(1 to 1) /=  "}" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                 elsif AESL_token(2 to 4 + 1) =  "ctrl" and AESL_token(4 + 2) = '"' then
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     if AESL_token(1 to 1) /=  ":" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
@@ -110,17 +110,17 @@ variable AESL_errline: LINE;
                     if AESL_token(1 to 1) =  "," then
                         esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     elsif AESL_token(1 to 1) /=  "}" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                 elsif AESL_token(2 to 8 + 1) =  "inSwitch" and AESL_token(8 + 2) = '"' then
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     if AESL_token(1 to 1) /=  ":" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
@@ -130,14 +130,14 @@ variable AESL_errline: LINE;
                     if AESL_token(1 to 1) =  "," then
                         esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     elsif AESL_token(1 to 1) /=  "}" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                 else
                     assert false report "warning: unknown token " &  AESL_token &
-                        " in file ADVIOS.hdltvin.dat" severity note;
+                        " in file advios.hdltvin.dat" severity note;
                 end if;
         end loop;
         end if;
@@ -146,23 +146,23 @@ variable AESL_errline: LINE;
 
     -----real input
 
-        file_open(AESL_mTv,  "ADVIOS.hdltvin.dat", READ_MODE);
+        file_open(AESL_mTv,  "advios.hdltvin.dat", READ_MODE);
         esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
 
         wait until AESL_clock = '1';
             if AESL_token(1 to 1) /=  "[" then
-        write(AESL_errline, string'("Illegal tv format of file ADVIOS.hdltvin.dat"));
+        write(AESL_errline, string'("Illegal tv format of file advios.hdltvin.dat"));
         writeline(AESL_errlog, AESL_errline);
-                assert false report "Illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                assert false report "Illegal tv format of file advios.hdltvin.dat" severity note;
                 assert false report "ERROR: Simulation using HLS TB failed." severity failure;
             end if;
     
             esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
             while (AESL_token(1 to 1) /= "]" and AESL_token(1 to 1) /= " ") loop
             if AESL_token(1 to 1) /=  "{" then
-        write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+        write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
         writeline(AESL_errlog, AESL_errline);
-                assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                 assert false report "ERROR: Simulation using HLS TB failed." severity failure;
             end if;
     
@@ -171,9 +171,9 @@ variable AESL_errline: LINE;
                 if AESL_token(2 to 5 + 1) =  "reset" and AESL_token(5 + 2) = '"' then
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     if AESL_token(1 to 1) /=  ":" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
@@ -183,17 +183,17 @@ variable AESL_errline: LINE;
                     if AESL_token(1 to 1) =  "," then
                         esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     elsif AESL_token(1 to 1) /=  "}" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                 elsif AESL_token(2 to 4 + 1) =  "ctrl" and AESL_token(4 + 2) = '"' then
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     if AESL_token(1 to 1) /=  ":" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
@@ -203,17 +203,17 @@ variable AESL_errline: LINE;
                     if AESL_token(1 to 1) =  "," then
                         esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     elsif AESL_token(1 to 1) /=  "}" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                 elsif AESL_token(2 to 8 + 1) =  "inSwitch" and AESL_token(8 + 2) = '"' then
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     if AESL_token(1 to 1) /=  ":" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
@@ -223,21 +223,21 @@ variable AESL_errline: LINE;
                     if AESL_token(1 to 1) =  "," then
                         esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     elsif AESL_token(1 to 1) /=  "}" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvin.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvin.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvin.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvin.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                 else
                     assert false report "warning: unknown token " &  AESL_token &
-                        " in file ADVIOS.hdltvin.dat" severity note;
+                        " in file advios.hdltvin.dat" severity note;
                 end if;
             end loop;
             esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
         if AESL_token(1 to 1) =  "," then
             esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
         elsif AESL_token(1 to 1) /=  "]" then
-            assert false report "Expected end ']' in file ADVIOS.hdltvin.dat" severity note;
+            assert false report "Expected end ']' in file advios.hdltvin.dat" severity note;
         end if;
     AESL_cycleNo := AESL_cycleNo + 1;
         wait until AESL_clock = '1';
@@ -258,13 +258,13 @@ variable AESL_errline: LINE;
     variable AESL_dontcare: BOOLEAN;
     begin
         wait until AESL_clock = '1';
-        file_open(AESL_mTv,  "ADVIOS.hdltvout.dat", READ_MODE);
+        file_open(AESL_mTv,  "advios.hdltvout.dat", READ_MODE);
 
         esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
             if AESL_token(1 to 1) /=  "[" then
-        write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvout.dat"));
+        write(AESL_errline, string'("illegal tv format of file advios.hdltvout.dat"));
         writeline(AESL_errlog, AESL_errline);
-                assert false report "illegal tv format of file ADVIOS.hdltvout.dat" severity note;
+                assert false report "illegal tv format of file advios.hdltvout.dat" severity note;
                 assert false report "ERROR: Simulation using HLS TB failed." severity failure;
             end if;
             AESL_cycleNo := 0;
@@ -272,9 +272,9 @@ variable AESL_errline: LINE;
         while (AESL_token(1) /= ']' and AESL_token(1) /= ' ') loop
         wait until AESL_clock = '1';
             if AESL_token(1 to 1) /=  "{" then
-        write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvout.dat"));
+        write(AESL_errline, string'("illegal tv format of file advios.hdltvout.dat"));
         writeline(AESL_errlog, AESL_errline);
-                assert false report "illegal tv format of file ADVIOS.hdltvout.dat" severity note;
+                assert false report "illegal tv format of file advios.hdltvout.dat" severity note;
                 assert false report "ERROR: Simulation using HLS TB failed." severity failure;
             end if;
 
@@ -283,9 +283,9 @@ variable AESL_errline: LINE;
                 if AESL_token(2 to 7 + 1) =  "outLeds" and AESL_token(7 + 2) = '"' then
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     if AESL_token(1 to 1) /=  ":" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvout.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvout.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvout.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvout.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
@@ -303,21 +303,21 @@ variable AESL_errline: LINE;
                     if AESL_token(1 to 1) =  "," then
                     esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
                     elsif AESL_token(1 to 1) /=  "}" then
-                    write(AESL_errline, string'("illegal tv format of file ADVIOS.hdltvout.dat"));
+                    write(AESL_errline, string'("illegal tv format of file advios.hdltvout.dat"));
                     writeline(AESL_errlog, AESL_errline);
-                        assert false report "illegal tv format of file ADVIOS.hdltvout.dat" severity note;
+                        assert false report "illegal tv format of file advios.hdltvout.dat" severity note;
                         assert false report "ERROR: Simulation using HLS TB failed." severity failure;
                     end if;
                 else
                     assert false report "warning: unknown token " &  AESL_token &
-                        " in file ADVIOS.hdltvout.dat" severity note;
+                        " in file advios.hdltvout.dat" severity note;
                 end if;
             end loop;
             esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
         if AESL_token(1 to 1) =  "," then
             esl_read_token(AESL_mTv,  AESL_mLine, AESL_token);
         elsif AESL_token(1 to 1) /=  "]" then
-            assert false report "Expected end ']' in file ADVIOS.hdltvout.dat" severity note;
+            assert false report "Expected end ']' in file advios.hdltvout.dat" severity note;
         end if;
             AESL_cycleNo := AESL_cycleNo + 1;
         end loop;

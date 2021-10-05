@@ -1,8 +1,8 @@
 #ifdef __RTL_SIMULATION__
-#include "ADVIOS_rtl_wrapper.h"
-#define ADVIOS ADVIOS_rtl_wrapper
+#include "advios_rtl_wrapper.h"
+#define advios advios_rtl_wrapper
 #else
-#include "ADVIOS.h"
+#include "advios.h"
 #endif
 #include "tb_init.h"
 #include "tb_driver.h"
@@ -23,7 +23,7 @@ int sc_main(int argc, char *argv[])
 	// Create a 10ns period clock signal
 	sc_clock s_clk("s_clk", 10, SC_NS);
 	tb_init U_tb_init("U_tb_init");
-	ADVIOS U_dut("U_dut");
+	advios U_dut("U_dut");
 	tb_driver U_tb_driver("U_tb_driver");
 
 	// Generate a clock and reset to drive the sim

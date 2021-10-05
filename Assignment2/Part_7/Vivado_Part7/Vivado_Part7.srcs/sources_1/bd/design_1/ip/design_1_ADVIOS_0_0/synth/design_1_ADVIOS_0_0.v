@@ -47,14 +47,14 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:hls:ADVIOS:1.0
-// IP Revision: 2110011541
+// IP VLNV: xilinx.com:hls:advios:1.0
+// IP Revision: 2110041402
 
 (* X_CORE_INFO = "advios_top,Vivado 2017.2" *)
-(* CHECK_LICENSE_TYPE = "design_1_ADVIOS_0_0,advios_top,{}" *)
-(* CORE_GENERATION_INFO = "design_1_ADVIOS_0_0,advios_top,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=ADVIOS,x_ipVersion=1.0,x_ipCoreRevision=2110011541,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,C_S_AXI_SLV0_ADDR_WIDTH=5,C_S_AXI_SLV0_DATA_WIDTH=32}" *)
+(* CHECK_LICENSE_TYPE = "design_1_advios_0_0,advios_top,{}" *)
+(* CORE_GENERATION_INFO = "design_1_advios_0_0,advios_top,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=advios,x_ipVersion=1.0,x_ipCoreRevision=2110041402,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,C_S_AXI_SLV0_ADDR_WIDTH=5,C_S_AXI_SLV0_DATA_WIDTH=32}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module design_1_ADVIOS_0_0 (
+module design_1_advios_0_0 (
   inSwitch,
   outLeds,
   s_axi_slv0_AWADDR,

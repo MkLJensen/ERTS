@@ -9,7 +9,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity ADVIOS is
+entity advios is
 port (
     clk : IN STD_LOGIC;
     reset : IN STD_LOGIC;
@@ -19,10 +19,10 @@ port (
 end;
 
 
-architecture behav of ADVIOS is 
+architecture behav of advios is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "ADVIOS,hls_ip_2017_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z010clg400-1,HLS_INPUT_CLOCK=8.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.330000,HLS_SYN_LAT=3,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=154,HLS_SYN_LUT=183}";
+    "advios,hls_ip_2017_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z010clg400-1,HLS_INPUT_CLOCK=8.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.330000,HLS_SYN_LAT=3,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=154,HLS_SYN_LUT=183}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
@@ -31,42 +31,42 @@ architecture behav of ADVIOS is
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_boolean_1 : BOOLEAN := true;
 
-    signal ADVIOS_ssdm_threa_load_fu_128_p1 : STD_LOGIC_VECTOR (0 downto 0);
+    signal advios_ssdm_threa_load_fu_128_p1 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm : STD_LOGIC_VECTOR (1 downto 0);
     attribute fsm_encoding : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
-    signal grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V : STD_LOGIC_VECTOR (27 downto 0);
-    signal grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V_ap_vld : STD_LOGIC;
-    signal grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse : STD_LOGIC;
-    signal grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse_ap_vld : STD_LOGIC;
-    signal grp_ADVIOS_led_Controller_fu_104_outLeds : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ADVIOS_led_Controller_fu_104_outLeds_ap_vld : STD_LOGIC;
-    signal grp_ADVIOS_led_Controller_fu_104_ADVIOS_switchs_V : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ADVIOS_led_Controller_fu_104_ADVIOS_switchs_V_ap_vld : STD_LOGIC;
-    signal grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V_ap_vld : STD_LOGIC;
-    signal grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o_ap_vld : STD_LOGIC;
-    signal grp_ADVIOS_led_Controller_fu_104_sec_pulse_i : STD_LOGIC;
-    signal grp_ADVIOS_led_Controller_fu_104_sec_pulse_o : STD_LOGIC;
-    signal grp_ADVIOS_led_Controller_fu_104_sec_pulse_o_ap_vld : STD_LOGIC;
+    signal grp_advios_periodic_Incrementer_fu_80_advios_count_V : STD_LOGIC_VECTOR (27 downto 0);
+    signal grp_advios_periodic_Incrementer_fu_80_advios_count_V_ap_vld : STD_LOGIC;
+    signal grp_advios_periodic_Incrementer_fu_80_sec_pulse : STD_LOGIC;
+    signal grp_advios_periodic_Incrementer_fu_80_sec_pulse_ap_vld : STD_LOGIC;
+    signal grp_advios_led_Controller_fu_104_outLeds : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_advios_led_Controller_fu_104_outLeds_ap_vld : STD_LOGIC;
+    signal grp_advios_led_Controller_fu_104_advios_switchs_V : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_advios_led_Controller_fu_104_advios_switchs_V_ap_vld : STD_LOGIC;
+    signal grp_advios_led_Controller_fu_104_advios_control_V : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_advios_led_Controller_fu_104_advios_control_V_ap_vld : STD_LOGIC;
+    signal grp_advios_led_Controller_fu_104_advios_sec_counter_V_o : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_advios_led_Controller_fu_104_advios_sec_counter_V_o_ap_vld : STD_LOGIC;
+    signal grp_advios_led_Controller_fu_104_sec_pulse_i : STD_LOGIC;
+    signal grp_advios_led_Controller_fu_104_sec_pulse_o : STD_LOGIC;
+    signal grp_advios_led_Controller_fu_104_sec_pulse_o_ap_vld : STD_LOGIC;
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal ADVIOS_sec_counter_V : STD_LOGIC_VECTOR (3 downto 0);
+    signal advios_sec_counter_V : STD_LOGIC_VECTOR (3 downto 0);
     signal sec_pulse : STD_LOGIC_VECTOR (0 downto 0);
 
-    component ADVIOS_periodic_Incrementer IS
+    component advios_periodic_Incrementer IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
-        ADVIOS_count_V : OUT STD_LOGIC_VECTOR (27 downto 0);
-        ADVIOS_count_V_ap_vld : OUT STD_LOGIC;
+        advios_count_V : OUT STD_LOGIC_VECTOR (27 downto 0);
+        advios_count_V_ap_vld : OUT STD_LOGIC;
         sec_pulse : OUT STD_LOGIC;
         sec_pulse_ap_vld : OUT STD_LOGIC );
     end component;
 
 
-    component ADVIOS_led_Controller IS
+    component advios_led_Controller IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -74,13 +74,13 @@ architecture behav of ADVIOS is
         inSwitch : IN STD_LOGIC_VECTOR (3 downto 0);
         outLeds : OUT STD_LOGIC_VECTOR (3 downto 0);
         outLeds_ap_vld : OUT STD_LOGIC;
-        ADVIOS_switchs_V : OUT STD_LOGIC_VECTOR (3 downto 0);
-        ADVIOS_switchs_V_ap_vld : OUT STD_LOGIC;
-        ADVIOS_control_V : OUT STD_LOGIC_VECTOR (3 downto 0);
-        ADVIOS_control_V_ap_vld : OUT STD_LOGIC;
-        ADVIOS_sec_counter_V_i : IN STD_LOGIC_VECTOR (3 downto 0);
-        ADVIOS_sec_counter_V_o : OUT STD_LOGIC_VECTOR (3 downto 0);
-        ADVIOS_sec_counter_V_o_ap_vld : OUT STD_LOGIC;
+        advios_switchs_V : OUT STD_LOGIC_VECTOR (3 downto 0);
+        advios_switchs_V_ap_vld : OUT STD_LOGIC;
+        advios_control_V : OUT STD_LOGIC_VECTOR (3 downto 0);
+        advios_control_V_ap_vld : OUT STD_LOGIC;
+        advios_sec_counter_V_i : IN STD_LOGIC_VECTOR (3 downto 0);
+        advios_sec_counter_V_o : OUT STD_LOGIC_VECTOR (3 downto 0);
+        advios_sec_counter_V_o_ap_vld : OUT STD_LOGIC;
         sec_pulse_i : IN STD_LOGIC;
         sec_pulse_o : OUT STD_LOGIC;
         sec_pulse_o_ap_vld : OUT STD_LOGIC );
@@ -89,43 +89,43 @@ architecture behav of ADVIOS is
 
 
 begin
-    grp_ADVIOS_periodic_Incrementer_fu_80 : component ADVIOS_periodic_Incrementer
+    grp_advios_periodic_Incrementer_fu_80 : component advios_periodic_Incrementer
     port map (
         ap_clk => clk,
         ap_rst => reset,
-        ADVIOS_count_V => grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V,
-        ADVIOS_count_V_ap_vld => grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V_ap_vld,
-        sec_pulse => grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse,
-        sec_pulse_ap_vld => grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse_ap_vld);
+        advios_count_V => grp_advios_periodic_Incrementer_fu_80_advios_count_V,
+        advios_count_V_ap_vld => grp_advios_periodic_Incrementer_fu_80_advios_count_V_ap_vld,
+        sec_pulse => grp_advios_periodic_Incrementer_fu_80_sec_pulse,
+        sec_pulse_ap_vld => grp_advios_periodic_Incrementer_fu_80_sec_pulse_ap_vld);
 
-    grp_ADVIOS_led_Controller_fu_104 : component ADVIOS_led_Controller
+    grp_advios_led_Controller_fu_104 : component advios_led_Controller
     port map (
         ap_clk => clk,
         ap_rst => reset,
         ctrl => ctrl,
         inSwitch => inSwitch,
-        outLeds => grp_ADVIOS_led_Controller_fu_104_outLeds,
-        outLeds_ap_vld => grp_ADVIOS_led_Controller_fu_104_outLeds_ap_vld,
-        ADVIOS_switchs_V => grp_ADVIOS_led_Controller_fu_104_ADVIOS_switchs_V,
-        ADVIOS_switchs_V_ap_vld => grp_ADVIOS_led_Controller_fu_104_ADVIOS_switchs_V_ap_vld,
-        ADVIOS_control_V => grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V,
-        ADVIOS_control_V_ap_vld => grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V_ap_vld,
-        ADVIOS_sec_counter_V_i => ADVIOS_sec_counter_V,
-        ADVIOS_sec_counter_V_o => grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o,
-        ADVIOS_sec_counter_V_o_ap_vld => grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o_ap_vld,
-        sec_pulse_i => grp_ADVIOS_led_Controller_fu_104_sec_pulse_i,
-        sec_pulse_o => grp_ADVIOS_led_Controller_fu_104_sec_pulse_o,
-        sec_pulse_o_ap_vld => grp_ADVIOS_led_Controller_fu_104_sec_pulse_o_ap_vld);
+        outLeds => grp_advios_led_Controller_fu_104_outLeds,
+        outLeds_ap_vld => grp_advios_led_Controller_fu_104_outLeds_ap_vld,
+        advios_switchs_V => grp_advios_led_Controller_fu_104_advios_switchs_V,
+        advios_switchs_V_ap_vld => grp_advios_led_Controller_fu_104_advios_switchs_V_ap_vld,
+        advios_control_V => grp_advios_led_Controller_fu_104_advios_control_V,
+        advios_control_V_ap_vld => grp_advios_led_Controller_fu_104_advios_control_V_ap_vld,
+        advios_sec_counter_V_i => advios_sec_counter_V,
+        advios_sec_counter_V_o => grp_advios_led_Controller_fu_104_advios_sec_counter_V_o,
+        advios_sec_counter_V_o_ap_vld => grp_advios_led_Controller_fu_104_advios_sec_counter_V_o_ap_vld,
+        sec_pulse_i => grp_advios_led_Controller_fu_104_sec_pulse_i,
+        sec_pulse_o => grp_advios_led_Controller_fu_104_sec_pulse_o,
+        sec_pulse_o_ap_vld => grp_advios_led_Controller_fu_104_sec_pulse_o_ap_vld);
 
 
 
 
 
-    ADVIOS_sec_counter_V_assign_proc : process(clk)
+    advios_sec_counter_V_assign_proc : process(clk)
     begin
         if (clk'event and clk =  '1') then
-            if ((ap_const_logic_1 = grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o_ap_vld)) then 
-                ADVIOS_sec_counter_V <= grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o;
+            if ((ap_const_logic_1 = grp_advios_led_Controller_fu_104_advios_sec_counter_V_o_ap_vld)) then 
+                advios_sec_counter_V <= grp_advios_led_Controller_fu_104_advios_sec_counter_V_o;
             end if; 
         end if;
     end process;
@@ -134,8 +134,8 @@ begin
     outLeds_assign_proc : process(clk)
     begin
         if (clk'event and clk =  '1') then
-            if ((ap_const_logic_1 = grp_ADVIOS_led_Controller_fu_104_outLeds_ap_vld)) then 
-                outLeds <= grp_ADVIOS_led_Controller_fu_104_outLeds;
+            if ((ap_const_logic_1 = grp_advios_led_Controller_fu_104_outLeds_ap_vld)) then 
+                outLeds <= grp_advios_led_Controller_fu_104_outLeds;
             end if; 
         end if;
     end process;
@@ -144,16 +144,16 @@ begin
     sec_pulse_assign_proc : process(clk)
     begin
         if (clk'event and clk =  '1') then
-            if ((ap_const_logic_1 = grp_ADVIOS_led_Controller_fu_104_sec_pulse_o_ap_vld)) then 
-                sec_pulse <= (0=>grp_ADVIOS_led_Controller_fu_104_sec_pulse_o, others=>'-');
-            elsif ((ap_const_logic_1 = grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse_ap_vld)) then 
-                sec_pulse <= (0=>grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse, others=>'-');
+            if ((ap_const_logic_1 = grp_advios_led_Controller_fu_104_sec_pulse_o_ap_vld)) then 
+                sec_pulse <= (0=>grp_advios_led_Controller_fu_104_sec_pulse_o, others=>'-');
+            elsif ((ap_const_logic_1 = grp_advios_periodic_Incrementer_fu_80_sec_pulse_ap_vld)) then 
+                sec_pulse <= (0=>grp_advios_periodic_Incrementer_fu_80_sec_pulse, others=>'-');
             end if; 
         end if;
     end process;
 
-    ADVIOS_ssdm_threa_load_fu_128_p1 <= ap_const_lv1_0;
+    advios_ssdm_threa_load_fu_128_p1 <= ap_const_lv1_0;
     ap_CS_fsm <= ap_const_lv2_0;
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
-    grp_ADVIOS_led_Controller_fu_104_sec_pulse_i <= sec_pulse(0);
+    grp_advios_led_Controller_fu_104_sec_pulse_i <= sec_pulse(0);
 end behav;

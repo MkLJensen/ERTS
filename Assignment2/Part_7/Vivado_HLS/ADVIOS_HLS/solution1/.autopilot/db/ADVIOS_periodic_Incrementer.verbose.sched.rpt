@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vivado HLS Report for 'ADVIOS_periodic_Incrementer'
+== Vivado HLS Report for 'advios_periodic_Incrementer'
 ================================================================
-* Date:           Mon Oct  4 10:42:19 2021
+* Date:           Mon Oct  4 14:00:18 2021
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        ADVIOS_HLS
@@ -105,92 +105,92 @@ ST_1: StgValue_10 (16)  [1/1] 0.00ns
 _ZN7_ap_sc_7sc_core4waitEi.exit2:5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %outLeds), !map !96
 
 ST_1: StgValue_11 (17)  [1/1] 0.00ns
-_ZN7_ap_sc_7sc_core4waitEi.exit2:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_switchs_V), !map !100
+_ZN7_ap_sc_7sc_core4waitEi.exit2:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_switchs_V), !map !100
 
 ST_1: StgValue_12 (18)  [1/1] 0.00ns
-_ZN7_ap_sc_7sc_core4waitEi.exit2:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_control_V), !map !104
+_ZN7_ap_sc_7sc_core4waitEi.exit2:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_control_V), !map !104
 
 ST_1: StgValue_13 (19)  [1/1] 0.00ns
-_ZN7_ap_sc_7sc_core4waitEi.exit2:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %ADVIOS_count_V), !map !108
+_ZN7_ap_sc_7sc_core4waitEi.exit2:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %advios_count_V), !map !108
 
 ST_1: StgValue_14 (20)  [1/1] 0.00ns
-_ZN7_ap_sc_7sc_core4waitEi.exit2:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_sec_counter_V), !map !112
+_ZN7_ap_sc_7sc_core4waitEi.exit2:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_sec_counter_V), !map !112
 
 ST_1: StgValue_15 (21)  [1/1] 0.00ns
 _ZN7_ap_sc_7sc_core4waitEi.exit2:10  call void (...)* @_ssdm_op_SpecBitsMap(i1* %sec_pulse), !map !116
 
-ST_1: StgValue_16 (22)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:4
+ST_1: StgValue_16 (22)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:4
 _ZN7_ap_sc_7sc_core4waitEi.exit2:11  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %clk) nounwind
 
-ST_1: StgValue_17 (23)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:5
+ST_1: StgValue_17 (23)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:5
 _ZN7_ap_sc_7sc_core4waitEi.exit2:12  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %reset) nounwind
 
-ST_1: StgValue_18 (24)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:6
+ST_1: StgValue_18 (24)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:6
 _ZN7_ap_sc_7sc_core4waitEi.exit2:13  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ctrl) nounwind
 
-ST_1: StgValue_19 (25)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:7
+ST_1: StgValue_19 (25)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:7
 _ZN7_ap_sc_7sc_core4waitEi.exit2:14  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %inSwitch) nounwind
 
-ST_1: StgValue_20 (26)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:8
+ST_1: StgValue_20 (26)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:8
 _ZN7_ap_sc_7sc_core4waitEi.exit2:15  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %outLeds) nounwind
 
-ST_1: StgValue_21 (27)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:9
+ST_1: StgValue_21 (27)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:9
 _ZN7_ap_sc_7sc_core4waitEi.exit2:16  call void (...)* @_ssdm_op_SpecProcessDef([7 x i8]* @p_str, i32 2, [21 x i8]* @p_str8) nounwind
 
-ST_1: tmp (28)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:9
+ST_1: tmp (28)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:9
 _ZN7_ap_sc_7sc_core4waitEi.exit2:17  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str9)
 
-ST_1: StgValue_23 (29)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:9
+ST_1: StgValue_23 (29)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:9
 _ZN7_ap_sc_7sc_core4waitEi.exit2:18  call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str10) nounwind
 
-ST_1: p_ssdm_reset_v (30)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:9
+ST_1: p_ssdm_reset_v (30)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:9
 _ZN7_ap_sc_7sc_core4waitEi.exit2:19  %p_ssdm_reset_v = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind
 
-ST_1: StgValue_25 (31)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:4
+ST_1: StgValue_25 (31)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:4
 _ZN7_ap_sc_7sc_core4waitEi.exit2:20  call void (...)* @_ssdm_op_SpecIFCore(i4* %ctrl, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
 
-ST_1: StgValue_26 (32)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:7
-_ZN7_ap_sc_7sc_core4waitEi.exit2:21  call void @_ssdm_op_Write.ap_auto.i28P(i28* %ADVIOS_count_V, i28 0)
+ST_1: StgValue_26 (32)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:7
+_ZN7_ap_sc_7sc_core4waitEi.exit2:21  call void @_ssdm_op_Write.ap_auto.i28P(i28* %advios_count_V, i28 0)
 
-ST_1: empty (33)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:7
+ST_1: empty (33)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:7
 _ZN7_ap_sc_7sc_core4waitEi.exit2:22  %empty = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %p_ssdm_reset_v) nounwind
 
-ST_1: empty_3 (34)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:7
+ST_1: empty_3 (34)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:7
 _ZN7_ap_sc_7sc_core4waitEi.exit2:23  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str9, i32 %tmp)
 
 
  <State 2>: 1.59ns
-ST_2: StgValue_29 (35)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:8
+ST_2: StgValue_29 (35)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:8
 _ZN7_ap_sc_7sc_core4waitEi.exit2:24  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
 
 ST_2: StgValue_30 (36)  [1/1] 1.59ns
 _ZN7_ap_sc_7sc_core4waitEi.exit2:25  store i28 0, i28* %t_V
 
-ST_2: StgValue_31 (37)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:9
+ST_2: StgValue_31 (37)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:9
 _ZN7_ap_sc_7sc_core4waitEi.exit2:26  br label %_ZN7_ap_sc_7sc_core4waitEi.exit
 
 
  <State 3>: 4.33ns
-ST_3: t_V_1 (39)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:13
+ST_3: t_V_1 (39)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:13
 _ZN7_ap_sc_7sc_core4waitEi.exit:0  %t_V_1 = load i28* %t_V
 
-ST_3: StgValue_33 (40)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:11
+ST_3: StgValue_33 (40)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:11
 _ZN7_ap_sc_7sc_core4waitEi.exit:1  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
 
-ST_3: ADVIOS_count_V_assig (41)  [1/1] 2.74ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:13
-_ZN7_ap_sc_7sc_core4waitEi.exit:2  %ADVIOS_count_V_assig = add i28 %t_V_1, 1
+ST_3: advios_count_V_assig (41)  [1/1] 2.74ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:13
+_ZN7_ap_sc_7sc_core4waitEi.exit:2  %advios_count_V_assig = add i28 %t_V_1, 1
 
-ST_3: StgValue_35 (42)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:13
-_ZN7_ap_sc_7sc_core4waitEi.exit:3  call void @_ssdm_op_Write.ap_auto.i28P(i28* %ADVIOS_count_V, i28 %ADVIOS_count_V_assig)
+ST_3: StgValue_35 (42)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:13
+_ZN7_ap_sc_7sc_core4waitEi.exit:3  call void @_ssdm_op_Write.ap_auto.i28P(i28* %advios_count_V, i28 %advios_count_V_assig)
 
-ST_3: tmp_1 (43)  [1/1] 3.26ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:13
+ST_3: tmp_1 (43)  [1/1] 3.26ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:13
 _ZN7_ap_sc_7sc_core4waitEi.exit:4  %tmp_1 = icmp ugt i28 %t_V_1, 99999999
 
-ST_3: StgValue_37 (44)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:13
+ST_3: StgValue_37 (44)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:13
 _ZN7_ap_sc_7sc_core4waitEi.exit:5  br i1 %tmp_1, label %0, label %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre
 
-ST_3: StgValue_38 (46)  [1/1] 1.59ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:13
-_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre:0  store i28 %ADVIOS_count_V_assig, i28* %t_V
+ST_3: StgValue_38 (46)  [1/1] 1.59ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:13
+_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre:0  store i28 %advios_count_V_assig, i28* %t_V
 
 ST_3: StgValue_39 (47)  [1/1] 0.00ns
 _ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre:1  br label %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge
@@ -200,13 +200,13 @@ ST_3: StgValue_40 (51)  [1/1] 1.59ns
 
 
  <State 4>: 0.00ns
-ST_4: StgValue_41 (49)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:15
+ST_4: StgValue_41 (49)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:15
 :0  call void @_ssdm_op_Write.ap_auto.volatile.i1P(i1* %sec_pulse, i1 true)
 
-ST_4: StgValue_42 (50)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:16
-:1  call void @_ssdm_op_Write.ap_auto.i28P(i28* %ADVIOS_count_V, i28 0)
+ST_4: StgValue_42 (50)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:16
+:1  call void @_ssdm_op_Write.ap_auto.i28P(i28* %advios_count_V, i28 0)
 
-ST_4: StgValue_43 (52)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:17
+ST_4: StgValue_43 (52)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:17
 :3  br label %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge
 
 ST_4: StgValue_44 (54)  [1/1] 0.00ns
@@ -228,9 +228,9 @@ The critical path consists of the following:
 
  <State 3>: 4.33ns
 The critical path consists of the following:
-	'load' operation ('t.V', ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:13) on local variable 't.V' [39]  (0 ns)
-	'add' operation ('ADVIOS_count_V_assig', ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:13) [41]  (2.74 ns)
-	'store' operation (../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:13) of variable 'ADVIOS_count_V_assig', ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp:13 on local variable 't.V' [46]  (1.59 ns)
+	'load' operation ('t.V', ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:13) on local variable 't.V' [39]  (0 ns)
+	'add' operation ('advios_count_V_assig', ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:13) [41]  (2.74 ns)
+	'store' operation (../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:13) of variable 'advios_count_V_assig', ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp:13 on local variable 't.V' [46]  (1.59 ns)
 
  <State 4>: 0ns
 The critical path consists of the following:

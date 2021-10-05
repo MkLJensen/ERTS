@@ -48,21 +48,22 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   create_project -in_memory -part xc7z010clg400-1
+  set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.cache/wt [current_project]
-  set_property parent.project_path C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.xpr [current_project]
-  set_property ip_repo_paths C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/impl/ip [current_project]
-  set_property ip_output_repo C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/vivado_Part7/vivado_Part7.cache/wt [current_project]
+  set_property parent.project_path C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/vivado_Part7/vivado_Part7.xpr [current_project]
+  set_property ip_repo_paths C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/impl [current_project]
+  set_property ip_output_repo C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/vivado_Part7/vivado_Part7.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/vivado_Part7/vivado_Part7.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -suppress
   set_param project.isImplRun true
-  add_files C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/design_1.bd
-  set_property is_locked true [get_files C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/design_1.bd]
+  add_files C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/vivado_Part7/vivado_Part7.srcs/sources_1/bd/design_1/design_1.bd
+  set_property is_locked true [get_files C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/vivado_Part7/vivado_Part7.srcs/sources_1/bd/design_1/design_1.bd]
   set_param project.isImplRun false
-  read_xdc C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/contraints.xdc
+  read_xdc C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/vivado_Part7/contraints.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z010clg400-1
   set_param project.isImplRun false

@@ -96,13 +96,13 @@ Ltmp14:
 	ret
 	.cfi_endproc
 
-	.def	 __ZN6ADVIOS20periodic_IncrementerEv;
+	.def	 __ZN6advios20periodic_IncrementerEv;
 	.scl	2;
 	.type	32;
 	.endef
-	.globl	__ZN6ADVIOS20periodic_IncrementerEv
+	.globl	__ZN6advios20periodic_IncrementerEv
 	.align	16, 0x90
-__ZN6ADVIOS20periodic_IncrementerEv:
+__ZN6advios20periodic_IncrementerEv:
 	.cfi_startproc
 	.cfi_personality 0, ___gxx_personality_v0
 Leh_func_begin4:
@@ -507,14 +507,14 @@ Ltmp49:
 	ret
 	.cfi_endproc
 
-	.def	 __ZN6ADVIOS14led_ControllerEv;
+	.def	 __ZN6advios14led_ControllerEv;
 	.scl	2;
 	.type	32;
 	.endef
 	.text
-	.globl	__ZN6ADVIOS14led_ControllerEv
+	.globl	__ZN6advios14led_ControllerEv
 	.align	16, 0x90
-__ZN6ADVIOS14led_ControllerEv:
+__ZN6advios14led_ControllerEv:
 	.cfi_startproc
 	.cfi_personality 0, ___gxx_personality_v0
 Leh_func_begin10:

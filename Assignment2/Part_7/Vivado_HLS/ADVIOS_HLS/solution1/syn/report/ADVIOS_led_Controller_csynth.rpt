@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vivado HLS Report for 'ADVIOS_led_Controller'
+== Vivado HLS Report for 'advios_led_Controller'
 ================================================================
-* Date:           Mon Oct  4 10:42:19 2021
+* Date:           Mon Oct  4 14:00:18 2021
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        ADVIOS_HLS
@@ -97,7 +97,7 @@
     +------------------------+----+-----------+-----+-----------+
     |          Name          | LUT| Input Size| Bits| Total Bits|
     +------------------------+----+-----------+-----+-----------+
-    |ADVIOS_sec_counter_V_o  |  15|          3|    4|         12|
+    |advios_sec_counter_V_o  |  15|          3|    4|         12|
     |ap_NS_fsm               |  21|          4|    1|          4|
     |outLeds                 |  21|          4|    4|         16|
     +------------------------+----+-----------+-----+-----------+
@@ -124,19 +124,19 @@
 +-------------------------------+-----+-----+------------+------------------------+--------------+
 |           RTL Ports           | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
 +-------------------------------+-----+-----+------------+------------------------+--------------+
-|ap_clk                         |  in |    1| ap_ctrl_hs | ADVIOS::led_Controller | return value |
-|ap_rst                         |  in |    1| ap_ctrl_hs | ADVIOS::led_Controller | return value |
+|ap_clk                         |  in |    1| ap_ctrl_hs | advios::led_Controller | return value |
+|ap_rst                         |  in |    1| ap_ctrl_hs | advios::led_Controller | return value |
 |ctrl                           |  in |    4|   ap_none  |          ctrl          |    pointer   |
 |inSwitch                       |  in |    4|   ap_none  |        inSwitch        |    pointer   |
 |outLeds                        | out |    4|   ap_vld   |         outLeds        |    pointer   |
 |outLeds_ap_vld                 | out |    1|   ap_vld   |         outLeds        |    pointer   |
-|ADVIOS_switchs_V               | out |    4|   ap_vld   |    ADVIOS_switchs_V    |    pointer   |
-|ADVIOS_switchs_V_ap_vld        | out |    1|   ap_vld   |    ADVIOS_switchs_V    |    pointer   |
-|ADVIOS_control_V               | out |    4|   ap_vld   |    ADVIOS_control_V    |    pointer   |
-|ADVIOS_control_V_ap_vld        | out |    1|   ap_vld   |    ADVIOS_control_V    |    pointer   |
-|ADVIOS_sec_counter_V_i         |  in |    4|   ap_ovld  |  ADVIOS_sec_counter_V  |    pointer   |
-|ADVIOS_sec_counter_V_o         | out |    4|   ap_ovld  |  ADVIOS_sec_counter_V  |    pointer   |
-|ADVIOS_sec_counter_V_o_ap_vld  | out |    1|   ap_ovld  |  ADVIOS_sec_counter_V  |    pointer   |
+|advios_switchs_V               | out |    4|   ap_vld   |    advios_switchs_V    |    pointer   |
+|advios_switchs_V_ap_vld        | out |    1|   ap_vld   |    advios_switchs_V    |    pointer   |
+|advios_control_V               | out |    4|   ap_vld   |    advios_control_V    |    pointer   |
+|advios_control_V_ap_vld        | out |    1|   ap_vld   |    advios_control_V    |    pointer   |
+|advios_sec_counter_V_i         |  in |    4|   ap_ovld  |  advios_sec_counter_V  |    pointer   |
+|advios_sec_counter_V_o         | out |    4|   ap_ovld  |  advios_sec_counter_V  |    pointer   |
+|advios_sec_counter_V_o_ap_vld  | out |    1|   ap_ovld  |  advios_sec_counter_V  |    pointer   |
 |sec_pulse_i                    |  in |    1|   ap_ovld  |        sec_pulse       |    pointer   |
 |sec_pulse_o                    | out |    1|   ap_ovld  |        sec_pulse       |    pointer   |
 |sec_pulse_o_ap_vld             | out |    1|   ap_ovld  |        sec_pulse       |    pointer   |

@@ -22,8 +22,8 @@ ap_puts_info "COSIM" 11 "Starting SystemC simulation ..."
 cd ../systemc
 
 # remove hdltvin&hdltvout in tv dir
-file delete -force [file join "../tv" ADVIOS.hdltvin.dat]
-file delete -force [file join "../tv" ADVIOS.hdltvout.dat]
+file delete -force [file join "../tv" advios.hdltvin.dat]
+file delete -force [file join "../tv" advios.hdltvout.dat]
 
 set ::env(AP_WRITE_TV) "on"
 
@@ -41,11 +41,11 @@ if {$ret == 1} {
 	return -code error -errorcode $::errorCode
 }
 
-if {[file isfile ADVIOS.hdltvin.dat]} {
-	file copy -force ADVIOS.hdltvin.dat [file join "../tv" ADVIOS.hdltvin.dat]
+if {[file isfile advios.hdltvin.dat]} {
+	file copy -force advios.hdltvin.dat [file join "../tv" advios.hdltvin.dat]
 }
-if {[file isfile ADVIOS.hdltvout.dat]} {
-	file copy -force ADVIOS.hdltvout.dat [file join "../tv" ADVIOS.hdltvout.dat]
+if {[file isfile advios.hdltvout.dat]} {
+	file copy -force advios.hdltvout.dat [file join "../tv" advios.hdltvout.dat]
 }
 
 sc_sim_check $ret $err "temp1.log"
@@ -58,14 +58,14 @@ ap_puts_info "COSIM" 15 "Starting XSIM ..."
 
 cd ../vhdl
 
-if {![file exists [file join "../tv" ADVIOS.hdltvin.dat]]} {
-	ap_puts_err "COSIM" 332 "Test Vector ADVIOS.hdltvin.dat in /tv dir doesn't exist."
+if {![file exists [file join "../tv" advios.hdltvin.dat]]} {
+	ap_puts_err "COSIM" 332 "Test Vector advios.hdltvin.dat in /tv dir doesn't exist."
 	return -code error -errorcode $::errorCode
 }
 
-file copy -force [file join "../tv" ADVIOS.hdltvin.dat] ADVIOS.hdltvin.dat
+file copy -force [file join "../tv" advios.hdltvin.dat] advios.hdltvin.dat
 
-file copy -force [file join "../tv" ADVIOS.hdltvout.dat] ADVIOS.hdltvout.dat
+file copy -force [file join "../tv" advios.hdltvout.dat] advios.hdltvout.dat
 
 file delete -force ".exit.err"
 file delete -force ".aesl_error"

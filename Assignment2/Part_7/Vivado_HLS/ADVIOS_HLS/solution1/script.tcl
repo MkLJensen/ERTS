@@ -4,10 +4,10 @@
 ## Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project ADVIOS_HLS
-set_top ADVIOS
-add_files ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp
-add_files ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h
-add_files -tb ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS_testBench.cpp
+set_top advios
+add_files ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp
+add_files ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h
+add_files -tb ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios_testBench.cpp
 add_files -tb ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/tb_driver.cpp
 add_files -tb ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/tb_driver.h
 add_files -tb ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/tb_init.cpp

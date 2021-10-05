@@ -1,6 +1,6 @@
-vhdl xil_defaultlib "c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_sim_netlist.vhdl" 
-vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_ADVIOS_0_0/design_1_ADVIOS_0_0_sim_netlist.vhdl" 
+vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_sim_netlist.vhdl" 
+vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_advios_0_0/design_1_advios_0_0_sim_netlist.vhdl" 
 vhdl xil_defaultlib "../../../bd/design_1/ip/design_1_rst_ps7_0_50M_0/sim/design_1_rst_ps7_0_50M_0.vhd" 
-vhdl xil_defaultlib "c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.vhdl" 
+vhdl xil_defaultlib "c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/vivado_Part7/vivado_Part7.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.vhdl" 
 vhdl xil_defaultlib "../../../bd/design_1/hdl/design_1.vhd" 
 nosort

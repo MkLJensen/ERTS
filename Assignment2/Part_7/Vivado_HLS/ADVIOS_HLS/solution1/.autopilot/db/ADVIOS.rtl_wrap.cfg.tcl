@@ -1,5 +1,5 @@
 set language "SC"
-set moduleName "ADVIOS"
+set moduleName "advios"
 set portName0 "clk"
 set isMeta0 0
 set portInterface0 [list "sc_in"]

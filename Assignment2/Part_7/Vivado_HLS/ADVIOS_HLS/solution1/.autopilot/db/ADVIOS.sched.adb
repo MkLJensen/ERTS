@@ -5,7 +5,7 @@
 	<userIPLatency>-1</userIPLatency>
 	<userIPName></userIPName>
 	<cdfg class_id="1" tracking_level="1" version="0" object_id="_0">
-		<name>ADVIOS</name>
+		<name>advios</name>
 		<ret_bitwidth>0</ret_bitwidth>
 		<ports class_id="2" tracking_level="0" version="0">
 			<count>5</count>
@@ -24,7 +24,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>ADVIOS.clk.m_if.Val</originalName>
+						<originalName>advios.clk.m_if.Val</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -52,7 +52,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>ADVIOS.reset.m_if.Val</originalName>
+						<originalName>advios.reset.m_if.Val</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -80,7 +80,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>ADVIOS.ctrl.m_if.Val.V</originalName>
+						<originalName>advios.ctrl.m_if.Val.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -108,7 +108,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>ADVIOS.inSwitch.m_if.Val.V</originalName>
+						<originalName>advios.inSwitch.m_if.Val.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -136,7 +136,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>ADVIOS.outLeds.m_if.Val.V</originalName>
+						<originalName>advios.outLeds.m_if.Val.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -159,11 +159,11 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>ADVIOS_ssdm_threa</name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</fileName>
+						<name>advios_ssdm_threa</name>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>24</lineNumber>
-						<contextFuncName>ADVIOS</contextFuncName>
+						<contextFuncName>advios</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -174,8 +174,8 @@
 									<item_version>0</item_version>
 									<item class_id="12" tracking_level="0" version="0">
 										<first class_id="13" tracking_level="0" version="0">
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</first>
-											<second>ADVIOS</second>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</first>
+											<second>advios</second>
 										</first>
 										<second>24</second>
 									</item>
@@ -202,10 +202,10 @@
 						<type>0</type>
 						<id>26</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>24</lineNumber>
-						<contextFuncName>ADVIOS</contextFuncName>
+						<contextFuncName>advios</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -216,8 +216,8 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</first>
-											<second>ADVIOS</second>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</first>
+											<second>advios</second>
 										</first>
 										<second>24</second>
 									</item>
@@ -245,11 +245,11 @@
 					<Obj>
 						<type>0</type>
 						<id>31</id>
-						<name>ADVIOS_ssdm_threa_1</name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</fileName>
+						<name>advios_ssdm_threa_1</name>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>27</lineNumber>
-						<contextFuncName>ADVIOS</contextFuncName>
+						<contextFuncName>advios</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -260,8 +260,8 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</first>
-											<second>ADVIOS</second>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</first>
+											<second>advios</second>
 										</first>
 										<second>27</second>
 									</item>
@@ -288,10 +288,10 @@
 						<type>0</type>
 						<id>32</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>27</lineNumber>
-						<contextFuncName>ADVIOS</contextFuncName>
+						<contextFuncName>advios</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -302,8 +302,8 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</first>
-											<second>ADVIOS</second>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</first>
+											<second>advios</second>
 										</first>
 										<second>27</second>
 									</item>
@@ -332,10 +332,10 @@
 						<type>0</type>
 						<id>43</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>34</lineNumber>
-						<contextFuncName>ADVIOS</contextFuncName>
+						<contextFuncName>advios</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -346,8 +346,8 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</first>
-											<second>ADVIOS</second>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</first>
+											<second>advios</second>
 										</first>
 										<second>34</second>
 									</item>
@@ -373,10 +373,10 @@
 						<type>0</type>
 						<id>45</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>27</lineNumber>
-						<contextFuncName>ADVIOS</contextFuncName>
+						<contextFuncName>advios</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -387,8 +387,8 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</first>
-											<second>ADVIOS</second>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</first>
+											<second>advios</second>
 										</first>
 										<second>27</second>
 									</item>
@@ -453,10 +453,10 @@
 						<type>0</type>
 						<id>48</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>24</lineNumber>
-						<contextFuncName>ADVIOS</contextFuncName>
+						<contextFuncName>advios</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
@@ -467,8 +467,8 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</first>
-											<second>ADVIOS</second>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</first>
+											<second>advios</second>
 										</first>
 										<second>24</second>
 									</item>
@@ -563,7 +563,7 @@
 					<Obj>
 						<type>2</type>
 						<id>57</id>
-						<name>ADVIOS_led_Controller</name>
+						<name>advios_led_Controller</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -579,14 +579,14 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:ADVIOS::led_Controller&gt;</content>
+				<content>&lt;constant:advios::led_Controller&gt;</content>
 			</item>
 			<item class_id_reference="16" object_id="_17">
 				<Value>
 					<Obj>
 						<type>2</type>
 						<id>74</id>
-						<name>ADVIOS_periodic_Incrementer</name>
+						<name>advios_periodic_Incrementer</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -602,7 +602,7 @@
 					<bitwidth>0</bitwidth>
 				</Value>
 				<const_type>6</const_type>
-				<content>&lt;constant:ADVIOS::periodic_Incrementer&gt;</content>
+				<content>&lt;constant:advios::periodic_Incrementer&gt;</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
@@ -989,7 +989,7 @@
 		<item_version>0</item_version>
 		<item class_id="22" tracking_level="1" version="0" object_id="_62">
 			<mId>1</mId>
-			<mTag>ADVIOS::ADVIOS</mTag>
+			<mTag>advios::advios</mTag>
 			<mType>0</mType>
 			<sub_regions>
 				<count>0</count>

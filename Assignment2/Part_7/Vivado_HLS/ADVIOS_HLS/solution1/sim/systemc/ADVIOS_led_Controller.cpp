@@ -5,41 +5,41 @@
 // 
 // ===========================================================
 
-#include "ADVIOS_led_Controller.h"
+#include "advios_led_Controller.h"
 #include "AESL_pkg.h"
 
 using namespace std;
 
 namespace ap_rtl {
 
-const sc_logic ADVIOS_led_Controller::ap_const_logic_1 = sc_dt::Log_1;
-const sc_logic ADVIOS_led_Controller::ap_const_logic_0 = sc_dt::Log_0;
-const sc_lv<4> ADVIOS_led_Controller::ap_ST_fsm_state2 = "10";
-const sc_lv<4> ADVIOS_led_Controller::ap_ST_fsm_state3 = "100";
-const sc_lv<4> ADVIOS_led_Controller::ap_ST_fsm_state4 = "1000";
-const sc_lv<32> ADVIOS_led_Controller::ap_const_lv32_2 = "10";
-const sc_lv<1> ADVIOS_led_Controller::ap_const_lv1_1 = "1";
-const sc_lv<32> ADVIOS_led_Controller::ap_const_lv32_3 = "11";
-const sc_lv<1> ADVIOS_led_Controller::ap_const_lv1_0 = "0";
-const sc_lv<4> ADVIOS_led_Controller::ap_const_lv4_0 = "0000";
-const sc_lv<4> ADVIOS_led_Controller::ap_const_lv4_1 = "1";
-const sc_lv<4> ADVIOS_led_Controller::ap_const_lv4_8 = "1000";
-const bool ADVIOS_led_Controller::ap_const_boolean_1 = true;
+const sc_logic advios_led_Controller::ap_const_logic_1 = sc_dt::Log_1;
+const sc_logic advios_led_Controller::ap_const_logic_0 = sc_dt::Log_0;
+const sc_lv<4> advios_led_Controller::ap_ST_fsm_state2 = "10";
+const sc_lv<4> advios_led_Controller::ap_ST_fsm_state3 = "100";
+const sc_lv<4> advios_led_Controller::ap_ST_fsm_state4 = "1000";
+const sc_lv<32> advios_led_Controller::ap_const_lv32_2 = "10";
+const sc_lv<1> advios_led_Controller::ap_const_lv1_1 = "1";
+const sc_lv<32> advios_led_Controller::ap_const_lv32_3 = "11";
+const sc_lv<1> advios_led_Controller::ap_const_lv1_0 = "0";
+const sc_lv<4> advios_led_Controller::ap_const_lv4_0 = "0000";
+const sc_lv<4> advios_led_Controller::ap_const_lv4_1 = "1";
+const sc_lv<4> advios_led_Controller::ap_const_lv4_8 = "1000";
+const bool advios_led_Controller::ap_const_boolean_1 = true;
 
-ADVIOS_led_Controller::ADVIOS_led_Controller(sc_module_name name) : sc_module(name), mVcdFile(0) {
+advios_led_Controller::advios_led_Controller(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
     sensitive << ( ap_clk.pos() );
 
-    SC_METHOD(thread_ADVIOS_control_V);
+    SC_METHOD(thread_advios_control_V);
     sensitive << ( ctrl );
     sensitive << ( ap_CS_fsm_state3 );
 
-    SC_METHOD(thread_ADVIOS_control_V_ap_vld);
+    SC_METHOD(thread_advios_control_V_ap_vld);
     sensitive << ( ap_CS_fsm_state3 );
 
-    SC_METHOD(thread_ADVIOS_sec_counter_V_o);
+    SC_METHOD(thread_advios_sec_counter_V_o);
     sensitive << ( tmp_3_reg_188 );
     sensitive << ( ap_CS_fsm_state3 );
     sensitive << ( tmp_4_reg_192 );
@@ -47,18 +47,18 @@ ADVIOS_led_Controller::ADVIOS_led_Controller(sc_module_name name) : sc_module(na
     sensitive << ( ap_CS_fsm_state4 );
     sensitive << ( tmp_2_fu_159_p2 );
 
-    SC_METHOD(thread_ADVIOS_sec_counter_V_o_ap_vld);
+    SC_METHOD(thread_advios_sec_counter_V_o_ap_vld);
     sensitive << ( tmp_3_reg_188 );
     sensitive << ( ap_CS_fsm_state3 );
     sensitive << ( tmp_4_reg_192 );
     sensitive << ( tmp_read_fu_122_p2 );
     sensitive << ( ap_CS_fsm_state4 );
 
-    SC_METHOD(thread_ADVIOS_switchs_V);
+    SC_METHOD(thread_advios_switchs_V);
     sensitive << ( inSwitch );
     sensitive << ( ap_CS_fsm_state3 );
 
-    SC_METHOD(thread_ADVIOS_switchs_V_ap_vld);
+    SC_METHOD(thread_advios_switchs_V_ap_vld);
     sensitive << ( ap_CS_fsm_state3 );
 
     SC_METHOD(thread_ap_CS_fsm_state3);
@@ -68,7 +68,7 @@ ADVIOS_led_Controller::ADVIOS_led_Controller(sc_module_name name) : sc_module(na
     sensitive << ( ap_CS_fsm );
 
     SC_METHOD(thread_outLeds);
-    sensitive << ( ADVIOS_sec_counter_V_i );
+    sensitive << ( advios_sec_counter_V_i );
     sensitive << ( tmp_3_fu_166_p2 );
     sensitive << ( tmp_3_reg_188 );
     sensitive << ( ap_CS_fsm_state3 );
@@ -96,7 +96,7 @@ ADVIOS_led_Controller::ADVIOS_led_Controller(sc_module_name name) : sc_module(na
     sensitive << ( tmp_read_fu_122_p2 );
 
     SC_METHOD(thread_tmp_2_fu_159_p2);
-    sensitive << ( ADVIOS_sec_counter_V_i );
+    sensitive << ( advios_sec_counter_V_i );
 
     SC_METHOD(thread_tmp_3_fu_166_p2);
     sensitive << ( ctrl );
@@ -117,7 +117,7 @@ ADVIOS_led_Controller::ADVIOS_led_Controller(sc_module_name name) : sc_module(na
     ap_CS_fsm = "0010";
     static int apTFileNum = 0;
     stringstream apTFilenSS;
-    apTFilenSS << "ADVIOS_led_Controller_sc_trace_" << apTFileNum ++;
+    apTFilenSS << "advios_led_Controller_sc_trace_" << apTFileNum ++;
     string apTFn = apTFilenSS.str();
     mVcdFile = sc_create_vcd_trace_file(apTFn.c_str());
     mVcdFile->set_time_unit(1, SC_PS);
@@ -129,13 +129,13 @@ ADVIOS_led_Controller::ADVIOS_led_Controller(sc_module_name name) : sc_module(na
     sc_trace(mVcdFile, inSwitch, "(port)inSwitch");
     sc_trace(mVcdFile, outLeds, "(port)outLeds");
     sc_trace(mVcdFile, outLeds_ap_vld, "(port)outLeds_ap_vld");
-    sc_trace(mVcdFile, ADVIOS_switchs_V, "(port)ADVIOS_switchs_V");
-    sc_trace(mVcdFile, ADVIOS_switchs_V_ap_vld, "(port)ADVIOS_switchs_V_ap_vld");
-    sc_trace(mVcdFile, ADVIOS_control_V, "(port)ADVIOS_control_V");
-    sc_trace(mVcdFile, ADVIOS_control_V_ap_vld, "(port)ADVIOS_control_V_ap_vld");
-    sc_trace(mVcdFile, ADVIOS_sec_counter_V_i, "(port)ADVIOS_sec_counter_V_i");
-    sc_trace(mVcdFile, ADVIOS_sec_counter_V_o, "(port)ADVIOS_sec_counter_V_o");
-    sc_trace(mVcdFile, ADVIOS_sec_counter_V_o_ap_vld, "(port)ADVIOS_sec_counter_V_o_ap_vld");
+    sc_trace(mVcdFile, advios_switchs_V, "(port)advios_switchs_V");
+    sc_trace(mVcdFile, advios_switchs_V_ap_vld, "(port)advios_switchs_V_ap_vld");
+    sc_trace(mVcdFile, advios_control_V, "(port)advios_control_V");
+    sc_trace(mVcdFile, advios_control_V_ap_vld, "(port)advios_control_V_ap_vld");
+    sc_trace(mVcdFile, advios_sec_counter_V_i, "(port)advios_sec_counter_V_i");
+    sc_trace(mVcdFile, advios_sec_counter_V_o, "(port)advios_sec_counter_V_o");
+    sc_trace(mVcdFile, advios_sec_counter_V_o_ap_vld, "(port)advios_sec_counter_V_o_ap_vld");
     sc_trace(mVcdFile, sec_pulse_i, "(port)sec_pulse_i");
     sc_trace(mVcdFile, sec_pulse_o, "(port)sec_pulse_o");
     sc_trace(mVcdFile, sec_pulse_o_ap_vld, "(port)sec_pulse_o_ap_vld");
@@ -157,13 +157,13 @@ ADVIOS_led_Controller::ADVIOS_led_Controller(sc_module_name name) : sc_module(na
     }
 }
 
-ADVIOS_led_Controller::~ADVIOS_led_Controller() {
+advios_led_Controller::~advios_led_Controller() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
 }
 
-void ADVIOS_led_Controller::thread_ap_clk_no_reset_() {
+void advios_led_Controller::thread_ap_clk_no_reset_() {
     if ( ap_rst.read() == ap_const_logic_1) {
         ap_CS_fsm = ap_ST_fsm_state2;
     } else {
@@ -177,64 +177,64 @@ void ADVIOS_led_Controller::thread_ap_clk_no_reset_() {
     }
 }
 
-void ADVIOS_led_Controller::thread_ADVIOS_control_V() {
-    ADVIOS_control_V = ctrl.read();
+void advios_led_Controller::thread_advios_control_V() {
+    advios_control_V = ctrl.read();
 }
 
-void ADVIOS_led_Controller::thread_ADVIOS_control_V_ap_vld() {
+void advios_led_Controller::thread_advios_control_V_ap_vld() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read())) {
-        ADVIOS_control_V_ap_vld = ap_const_logic_1;
+        advios_control_V_ap_vld = ap_const_logic_1;
     } else {
-        ADVIOS_control_V_ap_vld = ap_const_logic_0;
+        advios_control_V_ap_vld = ap_const_logic_0;
     }
 }
 
-void ADVIOS_led_Controller::thread_ADVIOS_sec_counter_V_o() {
+void advios_led_Controller::thread_advios_sec_counter_V_o() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
          esl_seteq<1,1,1>(tmp_3_reg_188.read(), ap_const_lv1_1) && 
          esl_seteq<1,1,1>(tmp_4_reg_192.read(), ap_const_lv1_1))) {
-        ADVIOS_sec_counter_V_o = ap_const_lv4_0;
+        advios_sec_counter_V_o = ap_const_lv4_0;
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && 
                 esl_seteq<1,1,1>(ap_const_lv1_1, tmp_read_fu_122_p2.read()))) {
-        ADVIOS_sec_counter_V_o = tmp_2_fu_159_p2.read();
+        advios_sec_counter_V_o = tmp_2_fu_159_p2.read();
     } else {
-        ADVIOS_sec_counter_V_o = "XXXX";
+        advios_sec_counter_V_o = "XXXX";
     }
 }
 
-void ADVIOS_led_Controller::thread_ADVIOS_sec_counter_V_o_ap_vld() {
+void advios_led_Controller::thread_advios_sec_counter_V_o_ap_vld() {
     if (((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && 
           esl_seteq<1,1,1>(ap_const_lv1_1, tmp_read_fu_122_p2.read())) || 
          (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
           esl_seteq<1,1,1>(tmp_3_reg_188.read(), ap_const_lv1_1) && 
           esl_seteq<1,1,1>(tmp_4_reg_192.read(), ap_const_lv1_1)))) {
-        ADVIOS_sec_counter_V_o_ap_vld = ap_const_logic_1;
+        advios_sec_counter_V_o_ap_vld = ap_const_logic_1;
     } else {
-        ADVIOS_sec_counter_V_o_ap_vld = ap_const_logic_0;
+        advios_sec_counter_V_o_ap_vld = ap_const_logic_0;
     }
 }
 
-void ADVIOS_led_Controller::thread_ADVIOS_switchs_V() {
-    ADVIOS_switchs_V = inSwitch.read();
+void advios_led_Controller::thread_advios_switchs_V() {
+    advios_switchs_V = inSwitch.read();
 }
 
-void ADVIOS_led_Controller::thread_ADVIOS_switchs_V_ap_vld() {
+void advios_led_Controller::thread_advios_switchs_V_ap_vld() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read())) {
-        ADVIOS_switchs_V_ap_vld = ap_const_logic_1;
+        advios_switchs_V_ap_vld = ap_const_logic_1;
     } else {
-        ADVIOS_switchs_V_ap_vld = ap_const_logic_0;
+        advios_switchs_V_ap_vld = ap_const_logic_0;
     }
 }
 
-void ADVIOS_led_Controller::thread_ap_CS_fsm_state3() {
+void advios_led_Controller::thread_ap_CS_fsm_state3() {
     ap_CS_fsm_state3 = ap_CS_fsm.read()[2];
 }
 
-void ADVIOS_led_Controller::thread_ap_CS_fsm_state4() {
+void advios_led_Controller::thread_ap_CS_fsm_state4() {
     ap_CS_fsm_state4 = ap_CS_fsm.read()[3];
 }
 
-void ADVIOS_led_Controller::thread_outLeds() {
+void advios_led_Controller::thread_outLeds() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
          esl_seteq<1,1,1>(tmp_3_reg_188.read(), ap_const_lv1_1) && 
          esl_seteq<1,1,1>(tmp_4_reg_192.read(), ap_const_lv1_1))) {
@@ -242,7 +242,7 @@ void ADVIOS_led_Controller::thread_outLeds() {
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
                 esl_seteq<1,1,1>(tmp_3_reg_188.read(), ap_const_lv1_1) && 
                 esl_seteq<1,1,1>(tmp_4_reg_192.read(), ap_const_lv1_0))) {
-        outLeds = ADVIOS_sec_counter_V_i.read();
+        outLeds = advios_sec_counter_V_i.read();
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && 
                 esl_seteq<1,1,1>(tmp_3_fu_166_p2.read(), ap_const_lv1_0))) {
         outLeds = r_V_fu_172_p2.read();
@@ -251,7 +251,7 @@ void ADVIOS_led_Controller::thread_outLeds() {
     }
 }
 
-void ADVIOS_led_Controller::thread_outLeds_ap_vld() {
+void advios_led_Controller::thread_outLeds_ap_vld() {
     if (((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && 
           esl_seteq<1,1,1>(tmp_3_reg_188.read(), ap_const_lv1_1) && 
           esl_seteq<1,1,1>(tmp_4_reg_192.read(), ap_const_lv1_0)) || 
@@ -266,15 +266,15 @@ void ADVIOS_led_Controller::thread_outLeds_ap_vld() {
     }
 }
 
-void ADVIOS_led_Controller::thread_r_V_fu_172_p2() {
+void advios_led_Controller::thread_r_V_fu_172_p2() {
     r_V_fu_172_p2 = (ctrl.read() & inSwitch.read());
 }
 
-void ADVIOS_led_Controller::thread_sec_pulse_o() {
+void advios_led_Controller::thread_sec_pulse_o() {
     sec_pulse_o =  (sc_logic) (ap_const_lv1_0[0]);
 }
 
-void ADVIOS_led_Controller::thread_sec_pulse_o_ap_vld() {
+void advios_led_Controller::thread_sec_pulse_o_ap_vld() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) && 
          esl_seteq<1,1,1>(ap_const_lv1_1, tmp_read_fu_122_p2.read()))) {
         sec_pulse_o_ap_vld = ap_const_logic_1;
@@ -283,23 +283,23 @@ void ADVIOS_led_Controller::thread_sec_pulse_o_ap_vld() {
     }
 }
 
-void ADVIOS_led_Controller::thread_tmp_2_fu_159_p2() {
-    tmp_2_fu_159_p2 = (!ADVIOS_sec_counter_V_i.read().is_01() || !ap_const_lv4_1.is_01())? sc_lv<4>(): (sc_biguint<4>(ADVIOS_sec_counter_V_i.read()) + sc_biguint<4>(ap_const_lv4_1));
+void advios_led_Controller::thread_tmp_2_fu_159_p2() {
+    tmp_2_fu_159_p2 = (!advios_sec_counter_V_i.read().is_01() || !ap_const_lv4_1.is_01())? sc_lv<4>(): (sc_biguint<4>(advios_sec_counter_V_i.read()) + sc_biguint<4>(ap_const_lv4_1));
 }
 
-void ADVIOS_led_Controller::thread_tmp_3_fu_166_p2() {
+void advios_led_Controller::thread_tmp_3_fu_166_p2() {
     tmp_3_fu_166_p2 = (!ctrl.read().is_01() || !ap_const_lv4_0.is_01())? sc_lv<1>(): sc_lv<1>(ctrl.read() == ap_const_lv4_0);
 }
 
-void ADVIOS_led_Controller::thread_tmp_4_fu_179_p2() {
+void advios_led_Controller::thread_tmp_4_fu_179_p2() {
     tmp_4_fu_179_p2 = (!inSwitch.read().is_01() || !ap_const_lv4_8.is_01())? sc_lv<1>(): sc_lv<1>(inSwitch.read() == ap_const_lv4_8);
 }
 
-void ADVIOS_led_Controller::thread_tmp_read_fu_122_p2() {
+void advios_led_Controller::thread_tmp_read_fu_122_p2() {
     tmp_read_fu_122_p2 =  (sc_lv<1>) (sec_pulse_i.read());
 }
 
-void ADVIOS_led_Controller::thread_ap_NS_fsm() {
+void advios_led_Controller::thread_ap_NS_fsm() {
     switch (ap_CS_fsm.read().to_uint64()) {
         case 2 : 
             ap_NS_fsm = ap_ST_fsm_state3;

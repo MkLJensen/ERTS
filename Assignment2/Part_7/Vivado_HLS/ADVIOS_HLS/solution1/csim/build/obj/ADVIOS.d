@@ -1,6 +1,6 @@
-obj/ADVIOS.o: \
- ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp \
- ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h \
+obj/advios.o: \
+ ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp \
+ ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h \
  C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/systemc.h \
  C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/systemc \
  C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/kernel/sc_cmnhdr.h \

@@ -5,8 +5,8 @@
 // 
 // ===========================================================
 
-#ifndef _ADVIOS_periodic_Incrementer_HH_
-#define _ADVIOS_periodic_Incrementer_HH_
+#ifndef _advios_periodic_Incrementer_HH_
+#define _advios_periodic_Incrementer_HH_
 
 #include "systemc.h"
 #include "AESL_pkg.h"
@@ -14,21 +14,21 @@
 
 namespace ap_rtl {
 
-struct ADVIOS_periodic_Incrementer : public sc_module {
+struct advios_periodic_Incrementer : public sc_module {
     // Port declarations 6
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
-    sc_out< sc_lv<28> > ADVIOS_count_V;
-    sc_out< sc_logic > ADVIOS_count_V_ap_vld;
+    sc_out< sc_lv<28> > advios_count_V;
+    sc_out< sc_logic > advios_count_V_ap_vld;
     sc_out< sc_logic > sec_pulse;
     sc_out< sc_logic > sec_pulse_ap_vld;
 
 
     // Module declarations
-    ADVIOS_periodic_Incrementer(sc_module_name name);
-    SC_HAS_PROCESS(ADVIOS_periodic_Incrementer);
+    advios_periodic_Incrementer(sc_module_name name);
+    SC_HAS_PROCESS(advios_periodic_Incrementer);
 
-    ~ADVIOS_periodic_Incrementer();
+    ~advios_periodic_Incrementer();
 
     sc_trace_file* mVcdFile;
 
@@ -38,7 +38,7 @@ struct ADVIOS_periodic_Incrementer : public sc_module {
     sc_signal< sc_logic > ap_CS_fsm_state3;
     sc_signal< sc_lv<28> > t_V_fu_86;
     sc_signal< sc_logic > ap_CS_fsm_state2;
-    sc_signal< sc_lv<28> > ADVIOS_count_V_assig_fu_114_p2;
+    sc_signal< sc_lv<28> > advios_count_V_assig_fu_114_p2;
     sc_signal< sc_logic > ap_CS_fsm_state4;
     sc_signal< sc_lv<4> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
@@ -58,9 +58,9 @@ struct ADVIOS_periodic_Incrementer : public sc_module {
     static const bool ap_const_boolean_1;
     // Thread declarations
     void thread_ap_clk_no_reset_();
-    void thread_ADVIOS_count_V();
-    void thread_ADVIOS_count_V_ap_vld();
-    void thread_ADVIOS_count_V_assig_fu_114_p2();
+    void thread_advios_count_V();
+    void thread_advios_count_V_ap_vld();
+    void thread_advios_count_V_assig_fu_114_p2();
     void thread_ap_CS_fsm_state2();
     void thread_ap_CS_fsm_state3();
     void thread_ap_CS_fsm_state4();

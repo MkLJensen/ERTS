@@ -3,7 +3,7 @@ target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f3
 target triple = "i686-pc-mingw32"
 
 %"class.std::ios_base::Init" = type {}
-%struct.ADVIOS = type { %"class._ap_sc_::sc_core::sc_in", %"class._ap_sc_::sc_core::sc_in", %"class._ap_sc_::sc_core::sc_in.0", %"class._ap_sc_::sc_core::sc_in.0", %"class._ap_sc_::sc_core::sc_out", %"struct._ap_sc_::sc_dt::sc_uint", %"struct._ap_sc_::sc_dt::sc_uint", %"struct._ap_sc_::sc_dt::sc_uint.4", %"struct._ap_sc_::sc_dt::sc_uint", %"class._ap_sc_::sc_core::sc_in" }
+%struct.advios = type { %"class._ap_sc_::sc_core::sc_in", %"class._ap_sc_::sc_core::sc_in", %"class._ap_sc_::sc_core::sc_in.0", %"class._ap_sc_::sc_core::sc_in.0", %"class._ap_sc_::sc_core::sc_out", %"struct._ap_sc_::sc_dt::sc_uint", %"struct._ap_sc_::sc_dt::sc_uint", %"struct._ap_sc_::sc_dt::sc_uint.4", %"struct._ap_sc_::sc_dt::sc_uint", %"class._ap_sc_::sc_core::sc_in" }
 %"class._ap_sc_::sc_core::sc_in" = type { %"class._ap_sc_::sc_core::sc_port_b" }
 %"class._ap_sc_::sc_core::sc_port_b" = type { %"class._ap_sc_::sc_core::sc_signal_in_if" }
 %"class._ap_sc_::sc_core::sc_signal_in_if" = type { i1 }
@@ -50,7 +50,7 @@ target triple = "i686-pc-mingw32"
 %struct.ap_int_base.17 = type { %"class.std::locale::id" }
 
 @_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1 ; [#uses=2 type=%"class.std::ios_base::Init"*]
-@.str = private unnamed_addr constant [7 x i8] c"ADVIOS\00", align 1 ; [#uses=1 type=[7 x i8]*]
+@.str = private unnamed_addr constant [7 x i8] c"advios\00", align 1 ; [#uses=1 type=[7 x i8]*]
 @.str1 = private unnamed_addr constant [7 x i8] c"\22bool\22\00", align 1 ; [#uses=1 type=[7 x i8]*]
 @.str2 = private unnamed_addr constant [4 x i8] c"clk\00", align 1 ; [#uses=1 type=[4 x i8]*]
 @.str3 = private unnamed_addr constant [6 x i8] c"reset\00", align 1 ; [#uses=1 type=[6 x i8]*]
@@ -70,7 +70,7 @@ target triple = "i686-pc-mingw32"
 @.str17 = private unnamed_addr constant [10 x i8] c"AXI4LiteS\00", align 1 ; [#uses=1 type=[10 x i8]*]
 @.str18 = private unnamed_addr constant [17 x i8] c"-bus_bundle slv0\00", align 1 ; [#uses=1 type=[17 x i8]*]
 @.str19 = private unnamed_addr constant [15 x i8] c"led_Controller\00", align 1 ; [#uses=1 type=[15 x i8]*]
-@ssdm_ins_ADVIOS_0_0 = global %struct.ADVIOS zeroinitializer, align 4 ; [#uses=1 type=%struct.ADVIOS*]
+@ssdm_ins_advios_0_0 = global %struct.advios zeroinitializer, align 4 ; [#uses=1 type=%struct.advios*]
 @.str21 = private unnamed_addr constant [9 x i8] c"ssdm_dut\00", align 1 ; [#uses=1 type=[9 x i8]*]
 @_ZN9__gnu_cxx24__numeric_traits_integer11__is_signedE = external constant i1 ; [#uses=0 type=i1*]
 @_ZN9__gnu_cxx24__numeric_traits_integer8__digitsE = external constant i32 ; [#uses=0 type=i32*]
@@ -109,8 +109,8 @@ target triple = "i686-pc-mingw32"
 @_ZSt5wcerr = external global %"class.std::basic_ostream.11" ; [#uses=0 type=%"class.std::basic_ostream.11"*]
 @_ZSt5wclog = external global %"class.std::basic_ostream.11" ; [#uses=0 type=%"class.std::basic_ostream.11"*]
 @_ZN7_ap_sc_7sc_core17SC_BIND_PROXY_NILE = external global %"struct._ap_sc_::sc_core::sc_bind_proxy" ; [#uses=0 type=%"struct._ap_sc_::sc_core::sc_bind_proxy"*]
-@_ZN6ADVIOS30__ssdm_thread_M_led_ControllerE = external global i1 ; [#uses=1 type=i1*]
-@_ZN6ADVIOS36__ssdm_thread_M_periodic_IncrementerE = external global i1 ; [#uses=1 type=i1*]
+@_ZN6advios30__ssdm_thread_M_led_ControllerE = external global i1 ; [#uses=1 type=i1*]
+@_ZN6advios36__ssdm_thread_M_periodic_IncrementerE = external global i1 ; [#uses=1 type=i1*]
 @llvm.global_ctors = appending global [1 x { i32, void ()* }] [{ i32, void ()* } { i32 65535, void ()* @_GLOBAL__I_a }] ; [#uses=0 type=[1 x { i32, void ()* }]*]
 
 ; [#uses=1]
@@ -136,25 +136,25 @@ define internal void @__dtor__ZStL8__ioinit() nounwind {
 declare i32 @atexit(void ()*) nounwind
 
 ; [#uses=1]
-define void @_ZN6ADVIOS20periodic_IncrementerEv(%struct.ADVIOS* %this) nounwind noinline align 2 {
-  %1 = alloca %struct.ADVIOS*, align 4            ; [#uses=2 type=%struct.ADVIOS**]
+define void @_ZN6advios20periodic_IncrementerEv(%struct.advios* %this) nounwind noinline align 2 {
+  %1 = alloca %struct.advios*, align 4            ; [#uses=2 type=%struct.advios**]
   %_ssdm_reset_v = alloca i32, align 4            ; [#uses=2 type=i32*]
   %2 = alloca %"struct._ap_sc_::sc_dt::sc_uint.4", align 4 ; [#uses=2 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*]
   %3 = alloca %struct.ap_int_base.5, align 4      ; [#uses=2 type=%struct.ap_int_base.5*]
   %4 = alloca i1, align 1                         ; [#uses=2 type=i1*]
   %5 = alloca %"struct._ap_sc_::sc_dt::sc_uint.4", align 4 ; [#uses=2 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*]
-  store %struct.ADVIOS* %this, %struct.ADVIOS** %1, align 4
-  call void @llvm.dbg.declare(metadata !{%struct.ADVIOS** %1}, metadata !5051), !dbg !5053 ; [debug line = 3:14] [debug variable = this]
-  %6 = load %struct.ADVIOS** %1                   ; [#uses=20 type=%struct.ADVIOS*]
-  %7 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 0, !dbg !5054 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 4:4]
+  store %struct.advios* %this, %struct.advios** %1, align 4
+  call void @llvm.dbg.declare(metadata !{%struct.advios** %1}, metadata !5051), !dbg !5053 ; [debug line = 3:14] [debug variable = this]
+  %6 = load %struct.advios** %1                   ; [#uses=20 type=%struct.advios*]
+  %7 = getelementptr inbounds %struct.advios* %6, i32 0, i32 0, !dbg !5054 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 4:4]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([7 x i8]* @.str1, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_in"* %7) nounwind, !dbg !5054 ; [debug line = 4:4]
-  %8 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 1, !dbg !5056 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 5:3]
+  %8 = getelementptr inbounds %struct.advios* %6, i32 0, i32 1, !dbg !5056 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 5:3]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([7 x i8]* @.str1, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8]* @.str3, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_in"* %8) nounwind, !dbg !5056 ; [debug line = 5:3]
-  %9 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 2, !dbg !5057 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 6:3]
+  %9 = getelementptr inbounds %struct.advios* %6, i32 0, i32 2, !dbg !5057 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 6:3]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([13 x i8]* @.str4, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8]* @.str5, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_in.0"* %9) nounwind, !dbg !5057 ; [debug line = 6:3]
-  %10 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 3, !dbg !5058 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 7:3]
+  %10 = getelementptr inbounds %struct.advios* %6, i32 0, i32 3, !dbg !5058 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 7:3]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([13 x i8]* @.str4, i32 0, i32 0), i8* getelementptr inbounds ([9 x i8]* @.str6, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_in.0"* %10) nounwind, !dbg !5058 ; [debug line = 7:3]
-  %11 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 4, !dbg !5059 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 8:3]
+  %11 = getelementptr inbounds %struct.advios* %6, i32 0, i32 4, !dbg !5059 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 8:3]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 1, i8* getelementptr inbounds ([13 x i8]* @.str4, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @.str7, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_out"* %11) nounwind, !dbg !5059 ; [debug line = 8:3]
   call void (...)* @_ssdm_op_SpecProcessDef(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 2, i8* getelementptr inbounds ([21 x i8]* @.str8, i32 0, i32 0)) nounwind, !dbg !5060 ; [debug line = 9:3]
   call void (...)* @_ssdm_InlineAll(i32 1) nounwind, !dbg !5061 ; [debug line = 9:77]
@@ -165,29 +165,29 @@ define void @_ZN6ADVIOS20periodic_IncrementerEv(%struct.ADVIOS* %this) nounwind 
   call void @llvm.dbg.declare(metadata !{i32* %_ssdm_reset_v}, metadata !5066), !dbg !5067 ; [debug line = 9:236] [debug variable = _ssdm_reset_v]
   %12 = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind, !dbg !5068 ; [#uses=1 type=i32] [debug line = 9:252]
   store i32 %12, i32* %_ssdm_reset_v, align 4, !dbg !5068 ; [debug line = 9:252]
-  %13 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 0, !dbg !5069 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 10:1]
+  %13 = getelementptr inbounds %struct.advios* %6, i32 0, i32 0, !dbg !5069 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 10:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %13) nounwind, !dbg !5069 ; [debug line = 10:1]
-  %14 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 1, !dbg !5070 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 11:1]
+  %14 = getelementptr inbounds %struct.advios* %6, i32 0, i32 1, !dbg !5070 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 11:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8]* @.str3, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %14) nounwind, !dbg !5070 ; [debug line = 11:1]
-  %15 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 2, !dbg !5071 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 12:1]
+  %15 = getelementptr inbounds %struct.advios* %6, i32 0, i32 2, !dbg !5071 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 12:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8]* @.str5, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in.0"* %15) nounwind, !dbg !5071 ; [debug line = 12:1]
-  %16 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 3, !dbg !5072 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 13:1]
+  %16 = getelementptr inbounds %struct.advios* %6, i32 0, i32 3, !dbg !5072 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 13:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([9 x i8]* @.str6, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in.0"* %16) nounwind, !dbg !5072 ; [debug line = 13:1]
-  %17 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 4, !dbg !5073 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 14:1]
+  %17 = getelementptr inbounds %struct.advios* %6, i32 0, i32 4, !dbg !5073 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 14:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @.str7, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_out"* %17) nounwind, !dbg !5073 ; [debug line = 14:1]
-  %18 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 9, !dbg !5074 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 15:1]
+  %18 = getelementptr inbounds %struct.advios* %6, i32 0, i32 9, !dbg !5074 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 15:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([10 x i8]* @.str12, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %18) nounwind, !dbg !5074 ; [debug line = 15:1]
-  %19 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 5, !dbg !5075 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 16:1]
+  %19 = getelementptr inbounds %struct.advios* %6, i32 0, i32 5, !dbg !5075 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 16:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @.str13, i32 0, i32 0), %"struct._ap_sc_::sc_dt::sc_uint"* %19) nounwind, !dbg !5075 ; [debug line = 16:1]
-  %20 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 6, !dbg !5076 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 17:1]
+  %20 = getelementptr inbounds %struct.advios* %6, i32 0, i32 6, !dbg !5076 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 17:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @.str14, i32 0, i32 0), %"struct._ap_sc_::sc_dt::sc_uint"* %20) nounwind, !dbg !5076 ; [debug line = 17:1]
-  %21 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 7, !dbg !5077 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 18:1]
+  %21 = getelementptr inbounds %struct.advios* %6, i32 0, i32 7, !dbg !5077 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 18:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8]* @.str15, i32 0, i32 0), %"struct._ap_sc_::sc_dt::sc_uint.4"* %21) nounwind, !dbg !5077 ; [debug line = 18:1]
-  %22 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 8, !dbg !5078 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 19:1]
+  %22 = getelementptr inbounds %struct.advios* %6, i32 0, i32 8, !dbg !5078 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 19:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @.str16, i32 0, i32 0), %"struct._ap_sc_::sc_dt::sc_uint"* %22) nounwind, !dbg !5078 ; [debug line = 19:1]
-  %23 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 2, !dbg !5079 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 4:1]
+  %23 = getelementptr inbounds %struct.advios* %6, i32 0, i32 2, !dbg !5079 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 4:1]
   call void (...)* @_ssdm_op_SpecResource(%"class._ap_sc_::sc_core::sc_in.0"* %23, i8* getelementptr inbounds ([1 x i8]* @.str10, i32 0, i32 0), i8* getelementptr inbounds ([10 x i8]* @.str17, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str10, i32 0, i32 0), i32 -1, i8* getelementptr inbounds ([1 x i8]* @.str10, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str10, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str10, i32 0, i32 0), i8* getelementptr inbounds ([1 x i8]* @.str10, i32 0, i32 0), i8* getelementptr inbounds ([17 x i8]* @.str18, i32 0, i32 0)) nounwind, !dbg !5079 ; [debug line = 4:1]
-  %24 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 7, !dbg !5080 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 7:1]
+  %24 = getelementptr inbounds %struct.advios* %6, i32 0, i32 7, !dbg !5080 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 7:1]
   call void @_ZN7_ap_sc_5sc_dt7sc_uintILi28EEC1Ei(%"struct._ap_sc_::sc_dt::sc_uint.4"* %2, i32 0), !dbg !5080 ; [debug line = 7:1]
   %25 = call %"struct._ap_sc_::sc_dt::sc_uint.4"* @_ZN7_ap_sc_5sc_dt7sc_uintILi28EEaSERKS2_(%"struct._ap_sc_::sc_dt::sc_uint.4"* %24, %"struct._ap_sc_::sc_dt::sc_uint.4"* %2), !dbg !5080 ; [#uses=0 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 7:1]
   %26 = load i32* %_ssdm_reset_v, align 4, !dbg !5081 ; [#uses=1 type=i32] [debug line = 7:12]
@@ -198,18 +198,18 @@ define void @_ZN6ADVIOS20periodic_IncrementerEv(%struct.ADVIOS* %this) nounwind 
 
 ; <label>:28                                      ; preds = %37, %0
   call void @_ZN7_ap_sc_7sc_core4waitEi(i32 1), !dbg !5085 ; [debug line = 11:3]
-  %29 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 7, !dbg !5087 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 13:7]
+  %29 = getelementptr inbounds %struct.advios* %6, i32 0, i32 7, !dbg !5087 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 13:7]
   %30 = bitcast %"struct._ap_sc_::sc_dt::sc_uint.4"* %29 to %struct.ap_int_base.5*, !dbg !5087 ; [#uses=1 type=%struct.ap_int_base.5*] [debug line = 13:7]
   call void @_ZN11ap_int_baseILi28ELb0ELb1EEppEi(%struct.ap_int_base.5* sret %3, %struct.ap_int_base.5* %30, i32 0), !dbg !5087 ; [debug line = 13:7]
   %31 = call zeroext i1 @_ZgeILi28ELb0EEbRK11ap_int_baseIXT_EXT0_EXleT_Li64EEEi(%struct.ap_int_base.5* %3, i32 100000000), !dbg !5087 ; [#uses=1 type=i1] [debug line = 13:7]
   br i1 %31, label %32, label %37, !dbg !5087     ; [debug line = 13:7]
 
 ; <label>:32                                      ; preds = %28
-  %33 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 9, !dbg !5088 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 15:4]
+  %33 = getelementptr inbounds %struct.advios* %6, i32 0, i32 9, !dbg !5088 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 15:4]
   %34 = bitcast %"class._ap_sc_::sc_core::sc_in"* %33 to %"class._ap_sc_::sc_core::sc_port_b"*, !dbg !5088 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_port_b"*] [debug line = 15:4]
   store i1 true, i1* %4, align 1, !dbg !5088      ; [debug line = 15:4]
   call void @_ZN7_ap_sc_7sc_core18sc_signal_inout_ifIbE5writeIbEEvRKT_(%"class._ap_sc_::sc_core::sc_port_b"* %34, i1* %4), !dbg !5088 ; [debug line = 15:4]
-  %35 = getelementptr inbounds %struct.ADVIOS* %6, i32 0, i32 7, !dbg !5090 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 16:4]
+  %35 = getelementptr inbounds %struct.advios* %6, i32 0, i32 7, !dbg !5090 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 16:4]
   call void @_ZN7_ap_sc_5sc_dt7sc_uintILi28EEC1Ei(%"struct._ap_sc_::sc_dt::sc_uint.4"* %5, i32 0), !dbg !5090 ; [debug line = 16:4]
   %36 = call %"struct._ap_sc_::sc_dt::sc_uint.4"* @_ZN7_ap_sc_5sc_dt7sc_uintILi28EEaSERKS2_(%"struct._ap_sc_::sc_dt::sc_uint.4"* %35, %"struct._ap_sc_::sc_dt::sc_uint.4"* %5), !dbg !5090 ; [#uses=0 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 16:4]
   br label %37, !dbg !5091                        ; [debug line = 17:3]
@@ -393,8 +393,8 @@ define linkonce_odr void @_ZN7_ap_sc_7sc_core18sc_signal_inout_ifIbE5writeIbEEvR
 }
 
 ; [#uses=1]
-define void @_ZN6ADVIOS14led_ControllerEv(%struct.ADVIOS* %this) nounwind noinline align 2 {
-  %1 = alloca %struct.ADVIOS*, align 4            ; [#uses=2 type=%struct.ADVIOS**]
+define void @_ZN6advios14led_ControllerEv(%struct.advios* %this) nounwind noinline align 2 {
+  %1 = alloca %struct.advios*, align 4            ; [#uses=2 type=%struct.advios**]
   %_ssdm_reset_v = alloca i32, align 4            ; [#uses=2 type=i32*]
   %2 = alloca %"struct._ap_sc_::sc_dt::sc_uint", align 1 ; [#uses=2 type=%"struct._ap_sc_::sc_dt::sc_uint"*]
   %3 = alloca %"struct._ap_sc_::sc_dt::sc_uint", align 1 ; [#uses=2 type=%"struct._ap_sc_::sc_dt::sc_uint"*]
@@ -404,18 +404,18 @@ define void @_ZN6ADVIOS14led_ControllerEv(%struct.ADVIOS* %this) nounwind noinli
   %7 = alloca %"struct._ap_sc_::sc_dt::sc_uint", align 1 ; [#uses=2 type=%"struct._ap_sc_::sc_dt::sc_uint"*]
   %8 = alloca %"struct._ap_sc_::sc_dt::sc_uint", align 1 ; [#uses=2 type=%"struct._ap_sc_::sc_dt::sc_uint"*]
   %9 = alloca %struct.ap_int_base, align 1        ; [#uses=2 type=%struct.ap_int_base*]
-  store %struct.ADVIOS* %this, %struct.ADVIOS** %1, align 4
-  call void @llvm.dbg.declare(metadata !{%struct.ADVIOS** %1}, metadata !5150), !dbg !5151 ; [debug line = 21:14] [debug variable = this]
-  %10 = load %struct.ADVIOS** %1                  ; [#uses=31 type=%struct.ADVIOS*]
-  %11 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 0, !dbg !5152 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 22:4]
+  store %struct.advios* %this, %struct.advios** %1, align 4
+  call void @llvm.dbg.declare(metadata !{%struct.advios** %1}, metadata !5150), !dbg !5151 ; [debug line = 21:14] [debug variable = this]
+  %10 = load %struct.advios** %1                  ; [#uses=31 type=%struct.advios*]
+  %11 = getelementptr inbounds %struct.advios* %10, i32 0, i32 0, !dbg !5152 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 22:4]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([7 x i8]* @.str1, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_in"* %11) nounwind, !dbg !5152 ; [debug line = 22:4]
-  %12 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 1, !dbg !5154 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 23:3]
+  %12 = getelementptr inbounds %struct.advios* %10, i32 0, i32 1, !dbg !5154 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 23:3]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([7 x i8]* @.str1, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8]* @.str3, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_in"* %12) nounwind, !dbg !5154 ; [debug line = 23:3]
-  %13 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 2, !dbg !5155 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 24:3]
+  %13 = getelementptr inbounds %struct.advios* %10, i32 0, i32 2, !dbg !5155 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 24:3]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([13 x i8]* @.str4, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8]* @.str5, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_in.0"* %13) nounwind, !dbg !5155 ; [debug line = 24:3]
-  %14 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 3, !dbg !5156 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 25:3]
+  %14 = getelementptr inbounds %struct.advios* %10, i32 0, i32 3, !dbg !5156 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 25:3]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([13 x i8]* @.str4, i32 0, i32 0), i8* getelementptr inbounds ([9 x i8]* @.str6, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_in.0"* %14) nounwind, !dbg !5156 ; [debug line = 25:3]
-  %15 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 4, !dbg !5157 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 26:3]
+  %15 = getelementptr inbounds %struct.advios* %10, i32 0, i32 4, !dbg !5157 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 26:3]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 1, i8* getelementptr inbounds ([13 x i8]* @.str4, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @.str7, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_out"* %15) nounwind, !dbg !5157 ; [debug line = 26:3]
   call void (...)* @_ssdm_op_SpecProcessDef(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 2, i8* getelementptr inbounds ([15 x i8]* @.str19, i32 0, i32 0)) nounwind, !dbg !5158 ; [debug line = 27:3]
   call void (...)* @_ssdm_InlineAll(i32 1) nounwind, !dbg !5159 ; [debug line = 27:71]
@@ -426,25 +426,25 @@ define void @_ZN6ADVIOS14led_ControllerEv(%struct.ADVIOS* %this) nounwind noinli
   call void @llvm.dbg.declare(metadata !{i32* %_ssdm_reset_v}, metadata !5164), !dbg !5165 ; [debug line = 27:230] [debug variable = _ssdm_reset_v]
   %16 = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind, !dbg !5166 ; [#uses=1 type=i32] [debug line = 27:246]
   store i32 %16, i32* %_ssdm_reset_v, align 4, !dbg !5166 ; [debug line = 27:246]
-  %17 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 0, !dbg !5167 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 28:1]
+  %17 = getelementptr inbounds %struct.advios* %10, i32 0, i32 0, !dbg !5167 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 28:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %17) nounwind, !dbg !5167 ; [debug line = 28:1]
-  %18 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 1, !dbg !5168 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 29:1]
+  %18 = getelementptr inbounds %struct.advios* %10, i32 0, i32 1, !dbg !5168 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 29:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8]* @.str3, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %18) nounwind, !dbg !5168 ; [debug line = 29:1]
-  %19 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 2, !dbg !5169 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 30:1]
+  %19 = getelementptr inbounds %struct.advios* %10, i32 0, i32 2, !dbg !5169 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 30:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8]* @.str5, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in.0"* %19) nounwind, !dbg !5169 ; [debug line = 30:1]
-  %20 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 3, !dbg !5170 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 31:1]
+  %20 = getelementptr inbounds %struct.advios* %10, i32 0, i32 3, !dbg !5170 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 31:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([9 x i8]* @.str6, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in.0"* %20) nounwind, !dbg !5170 ; [debug line = 31:1]
-  %21 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 4, !dbg !5171 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 32:1]
+  %21 = getelementptr inbounds %struct.advios* %10, i32 0, i32 4, !dbg !5171 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 32:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @.str7, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_out"* %21) nounwind, !dbg !5171 ; [debug line = 32:1]
-  %22 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 9, !dbg !5172 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 33:1]
+  %22 = getelementptr inbounds %struct.advios* %10, i32 0, i32 9, !dbg !5172 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 33:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([10 x i8]* @.str12, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %22) nounwind, !dbg !5172 ; [debug line = 33:1]
-  %23 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 5, !dbg !5173 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 34:1]
+  %23 = getelementptr inbounds %struct.advios* %10, i32 0, i32 5, !dbg !5173 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 34:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @.str13, i32 0, i32 0), %"struct._ap_sc_::sc_dt::sc_uint"* %23) nounwind, !dbg !5173 ; [debug line = 34:1]
-  %24 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 6, !dbg !5174 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 35:1]
+  %24 = getelementptr inbounds %struct.advios* %10, i32 0, i32 6, !dbg !5174 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 35:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @.str14, i32 0, i32 0), %"struct._ap_sc_::sc_dt::sc_uint"* %24) nounwind, !dbg !5174 ; [debug line = 35:1]
-  %25 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 7, !dbg !5175 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 36:1]
+  %25 = getelementptr inbounds %struct.advios* %10, i32 0, i32 7, !dbg !5175 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 36:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8]* @.str15, i32 0, i32 0), %"struct._ap_sc_::sc_dt::sc_uint.4"* %25) nounwind, !dbg !5175 ; [debug line = 36:1]
-  %26 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 8, !dbg !5176 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 37:1]
+  %26 = getelementptr inbounds %struct.advios* %10, i32 0, i32 8, !dbg !5176 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 37:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @.str16, i32 0, i32 0), %"struct._ap_sc_::sc_dt::sc_uint"* %26) nounwind, !dbg !5176 ; [debug line = 37:1]
   %27 = load i32* %_ssdm_reset_v, align 4, !dbg !5177 ; [#uses=1 type=i32] [debug line = 38:45]
   %28 = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %27) nounwind, !dbg !5177 ; [#uses=0 type=i32] [debug line = 38:45]
@@ -453,55 +453,55 @@ define void @_ZN6ADVIOS14led_ControllerEv(%struct.ADVIOS* %this) nounwind noinli
   br label %29, !dbg !5180                        ; [debug line = 23:5]
 
 ; <label>:29                                      ; preds = %69, %0
-  %30 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 5, !dbg !5181 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 26:3]
-  %31 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 3, !dbg !5183 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 26:13]
+  %30 = getelementptr inbounds %struct.advios* %10, i32 0, i32 5, !dbg !5181 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 26:3]
+  %31 = getelementptr inbounds %struct.advios* %10, i32 0, i32 3, !dbg !5183 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 26:13]
   call void @_ZN7_ap_sc_7sc_core5sc_inINS_5sc_dt7sc_uintILi4EEEE4readEv(%"struct._ap_sc_::sc_dt::sc_uint"* sret %2, %"class._ap_sc_::sc_core::sc_in.0"* %31), !dbg !5183 ; [debug line = 26:13]
   %32 = call %"struct._ap_sc_::sc_dt::sc_uint"* @_ZN7_ap_sc_5sc_dt7sc_uintILi4EEaSERKS2_(%"struct._ap_sc_::sc_dt::sc_uint"* %30, %"struct._ap_sc_::sc_dt::sc_uint"* %2), !dbg !5183 ; [#uses=0 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 26:13]
-  %33 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 6, !dbg !5184 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 27:3]
-  %34 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 2, !dbg !5185 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 27:13]
+  %33 = getelementptr inbounds %struct.advios* %10, i32 0, i32 6, !dbg !5184 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 27:3]
+  %34 = getelementptr inbounds %struct.advios* %10, i32 0, i32 2, !dbg !5185 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 27:13]
   call void @_ZN7_ap_sc_7sc_core5sc_inINS_5sc_dt7sc_uintILi4EEEE4readEv(%"struct._ap_sc_::sc_dt::sc_uint"* sret %3, %"class._ap_sc_::sc_core::sc_in.0"* %34), !dbg !5185 ; [debug line = 27:13]
   %35 = call %"struct._ap_sc_::sc_dt::sc_uint"* @_ZN7_ap_sc_5sc_dt7sc_uintILi4EEaSERKS2_(%"struct._ap_sc_::sc_dt::sc_uint"* %33, %"struct._ap_sc_::sc_dt::sc_uint"* %3), !dbg !5185 ; [#uses=0 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 27:13]
-  %36 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 9, !dbg !5186 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 29:6]
+  %36 = getelementptr inbounds %struct.advios* %10, i32 0, i32 9, !dbg !5186 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 29:6]
   %37 = bitcast %"class._ap_sc_::sc_core::sc_in"* %36 to %"class._ap_sc_::sc_core::sc_signal_in_if"*, !dbg !5186 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_signal_in_if"*] [debug line = 29:6]
   %38 = call zeroext i1 @_ZN7_ap_sc_7sc_core15sc_signal_in_ifIbE4readEv(%"class._ap_sc_::sc_core::sc_signal_in_if"* %37), !dbg !5186 ; [#uses=1 type=i1] [debug line = 29:6]
   br i1 %38, label %39, label %44, !dbg !5186     ; [debug line = 29:6]
 
 ; <label>:39                                      ; preds = %29
-  %40 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 8, !dbg !5187 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 30:4]
+  %40 = getelementptr inbounds %struct.advios* %10, i32 0, i32 8, !dbg !5187 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 30:4]
   %41 = bitcast %"struct._ap_sc_::sc_dt::sc_uint"* %40 to %struct.ap_int_base*, !dbg !5187 ; [#uses=1 type=%struct.ap_int_base*] [debug line = 30:4]
   call void @_ZN11ap_int_baseILi4ELb0ELb1EEppEi(%struct.ap_int_base* sret %4, %struct.ap_int_base* %41, i32 0), !dbg !5187 ; [debug line = 30:4]
-  %42 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 9, !dbg !5189 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 31:4]
+  %42 = getelementptr inbounds %struct.advios* %10, i32 0, i32 9, !dbg !5189 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 31:4]
   %43 = bitcast %"class._ap_sc_::sc_core::sc_in"* %42 to %"class._ap_sc_::sc_core::sc_port_b"*, !dbg !5189 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_port_b"*] [debug line = 31:4]
   store i1 false, i1* %5, align 1, !dbg !5189     ; [debug line = 31:4]
   call void @_ZN7_ap_sc_7sc_core18sc_signal_inout_ifIbE5writeIbEEvRKT_(%"class._ap_sc_::sc_core::sc_port_b"* %43, i1* %5), !dbg !5189 ; [debug line = 31:4]
   br label %44, !dbg !5190                        ; [debug line = 32:3]
 
 ; <label>:44                                      ; preds = %39, %29
-  %45 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 6, !dbg !5191 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 34:7]
+  %45 = getelementptr inbounds %struct.advios* %10, i32 0, i32 6, !dbg !5191 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 34:7]
   %46 = bitcast %"struct._ap_sc_::sc_dt::sc_uint"* %45 to %struct.ap_int_base*, !dbg !5191 ; [#uses=1 type=%struct.ap_int_base*] [debug line = 34:7]
   %47 = call zeroext i1 @_ZeqILi4ELb0EEbRK11ap_int_baseIXT_EXT0_EXleT_Li64EEEi(%struct.ap_int_base* %46, i32 0), !dbg !5191 ; [#uses=1 type=i1] [debug line = 34:7]
   br i1 %47, label %48, label %62, !dbg !5191     ; [debug line = 34:7]
 
 ; <label>:48                                      ; preds = %44
-  %49 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 5, !dbg !5192 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 36:8]
+  %49 = getelementptr inbounds %struct.advios* %10, i32 0, i32 5, !dbg !5192 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 36:8]
   %50 = bitcast %"struct._ap_sc_::sc_dt::sc_uint"* %49 to %struct.ap_int_base*, !dbg !5192 ; [#uses=1 type=%struct.ap_int_base*] [debug line = 36:8]
   %51 = call zeroext i1 @_ZeqILi4ELb0EEbRK11ap_int_baseIXT_EXT0_EXleT_Li64EEEi(%struct.ap_int_base* %50, i32 8), !dbg !5192 ; [#uses=1 type=i1] [debug line = 36:8]
   br i1 %51, label %52, label %57, !dbg !5192     ; [debug line = 36:8]
 
 ; <label>:52                                      ; preds = %48
-  %53 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 8, !dbg !5194 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 38:5]
+  %53 = getelementptr inbounds %struct.advios* %10, i32 0, i32 8, !dbg !5194 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 38:5]
   call void @_ZN7_ap_sc_5sc_dt7sc_uintILi4EEC1Ei(%"struct._ap_sc_::sc_dt::sc_uint"* %6, i32 0), !dbg !5194 ; [debug line = 38:5]
   %54 = call %"struct._ap_sc_::sc_dt::sc_uint"* @_ZN7_ap_sc_5sc_dt7sc_uintILi4EEaSERKS2_(%"struct._ap_sc_::sc_dt::sc_uint"* %53, %"struct._ap_sc_::sc_dt::sc_uint"* %6), !dbg !5194 ; [#uses=0 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 38:5]
-  %55 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 4, !dbg !5196 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 39:5]
+  %55 = getelementptr inbounds %struct.advios* %10, i32 0, i32 4, !dbg !5196 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 39:5]
   %56 = bitcast %"class._ap_sc_::sc_core::sc_out"* %55 to %"class._ap_sc_::sc_core::sc_inout"*, !dbg !5196 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_inout"*] [debug line = 39:5]
   call void @_ZN7_ap_sc_5sc_dt7sc_uintILi4EEC1Ei(%"struct._ap_sc_::sc_dt::sc_uint"* %7, i32 0), !dbg !5196 ; [debug line = 39:5]
   call void @_ZN7_ap_sc_7sc_core8sc_inoutINS_5sc_dt7sc_uintILi4EEEE5writeERKS4_(%"class._ap_sc_::sc_core::sc_inout"* %56, %"struct._ap_sc_::sc_dt::sc_uint"* %7), !dbg !5196 ; [debug line = 39:5]
   br label %61, !dbg !5197                        ; [debug line = 40:4]
 
 ; <label>:57                                      ; preds = %48
-  %58 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 4, !dbg !5198 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 43:5]
+  %58 = getelementptr inbounds %struct.advios* %10, i32 0, i32 4, !dbg !5198 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 43:5]
   %59 = bitcast %"class._ap_sc_::sc_core::sc_out"* %58 to %"class._ap_sc_::sc_core::sc_inout"*, !dbg !5198 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_inout"*] [debug line = 43:5]
-  %60 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 8, !dbg !5198 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 43:5]
+  %60 = getelementptr inbounds %struct.advios* %10, i32 0, i32 8, !dbg !5198 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 43:5]
   call void @_ZN7_ap_sc_7sc_core8sc_inoutINS_5sc_dt7sc_uintILi4EEEE5writeERKS4_(%"class._ap_sc_::sc_core::sc_inout"* %59, %"struct._ap_sc_::sc_dt::sc_uint"* %60), !dbg !5198 ; [debug line = 43:5]
   br label %61
 
@@ -509,11 +509,11 @@ define void @_ZN6ADVIOS14led_ControllerEv(%struct.ADVIOS* %this) nounwind noinli
   br label %69, !dbg !5200                        ; [debug line = 45:3]
 
 ; <label>:62                                      ; preds = %44
-  %63 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 4, !dbg !5201 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 48:4]
+  %63 = getelementptr inbounds %struct.advios* %10, i32 0, i32 4, !dbg !5201 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 48:4]
   %64 = bitcast %"class._ap_sc_::sc_core::sc_out"* %63 to %"class._ap_sc_::sc_core::sc_inout"*, !dbg !5201 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_inout"*] [debug line = 48:4]
-  %65 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 6, !dbg !5203 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 48:18]
+  %65 = getelementptr inbounds %struct.advios* %10, i32 0, i32 6, !dbg !5203 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 48:18]
   %66 = bitcast %"struct._ap_sc_::sc_dt::sc_uint"* %65 to %struct.ap_int_base*, !dbg !5203 ; [#uses=1 type=%struct.ap_int_base*] [debug line = 48:18]
-  %67 = getelementptr inbounds %struct.ADVIOS* %10, i32 0, i32 5, !dbg !5203 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 48:18]
+  %67 = getelementptr inbounds %struct.advios* %10, i32 0, i32 5, !dbg !5203 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 48:18]
   %68 = bitcast %"struct._ap_sc_::sc_dt::sc_uint"* %67 to %struct.ap_int_base*, !dbg !5203 ; [#uses=1 type=%struct.ap_int_base*] [debug line = 48:18]
   call void @_ZanILi4ELb0ELi4ELb0EEN11ap_int_baseIXT_EXT0_EXleT_Li64EEE5RTypeIXT1_EXT2_EE5logicERKS1_RKS0_IXT1_EXT2_EXleT1_Li64EEE(%struct.ap_int_base* sret %9, %struct.ap_int_base* %66, %struct.ap_int_base* %68), !dbg !5203 ; [debug line = 48:18]
   call void @_ZN7_ap_sc_5sc_dt7sc_uintILi4EEC1ERK11ap_int_baseILi4ELb0ELb1EE(%"struct._ap_sc_::sc_dt::sc_uint"* %8, %struct.ap_int_base* %9), !dbg !5203 ; [debug line = 48:18]
@@ -709,17 +709,17 @@ define linkonce_odr void @_ZanILi4ELb0ELi4ELb0EEN11ap_int_baseIXT_EXT0_EXleT_Li6
 define internal void @__cxx_global_var_init20() nounwind {
   %1 = alloca %"class.std::ios_base::Init", align 1 ; [#uses=2 type=%"class.std::ios_base::Init"*]
   call void @_ZN7_ap_sc_7sc_core14sc_module_nameC1EPKc(%"class.std::ios_base::Init"* %1, i8* getelementptr inbounds ([9 x i8]* @.str21, i32 0, i32 0))
-  call void @_ZN6ADVIOSC1EN7_ap_sc_7sc_core14sc_module_nameE(%struct.ADVIOS* @ssdm_ins_ADVIOS_0_0, %"class.std::ios_base::Init"* %1)
+  call void @_ZN6adviosC1EN7_ap_sc_7sc_core14sc_module_nameE(%struct.advios* @ssdm_ins_advios_0_0, %"class.std::ios_base::Init"* %1)
   ret void
 }
 
 ; [#uses=1]
-define linkonce_odr void @_ZN6ADVIOSC1EN7_ap_sc_7sc_core14sc_module_nameE(%struct.ADVIOS* %this, %"class.std::ios_base::Init"*) unnamed_addr nounwind align 2 {
-  %2 = alloca %struct.ADVIOS*, align 4            ; [#uses=2 type=%struct.ADVIOS**]
-  store %struct.ADVIOS* %this, %struct.ADVIOS** %2, align 4
-  call void @llvm.dbg.declare(metadata !{%struct.ADVIOS** %2}, metadata !5270), !dbg !5271 ; [debug line = 21:3] [debug variable = this]
-  %3 = load %struct.ADVIOS** %2                   ; [#uses=1 type=%struct.ADVIOS*]
-  call void @_ZN6ADVIOSC2EN7_ap_sc_7sc_core14sc_module_nameE(%struct.ADVIOS* %3, %"class.std::ios_base::Init"* %0), !dbg !5272 ; [debug line = 34:1]
+define linkonce_odr void @_ZN6adviosC1EN7_ap_sc_7sc_core14sc_module_nameE(%struct.advios* %this, %"class.std::ios_base::Init"*) unnamed_addr nounwind align 2 {
+  %2 = alloca %struct.advios*, align 4            ; [#uses=2 type=%struct.advios**]
+  store %struct.advios* %this, %struct.advios** %2, align 4
+  call void @llvm.dbg.declare(metadata !{%struct.advios** %2}, metadata !5270), !dbg !5271 ; [debug line = 21:3] [debug variable = this]
+  %3 = load %struct.advios** %2                   ; [#uses=1 type=%struct.advios*]
+  call void @_ZN6adviosC2EN7_ap_sc_7sc_core14sc_module_nameE(%struct.advios* %3, %"class.std::ios_base::Init"* %0), !dbg !5272 ; [debug line = 34:1]
   ret void, !dbg !5272                            ; [debug line = 34:1]
 }
 
@@ -1202,91 +1202,91 @@ define linkonce_odr void @_ZN7_ap_sc_7sc_core14sc_module_nameC2EPKc(%"class.std:
 }
 
 ; [#uses=1]
-define linkonce_odr void @_ZN6ADVIOSC2EN7_ap_sc_7sc_core14sc_module_nameE(%struct.ADVIOS* %this, %"class.std::ios_base::Init"*) unnamed_addr nounwind align 2 {
-  %2 = alloca %struct.ADVIOS*, align 4            ; [#uses=2 type=%struct.ADVIOS**]
-  store %struct.ADVIOS* %this, %struct.ADVIOS** %2, align 4
-  call void @llvm.dbg.declare(metadata !{%struct.ADVIOS** %2}, metadata !5469), !dbg !5470 ; [debug line = 21:3] [debug variable = this]
-  %3 = load %struct.ADVIOS** %2                   ; [#uses=32 type=%struct.ADVIOS*]
-  %4 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 0, !dbg !5471 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 22:2]
+define linkonce_odr void @_ZN6adviosC2EN7_ap_sc_7sc_core14sc_module_nameE(%struct.advios* %this, %"class.std::ios_base::Init"*) unnamed_addr nounwind align 2 {
+  %2 = alloca %struct.advios*, align 4            ; [#uses=2 type=%struct.advios**]
+  store %struct.advios* %this, %struct.advios** %2, align 4
+  call void @llvm.dbg.declare(metadata !{%struct.advios** %2}, metadata !5469), !dbg !5470 ; [debug line = 21:3] [debug variable = this]
+  %3 = load %struct.advios** %2                   ; [#uses=32 type=%struct.advios*]
+  %4 = getelementptr inbounds %struct.advios* %3, i32 0, i32 0, !dbg !5471 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 22:2]
   call void @_ZN7_ap_sc_7sc_core5sc_inIbEC1Ev(%"class._ap_sc_::sc_core::sc_in"* %4), !dbg !5471 ; [debug line = 22:2]
-  %5 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 1, !dbg !5471 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 22:2]
+  %5 = getelementptr inbounds %struct.advios* %3, i32 0, i32 1, !dbg !5471 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 22:2]
   call void @_ZN7_ap_sc_7sc_core5sc_inIbEC1Ev(%"class._ap_sc_::sc_core::sc_in"* %5), !dbg !5471 ; [debug line = 22:2]
-  %6 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 2, !dbg !5471 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 22:2]
+  %6 = getelementptr inbounds %struct.advios* %3, i32 0, i32 2, !dbg !5471 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 22:2]
   call void @_ZN7_ap_sc_7sc_core5sc_inINS_5sc_dt7sc_uintILi4EEEEC1Ev(%"class._ap_sc_::sc_core::sc_in.0"* %6), !dbg !5471 ; [debug line = 22:2]
-  %7 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 3, !dbg !5471 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 22:2]
+  %7 = getelementptr inbounds %struct.advios* %3, i32 0, i32 3, !dbg !5471 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 22:2]
   call void @_ZN7_ap_sc_7sc_core5sc_inINS_5sc_dt7sc_uintILi4EEEEC1Ev(%"class._ap_sc_::sc_core::sc_in.0"* %7), !dbg !5471 ; [debug line = 22:2]
-  %8 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 4, !dbg !5471 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 22:2]
+  %8 = getelementptr inbounds %struct.advios* %3, i32 0, i32 4, !dbg !5471 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 22:2]
   call void @_ZN7_ap_sc_7sc_core6sc_outINS_5sc_dt7sc_uintILi4EEEEC1Ev(%"class._ap_sc_::sc_core::sc_out"* %8), !dbg !5471 ; [debug line = 22:2]
-  %9 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 5, !dbg !5471 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 22:2]
+  %9 = getelementptr inbounds %struct.advios* %3, i32 0, i32 5, !dbg !5471 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 22:2]
   call void @_ZN7_ap_sc_5sc_dt7sc_uintILi4EEC1Ev(%"struct._ap_sc_::sc_dt::sc_uint"* %9), !dbg !5471 ; [debug line = 22:2]
-  %10 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 6, !dbg !5471 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 22:2]
+  %10 = getelementptr inbounds %struct.advios* %3, i32 0, i32 6, !dbg !5471 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 22:2]
   call void @_ZN7_ap_sc_5sc_dt7sc_uintILi4EEC1Ev(%"struct._ap_sc_::sc_dt::sc_uint"* %10), !dbg !5471 ; [debug line = 22:2]
-  %11 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 7, !dbg !5471 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 22:2]
+  %11 = getelementptr inbounds %struct.advios* %3, i32 0, i32 7, !dbg !5471 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 22:2]
   call void @_ZN7_ap_sc_5sc_dt7sc_uintILi28EEC1Ev(%"struct._ap_sc_::sc_dt::sc_uint.4"* %11), !dbg !5471 ; [debug line = 22:2]
-  %12 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 8, !dbg !5471 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 22:2]
+  %12 = getelementptr inbounds %struct.advios* %3, i32 0, i32 8, !dbg !5471 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 22:2]
   call void @_ZN7_ap_sc_5sc_dt7sc_uintILi4EEC1Ev(%"struct._ap_sc_::sc_dt::sc_uint"* %12), !dbg !5471 ; [debug line = 22:2]
-  %13 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 9, !dbg !5471 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 22:2]
+  %13 = getelementptr inbounds %struct.advios* %3, i32 0, i32 9, !dbg !5471 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 22:2]
   call void @_ZN7_ap_sc_7sc_core9sc_signalIbEC1Ev(%"class._ap_sc_::sc_core::sc_in"* %13), !dbg !5471 ; [debug line = 22:2]
   call void (...)* @_ssdm_op_SpecTopModule(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0)) nounwind, !dbg !5472 ; [debug line = 23:5]
   call void (...)* @_ssdm_InlineAll(i32 1) nounwind, !dbg !5474 ; [debug line = 23:49]
   call void (...)* @_ssdm_InlineSelf(i32 2) nounwind, !dbg !5475 ; [debug line = 23:69]
-  %14 = load i1* @_ZN6ADVIOS30__ssdm_thread_M_led_ControllerE, align 1, !dbg !5476 ; [#uses=1 type=i1] [debug line = 24:5]
+  %14 = load i1* @_ZN6advios30__ssdm_thread_M_led_ControllerE, align 1, !dbg !5476 ; [#uses=1 type=i1] [debug line = 24:5]
   br i1 %14, label %15, label %16, !dbg !5476     ; [debug line = 24:5]
 
 ; <label>:15                                      ; preds = %1
-  call void @_ZN6ADVIOS14led_ControllerEv(%struct.ADVIOS* %3), !dbg !5477 ; [debug line = 24:41]
+  call void @_ZN6advios14led_ControllerEv(%struct.advios* %3), !dbg !5477 ; [debug line = 24:41]
   br label %16, !dbg !5477                        ; [debug line = 24:41]
 
 ; <label>:16                                      ; preds = %15, %1
   call void (...)* @_ssdm_op_SpecProcessDecl(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 2, i8* getelementptr inbounds ([15 x i8]* @.str19, i32 0, i32 0)) nounwind, !dbg !5478 ; [debug line = 24:59]
-  %17 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 0, !dbg !5479 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 25:5]
+  %17 = getelementptr inbounds %struct.advios* %3, i32 0, i32 0, !dbg !5479 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 25:5]
   call void (...)* @_ssdm_op_SpecSensitive(i8* getelementptr inbounds ([15 x i8]* @.str19, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %17, i32 1) nounwind, !dbg !5479 ; [debug line = 25:5]
-  %18 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 1, !dbg !5480 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 26:5]
+  %18 = getelementptr inbounds %struct.advios* %3, i32 0, i32 1, !dbg !5480 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 26:5]
   call void (...)* @_ssdm_op_SpecSensitive(i8* getelementptr inbounds ([15 x i8]* @.str19, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8]* @.str3, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %18, i32 3) nounwind, !dbg !5480 ; [debug line = 26:5]
-  %19 = load i1* @_ZN6ADVIOS36__ssdm_thread_M_periodic_IncrementerE, align 1, !dbg !5481 ; [#uses=1 type=i1] [debug line = 27:5]
+  %19 = load i1* @_ZN6advios36__ssdm_thread_M_periodic_IncrementerE, align 1, !dbg !5481 ; [#uses=1 type=i1] [debug line = 27:5]
   br i1 %19, label %20, label %21, !dbg !5481     ; [debug line = 27:5]
 
 ; <label>:20                                      ; preds = %16
-  call void @_ZN6ADVIOS20periodic_IncrementerEv(%struct.ADVIOS* %3), !dbg !5482 ; [debug line = 27:47]
+  call void @_ZN6advios20periodic_IncrementerEv(%struct.advios* %3), !dbg !5482 ; [debug line = 27:47]
   br label %21, !dbg !5482                        ; [debug line = 27:47]
 
 ; <label>:21                                      ; preds = %20, %16
   call void (...)* @_ssdm_op_SpecProcessDecl(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 2, i8* getelementptr inbounds ([21 x i8]* @.str8, i32 0, i32 0)) nounwind, !dbg !5483 ; [debug line = 27:71]
-  %22 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 0, !dbg !5484 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 28:5]
+  %22 = getelementptr inbounds %struct.advios* %3, i32 0, i32 0, !dbg !5484 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 28:5]
   call void (...)* @_ssdm_op_SpecSensitive(i8* getelementptr inbounds ([21 x i8]* @.str8, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %22, i32 1) nounwind, !dbg !5484 ; [debug line = 28:5]
-  %23 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 1, !dbg !5485 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 29:5]
+  %23 = getelementptr inbounds %struct.advios* %3, i32 0, i32 1, !dbg !5485 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 29:5]
   call void (...)* @_ssdm_op_SpecSensitive(i8* getelementptr inbounds ([21 x i8]* @.str8, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8]* @.str3, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %23, i32 3) nounwind, !dbg !5485 ; [debug line = 29:5]
-  %24 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 0, !dbg !5486 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 30:5]
+  %24 = getelementptr inbounds %struct.advios* %3, i32 0, i32 0, !dbg !5486 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 30:5]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([7 x i8]* @.str1, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_in"* %24) nounwind, !dbg !5486 ; [debug line = 30:5]
-  %25 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 1, !dbg !5487 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 31:5]
+  %25 = getelementptr inbounds %struct.advios* %3, i32 0, i32 1, !dbg !5487 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 31:5]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([7 x i8]* @.str1, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8]* @.str3, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_in"* %25) nounwind, !dbg !5487 ; [debug line = 31:5]
-  %26 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 2, !dbg !5488 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 32:5]
+  %26 = getelementptr inbounds %struct.advios* %3, i32 0, i32 2, !dbg !5488 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 32:5]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([13 x i8]* @.str4, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8]* @.str5, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_in.0"* %26) nounwind, !dbg !5488 ; [debug line = 32:5]
-  %27 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 3, !dbg !5489 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 33:5]
+  %27 = getelementptr inbounds %struct.advios* %3, i32 0, i32 3, !dbg !5489 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 33:5]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([13 x i8]* @.str4, i32 0, i32 0), i8* getelementptr inbounds ([9 x i8]* @.str6, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_in.0"* %27) nounwind, !dbg !5489 ; [debug line = 33:5]
-  %28 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 4, !dbg !5490 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 34:5]
+  %28 = getelementptr inbounds %struct.advios* %3, i32 0, i32 4, !dbg !5490 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 34:5]
   call void (...)* @_ssdm_op_SpecPort(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 1, i8* getelementptr inbounds ([13 x i8]* @.str4, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @.str7, i32 0, i32 0), i32 0, i32 0, %"class._ap_sc_::sc_core::sc_out"* %28) nounwind, !dbg !5490 ; [debug line = 34:5]
-  %29 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 9, !dbg !5491 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 35:5]
+  %29 = getelementptr inbounds %struct.advios* %3, i32 0, i32 9, !dbg !5491 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 35:5]
   call void (...)* @_ssdm_op_SpecChannel(i8* getelementptr inbounds ([7 x i8]* @.str, i32 0, i32 0), i32 0, i8* getelementptr inbounds ([7 x i8]* @.str1, i32 0, i32 0), i8* getelementptr inbounds ([10 x i8]* @.str12, i32 0, i32 0), i32 1, i32 0, %"class._ap_sc_::sc_core::sc_in"* %29) nounwind, !dbg !5491 ; [debug line = 35:5]
-  %30 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 0, !dbg !5492 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 36:1]
+  %30 = getelementptr inbounds %struct.advios* %3, i32 0, i32 0, !dbg !5492 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 36:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8]* @.str2, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %30) nounwind, !dbg !5492 ; [debug line = 36:1]
-  %31 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 1, !dbg !5493 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 37:1]
+  %31 = getelementptr inbounds %struct.advios* %3, i32 0, i32 1, !dbg !5493 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 37:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8]* @.str3, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %31) nounwind, !dbg !5493 ; [debug line = 37:1]
-  %32 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 2, !dbg !5494 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 38:1]
+  %32 = getelementptr inbounds %struct.advios* %3, i32 0, i32 2, !dbg !5494 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 38:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8]* @.str5, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in.0"* %32) nounwind, !dbg !5494 ; [debug line = 38:1]
-  %33 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 3, !dbg !5495 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 39:1]
+  %33 = getelementptr inbounds %struct.advios* %3, i32 0, i32 3, !dbg !5495 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in.0"*] [debug line = 39:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([9 x i8]* @.str6, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in.0"* %33) nounwind, !dbg !5495 ; [debug line = 39:1]
-  %34 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 4, !dbg !5496 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 40:1]
+  %34 = getelementptr inbounds %struct.advios* %3, i32 0, i32 4, !dbg !5496 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_out"*] [debug line = 40:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @.str7, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_out"* %34) nounwind, !dbg !5496 ; [debug line = 40:1]
-  %35 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 9, !dbg !5497 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 41:1]
+  %35 = getelementptr inbounds %struct.advios* %3, i32 0, i32 9, !dbg !5497 ; [#uses=1 type=%"class._ap_sc_::sc_core::sc_in"*] [debug line = 41:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([10 x i8]* @.str12, i32 0, i32 0), %"class._ap_sc_::sc_core::sc_in"* %35) nounwind, !dbg !5497 ; [debug line = 41:1]
-  %36 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 5, !dbg !5498 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 42:1]
+  %36 = getelementptr inbounds %struct.advios* %3, i32 0, i32 5, !dbg !5498 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 42:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @.str13, i32 0, i32 0), %"struct._ap_sc_::sc_dt::sc_uint"* %36) nounwind, !dbg !5498 ; [debug line = 42:1]
-  %37 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 6, !dbg !5499 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 43:1]
+  %37 = getelementptr inbounds %struct.advios* %3, i32 0, i32 6, !dbg !5499 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 43:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8]* @.str14, i32 0, i32 0), %"struct._ap_sc_::sc_dt::sc_uint"* %37) nounwind, !dbg !5499 ; [debug line = 43:1]
-  %38 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 7, !dbg !5500 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 44:1]
+  %38 = getelementptr inbounds %struct.advios* %3, i32 0, i32 7, !dbg !5500 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint.4"*] [debug line = 44:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8]* @.str15, i32 0, i32 0), %"struct._ap_sc_::sc_dt::sc_uint.4"* %38) nounwind, !dbg !5500 ; [debug line = 44:1]
-  %39 = getelementptr inbounds %struct.ADVIOS* %3, i32 0, i32 8, !dbg !5501 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 45:1]
+  %39 = getelementptr inbounds %struct.advios* %3, i32 0, i32 8, !dbg !5501 ; [#uses=1 type=%"struct._ap_sc_::sc_dt::sc_uint"*] [debug line = 45:1]
   call void (...)* @_ssdm_op_SpecExt(i8* getelementptr inbounds ([12 x i8]* @.str11, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8]* @.str16, i32 0, i32 0), %"struct._ap_sc_::sc_dt::sc_uint"* %39) nounwind, !dbg !5501 ; [debug line = 45:1]
   ret void, !dbg !5502                            ; [debug line = 34:1]
 }
@@ -1580,7 +1580,7 @@ define internal void @_GLOBAL__I_a() nounwind {
 !opencl.kernels = !{!4937, !4944, !4945, !4951, !4952, !4953, !4954, !4960, !4961, !4964, !4966, !4969, !4971, !4973, !4974, !4975, !4977, !4978, !4979, !4980, !4982, !4984, !4985, !4986, !4987, !4989, !4990, !4991, !4992, !4995, !4997, !4998, !4999, !5001, !5003, !5005, !5006, !5007, !5008, !5009, !5010, !5011, !5012, !5014, !5015, !5017, !5021, !5022, !5024, !5025, !5026, !5027, !5028, !5029, !5030, !5031, !5032, !5033, !5034, !5035, !5036, !5037, !5038, !5039, !5040, !5041, !5042, !5043, !5044, !5045, !5046, !5047, !5048, !5049}
 !hls.encrypted.func = !{}
 
-!0 = metadata !{i32 786449, i32 0, i32 4, metadata !"C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/.autopilot/db/ADVIOS.pragma.2.cpp", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", metadata !"clang version 3.1 ", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !921, metadata !923, metadata !3132} ; [ DW_TAG_compile_unit ]
+!0 = metadata !{i32 786449, i32 0, i32 4, metadata !"C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/.autopilot/db/advios.pragma.2.cpp", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", metadata !"clang version 3.1 ", i1 true, i1 false, metadata !"", i32 0, metadata !1, metadata !921, metadata !923, metadata !3132} ; [ DW_TAG_compile_unit ]
 !1 = metadata !{metadata !2}
 !2 = metadata !{metadata !3, metadata !26, metadata !33, metadata !42, metadata !48, metadata !864, metadata !871, metadata !871, metadata !871, metadata !871, metadata !871, metadata !871, metadata !891, metadata !891, metadata !900, metadata !900, metadata !871, metadata !871, metadata !871, metadata !871, metadata !871, metadata !891, metadata !900, metadata !891, metadata !906, metadata !906, metadata !906, metadata !891, metadata !906, metadata !906, metadata !871, metadata !871, metadata !871, metadata !871, metadata !871, metadata !914, metadata !914}
 !3 = metadata !{i32 786436, metadata !4, metadata !"_Ios_Fmtflags", metadata !5, i32 59, i64 17, i64 32, i32 0, i32 0, null, metadata !6, i32 0, i32 0} ; [ DW_TAG_enumeration_type ]
@@ -2505,13 +2505,13 @@ define internal void @_GLOBAL__I_a() nounwind {
 !922 = metadata !{i32 0}
 !923 = metadata !{metadata !924}
 !924 = metadata !{metadata !925, metadata !2226, metadata !2227, metadata !2228, metadata !2229, metadata !2230, metadata !2231, metadata !2237, metadata !2238, metadata !2239, metadata !2244, metadata !2251, metadata !2252, metadata !2253, metadata !2254, metadata !2255, metadata !2259, metadata !2800, metadata !2801, metadata !2802, metadata !2805, metadata !2806, metadata !3056, metadata !3057, metadata !3058, metadata !3061, metadata !3062, metadata !3063, metadata !3064, metadata !3068, metadata !3069, metadata !3070, metadata !3071, metadata !3072, metadata !3078, metadata !3082, metadata !3085, metadata !3086, metadata !3089, metadata !3090, metadata !3091, metadata !3092, metadata !3093, metadata !3094, metadata !3095, metadata !3101, metadata !3102, metadata !3103, metadata !3104, metadata !3105, metadata !3106, metadata !3107, metadata !3108, metadata !3109, metadata !3110, metadata !3111, metadata !3112, metadata !3113, metadata !3114, metadata !3115, metadata !3116, metadata !3117, metadata !3118, metadata !3119, metadata !3120, metadata !3121, metadata !3122, metadata !3123, metadata !3124, metadata !3125, metadata !3126, metadata !3127, metadata !3128, metadata !3129}
-!925 = metadata !{i32 786478, i32 0, null, metadata !"periodic_Incrementer", metadata !"periodic_Incrementer", metadata !"_ZN6ADVIOS20periodic_IncrementerEv", metadata !926, i32 3, metadata !927, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%struct.ADVIOS*)* @_ZN6ADVIOS20periodic_IncrementerEv, null, metadata !2211, metadata !86, i32 4} ; [ DW_TAG_subprogram ]
-!926 = metadata !{i32 786473, metadata !"../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", null} ; [ DW_TAG_file_type ]
+!925 = metadata !{i32 786478, i32 0, null, metadata !"periodic_Incrementer", metadata !"periodic_Incrementer", metadata !"_ZN6advios20periodic_IncrementerEv", metadata !926, i32 3, metadata !927, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%struct.advios*)* @_ZN6advios20periodic_IncrementerEv, null, metadata !2211, metadata !86, i32 4} ; [ DW_TAG_subprogram ]
+!926 = metadata !{i32 786473, metadata !"../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", null} ; [ DW_TAG_file_type ]
 !927 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !928, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !928 = metadata !{null, metadata !929}
 !929 = metadata !{i32 786447, i32 0, metadata !"", i32 0, i32 0, i64 32, i64 32, i64 0, i32 64, metadata !930} ; [ DW_TAG_pointer_type ]
-!930 = metadata !{i32 786434, null, metadata !"ADVIOS", metadata !931, i32 6, i64 128, i64 32, i32 0, i32 0, null, metadata !932, i32 0, null, null} ; [ DW_TAG_class_type ]
-!931 = metadata !{i32 786473, metadata !"../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", null} ; [ DW_TAG_file_type ]
+!930 = metadata !{i32 786434, null, metadata !"advios", metadata !931, i32 6, i64 128, i64 32, i32 0, i32 0, null, metadata !932, i32 0, null, null} ; [ DW_TAG_class_type ]
+!931 = metadata !{i32 786473, metadata !"../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", null} ; [ DW_TAG_file_type ]
 !932 = metadata !{metadata !933, metadata !1042, metadata !1043, metadata !1737, metadata !1738, metadata !1837, metadata !1838, metadata !1839, metadata !2172, metadata !2173, metadata !2210, metadata !2211, metadata !2212}
 !933 = metadata !{i32 786445, metadata !930, metadata !"clk", metadata !931, i32 9, i64 8, i64 8, i64 0, i32 0, metadata !934} ; [ DW_TAG_member ]
 !934 = metadata !{i32 786434, metadata !935, metadata !"sc_in<bool>", metadata !937, i32 370, i64 8, i64 8, i32 0, i32 0, null, metadata !938, i32 0, null, metadata !980} ; [ DW_TAG_class_type ]
@@ -3790,9 +3790,9 @@ define internal void @_GLOBAL__I_a() nounwind {
 !2207 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !2208, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !2208 = metadata !{metadata !2209, metadata !2202, metadata !2193}
 !2209 = metadata !{i32 786448, null, null, null, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !2174} ; [ DW_TAG_reference_type ]
-!2210 = metadata !{i32 786478, i32 0, metadata !930, metadata !"led_Controller", metadata !"led_Controller", metadata !"_ZN6ADVIOS14led_ControllerEv", metadata !931, i32 19, metadata !927, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, metadata !86, i32 19} ; [ DW_TAG_subprogram ]
-!2211 = metadata !{i32 786478, i32 0, metadata !930, metadata !"periodic_Incrementer", metadata !"periodic_Incrementer", metadata !"_ZN6ADVIOS20periodic_IncrementerEv", metadata !931, i32 20, metadata !927, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, metadata !86, i32 20} ; [ DW_TAG_subprogram ]
-!2212 = metadata !{i32 786478, i32 0, metadata !930, metadata !"ADVIOS", metadata !"ADVIOS", metadata !"", metadata !931, i32 21, metadata !2213, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, metadata !86, i32 21} ; [ DW_TAG_subprogram ]
+!2210 = metadata !{i32 786478, i32 0, metadata !930, metadata !"led_Controller", metadata !"led_Controller", metadata !"_ZN6advios14led_ControllerEv", metadata !931, i32 19, metadata !927, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, metadata !86, i32 19} ; [ DW_TAG_subprogram ]
+!2211 = metadata !{i32 786478, i32 0, metadata !930, metadata !"periodic_Incrementer", metadata !"periodic_Incrementer", metadata !"_ZN6advios20periodic_IncrementerEv", metadata !931, i32 20, metadata !927, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, metadata !86, i32 20} ; [ DW_TAG_subprogram ]
+!2212 = metadata !{i32 786478, i32 0, metadata !930, metadata !"advios", metadata !"advios", metadata !"", metadata !931, i32 21, metadata !2213, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, metadata !86, i32 21} ; [ DW_TAG_subprogram ]
 !2213 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !2214, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !2214 = metadata !{null, metadata !929, metadata !2215}
 !2215 = metadata !{i32 786434, metadata !935, metadata !"sc_module_name", metadata !937, i32 591, i64 8, i64 8, i32 0, i32 0, null, metadata !2216, i32 0, null, null} ; [ DW_TAG_class_type ]
@@ -3806,7 +3806,7 @@ define internal void @_GLOBAL__I_a() nounwind {
 !2223 = metadata !{null, metadata !2220, metadata !2224}
 !2224 = metadata !{i32 786448, null, null, null, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !2225} ; [ DW_TAG_reference_type ]
 !2225 = metadata !{i32 786470, null, metadata !"", null, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !2215} ; [ DW_TAG_const_type ]
-!2226 = metadata !{i32 786478, i32 0, null, metadata !"led_Controller", metadata !"led_Controller", metadata !"_ZN6ADVIOS14led_ControllerEv", metadata !926, i32 21, metadata !927, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%struct.ADVIOS*)* @_ZN6ADVIOS14led_ControllerEv, null, metadata !2210, metadata !86, i32 22} ; [ DW_TAG_subprogram ]
+!2226 = metadata !{i32 786478, i32 0, null, metadata !"led_Controller", metadata !"led_Controller", metadata !"_ZN6advios14led_ControllerEv", metadata !926, i32 21, metadata !927, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%struct.advios*)* @_ZN6advios14led_ControllerEv, null, metadata !2210, metadata !86, i32 22} ; [ DW_TAG_subprogram ]
 !2227 = metadata !{i32 786478, i32 0, metadata !1057, metadata !"sc_uint", metadata !"sc_uint", metadata !"_ZN7_ap_sc_5sc_dt7sc_uintILi4EEC1ERK11ap_int_baseILi4ELb0ELb1EE", metadata !1059, i32 278, metadata !1583, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%"struct._ap_sc_::sc_dt::sc_uint"*, %struct.ap_int_base*)* @_ZN7_ap_sc_5sc_dt7sc_uintILi4EEC1ERK11ap_int_baseILi4ELb0ELb1EE, null, metadata !1582, metadata !86, i32 278} ; [ DW_TAG_subprogram ]
 !2228 = metadata !{i32 786478, i32 0, metadata !1057, metadata !"sc_uint", metadata !"sc_uint", metadata !"_ZN7_ap_sc_5sc_dt7sc_uintILi4EEC2ERK11ap_int_baseILi4ELb0ELb1EE", metadata !1059, i32 278, metadata !1583, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%"struct._ap_sc_::sc_dt::sc_uint"*, %struct.ap_int_base*)* @_ZN7_ap_sc_5sc_dt7sc_uintILi4EEC2ERK11ap_int_baseILi4ELb0ELb1EE, null, metadata !1582, metadata !86, i32 278} ; [ DW_TAG_subprogram ]
 !2229 = metadata !{i32 786478, i32 0, null, metadata !"ap_int_base", metadata !"ap_int_base", metadata !"_ZN11ap_int_baseILi4ELb0ELb1EEC2Ev", metadata !865, i32 1429, metadata !1078, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%struct.ap_int_base*)* @_ZN11ap_int_baseILi4ELb0ELb1EEC2Ev, null, metadata !1077, metadata !86, i32 1429} ; [ DW_TAG_subprogram ]
@@ -4683,8 +4683,8 @@ define internal void @_GLOBAL__I_a() nounwind {
 !3100 = metadata !{i32 786479, null, metadata !"T1", metadata !212, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
 !3101 = metadata !{i32 786478, i32 0, metadata !935, metadata !"sc_module_name", metadata !"sc_module_name", metadata !"_ZN7_ap_sc_7sc_core14sc_module_nameC1EPKc", metadata !937, i32 594, metadata !2218, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%"class.std::ios_base::Init"*, i8*)* @_ZN7_ap_sc_7sc_core14sc_module_nameC1EPKc, null, metadata !2217, metadata !86, i32 594} ; [ DW_TAG_subprogram ]
 !3102 = metadata !{i32 786478, i32 0, metadata !935, metadata !"sc_module_name", metadata !"sc_module_name", metadata !"_ZN7_ap_sc_7sc_core14sc_module_nameC2EPKc", metadata !937, i32 594, metadata !2218, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%"class.std::ios_base::Init"*, i8*)* @_ZN7_ap_sc_7sc_core14sc_module_nameC2EPKc, null, metadata !2217, metadata !86, i32 594} ; [ DW_TAG_subprogram ]
-!3103 = metadata !{i32 786478, i32 0, null, metadata !"ADVIOS", metadata !"ADVIOS", metadata !"_ZN6ADVIOSC1EN7_ap_sc_7sc_core14sc_module_nameE", metadata !931, i32 21, metadata !2213, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%struct.ADVIOS*, %"class.std::ios_base::Init"*)* @_ZN6ADVIOSC1EN7_ap_sc_7sc_core14sc_module_nameE, null, metadata !2212, metadata !86, i32 22} ; [ DW_TAG_subprogram ]
-!3104 = metadata !{i32 786478, i32 0, null, metadata !"ADVIOS", metadata !"ADVIOS", metadata !"_ZN6ADVIOSC2EN7_ap_sc_7sc_core14sc_module_nameE", metadata !931, i32 21, metadata !2213, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%struct.ADVIOS*, %"class.std::ios_base::Init"*)* @_ZN6ADVIOSC2EN7_ap_sc_7sc_core14sc_module_nameE, null, metadata !2212, metadata !86, i32 22} ; [ DW_TAG_subprogram ]
+!3103 = metadata !{i32 786478, i32 0, null, metadata !"advios", metadata !"advios", metadata !"_ZN6adviosC1EN7_ap_sc_7sc_core14sc_module_nameE", metadata !931, i32 21, metadata !2213, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%struct.advios*, %"class.std::ios_base::Init"*)* @_ZN6adviosC1EN7_ap_sc_7sc_core14sc_module_nameE, null, metadata !2212, metadata !86, i32 22} ; [ DW_TAG_subprogram ]
+!3104 = metadata !{i32 786478, i32 0, null, metadata !"advios", metadata !"advios", metadata !"_ZN6adviosC2EN7_ap_sc_7sc_core14sc_module_nameE", metadata !931, i32 21, metadata !2213, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%struct.advios*, %"class.std::ios_base::Init"*)* @_ZN6adviosC2EN7_ap_sc_7sc_core14sc_module_nameE, null, metadata !2212, metadata !86, i32 22} ; [ DW_TAG_subprogram ]
 !3105 = metadata !{i32 786478, i32 0, metadata !935, metadata !"sc_signal", metadata !"sc_signal", metadata !"_ZN7_ap_sc_7sc_core9sc_signalIbEC1Ev", metadata !937, i32 326, metadata !2200, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%"class._ap_sc_::sc_core::sc_in"*)* @_ZN7_ap_sc_7sc_core9sc_signalIbEC1Ev, null, metadata !2199, metadata !86, i32 326} ; [ DW_TAG_subprogram ]
 !3106 = metadata !{i32 786478, i32 0, metadata !935, metadata !"sc_signal", metadata !"sc_signal", metadata !"_ZN7_ap_sc_7sc_core9sc_signalIbEC2Ev", metadata !937, i32 326, metadata !2200, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%"class._ap_sc_::sc_core::sc_in"*)* @_ZN7_ap_sc_7sc_core9sc_signalIbEC2Ev, null, metadata !2199, metadata !86, i32 326} ; [ DW_TAG_subprogram ]
 !3107 = metadata !{i32 786478, i32 0, metadata !935, metadata !"sc_signal_inout_if", metadata !"sc_signal_inout_if", metadata !"_ZN7_ap_sc_7sc_core18sc_signal_inout_ifIbEC2Ev", metadata !937, i32 197, metadata !2181, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, void (%"class._ap_sc_::sc_core::sc_port_b"*)* @_ZN7_ap_sc_7sc_core18sc_signal_inout_ifIbEC2Ev, null, metadata !2180, metadata !86, i32 197} ; [ DW_TAG_subprogram ]
@@ -4777,7 +4777,7 @@ define internal void @_GLOBAL__I_a() nounwind {
 !3194 = metadata !{i32 786470, null, metadata !"", null, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !56} ; [ DW_TAG_const_type ]
 !3195 = metadata !{i32 786484, i32 0, metadata !1290, metadata !"width", metadata !"width", metadata !"width", metadata !865, i32 1395, metadata !3194, i32 1, i32 1, i32 5} ; [ DW_TAG_variable ]
 !3196 = metadata !{i32 786484, i32 0, metadata !1843, metadata !"width", metadata !"width", metadata !"width", metadata !865, i32 1395, metadata !3194, i32 1, i32 1, i32 28} ; [ DW_TAG_variable ]
-!3197 = metadata !{i32 786484, i32 0, null, metadata !"ssdm_ins_ADVIOS_0_0", metadata !"ssdm_ins_ADVIOS_0_0", metadata !"", metadata !926, i32 55, metadata !930, i32 0, i32 1, %struct.ADVIOS* @ssdm_ins_ADVIOS_0_0} ; [ DW_TAG_variable ]
+!3197 = metadata !{i32 786484, i32 0, null, metadata !"ssdm_ins_advios_0_0", metadata !"ssdm_ins_advios_0_0", metadata !"", metadata !926, i32 55, metadata !930, i32 0, i32 1, %struct.advios* @ssdm_ins_advios_0_0} ; [ DW_TAG_variable ]
 !3198 = metadata !{i32 786484, i32 0, null, metadata !"__is_signed", metadata !"__is_signed", metadata !"_ZN9__gnu_cxx24__numeric_traits_integer11__is_signedE", metadata !3199, i32 71, metadata !976, i32 0, i32 1, i1* @_ZN9__gnu_cxx24__numeric_traits_integer11__is_signedE} ; [ DW_TAG_variable ]
 !3199 = metadata !{i32 786473, metadata !"C:/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin\5C..\5Clib\5Cclang\5C3.1/../../../include/c++/4.5.2\5Cext/numeric_traits.h", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", null} ; [ DW_TAG_file_type ]
 !3200 = metadata !{i32 786484, i32 0, null, metadata !"__digits", metadata !"__digits", metadata !"_ZN9__gnu_cxx24__numeric_traits_integer8__digitsE", metadata !3199, i32 74, metadata !3194, i32 0, i32 1, i32* @_ZN9__gnu_cxx24__numeric_traits_integer8__digitsE} ; [ DW_TAG_variable ]
@@ -5144,7 +5144,7 @@ define internal void @_GLOBAL__I_a() nounwind {
 !3561 = metadata !{i32 786473, metadata !"C:/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin\5C..\5Clib\5Cclang\5C3.1/../../../include/c++/4.5.2\5Ciosfwd", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", null} ; [ DW_TAG_file_type ]
 !3562 = metadata !{i32 786434, metadata !3560, metadata !"basic_istream<char>", metadata !3563, i32 1020, i64 1152, i64 32, i32 0, i32 0, null, metadata !3564, i32 0, metadata !3562, metadata !3710} ; [ DW_TAG_class_type ]
 !3563 = metadata !{i32 786473, metadata !"C:/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin\5C..\5Clib\5Cclang\5C3.1/../../../include/c++/4.5.2\5Cbits/istream.tcc", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", null} ; [ DW_TAG_file_type ]
-!3564 = metadata !{metadata !3565, metadata !4065, metadata !4066, metadata !4068, metadata !4074, metadata !4077, metadata !4085, metadata !4093, metadata !4096, metadata !4099, metadata !4103, metadata !4106, metadata !4109, metadata !4112, metadata !4115, metadata !4118, metadata !4121, metadata !4124, metadata !4127, metadata !4130, metadata !4133, metadata !4136, metadata !4139, metadata !4144, metadata !4148, metadata !4153, metadata !4157, metadata !4160, metadata !4164, metadata !4167, metadata !4168, metadata !4169, metadata !4172, metadata !4175, metadata !4178, metadata !4179, metadata !4180, metadata !4183, metadata !4186, metadata !4187, metadata !4190, metadata !4194, metadata !4197, metadata !4201, metadata !4202, metadata !4203, metadata !4204, metadata !4205, metadata !4206, metadata !4207, metadata !4208, metadata !4211, metadata !4214, metadata !4215, metadata !4218, metadata !4221}
+!3564 = metadata !{metadata !3565, metadata !4065, metadata !4066, metadata !4068, metadata !4074, metadata !4077, metadata !4085, metadata !4093, metadata !4096, metadata !4099, metadata !4103, metadata !4106, metadata !4109, metadata !4112, metadata !4115, metadata !4118, metadata !4121, metadata !4124, metadata !4127, metadata !4130, metadata !4133, metadata !4136, metadata !4139, metadata !4144, metadata !4148, metadata !4153, metadata !4157, metadata !4160, metadata !4164, metadata !4167, metadata !4168, metadata !4169, metadata !4172, metadata !4175, metadata !4178, metadata !4179, metadata !4180, metadata !4183, metadata !4186, metadata !4187, metadata !4190, metadata !4194, metadata !4197, metadata !4201, metadata !4202, metadata !4203, metadata !4204, metadata !4205, metadata !4206, metadata !4207, metadata !4210, metadata !4213, metadata !4214, metadata !4217, metadata !4218, metadata !4221}
 !3565 = metadata !{i32 786460, metadata !3562, null, metadata !3563, i32 0, i64 0, i64 0, i64 12, i32 32, metadata !3566} ; [ DW_TAG_inheritance ]
 !3566 = metadata !{i32 786434, metadata !3560, metadata !"basic_ios<char>", metadata !3567, i32 177, i64 1088, i64 32, i32 0, i32 0, null, metadata !3568, i32 0, metadata !49, metadata !3710} ; [ DW_TAG_class_type ]
 !3567 = metadata !{i32 786473, metadata !"C:/Xilinx/Vivado_HLS/2017.2/win64/tools/clang/bin\5C..\5Clib\5Cclang\5C3.1/../../../include/c++/4.5.2\5Cbits/basic_ios.tcc", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", null} ; [ DW_TAG_file_type ]
@@ -5386,30 +5386,30 @@ define internal void @_GLOBAL__I_a() nounwind {
 !3803 = metadata !{metadata !3717, metadata !3582, metadata !3804, metadata !3168}
 !3804 = metadata !{i32 786454, metadata !3573, metadata !"off_type", metadata !3574, i32 61, i64 0, i64 0, i64 0, i32 0, metadata !3624} ; [ DW_TAG_typedef ]
 !3805 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"basic_ostream", metadata !"basic_ostream", metadata !"", metadata !3579, i32 360, metadata !3712, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, null, i32 0, metadata !86, i32 360} ; [ DW_TAG_subprogram ]
-!3806 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<double>", metadata !"_M_insert<double>", metadata !"_ZNSo9_M_insertIdEERSoT_", metadata !3579, i32 365, metadata !3764, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3807, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!3806 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<bool>", metadata !"_M_insert<bool>", metadata !"_ZNSo9_M_insertIbEERSoT_", metadata !3579, i32 365, metadata !3743, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3807, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
 !3807 = metadata !{metadata !3808}
-!3808 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !1149, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
-!3809 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<unsigned long>", metadata !"_M_insert<unsigned long>", metadata !"_ZNSo9_M_insertImEERSoT_", metadata !3579, i32 365, metadata !3740, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3810, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!3808 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !212, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
+!3809 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<unsigned long long>", metadata !"_M_insert<unsigned long long>", metadata !"_ZNSo9_M_insertIyEERSoT_", metadata !3579, i32 365, metadata !3761, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3810, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
 !3810 = metadata !{metadata !3811}
-!3811 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !1126, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
-!3812 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<bool>", metadata !"_M_insert<bool>", metadata !"_ZNSo9_M_insertIbEERSoT_", metadata !3579, i32 365, metadata !3743, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3813, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!3811 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !1136, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
+!3812 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<unsigned long>", metadata !"_M_insert<unsigned long>", metadata !"_ZNSo9_M_insertImEERSoT_", metadata !3579, i32 365, metadata !3740, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3813, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
 !3813 = metadata !{metadata !3814}
-!3814 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !212, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
-!3815 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<long double>", metadata !"_M_insert<long double>", metadata !"_ZNSo9_M_insertIeEERSoT_", metadata !3579, i32 365, metadata !3770, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3816, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!3814 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !1126, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
+!3815 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<double>", metadata !"_M_insert<double>", metadata !"_ZNSo9_M_insertIdEERSoT_", metadata !3579, i32 365, metadata !3764, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3816, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
 !3816 = metadata !{metadata !3817}
-!3817 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !3772, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
-!3818 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<unsigned long long>", metadata !"_M_insert<unsigned long long>", metadata !"_ZNSo9_M_insertIyEERSoT_", metadata !3579, i32 365, metadata !3761, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3819, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!3817 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !1149, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
+!3818 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<long long>", metadata !"_M_insert<long long>", metadata !"_ZNSo9_M_insertIxEERSoT_", metadata !3579, i32 365, metadata !3758, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3819, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
 !3819 = metadata !{metadata !3820}
-!3820 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !1136, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
-!3821 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<long long>", metadata !"_M_insert<long long>", metadata !"_ZNSo9_M_insertIxEERSoT_", metadata !3579, i32 365, metadata !3758, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3822, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!3820 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !1131, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
+!3821 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<const void *>", metadata !"_M_insert<const void *>", metadata !"_ZNSo9_M_insertIPKvEERSoT_", metadata !3579, i32 365, metadata !3774, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3822, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
 !3822 = metadata !{metadata !3823}
-!3823 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !1131, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
-!3824 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<long>", metadata !"_M_insert<long>", metadata !"_ZNSo9_M_insertIlEERSoT_", metadata !3579, i32 365, metadata !3737, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3825, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!3823 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !325, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
+!3824 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<long double>", metadata !"_M_insert<long double>", metadata !"_ZNSo9_M_insertIeEERSoT_", metadata !3579, i32 365, metadata !3770, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3825, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
 !3825 = metadata !{metadata !3826}
-!3826 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !100, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
-!3827 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<const void *>", metadata !"_M_insert<const void *>", metadata !"_ZNSo9_M_insertIPKvEERSoT_", metadata !3579, i32 365, metadata !3774, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3828, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!3826 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !3772, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
+!3827 = metadata !{i32 786478, i32 0, metadata !3573, metadata !"_M_insert<long>", metadata !"_M_insert<long>", metadata !"_ZNSo9_M_insertIlEERSoT_", metadata !3579, i32 365, metadata !3737, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3828, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
 !3828 = metadata !{metadata !3829}
-!3829 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !325, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
+!3829 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !100, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
 !3830 = metadata !{i32 786474, metadata !3573, null, metadata !3574, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !3831} ; [ DW_TAG_friend ]
 !3831 = metadata !{i32 786434, metadata !3573, metadata !"sentry", metadata !3579, i32 93, i64 64, i64 32, i32 0, i32 0, null, metadata !3832, i32 0, null, null} ; [ DW_TAG_class_type ]
 !3832 = metadata !{metadata !3833, metadata !3834, metadata !3836, metadata !3840, metadata !3843}
@@ -5782,25 +5782,25 @@ define internal void @_GLOBAL__I_a() nounwind {
 !4199 = metadata !{metadata !4080, metadata !4071, metadata !4200, metadata !3168}
 !4200 = metadata !{i32 786454, metadata !3562, metadata !"off_type", metadata !3563, i32 61, i64 0, i64 0, i64 0, i32 0, metadata !3624} ; [ DW_TAG_typedef ]
 !4201 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"basic_istream", metadata !"basic_istream", metadata !"", metadata !4067, i32 581, metadata !4075, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, null, i32 0, metadata !86, i32 581} ; [ DW_TAG_subprogram ]
-!4202 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<double>", metadata !"_M_extract<double>", metadata !"_ZNSi10_M_extractIdEERSiRT_", metadata !4067, i32 587, metadata !4128, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3807, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4203 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<unsigned long>", metadata !"_M_extract<unsigned long>", metadata !"_ZNSi10_M_extractImEERSiRT_", metadata !4067, i32 587, metadata !4116, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3810, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4204 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<bool>", metadata !"_M_extract<bool>", metadata !"_ZNSi10_M_extractIbEERSiRT_", metadata !4067, i32 587, metadata !4097, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3813, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4205 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<long double>", metadata !"_M_extract<long double>", metadata !"_ZNSi10_M_extractIeEERSiRT_", metadata !4067, i32 587, metadata !4131, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3816, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4206 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<unsigned long long>", metadata !"_M_extract<unsigned long long>", metadata !"_ZNSi10_M_extractIyEERSiRT_", metadata !4067, i32 587, metadata !4122, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3819, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4207 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<long long>", metadata !"_M_extract<long long>", metadata !"_ZNSi10_M_extractIxEERSiRT_", metadata !4067, i32 587, metadata !4119, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3822, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4208 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<float>", metadata !"_M_extract<float>", metadata !"_ZNSi10_M_extractIfEERSiRT_", metadata !4067, i32 587, metadata !4125, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4209, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4209 = metadata !{metadata !4210}
-!4210 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !1145, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
-!4211 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<unsigned short>", metadata !"_M_extract<unsigned short>", metadata !"_ZNSi10_M_extractItEERSiRT_", metadata !4067, i32 587, metadata !4104, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4212, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4212 = metadata !{metadata !4213}
-!4213 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !1113, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
-!4214 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<long>", metadata !"_M_extract<long>", metadata !"_ZNSi10_M_extractIlEERSiRT_", metadata !4067, i32 587, metadata !4113, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3825, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4215 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<unsigned int>", metadata !"_M_extract<unsigned int>", metadata !"_ZNSi10_M_extractIjEERSiRT_", metadata !4067, i32 587, metadata !4110, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4216, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4216 = metadata !{metadata !4217}
-!4217 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !138, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
-!4218 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<void *>", metadata !"_M_extract<void *>", metadata !"_ZNSi10_M_extractIPvEERSiRT_", metadata !4067, i32 587, metadata !4134, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4219, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4202 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<bool>", metadata !"_M_extract<bool>", metadata !"_ZNSi10_M_extractIbEERSiRT_", metadata !4067, i32 587, metadata !4097, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3807, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4203 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<unsigned long long>", metadata !"_M_extract<unsigned long long>", metadata !"_ZNSi10_M_extractIyEERSiRT_", metadata !4067, i32 587, metadata !4122, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3810, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4204 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<unsigned long>", metadata !"_M_extract<unsigned long>", metadata !"_ZNSi10_M_extractImEERSiRT_", metadata !4067, i32 587, metadata !4116, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3813, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4205 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<double>", metadata !"_M_extract<double>", metadata !"_ZNSi10_M_extractIdEERSiRT_", metadata !4067, i32 587, metadata !4128, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3816, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4206 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<long long>", metadata !"_M_extract<long long>", metadata !"_ZNSi10_M_extractIxEERSiRT_", metadata !4067, i32 587, metadata !4119, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3819, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4207 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<unsigned int>", metadata !"_M_extract<unsigned int>", metadata !"_ZNSi10_M_extractIjEERSiRT_", metadata !4067, i32 587, metadata !4110, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4208, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4208 = metadata !{metadata !4209}
+!4209 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !138, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
+!4210 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<unsigned short>", metadata !"_M_extract<unsigned short>", metadata !"_ZNSi10_M_extractItEERSiRT_", metadata !4067, i32 587, metadata !4104, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4211, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4211 = metadata !{metadata !4212}
+!4212 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !1113, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
+!4213 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<long double>", metadata !"_M_extract<long double>", metadata !"_ZNSi10_M_extractIeEERSiRT_", metadata !4067, i32 587, metadata !4131, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3825, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4214 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<void *>", metadata !"_M_extract<void *>", metadata !"_ZNSi10_M_extractIPvEERSiRT_", metadata !4067, i32 587, metadata !4134, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4215, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4215 = metadata !{metadata !4216}
+!4216 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !98, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
+!4217 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<long>", metadata !"_M_extract<long>", metadata !"_ZNSi10_M_extractIlEERSiRT_", metadata !4067, i32 587, metadata !4113, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3828, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4218 = metadata !{i32 786478, i32 0, metadata !3562, metadata !"_M_extract<float>", metadata !"_M_extract<float>", metadata !"_ZNSi10_M_extractIfEERSiRT_", metadata !4067, i32 587, metadata !4125, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4219, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
 !4219 = metadata !{metadata !4220}
-!4220 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !98, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
+!4220 = metadata !{i32 786479, null, metadata !"_ValueT", metadata !1145, null, i32 0, i32 0} ; [ DW_TAG_template_type_parameter ]
 !4221 = metadata !{i32 786474, metadata !3562, null, metadata !3563, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !4222} ; [ DW_TAG_friend ]
 !4222 = metadata !{i32 786434, metadata !3562, metadata !"sentry", metadata !4067, i32 104, i64 8, i64 8, i32 0, i32 0, null, metadata !4223, i32 0, null, null} ; [ DW_TAG_class_type ]
 !4223 = metadata !{metadata !4224, metadata !4225, metadata !4230}
@@ -6099,14 +6099,14 @@ define internal void @_GLOBAL__I_a() nounwind {
 !4516 = metadata !{metadata !4434, metadata !4255, metadata !4517, metadata !3168}
 !4517 = metadata !{i32 786454, metadata !4249, metadata !"off_type", metadata !3574, i32 61, i64 0, i64 0, i64 0, i32 0, metadata !4342} ; [ DW_TAG_typedef ]
 !4518 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"basic_ostream", metadata !"basic_ostream", metadata !"", metadata !3579, i32 360, metadata !4429, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, null, i32 0, metadata !86, i32 360} ; [ DW_TAG_subprogram ]
-!4519 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<double>", metadata !"_M_insert<double>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIdEERS2_T_", metadata !3579, i32 365, metadata !4478, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3807, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
-!4520 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<unsigned long>", metadata !"_M_insert<unsigned long>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertImEERS2_T_", metadata !3579, i32 365, metadata !4454, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3810, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
-!4521 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<bool>", metadata !"_M_insert<bool>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIbEERS2_T_", metadata !3579, i32 365, metadata !4457, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3813, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
-!4522 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<long double>", metadata !"_M_insert<long double>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIeEERS2_T_", metadata !3579, i32 365, metadata !4484, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3816, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
-!4523 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<unsigned long long>", metadata !"_M_insert<unsigned long long>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIyEERS2_T_", metadata !3579, i32 365, metadata !4475, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3819, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
-!4524 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<long long>", metadata !"_M_insert<long long>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIxEERS2_T_", metadata !3579, i32 365, metadata !4472, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3822, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
-!4525 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<long>", metadata !"_M_insert<long>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIlEERS2_T_", metadata !3579, i32 365, metadata !4451, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3825, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
-!4526 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<const void *>", metadata !"_M_insert<const void *>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIPKvEERS2_T_", metadata !3579, i32 365, metadata !4487, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3828, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!4519 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<bool>", metadata !"_M_insert<bool>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIbEERS2_T_", metadata !3579, i32 365, metadata !4457, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3807, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!4520 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<unsigned long long>", metadata !"_M_insert<unsigned long long>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIyEERS2_T_", metadata !3579, i32 365, metadata !4475, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3810, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!4521 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<unsigned long>", metadata !"_M_insert<unsigned long>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertImEERS2_T_", metadata !3579, i32 365, metadata !4454, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3813, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!4522 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<double>", metadata !"_M_insert<double>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIdEERS2_T_", metadata !3579, i32 365, metadata !4478, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3816, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!4523 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<long long>", metadata !"_M_insert<long long>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIxEERS2_T_", metadata !3579, i32 365, metadata !4472, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3819, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!4524 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<const void *>", metadata !"_M_insert<const void *>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIPKvEERS2_T_", metadata !3579, i32 365, metadata !4487, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3822, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!4525 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<long double>", metadata !"_M_insert<long double>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIeEERS2_T_", metadata !3579, i32 365, metadata !4484, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3825, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
+!4526 = metadata !{i32 786478, i32 0, metadata !4249, metadata !"_M_insert<long>", metadata !"_M_insert<long>", metadata !"_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIlEERS2_T_", metadata !3579, i32 365, metadata !4451, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3828, i32 0, metadata !86, i32 365} ; [ DW_TAG_subprogram ]
 !4527 = metadata !{i32 786474, metadata !4249, null, metadata !3574, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !4528} ; [ DW_TAG_friend ]
 !4528 = metadata !{i32 786434, metadata !4249, metadata !"sentry", metadata !3579, i32 93, i64 64, i64 32, i32 0, i32 0, null, metadata !4529, i32 0, null, null} ; [ DW_TAG_class_type ]
 !4529 = metadata !{metadata !4530, metadata !4531, metadata !4533, metadata !4537, metadata !4540}
@@ -6463,17 +6463,17 @@ define internal void @_GLOBAL__I_a() nounwind {
 !4880 = metadata !{metadata !4762, metadata !4753, metadata !4881, metadata !3168}
 !4881 = metadata !{i32 786454, metadata !4241, metadata !"off_type", metadata !3563, i32 61, i64 0, i64 0, i64 0, i32 0, metadata !4342} ; [ DW_TAG_typedef ]
 !4882 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"basic_istream", metadata !"basic_istream", metadata !"", metadata !4067, i32 581, metadata !4757, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, null, i32 0, metadata !86, i32 581} ; [ DW_TAG_subprogram ]
-!4883 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<double>", metadata !"_M_extract<double>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIdEERS2_RT_", metadata !4067, i32 587, metadata !4809, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3807, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4884 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<unsigned long>", metadata !"_M_extract<unsigned long>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractImEERS2_RT_", metadata !4067, i32 587, metadata !4797, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3810, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4885 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<bool>", metadata !"_M_extract<bool>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIbEERS2_RT_", metadata !4067, i32 587, metadata !4779, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3813, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4886 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<long double>", metadata !"_M_extract<long double>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIeEERS2_RT_", metadata !4067, i32 587, metadata !4812, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3816, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4887 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<unsigned long long>", metadata !"_M_extract<unsigned long long>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIyEERS2_RT_", metadata !4067, i32 587, metadata !4803, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3819, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4888 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<long long>", metadata !"_M_extract<long long>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIxEERS2_RT_", metadata !4067, i32 587, metadata !4800, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3822, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4889 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<float>", metadata !"_M_extract<float>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIfEERS2_RT_", metadata !4067, i32 587, metadata !4806, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4209, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4890 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<unsigned short>", metadata !"_M_extract<unsigned short>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractItEERS2_RT_", metadata !4067, i32 587, metadata !4785, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4212, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4891 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<long>", metadata !"_M_extract<long>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIlEERS2_RT_", metadata !4067, i32 587, metadata !4794, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3825, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4892 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<unsigned int>", metadata !"_M_extract<unsigned int>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIjEERS2_RT_", metadata !4067, i32 587, metadata !4791, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4216, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
-!4893 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<void *>", metadata !"_M_extract<void *>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIPvEERS2_RT_", metadata !4067, i32 587, metadata !4815, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4219, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4883 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<bool>", metadata !"_M_extract<bool>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIbEERS2_RT_", metadata !4067, i32 587, metadata !4779, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3807, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4884 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<unsigned long long>", metadata !"_M_extract<unsigned long long>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIyEERS2_RT_", metadata !4067, i32 587, metadata !4803, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3810, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4885 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<unsigned long>", metadata !"_M_extract<unsigned long>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractImEERS2_RT_", metadata !4067, i32 587, metadata !4797, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3813, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4886 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<double>", metadata !"_M_extract<double>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIdEERS2_RT_", metadata !4067, i32 587, metadata !4809, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3816, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4887 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<long long>", metadata !"_M_extract<long long>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIxEERS2_RT_", metadata !4067, i32 587, metadata !4800, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3819, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4888 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<unsigned int>", metadata !"_M_extract<unsigned int>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIjEERS2_RT_", metadata !4067, i32 587, metadata !4791, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4208, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4889 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<unsigned short>", metadata !"_M_extract<unsigned short>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractItEERS2_RT_", metadata !4067, i32 587, metadata !4785, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4211, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4890 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<long double>", metadata !"_M_extract<long double>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIeEERS2_RT_", metadata !4067, i32 587, metadata !4812, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3825, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4891 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<void *>", metadata !"_M_extract<void *>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIPvEERS2_RT_", metadata !4067, i32 587, metadata !4815, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4215, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4892 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<long>", metadata !"_M_extract<long>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIlEERS2_RT_", metadata !4067, i32 587, metadata !4794, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !3828, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
+!4893 = metadata !{i32 786478, i32 0, metadata !4241, metadata !"_M_extract<float>", metadata !"_M_extract<float>", metadata !"_ZNSt13basic_istreamIwSt11char_traitsIwEE10_M_extractIfEERS2_RT_", metadata !4067, i32 587, metadata !4806, i1 false, i1 false, i32 0, i32 0, null, i32 258, i1 false, null, metadata !4219, i32 0, metadata !86, i32 587} ; [ DW_TAG_subprogram ]
 !4894 = metadata !{i32 786474, metadata !4241, null, metadata !3563, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !4895} ; [ DW_TAG_friend ]
 !4895 = metadata !{i32 786434, metadata !4241, metadata !"sentry", metadata !4067, i32 104, i64 8, i64 8, i32 0, i32 0, null, metadata !4896, i32 0, null, null} ; [ DW_TAG_class_type ]
 !4896 = metadata !{metadata !4897, metadata !4898, metadata !4903}
@@ -6512,19 +6512,19 @@ define internal void @_GLOBAL__I_a() nounwind {
 !4929 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !4930, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !4930 = metadata !{null, metadata !4923, metadata !4931}
 !4931 = metadata !{i32 786448, null, null, null, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !943} ; [ DW_TAG_reference_type ]
-!4932 = metadata !{i32 786484, i32 0, metadata !930, metadata !"__ssdm_thread_M_led_Controller", metadata !"__ssdm_thread_M_led_Controller", metadata !"_ZN6ADVIOS30__ssdm_thread_M_led_ControllerE", metadata !931, i32 7, metadata !212, i32 0, i32 1, i1* @_ZN6ADVIOS30__ssdm_thread_M_led_ControllerE} ; [ DW_TAG_variable ]
-!4933 = metadata !{i32 786484, i32 0, metadata !930, metadata !"__ssdm_thread_M_periodic_Incrementer", metadata !"__ssdm_thread_M_periodic_Incrementer", metadata !"_ZN6ADVIOS36__ssdm_thread_M_periodic_IncrementerE", metadata !931, i32 8, metadata !212, i32 0, i32 1, i1* @_ZN6ADVIOS36__ssdm_thread_M_periodic_IncrementerE} ; [ DW_TAG_variable ]
+!4932 = metadata !{i32 786484, i32 0, metadata !930, metadata !"__ssdm_thread_M_led_Controller", metadata !"__ssdm_thread_M_led_Controller", metadata !"_ZN6advios30__ssdm_thread_M_led_ControllerE", metadata !931, i32 7, metadata !212, i32 0, i32 1, i1* @_ZN6advios30__ssdm_thread_M_led_ControllerE} ; [ DW_TAG_variable ]
+!4933 = metadata !{i32 786484, i32 0, metadata !930, metadata !"__ssdm_thread_M_periodic_Incrementer", metadata !"__ssdm_thread_M_periodic_Incrementer", metadata !"_ZN6advios36__ssdm_thread_M_periodic_IncrementerE", metadata !931, i32 8, metadata !212, i32 0, i32 1, i1* @_ZN6advios36__ssdm_thread_M_periodic_IncrementerE} ; [ DW_TAG_variable ]
 !4934 = metadata !{i32 786484, i32 0, metadata !2263, metadata !"width", metadata !"width", metadata !"width", metadata !865, i32 1395, metadata !3194, i32 1, i32 1, i32 32} ; [ DW_TAG_variable ]
 !4935 = metadata !{i32 786484, i32 0, metadata !2472, metadata !"width", metadata !"width", metadata !"width", metadata !865, i32 1395, metadata !3194, i32 1, i32 1, i32 33} ; [ DW_TAG_variable ]
 !4936 = metadata !{i32 786484, i32 0, metadata !2810, metadata !"width", metadata !"width", metadata !"width", metadata !865, i32 1395, metadata !3194, i32 1, i32 1, i32 1} ; [ DW_TAG_variable ]
-!4937 = metadata !{void (%struct.ADVIOS*)* @_ZN6ADVIOS20periodic_IncrementerEv, metadata !4938, metadata !4939, metadata !4940, metadata !4941, metadata !4942, metadata !4943}
+!4937 = metadata !{void (%struct.advios*)* @_ZN6advios20periodic_IncrementerEv, metadata !4938, metadata !4939, metadata !4940, metadata !4941, metadata !4942, metadata !4943}
 !4938 = metadata !{metadata !"kernel_arg_addr_space"}
 !4939 = metadata !{metadata !"kernel_arg_access_qual"}
 !4940 = metadata !{metadata !"kernel_arg_type"}
 !4941 = metadata !{metadata !"kernel_arg_type_qual"}
 !4942 = metadata !{metadata !"kernel_arg_name"}
 !4943 = metadata !{metadata !"reqd_work_group_size", i32 1, i32 1, i32 1}
-!4944 = metadata !{void (%struct.ADVIOS*)* @_ZN6ADVIOS14led_ControllerEv, metadata !4938, metadata !4939, metadata !4940, metadata !4941, metadata !4942, metadata !4943}
+!4944 = metadata !{void (%struct.advios*)* @_ZN6advios14led_ControllerEv, metadata !4938, metadata !4939, metadata !4940, metadata !4941, metadata !4942, metadata !4943}
 !4945 = metadata !{void (%"struct._ap_sc_::sc_dt::sc_uint"*, %struct.ap_int_base*)* @_ZN7_ap_sc_5sc_dt7sc_uintILi4EEC1ERK11ap_int_baseILi4ELb0ELb1EE, metadata !4946, metadata !4947, metadata !4948, metadata !4949, metadata !4950, metadata !4943}
 !4946 = metadata !{metadata !"kernel_arg_addr_space", i32 0}
 !4947 = metadata !{metadata !"kernel_arg_access_qual", metadata !"none"}
@@ -6602,9 +6602,9 @@ define internal void @_GLOBAL__I_a() nounwind {
 !5019 = metadata !{metadata !"kernel_arg_type", metadata !"char*"}
 !5020 = metadata !{metadata !"kernel_arg_type_qual", metadata !"const"}
 !5021 = metadata !{void (%"class.std::ios_base::Init"*, i8*)* @_ZN7_ap_sc_7sc_core14sc_module_nameC2EPKc, metadata !5018, metadata !4947, metadata !5019, metadata !5020, metadata !4983, metadata !4943}
-!5022 = metadata !{void (%struct.ADVIOS*, %"class.std::ios_base::Init"*)* @_ZN6ADVIOSC1EN7_ap_sc_7sc_core14sc_module_nameE, metadata !4946, metadata !4947, metadata !5023, metadata !4949, metadata !4983, metadata !4943}
+!5022 = metadata !{void (%struct.advios*, %"class.std::ios_base::Init"*)* @_ZN6adviosC1EN7_ap_sc_7sc_core14sc_module_nameE, metadata !4946, metadata !4947, metadata !5023, metadata !4949, metadata !4983, metadata !4943}
 !5023 = metadata !{metadata !"kernel_arg_type", metadata !"::sc_core::sc_module_name"}
-!5024 = metadata !{void (%struct.ADVIOS*, %"class.std::ios_base::Init"*)* @_ZN6ADVIOSC2EN7_ap_sc_7sc_core14sc_module_nameE, metadata !4946, metadata !4947, metadata !5023, metadata !4949, metadata !4983, metadata !4943}
+!5024 = metadata !{void (%struct.advios*, %"class.std::ios_base::Init"*)* @_ZN6adviosC2EN7_ap_sc_7sc_core14sc_module_nameE, metadata !4946, metadata !4947, metadata !5023, metadata !4949, metadata !4983, metadata !4943}
 !5025 = metadata !{void (%"class._ap_sc_::sc_core::sc_in"*)* @_ZN7_ap_sc_7sc_core9sc_signalIbEC1Ev, metadata !4938, metadata !4939, metadata !4940, metadata !4941, metadata !4942, metadata !4943}
 !5026 = metadata !{void (%"class._ap_sc_::sc_core::sc_in"*)* @_ZN7_ap_sc_7sc_core9sc_signalIbEC2Ev, metadata !4938, metadata !4939, metadata !4940, metadata !4941, metadata !4942, metadata !4943}
 !5027 = metadata !{void (%"class._ap_sc_::sc_core::sc_port_b"*)* @_ZN7_ap_sc_7sc_core18sc_signal_inout_ifIbEC2Ev, metadata !4938, metadata !4939, metadata !4940, metadata !4941, metadata !4942, metadata !4943}

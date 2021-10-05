@@ -6,7 +6,7 @@
         <clock default="false" name="default" period="8" uncertainty="1"/>
     </clockList>
     <config>
-        <schedule model="ADVIOS"/>
+        <schedule model="advios"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">

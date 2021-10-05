@@ -1,1 +1,1 @@
-xsim {ADVIOS} -autoloadwcfg -tclbatch {ADVIOS.tcl}
+xsim {advios} -autoloadwcfg -tclbatch {advios.tcl}

@@ -6,5 +6,5 @@ set status(bc_tb_done) 0
 set status(tvout) ""
 set status(sc_done) 1
 set status(cas_done) 0
-set status(hdl_tvin) "ADVIOS.hdltvin.dat"
-set status(hdl_tvout) "ADVIOS.hdltvout.dat"
+set status(hdl_tvin) "advios.hdltvin.dat"
+set status(hdl_tvout) "advios.hdltvout.dat"

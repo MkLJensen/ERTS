@@ -8,7 +8,7 @@
 #
 # Settings for Vivado implementation flow
 #
-set top_module ADVIOS
+set top_module advios
 set language vhdl
 set family zynq
 set device xc7z010

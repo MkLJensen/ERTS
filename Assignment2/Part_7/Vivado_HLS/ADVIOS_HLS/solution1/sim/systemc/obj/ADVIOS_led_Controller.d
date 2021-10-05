@@ -1,5 +1,5 @@
-obj/ADVIOS_led_Controller.o: ADVIOS_led_Controller.cpp \
- ADVIOS_led_Controller.h \
+obj/advios_led_Controller.o: advios_led_Controller.cpp \
+ advios_led_Controller.h \
  C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/systemc.h \
  c:\xilinx\vivado_hls\2017.2\msys\bin\../lib/gcc/mingw32/4.6.2/include/c++/cassert \
  c:\xilinx\vivado_hls\2017.2\msys\bin\../lib/gcc/mingw32/4.6.2/../../../../include/assert.h \
@@ -226,7 +226,7 @@ obj/ADVIOS_led_Controller.o: ADVIOS_led_Controller.cpp \
  C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/packages/boost/utility/enable_if.hpp \
  C:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/SystemC/AESL_pkg.h
 
-ADVIOS_led_Controller.h:
+advios_led_Controller.h:
 
 C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/systemc.h:
 

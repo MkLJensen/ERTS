@@ -5,7 +5,7 @@
 <option name="complete" positionalBoolean="type" value=""/>
 </pragma>
 </directive>
-<directive functionLabel="" functionName="ADVIOS::periodic_Incrementer" label="">
+<directive functionLabel="" functionName="advios::periodic_Incrementer" label="">
 <pragma name="RESOURCE">
 <option name="variable" positionalBoolean="4" value="ctrl"/>
 <option name="core" value="AXI4LiteS"/>

@@ -1,11 +1,11 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Fri Oct  1 16:54:45 2021
+// Date        : Mon Oct  4 15:22:47 2021
 // Host        : DESKTOP-IFL7HB3 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_Part7/Vivado_Part7.srcs/sources_1/bd/design_1/ip/design_1_ADVIOS_0_0/design_1_ADVIOS_0_0_stub.v
-// Design      : design_1_ADVIOS_0_0
+//               c:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/vivado_Part7/vivado_Part7.srcs/sources_1/bd/design_1/ip/design_1_advios_0_0/design_1_advios_0_0_stub.v
+// Design      : design_1_advios_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1
 // --------------------------------------------------------------------------------
@@ -14,7 +14,7 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "advios_top,Vivado 2017.2" *)
-module design_1_ADVIOS_0_0(inSwitch, outLeds, s_axi_slv0_AWADDR, 
+module design_1_advios_0_0(inSwitch, outLeds, s_axi_slv0_AWADDR, 
   s_axi_slv0_AWVALID, s_axi_slv0_AWREADY, s_axi_slv0_WDATA, s_axi_slv0_WSTRB, 
   s_axi_slv0_WVALID, s_axi_slv0_WREADY, s_axi_slv0_BRESP, s_axi_slv0_BVALID, 
   s_axi_slv0_BREADY, s_axi_slv0_ARADDR, s_axi_slv0_ARVALID, s_axi_slv0_ARREADY, 

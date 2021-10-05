@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vivado HLS Report for 'ADVIOS'
+== Vivado HLS Report for 'advios'
 ================================================================
-* Date:           Mon Oct  4 10:42:20 2021
+* Date:           Mon Oct  4 14:00:19 2021
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        ADVIOS_HLS
@@ -38,8 +38,8 @@
         |                                       |                             |  Latency  |  Interval | Pipeline|
         |                Instance               |            Module           | min | max | min | max |   Type  |
         +---------------------------------------+-----------------------------+-----+-----+-----+-----+---------+
-        |grp_ADVIOS_periodic_Incrementer_fu_80  |ADVIOS_periodic_Incrementer  |    4|    4|    4|    4|   none  |
-        |grp_ADVIOS_led_Controller_fu_104       |ADVIOS_led_Controller        |    4|    4|    4|    4|   none  |
+        |grp_advios_periodic_Incrementer_fu_80  |advios_periodic_Incrementer  |    4|    4|    4|    4|   none  |
+        |grp_advios_led_Controller_fu_104       |advios_led_Controller        |    4|    4|    4|    4|   none  |
         +---------------------------------------+-----------------------------+-----+-----+-----+-----+---------+
 
         * Loop: 
@@ -74,8 +74,8 @@
     +---------------------------------------+-----------------------------+---------+-------+-----+-----+
     |                Instance               |            Module           | BRAM_18K| DSP48E|  FF | LUT |
     +---------------------------------------+-----------------------------+---------+-------+-----+-----+
-    |grp_ADVIOS_led_Controller_fu_104       |ADVIOS_led_Controller        |        0|      0|   23|   74|
-    |grp_ADVIOS_periodic_Incrementer_fu_80  |ADVIOS_periodic_Incrementer  |        0|      0|  122|  100|
+    |grp_advios_led_Controller_fu_104       |advios_led_Controller        |        0|      0|   23|   74|
+    |grp_advios_periodic_Incrementer_fu_80  |advios_periodic_Incrementer  |        0|      0|  122|  100|
     +---------------------------------------+-----------------------------+---------+-------+-----+-----+
     |Total                                  |                             |        0|      0|  145|  174|
     +---------------------------------------+-----------------------------+---------+-------+-----+-----+
@@ -105,7 +105,7 @@
     +----------------------+---+----+-----+-----------+
     |         Name         | FF| LUT| Bits| Const Bits|
     +----------------------+---+----+-----+-----------+
-    |ADVIOS_sec_counter_V  |  4|   0|    4|          0|
+    |advios_sec_counter_V  |  4|   0|    4|          0|
     |outLeds               |  4|   0|    4|          0|
     |sec_pulse             |  1|   0|    1|          0|
     +----------------------+---+----+-----+-----------+
@@ -121,8 +121,8 @@
 +----------+-----+-----+------------+----------------+--------------+
 | RTL Ports| Dir | Bits|  Protocol  |  Source Object |    C Type    |
 +----------+-----+-----+------------+----------------+--------------+
-|clk       |  in |    1| ap_ctrl_hs | ADVIOS::ADVIOS | return value |
-|reset     |  in |    1| ap_ctrl_hs | ADVIOS::ADVIOS | return value |
+|clk       |  in |    1| ap_ctrl_hs | advios::advios | return value |
+|reset     |  in |    1| ap_ctrl_hs | advios::advios | return value |
 |ctrl      |  in |    4|   ap_none  |      ctrl      |    pointer   |
 |inSwitch  |  in |    4|   ap_none  |    inSwitch    |    pointer   |
 |outLeds   | out |    4|   ap_vld   |     outLeds    |    pointer   |
@@ -160,7 +160,7 @@ IsGatedGlobalClock: 0
 
 * FSM state transitions: 
 1 --> 
-	2  / (ADVIOS_ssdm_threa) | (ADVIOS_ssdm_threa_1)
+	2  / (advios_ssdm_threa) | (advios_ssdm_threa_1)
 2 --> 
 * FSM state operations: 
 
@@ -184,90 +184,90 @@ ST_1: StgValue_8 (18)  [1/1] 0.00ns
 :5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %outLeds), !map !96
 
 ST_1: StgValue_9 (19)  [1/1] 0.00ns
-:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_switchs_V), !map !100
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_switchs_V), !map !100
 
 ST_1: StgValue_10 (20)  [1/1] 0.00ns
-:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_control_V), !map !104
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_control_V), !map !104
 
 ST_1: StgValue_11 (21)  [1/1] 0.00ns
-:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %ADVIOS_count_V), !map !108
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %advios_count_V), !map !108
 
 ST_1: StgValue_12 (22)  [1/1] 0.00ns
-:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_sec_counter_V), !map !112
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_sec_counter_V), !map !112
 
 ST_1: StgValue_13 (23)  [1/1] 0.00ns
 :10  call void (...)* @_ssdm_op_SpecBitsMap(i1* %sec_pulse), !map !116
 
-ST_1: StgValue_14 (24)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:23
+ST_1: StgValue_14 (24)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:23
 :11  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @p_str, [7 x i8]* @p_str) nounwind
 
-ST_1: ADVIOS_ssdm_threa (25)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:24
-:12  %ADVIOS_ssdm_threa = load i1* @ADVIOS_ssdm_thread_M_led_Controller, align 1
+ST_1: advios_ssdm_threa (25)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:24
+:12  %advios_ssdm_threa = load i1* @advios_ssdm_thread_M_led_Controller, align 1
 
-ST_1: StgValue_16 (26)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:24
-:13  br i1 %ADVIOS_ssdm_threa, label %1, label %2
+ST_1: StgValue_16 (26)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:24
+:13  br i1 %advios_ssdm_threa, label %1, label %2
 
-ST_1: StgValue_17 (28)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:24
+ST_1: StgValue_17 (28)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:24
 :0  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [15 x i8]* @p_str19) nounwind
 
-ST_1: StgValue_18 (29)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:25
+ST_1: StgValue_18 (29)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:25
 :1  call void (...)* @_ssdm_op_SpecSensitive([15 x i8]* @p_str19, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
 
-ST_1: StgValue_19 (30)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:26
+ST_1: StgValue_19 (30)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:26
 :2  call void (...)* @_ssdm_op_SpecSensitive([15 x i8]* @p_str19, [6 x i8]* @p_str3, i1* %reset, i32 3) nounwind
 
-ST_1: ADVIOS_ssdm_threa_1 (31)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:27
-:3  %ADVIOS_ssdm_threa_1 = load i1* @ADVIOS_ssdm_thread_M_periodic_Incrementer, align 1
+ST_1: advios_ssdm_threa_1 (31)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:27
+:3  %advios_ssdm_threa_1 = load i1* @advios_ssdm_thread_M_periodic_Incrementer, align 1
 
-ST_1: StgValue_21 (32)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:27
-:4  br i1 %ADVIOS_ssdm_threa_1, label %3, label %4
+ST_1: StgValue_21 (32)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:27
+:4  br i1 %advios_ssdm_threa_1, label %3, label %4
 
-ST_1: StgValue_22 (34)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:27
+ST_1: StgValue_22 (34)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:27
 :0  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [21 x i8]* @p_str8) nounwind
 
-ST_1: StgValue_23 (35)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:28
+ST_1: StgValue_23 (35)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:28
 :1  call void (...)* @_ssdm_op_SpecSensitive([21 x i8]* @p_str8, [4 x i8]* @p_str2, i1* %clk, i32 1) nounwind
 
-ST_1: StgValue_24 (36)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:29
+ST_1: StgValue_24 (36)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:29
 :2  call void (...)* @_ssdm_op_SpecSensitive([21 x i8]* @p_str8, [6 x i8]* @p_str3, i1* %reset, i32 3) nounwind
 
-ST_1: StgValue_25 (37)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:30
+ST_1: StgValue_25 (37)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:30
 :3  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %clk) nounwind
 
-ST_1: StgValue_26 (38)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:31
+ST_1: StgValue_26 (38)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:31
 :4  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %reset) nounwind
 
-ST_1: StgValue_27 (39)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:32
+ST_1: StgValue_27 (39)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:32
 :5  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ctrl) nounwind
 
-ST_1: StgValue_28 (40)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:33
+ST_1: StgValue_28 (40)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:33
 :6  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %inSwitch) nounwind
 
-ST_1: StgValue_29 (41)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:34
+ST_1: StgValue_29 (41)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:34
 :7  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %outLeds) nounwind
 
-ST_1: StgValue_30 (42)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:35
+ST_1: StgValue_30 (42)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:35
 :8  call void (...)* @_ssdm_op_SpecChannel([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [10 x i8]* @p_str12, i32 1, i32 0, i1* %sec_pulse) nounwind
 
-ST_1: StgValue_31 (43)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:34
+ST_1: StgValue_31 (43)  [1/1] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:34
 :9  ret void
 
-ST_1: StgValue_32 (45)  [2/2] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:27
-:0  call void @"ADVIOS::periodic_Incrementer"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %sec_pulse)
+ST_1: StgValue_32 (45)  [2/2] 0.00ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:27
+:0  call void @"advios::periodic_Incrementer"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %sec_pulse)
 
-ST_1: StgValue_33 (48)  [2/2] 3.10ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:24
-:0  call void @"ADVIOS::led_Controller"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %sec_pulse)
+ST_1: StgValue_33 (48)  [2/2] 3.10ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:24
+:0  call void @"advios::led_Controller"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %sec_pulse)
 
 
  <State 2>: 2.74ns
-ST_2: StgValue_34 (45)  [1/2] 2.74ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:27
-:0  call void @"ADVIOS::periodic_Incrementer"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %sec_pulse)
+ST_2: StgValue_34 (45)  [1/2] 2.74ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:27
+:0  call void @"advios::periodic_Incrementer"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %sec_pulse)
 
 ST_2: StgValue_35 (46)  [1/1] 0.00ns
 :1  br label %UnifiedUnreachableBlock
 
-ST_2: StgValue_36 (48)  [1/2] 2.35ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h:24
-:0  call void @"ADVIOS::led_Controller"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %sec_pulse)
+ST_2: StgValue_36 (48)  [1/2] 2.35ns  loc: ../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h:24
+:0  call void @"advios::led_Controller"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %sec_pulse)
 
 ST_2: StgValue_37 (49)  [1/1] 0.00ns
 :1  br label %UnifiedUnreachableBlock
@@ -293,13 +293,13 @@ Port [ reset]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; exte
 Port [ ctrl]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ inSwitch]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
 Port [ outLeds]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=ap_vld:ce=0
-Port [ ADVIOS_switchs_V]:  wired=1; compound=0; hidden=1; nouse=0; global=0; static=0; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
-Port [ ADVIOS_control_V]:  wired=1; compound=0; hidden=1; nouse=0; global=0; static=0; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
-Port [ ADVIOS_count_V]:  wired=1; compound=0; hidden=1; nouse=0; global=0; static=0; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
-Port [ ADVIOS_sec_counter_V]:  wired=1; compound=0; hidden=1; nouse=0; global=0; static=0; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ advios_switchs_V]:  wired=1; compound=0; hidden=1; nouse=0; global=0; static=0; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ advios_control_V]:  wired=1; compound=0; hidden=1; nouse=0; global=0; static=0; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ advios_count_V]:  wired=1; compound=0; hidden=1; nouse=0; global=0; static=0; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
+Port [ advios_sec_counter_V]:  wired=1; compound=0; hidden=1; nouse=0; global=0; static=0; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
 Port [ sec_pulse]:  wired=1; compound=0; hidden=1; nouse=0; global=0; static=0; extern=0; dir=2; type=0; pingpong=0; private_global=0; IO mode=ap_ovld:ce=0
-Port [ ADVIOS_ssdm_thread_M_led_Controller]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=1; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
-Port [ ADVIOS_ssdm_thread_M_periodic_Incrementer]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=1; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ advios_ssdm_thread_M_led_Controller]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=1; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
+Port [ advios_ssdm_thread_M_periodic_Incrementer]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=0; extern=1; dir=0; type=0; pingpong=0; private_global=1; linkage=0; visibility=0; IO mode=ap_none:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -318,12 +318,12 @@ StgValue_11         (specbitsmap    ) [ 000]
 StgValue_12         (specbitsmap    ) [ 000]
 StgValue_13         (specbitsmap    ) [ 000]
 StgValue_14         (spectopmodule  ) [ 000]
-ADVIOS_ssdm_threa   (load           ) [ 011]
+advios_ssdm_threa   (load           ) [ 011]
 StgValue_16         (br             ) [ 000]
 StgValue_17         (specprocessdecl) [ 000]
 StgValue_18         (specsensitive  ) [ 000]
 StgValue_19         (specsensitive  ) [ 000]
-ADVIOS_ssdm_threa_1 (load           ) [ 010]
+advios_ssdm_threa_1 (load           ) [ 010]
 StgValue_21         (br             ) [ 000]
 StgValue_22         (specprocessdecl) [ 000]
 StgValue_23         (specsensitive  ) [ 000]
@@ -390,39 +390,39 @@ StgValue_38         (unreachable    ) [ 000]
 </bind>
 </comp>
 
-<comp id="10" class="1000" name="ADVIOS_switchs_V">
+<comp id="10" class="1000" name="advios_switchs_V">
 <pin_list>
 <pin id="11" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="ADVIOS_switchs_V"/></StgValue>
+<StgValue><ssdm name="advios_switchs_V"/></StgValue>
 </bind>
 </comp>
 
-<comp id="12" class="1000" name="ADVIOS_control_V">
+<comp id="12" class="1000" name="advios_control_V">
 <pin_list>
 <pin id="13" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="ADVIOS_control_V"/></StgValue>
+<StgValue><ssdm name="advios_control_V"/></StgValue>
 </bind>
 </comp>
 
-<comp id="14" class="1000" name="ADVIOS_count_V">
+<comp id="14" class="1000" name="advios_count_V">
 <pin_list>
 <pin id="15" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="ADVIOS_count_V"/></StgValue>
+<StgValue><ssdm name="advios_count_V"/></StgValue>
 </bind>
 </comp>
 
-<comp id="16" class="1000" name="ADVIOS_sec_counter_V">
+<comp id="16" class="1000" name="advios_sec_counter_V">
 <pin_list>
 <pin id="17" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="ADVIOS_sec_counter_V"/></StgValue>
+<StgValue><ssdm name="advios_sec_counter_V"/></StgValue>
 </bind>
 </comp>
 
@@ -435,21 +435,21 @@ StgValue_38         (unreachable    ) [ 000]
 </bind>
 </comp>
 
-<comp id="20" class="1000" name="ADVIOS_ssdm_thread_M_led_Controller">
+<comp id="20" class="1000" name="advios_ssdm_thread_M_led_Controller">
 <pin_list>
 <pin id="21" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="ADVIOS_ssdm_thread_M_led_Controller"/></StgValue>
+<StgValue><ssdm name="advios_ssdm_thread_M_led_Controller"/></StgValue>
 </bind>
 </comp>
 
-<comp id="22" class="1000" name="ADVIOS_ssdm_thread_M_periodic_Incrementer">
+<comp id="22" class="1000" name="advios_ssdm_thread_M_periodic_Incrementer">
 <pin_list>
 <pin id="23" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="ADVIOS_ssdm_thread_M_periodic_Incrementer"/></StgValue>
+<StgValue><ssdm name="advios_ssdm_thread_M_periodic_Incrementer"/></StgValue>
 </bind>
 </comp>
 
@@ -692,7 +692,7 @@ StgValue_38         (unreachable    ) [ 000]
 <pin id="77" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="ADVIOS::periodic_Incrementer"/></StgValue>
+<StgValue><ssdm name="advios::periodic_Incrementer"/></StgValue>
 </bind>
 </comp>
 
@@ -701,11 +701,11 @@ StgValue_38         (unreachable    ) [ 000]
 <pin id="79" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="ADVIOS::led_Controller"/></StgValue>
+<StgValue><ssdm name="advios::led_Controller"/></StgValue>
 </bind>
 </comp>
 
-<comp id="80" class="1004" name="grp_ADVIOS_periodic_Incrementer_fu_80">
+<comp id="80" class="1004" name="grp_advios_periodic_Incrementer_fu_80">
 <pin_list>
 <pin id="81" dir="0" index="0" bw="0" slack="0"/>
 <pin id="82" dir="0" index="1" bw="1" slack="0"/>
@@ -726,7 +726,7 @@ StgValue_38         (unreachable    ) [ 000]
 </bind>
 </comp>
 
-<comp id="104" class="1004" name="grp_ADVIOS_led_Controller_fu_104">
+<comp id="104" class="1004" name="grp_advios_led_Controller_fu_104">
 <pin_list>
 <pin id="105" dir="0" index="0" bw="0" slack="0"/>
 <pin id="106" dir="0" index="1" bw="1" slack="0"/>
@@ -747,35 +747,35 @@ StgValue_38         (unreachable    ) [ 000]
 </bind>
 </comp>
 
-<comp id="128" class="1004" name="ADVIOS_ssdm_threa_load_fu_128">
+<comp id="128" class="1004" name="advios_ssdm_threa_load_fu_128">
 <pin_list>
 <pin id="129" dir="0" index="0" bw="1" slack="0"/>
 <pin id="130" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="ADVIOS_ssdm_threa/1 "/>
+<opset="advios_ssdm_threa/1 "/>
 </bind>
 </comp>
 
-<comp id="132" class="1004" name="ADVIOS_ssdm_threa_1_load_fu_132">
+<comp id="132" class="1004" name="advios_ssdm_threa_1_load_fu_132">
 <pin_list>
 <pin id="133" dir="0" index="0" bw="1" slack="0"/>
 <pin id="134" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="ADVIOS_ssdm_threa_1/1 "/>
+<opset="advios_ssdm_threa_1/1 "/>
 </bind>
 </comp>
 
-<comp id="136" class="1005" name="ADVIOS_ssdm_threa_reg_136">
+<comp id="136" class="1005" name="advios_ssdm_threa_reg_136">
 <pin_list>
 <pin id="137" dir="0" index="0" bw="1" slack="1"/>
 <pin id="138" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="ADVIOS_ssdm_threa "/>
+<opset="advios_ssdm_threa "/>
 </bind>
 </comp>
 
@@ -840,18 +840,18 @@ StgValue_38         (unreachable    ) [ 000]
 * FSMD analyzer results:
   - Output states:
 	Port: outLeds | {1 2 }
-	Port: ADVIOS_switchs_V | {1 2 }
-	Port: ADVIOS_control_V | {1 2 }
-	Port: ADVIOS_count_V | {1 2 }
-	Port: ADVIOS_sec_counter_V | {1 2 }
+	Port: advios_switchs_V | {1 2 }
+	Port: advios_control_V | {1 2 }
+	Port: advios_count_V | {1 2 }
+	Port: advios_sec_counter_V | {1 2 }
 	Port: sec_pulse | {1 2 }
  - Input state : 
-	Port: ADVIOS::ADVIOS : ctrl | {1 2 }
-	Port: ADVIOS::ADVIOS : inSwitch | {1 2 }
-	Port: ADVIOS::ADVIOS : ADVIOS_sec_counter_V | {1 2 }
-	Port: ADVIOS::ADVIOS : sec_pulse | {1 2 }
-	Port: ADVIOS::ADVIOS : ADVIOS_ssdm_thread_M_led_Controller | {1 }
-	Port: ADVIOS::ADVIOS : ADVIOS_ssdm_thread_M_periodic_Incrementer | {1 }
+	Port: advios::advios : ctrl | {1 2 }
+	Port: advios::advios : inSwitch | {1 2 }
+	Port: advios::advios : advios_sec_counter_V | {1 2 }
+	Port: advios::advios : sec_pulse | {1 2 }
+	Port: advios::advios : advios_ssdm_thread_M_led_Controller | {1 }
+	Port: advios::advios : advios_ssdm_thread_M_periodic_Incrementer | {1 }
   - Chain level:
 	State 1
 		StgValue_16 : 1
@@ -867,8 +867,8 @@ StgValue_38         (unreachable    ) [ 000]
 |----------|---------------------------------------|---------|---------|---------|
 | Operation|            Functional Unit            |  Delay  |    FF   |   LUT   |
 |----------|---------------------------------------|---------|---------|---------|
-|   call   | grp_ADVIOS_periodic_Incrementer_fu_80 |  1.588  |   118   |    58   |
-|          |    grp_ADVIOS_led_Controller_fu_104   |  3.361  |    19   |    41   |
+|   call   | grp_advios_periodic_Incrementer_fu_80 |  1.588  |   118   |    58   |
+|          |    grp_advios_led_Controller_fu_104   |  3.361  |    19   |    41   |
 |----------|---------------------------------------|---------|---------|---------|
 |   Total  |                                       |  4.949  |   137   |    99   |
 |----------|---------------------------------------|---------|---------|---------|
@@ -880,7 +880,7 @@ N/A
 +-------------------------+--------+
 |                         |   FF   |
 +-------------------------+--------+
-|ADVIOS_ssdm_threa_reg_136|    1   |
+|advios_ssdm_threa_reg_136|    1   |
 +-------------------------+--------+
 |          Total          |    1   |
 +-------------------------+--------+

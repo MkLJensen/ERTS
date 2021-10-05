@@ -5,48 +5,48 @@
 // 
 // ===========================================================
 
-#include "ADVIOS.h"
+#include "advios.h"
 #include "AESL_pkg.h"
 
 using namespace std;
 
 namespace ap_rtl {
 
-const sc_logic ADVIOS::ap_const_logic_1 = sc_dt::Log_1;
-const sc_lv<1> ADVIOS::ap_const_lv1_0 = "0";
-const sc_lv<32> ADVIOS::ap_const_lv32_1 = "1";
-const sc_lv<1> ADVIOS::ap_const_lv1_1 = "1";
-const sc_lv<2> ADVIOS::ap_const_lv2_0 = "00";
-const sc_logic ADVIOS::ap_const_logic_0 = sc_dt::Log_0;
-const bool ADVIOS::ap_const_boolean_1 = true;
+const sc_logic advios::ap_const_logic_1 = sc_dt::Log_1;
+const sc_lv<1> advios::ap_const_lv1_0 = "0";
+const sc_lv<32> advios::ap_const_lv32_1 = "1";
+const sc_lv<1> advios::ap_const_lv1_1 = "1";
+const sc_lv<2> advios::ap_const_lv2_0 = "00";
+const sc_logic advios::ap_const_logic_0 = sc_dt::Log_0;
+const bool advios::ap_const_boolean_1 = true;
 
-ADVIOS::ADVIOS(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    grp_ADVIOS_periodic_Incrementer_fu_80 = new ADVIOS_periodic_Incrementer("grp_ADVIOS_periodic_Incrementer_fu_80");
-    grp_ADVIOS_periodic_Incrementer_fu_80->ap_clk(clk);
-    grp_ADVIOS_periodic_Incrementer_fu_80->ap_rst(reset);
-    grp_ADVIOS_periodic_Incrementer_fu_80->ADVIOS_count_V(grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V);
-    grp_ADVIOS_periodic_Incrementer_fu_80->ADVIOS_count_V_ap_vld(grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V_ap_vld);
-    grp_ADVIOS_periodic_Incrementer_fu_80->sec_pulse(grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse);
-    grp_ADVIOS_periodic_Incrementer_fu_80->sec_pulse_ap_vld(grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse_ap_vld);
-    grp_ADVIOS_led_Controller_fu_104 = new ADVIOS_led_Controller("grp_ADVIOS_led_Controller_fu_104");
-    grp_ADVIOS_led_Controller_fu_104->ap_clk(clk);
-    grp_ADVIOS_led_Controller_fu_104->ap_rst(reset);
-    grp_ADVIOS_led_Controller_fu_104->ctrl(ctrl);
-    grp_ADVIOS_led_Controller_fu_104->inSwitch(inSwitch);
-    grp_ADVIOS_led_Controller_fu_104->outLeds(grp_ADVIOS_led_Controller_fu_104_outLeds);
-    grp_ADVIOS_led_Controller_fu_104->outLeds_ap_vld(grp_ADVIOS_led_Controller_fu_104_outLeds_ap_vld);
-    grp_ADVIOS_led_Controller_fu_104->ADVIOS_switchs_V(grp_ADVIOS_led_Controller_fu_104_ADVIOS_switchs_V);
-    grp_ADVIOS_led_Controller_fu_104->ADVIOS_switchs_V_ap_vld(grp_ADVIOS_led_Controller_fu_104_ADVIOS_switchs_V_ap_vld);
-    grp_ADVIOS_led_Controller_fu_104->ADVIOS_control_V(grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V);
-    grp_ADVIOS_led_Controller_fu_104->ADVIOS_control_V_ap_vld(grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V_ap_vld);
-    grp_ADVIOS_led_Controller_fu_104->ADVIOS_sec_counter_V_i(ADVIOS_sec_counter_V);
-    grp_ADVIOS_led_Controller_fu_104->ADVIOS_sec_counter_V_o(grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o);
-    grp_ADVIOS_led_Controller_fu_104->ADVIOS_sec_counter_V_o_ap_vld(grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o_ap_vld);
-    grp_ADVIOS_led_Controller_fu_104->sec_pulse_i(grp_ADVIOS_led_Controller_fu_104_sec_pulse_i);
-    grp_ADVIOS_led_Controller_fu_104->sec_pulse_o(grp_ADVIOS_led_Controller_fu_104_sec_pulse_o);
-    grp_ADVIOS_led_Controller_fu_104->sec_pulse_o_ap_vld(grp_ADVIOS_led_Controller_fu_104_sec_pulse_o_ap_vld);
+advios::advios(sc_module_name name) : sc_module(name), mVcdFile(0) {
+    grp_advios_periodic_Incrementer_fu_80 = new advios_periodic_Incrementer("grp_advios_periodic_Incrementer_fu_80");
+    grp_advios_periodic_Incrementer_fu_80->ap_clk(clk);
+    grp_advios_periodic_Incrementer_fu_80->ap_rst(reset);
+    grp_advios_periodic_Incrementer_fu_80->advios_count_V(grp_advios_periodic_Incrementer_fu_80_advios_count_V);
+    grp_advios_periodic_Incrementer_fu_80->advios_count_V_ap_vld(grp_advios_periodic_Incrementer_fu_80_advios_count_V_ap_vld);
+    grp_advios_periodic_Incrementer_fu_80->sec_pulse(grp_advios_periodic_Incrementer_fu_80_sec_pulse);
+    grp_advios_periodic_Incrementer_fu_80->sec_pulse_ap_vld(grp_advios_periodic_Incrementer_fu_80_sec_pulse_ap_vld);
+    grp_advios_led_Controller_fu_104 = new advios_led_Controller("grp_advios_led_Controller_fu_104");
+    grp_advios_led_Controller_fu_104->ap_clk(clk);
+    grp_advios_led_Controller_fu_104->ap_rst(reset);
+    grp_advios_led_Controller_fu_104->ctrl(ctrl);
+    grp_advios_led_Controller_fu_104->inSwitch(inSwitch);
+    grp_advios_led_Controller_fu_104->outLeds(grp_advios_led_Controller_fu_104_outLeds);
+    grp_advios_led_Controller_fu_104->outLeds_ap_vld(grp_advios_led_Controller_fu_104_outLeds_ap_vld);
+    grp_advios_led_Controller_fu_104->advios_switchs_V(grp_advios_led_Controller_fu_104_advios_switchs_V);
+    grp_advios_led_Controller_fu_104->advios_switchs_V_ap_vld(grp_advios_led_Controller_fu_104_advios_switchs_V_ap_vld);
+    grp_advios_led_Controller_fu_104->advios_control_V(grp_advios_led_Controller_fu_104_advios_control_V);
+    grp_advios_led_Controller_fu_104->advios_control_V_ap_vld(grp_advios_led_Controller_fu_104_advios_control_V_ap_vld);
+    grp_advios_led_Controller_fu_104->advios_sec_counter_V_i(advios_sec_counter_V);
+    grp_advios_led_Controller_fu_104->advios_sec_counter_V_o(grp_advios_led_Controller_fu_104_advios_sec_counter_V_o);
+    grp_advios_led_Controller_fu_104->advios_sec_counter_V_o_ap_vld(grp_advios_led_Controller_fu_104_advios_sec_counter_V_o_ap_vld);
+    grp_advios_led_Controller_fu_104->sec_pulse_i(grp_advios_led_Controller_fu_104_sec_pulse_i);
+    grp_advios_led_Controller_fu_104->sec_pulse_o(grp_advios_led_Controller_fu_104_sec_pulse_o);
+    grp_advios_led_Controller_fu_104->sec_pulse_o_ap_vld(grp_advios_led_Controller_fu_104_sec_pulse_o_ap_vld);
 
-    SC_METHOD(thread_ADVIOS_sec_counter_V);
+    SC_METHOD(thread_advios_sec_counter_V);
     dont_initialize();
     sensitive << ( clk.pos() );
 
@@ -58,15 +58,15 @@ ADVIOS::ADVIOS(sc_module_name name) : sc_module(name), mVcdFile(0) {
     dont_initialize();
     sensitive << ( clk.pos() );
 
-    SC_METHOD(thread_ADVIOS_ssdm_threa_load_fu_128_p1);
+    SC_METHOD(thread_advios_ssdm_threa_load_fu_128_p1);
 
     SC_METHOD(thread_ap_CS_fsm);
 
     SC_METHOD(thread_ap_CS_fsm_state2);
     sensitive << ( ap_CS_fsm );
 
-    SC_METHOD(thread_grp_ADVIOS_led_Controller_fu_104_sec_pulse_i);
-    sensitive << ( ADVIOS_ssdm_threa_load_fu_128_p1 );
+    SC_METHOD(thread_grp_advios_led_Controller_fu_104_sec_pulse_i);
+    sensitive << ( advios_ssdm_threa_load_fu_128_p1 );
     sensitive << ( ap_CS_fsm_state2 );
     sensitive << ( sec_pulse );
 
@@ -75,7 +75,7 @@ ADVIOS::ADVIOS(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     static int apTFileNum = 0;
     stringstream apTFilenSS;
-    apTFilenSS << "ADVIOS_sc_trace_" << apTFileNum ++;
+    apTFilenSS << "advios_sc_trace_" << apTFileNum ++;
     string apTFn = apTFilenSS.str();
     mVcdFile = sc_create_vcd_trace_file(apTFn.c_str());
     mVcdFile->set_time_unit(1, SC_PS);
@@ -88,34 +88,34 @@ ADVIOS::ADVIOS(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, outLeds, "(port)outLeds");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
-    sc_trace(mVcdFile, ADVIOS_ssdm_threa_load_fu_128_p1, "ADVIOS_ssdm_threa_load_fu_128_p1");
+    sc_trace(mVcdFile, advios_ssdm_threa_load_fu_128_p1, "advios_ssdm_threa_load_fu_128_p1");
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
-    sc_trace(mVcdFile, grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V, "grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V");
-    sc_trace(mVcdFile, grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V_ap_vld, "grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V_ap_vld");
-    sc_trace(mVcdFile, grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse, "grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse");
-    sc_trace(mVcdFile, grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse_ap_vld, "grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse_ap_vld");
-    sc_trace(mVcdFile, grp_ADVIOS_led_Controller_fu_104_outLeds, "grp_ADVIOS_led_Controller_fu_104_outLeds");
-    sc_trace(mVcdFile, grp_ADVIOS_led_Controller_fu_104_outLeds_ap_vld, "grp_ADVIOS_led_Controller_fu_104_outLeds_ap_vld");
-    sc_trace(mVcdFile, grp_ADVIOS_led_Controller_fu_104_ADVIOS_switchs_V, "grp_ADVIOS_led_Controller_fu_104_ADVIOS_switchs_V");
-    sc_trace(mVcdFile, grp_ADVIOS_led_Controller_fu_104_ADVIOS_switchs_V_ap_vld, "grp_ADVIOS_led_Controller_fu_104_ADVIOS_switchs_V_ap_vld");
-    sc_trace(mVcdFile, grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V, "grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V");
-    sc_trace(mVcdFile, grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V_ap_vld, "grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V_ap_vld");
-    sc_trace(mVcdFile, grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o, "grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o");
-    sc_trace(mVcdFile, grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o_ap_vld, "grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o_ap_vld");
-    sc_trace(mVcdFile, grp_ADVIOS_led_Controller_fu_104_sec_pulse_i, "grp_ADVIOS_led_Controller_fu_104_sec_pulse_i");
-    sc_trace(mVcdFile, grp_ADVIOS_led_Controller_fu_104_sec_pulse_o, "grp_ADVIOS_led_Controller_fu_104_sec_pulse_o");
-    sc_trace(mVcdFile, grp_ADVIOS_led_Controller_fu_104_sec_pulse_o_ap_vld, "grp_ADVIOS_led_Controller_fu_104_sec_pulse_o_ap_vld");
+    sc_trace(mVcdFile, grp_advios_periodic_Incrementer_fu_80_advios_count_V, "grp_advios_periodic_Incrementer_fu_80_advios_count_V");
+    sc_trace(mVcdFile, grp_advios_periodic_Incrementer_fu_80_advios_count_V_ap_vld, "grp_advios_periodic_Incrementer_fu_80_advios_count_V_ap_vld");
+    sc_trace(mVcdFile, grp_advios_periodic_Incrementer_fu_80_sec_pulse, "grp_advios_periodic_Incrementer_fu_80_sec_pulse");
+    sc_trace(mVcdFile, grp_advios_periodic_Incrementer_fu_80_sec_pulse_ap_vld, "grp_advios_periodic_Incrementer_fu_80_sec_pulse_ap_vld");
+    sc_trace(mVcdFile, grp_advios_led_Controller_fu_104_outLeds, "grp_advios_led_Controller_fu_104_outLeds");
+    sc_trace(mVcdFile, grp_advios_led_Controller_fu_104_outLeds_ap_vld, "grp_advios_led_Controller_fu_104_outLeds_ap_vld");
+    sc_trace(mVcdFile, grp_advios_led_Controller_fu_104_advios_switchs_V, "grp_advios_led_Controller_fu_104_advios_switchs_V");
+    sc_trace(mVcdFile, grp_advios_led_Controller_fu_104_advios_switchs_V_ap_vld, "grp_advios_led_Controller_fu_104_advios_switchs_V_ap_vld");
+    sc_trace(mVcdFile, grp_advios_led_Controller_fu_104_advios_control_V, "grp_advios_led_Controller_fu_104_advios_control_V");
+    sc_trace(mVcdFile, grp_advios_led_Controller_fu_104_advios_control_V_ap_vld, "grp_advios_led_Controller_fu_104_advios_control_V_ap_vld");
+    sc_trace(mVcdFile, grp_advios_led_Controller_fu_104_advios_sec_counter_V_o, "grp_advios_led_Controller_fu_104_advios_sec_counter_V_o");
+    sc_trace(mVcdFile, grp_advios_led_Controller_fu_104_advios_sec_counter_V_o_ap_vld, "grp_advios_led_Controller_fu_104_advios_sec_counter_V_o_ap_vld");
+    sc_trace(mVcdFile, grp_advios_led_Controller_fu_104_sec_pulse_i, "grp_advios_led_Controller_fu_104_sec_pulse_i");
+    sc_trace(mVcdFile, grp_advios_led_Controller_fu_104_sec_pulse_o, "grp_advios_led_Controller_fu_104_sec_pulse_o");
+    sc_trace(mVcdFile, grp_advios_led_Controller_fu_104_sec_pulse_o_ap_vld, "grp_advios_led_Controller_fu_104_sec_pulse_o_ap_vld");
     sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
-    sc_trace(mVcdFile, ADVIOS_sec_counter_V, "ADVIOS_sec_counter_V");
+    sc_trace(mVcdFile, advios_sec_counter_V, "advios_sec_counter_V");
     sc_trace(mVcdFile, sec_pulse, "sec_pulse");
 #endif
 
     }
-    mHdltvinHandle.open("ADVIOS.hdltvin.dat");
-    mHdltvoutHandle.open("ADVIOS.hdltvout.dat");
+    mHdltvinHandle.open("advios.hdltvin.dat");
+    mHdltvoutHandle.open("advios.hdltvout.dat");
 }
 
-ADVIOS::~ADVIOS() {
+advios::~advios() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
@@ -123,47 +123,47 @@ ADVIOS::~ADVIOS() {
     mHdltvoutHandle << "] " << endl;
     mHdltvinHandle.close();
     mHdltvoutHandle.close();
-    delete grp_ADVIOS_periodic_Incrementer_fu_80;
-    delete grp_ADVIOS_led_Controller_fu_104;
+    delete grp_advios_periodic_Incrementer_fu_80;
+    delete grp_advios_led_Controller_fu_104;
 }
 
-void ADVIOS::thread_ADVIOS_sec_counter_V() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o_ap_vld.read())) {
-        ADVIOS_sec_counter_V = grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o.read();
+void advios::thread_advios_sec_counter_V() {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_advios_led_Controller_fu_104_advios_sec_counter_V_o_ap_vld.read())) {
+        advios_sec_counter_V = grp_advios_led_Controller_fu_104_advios_sec_counter_V_o.read();
     }
 }
 
-void ADVIOS::thread_outLeds() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_ADVIOS_led_Controller_fu_104_outLeds_ap_vld.read())) {
-        outLeds = grp_ADVIOS_led_Controller_fu_104_outLeds.read();
+void advios::thread_outLeds() {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_advios_led_Controller_fu_104_outLeds_ap_vld.read())) {
+        outLeds = grp_advios_led_Controller_fu_104_outLeds.read();
     }
 }
 
-void ADVIOS::thread_sec_pulse() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_ADVIOS_led_Controller_fu_104_sec_pulse_o_ap_vld.read())) {
-        sec_pulse =  (sc_lv<1>) (grp_ADVIOS_led_Controller_fu_104_sec_pulse_o.read());
-    } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse_ap_vld.read())) {
-        sec_pulse =  (sc_lv<1>) (grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse.read());
+void advios::thread_sec_pulse() {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_advios_led_Controller_fu_104_sec_pulse_o_ap_vld.read())) {
+        sec_pulse =  (sc_lv<1>) (grp_advios_led_Controller_fu_104_sec_pulse_o.read());
+    } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_advios_periodic_Incrementer_fu_80_sec_pulse_ap_vld.read())) {
+        sec_pulse =  (sc_lv<1>) (grp_advios_periodic_Incrementer_fu_80_sec_pulse.read());
     }
 }
 
-void ADVIOS::thread_ADVIOS_ssdm_threa_load_fu_128_p1() {
-    ADVIOS_ssdm_threa_load_fu_128_p1 = ap_const_lv1_0;
+void advios::thread_advios_ssdm_threa_load_fu_128_p1() {
+    advios_ssdm_threa_load_fu_128_p1 = ap_const_lv1_0;
 }
 
-void ADVIOS::thread_ap_CS_fsm() {
+void advios::thread_ap_CS_fsm() {
     ap_CS_fsm = ap_const_lv2_0;
 }
 
-void ADVIOS::thread_ap_CS_fsm_state2() {
+void advios::thread_ap_CS_fsm_state2() {
     ap_CS_fsm_state2 = ap_CS_fsm.read()[1];
 }
 
-void ADVIOS::thread_grp_ADVIOS_led_Controller_fu_104_sec_pulse_i() {
-    grp_ADVIOS_led_Controller_fu_104_sec_pulse_i =  (sc_logic) (sec_pulse.read()[0]);
+void advios::thread_grp_advios_led_Controller_fu_104_sec_pulse_i() {
+    grp_advios_led_Controller_fu_104_sec_pulse_i =  (sc_logic) (sec_pulse.read()[0]);
 }
 
-void ADVIOS::thread_hdltv_gen() {
+void advios::thread_hdltv_gen() {
     const char* dump_tv = std::getenv("AP_WRITE_TV");
     if (!(dump_tv && string(dump_tv) == "on")) return;
 

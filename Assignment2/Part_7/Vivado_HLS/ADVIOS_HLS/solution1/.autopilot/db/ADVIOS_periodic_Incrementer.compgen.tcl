@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 7 \
-    name ADVIOS_count_V \
+    name advios_count_V \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_ADVIOS_count_V \
+    corename dc_advios_count_V \
     op interface \
-    ports { ADVIOS_count_V { O 28 vector } ADVIOS_count_V_ap_vld { O 1 bit } } \
+    ports { advios_count_V { O 28 vector } advios_count_V_ap_vld { O 1 bit } } \
 } "
 }
 

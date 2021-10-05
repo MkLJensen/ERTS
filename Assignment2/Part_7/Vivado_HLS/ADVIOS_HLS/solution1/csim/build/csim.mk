@@ -19,7 +19,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS_testBench.cpp ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/tb_driver.cpp ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/tb_init.cpp ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp
+HLS_SOURCES = ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios_testBench.cpp ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/tb_driver.cpp ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/tb_init.cpp ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp
 
 TARGET := csim.exe
 
@@ -70,11 +70,11 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/ADVIOS_testBench.o: ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS_testBench.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS_testBench.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/advios_testBench.o: ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios_testBench.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios_testBench.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/ADVIOS_testBench.d
+-include $(ObjDir)/advios_testBench.d
 
 $(ObjDir)/tb_driver.o: ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/tb_driver.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/tb_driver.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
@@ -88,8 +88,8 @@ $(ObjDir)/tb_init.o: ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/tb
 
 -include $(ObjDir)/tb_init.d
 
-$(ObjDir)/ADVIOS.o: ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/advios.o: ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/ADVIOS.d
+-include $(ObjDir)/advios.d

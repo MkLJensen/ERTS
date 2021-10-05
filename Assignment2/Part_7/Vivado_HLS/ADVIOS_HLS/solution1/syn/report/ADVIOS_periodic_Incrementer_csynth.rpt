@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vivado HLS Report for 'ADVIOS_periodic_Incrementer'
+== Vivado HLS Report for 'advios_periodic_Incrementer'
 ================================================================
-* Date:           Mon Oct  4 10:42:19 2021
+* Date:           Mon Oct  4 14:00:18 2021
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        ADVIOS_HLS
@@ -85,7 +85,7 @@
     +--------------------------------+----------+-------+----+----+------------+------------+
     |          Variable Name         | Operation| DSP48E| FF | LUT| Bitwidth P0| Bitwidth P1|
     +--------------------------------+----------+-------+----+----+------------+------------+
-    |ADVIOS_count_V_assig_fu_114_p2  |     +    |      0|  89|  33|          28|           1|
+    |advios_count_V_assig_fu_114_p2  |     +    |      0|  89|  33|          28|           1|
     |tmp_1_fu_121_p2                 |   icmp   |      0|   0|  16|          28|          27|
     +--------------------------------+----------+-------+----+----+------------+------------+
     |Total                           |          |      0|  89|  49|          56|          28|
@@ -95,7 +95,7 @@
     +----------------+----+-----------+-----+-----------+
     |      Name      | LUT| Input Size| Bits| Total Bits|
     +----------------+----+-----------+-----+-----------+
-    |ADVIOS_count_V  |  15|          3|   28|         84|
+    |advios_count_V  |  15|          3|   28|         84|
     |ap_NS_fsm       |  27|          5|    1|          5|
     |t_V_fu_86       |   9|          2|   28|         56|
     +----------------+----+-----------+-----+-----------+
@@ -122,10 +122,10 @@
 +-----------------------+-----+-----+------------+------------------------------+--------------+
 |       RTL Ports       | Dir | Bits|  Protocol  |         Source Object        |    C Type    |
 +-----------------------+-----+-----+------------+------------------------------+--------------+
-|ap_clk                 |  in |    1| ap_ctrl_hs | ADVIOS::periodic_Incrementer | return value |
-|ap_rst                 |  in |    1| ap_ctrl_hs | ADVIOS::periodic_Incrementer | return value |
-|ADVIOS_count_V         | out |   28|   ap_vld   |        ADVIOS_count_V        |    pointer   |
-|ADVIOS_count_V_ap_vld  | out |    1|   ap_vld   |        ADVIOS_count_V        |    pointer   |
+|ap_clk                 |  in |    1| ap_ctrl_hs | advios::periodic_Incrementer | return value |
+|ap_rst                 |  in |    1| ap_ctrl_hs | advios::periodic_Incrementer | return value |
+|advios_count_V         | out |   28|   ap_vld   |        advios_count_V        |    pointer   |
+|advios_count_V_ap_vld  | out |    1|   ap_vld   |        advios_count_V        |    pointer   |
 |sec_pulse              | out |    1|   ap_vld   |           sec_pulse          |    pointer   |
 |sec_pulse_ap_vld       | out |    1|   ap_vld   |           sec_pulse          |    pointer   |
 +-----------------------+-----+-----+------------+------------------------------+--------------+

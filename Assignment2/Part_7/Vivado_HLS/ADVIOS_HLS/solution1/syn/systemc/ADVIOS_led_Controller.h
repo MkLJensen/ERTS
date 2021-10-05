@@ -5,8 +5,8 @@
 // 
 // ===========================================================
 
-#ifndef _ADVIOS_led_Controller_HH_
-#define _ADVIOS_led_Controller_HH_
+#ifndef _advios_led_Controller_HH_
+#define _advios_led_Controller_HH_
 
 #include "systemc.h"
 #include "AESL_pkg.h"
@@ -14,7 +14,7 @@
 
 namespace ap_rtl {
 
-struct ADVIOS_led_Controller : public sc_module {
+struct advios_led_Controller : public sc_module {
     // Port declarations 16
     sc_in_clk ap_clk;
     sc_in< sc_logic > ap_rst;
@@ -22,23 +22,23 @@ struct ADVIOS_led_Controller : public sc_module {
     sc_in< sc_lv<4> > inSwitch;
     sc_out< sc_lv<4> > outLeds;
     sc_out< sc_logic > outLeds_ap_vld;
-    sc_out< sc_lv<4> > ADVIOS_switchs_V;
-    sc_out< sc_logic > ADVIOS_switchs_V_ap_vld;
-    sc_out< sc_lv<4> > ADVIOS_control_V;
-    sc_out< sc_logic > ADVIOS_control_V_ap_vld;
-    sc_in< sc_lv<4> > ADVIOS_sec_counter_V_i;
-    sc_out< sc_lv<4> > ADVIOS_sec_counter_V_o;
-    sc_out< sc_logic > ADVIOS_sec_counter_V_o_ap_vld;
+    sc_out< sc_lv<4> > advios_switchs_V;
+    sc_out< sc_logic > advios_switchs_V_ap_vld;
+    sc_out< sc_lv<4> > advios_control_V;
+    sc_out< sc_logic > advios_control_V_ap_vld;
+    sc_in< sc_lv<4> > advios_sec_counter_V_i;
+    sc_out< sc_lv<4> > advios_sec_counter_V_o;
+    sc_out< sc_logic > advios_sec_counter_V_o_ap_vld;
     sc_in< sc_logic > sec_pulse_i;
     sc_out< sc_logic > sec_pulse_o;
     sc_out< sc_logic > sec_pulse_o_ap_vld;
 
 
     // Module declarations
-    ADVIOS_led_Controller(sc_module_name name);
-    SC_HAS_PROCESS(ADVIOS_led_Controller);
+    advios_led_Controller(sc_module_name name);
+    SC_HAS_PROCESS(advios_led_Controller);
 
-    ~ADVIOS_led_Controller();
+    ~advios_led_Controller();
 
     sc_trace_file* mVcdFile;
 
@@ -68,12 +68,12 @@ struct ADVIOS_led_Controller : public sc_module {
     static const bool ap_const_boolean_1;
     // Thread declarations
     void thread_ap_clk_no_reset_();
-    void thread_ADVIOS_control_V();
-    void thread_ADVIOS_control_V_ap_vld();
-    void thread_ADVIOS_sec_counter_V_o();
-    void thread_ADVIOS_sec_counter_V_o_ap_vld();
-    void thread_ADVIOS_switchs_V();
-    void thread_ADVIOS_switchs_V_ap_vld();
+    void thread_advios_control_V();
+    void thread_advios_control_V_ap_vld();
+    void thread_advios_sec_counter_V_o();
+    void thread_advios_sec_counter_V_o_ap_vld();
+    void thread_advios_switchs_V();
+    void thread_advios_switchs_V_ap_vld();
     void thread_ap_CS_fsm_state3();
     void thread_ap_CS_fsm_state4();
     void thread_outLeds();

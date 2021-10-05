@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Fri Oct  1 17:01:41 2021
+--Date        : Mon Oct  4 15:20:50 2021
 --Host        : DESKTOP-IFL7HB3 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -675,7 +675,7 @@ architecture STRUCTURE of design_1 is
     PS_PORB : inout STD_LOGIC
   );
   end component design_1_processing_system7_0_0;
-  component design_1_ADVIOS_0_0 is
+  component design_1_advios_0_0 is
   port (
     inSwitch : in STD_LOGIC_VECTOR ( 3 downto 0 );
     outLeds : out STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -699,7 +699,7 @@ architecture STRUCTURE of design_1 is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  end component design_1_ADVIOS_0_0;
+  end component design_1_advios_0_0;
   component design_1_rst_ps7_0_50M_0 is
   port (
     slowest_sync_clk : in STD_LOGIC;
@@ -714,7 +714,7 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_rst_ps7_0_50M_0;
-  signal ADVIOS_0_outLeds : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal advios_0_outLeds : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal inSwitch_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -801,13 +801,13 @@ architecture STRUCTURE of design_1 is
   signal NLW_rst_ps7_0_50M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
 begin
   inSwitch_1(3 downto 0) <= inSwitch(3 downto 0);
-  outLeds(3 downto 0) <= ADVIOS_0_outLeds(3 downto 0);
-ADVIOS_0: component design_1_ADVIOS_0_0
+  outLeds(3 downto 0) <= advios_0_outLeds(3 downto 0);
+advios_0: component design_1_advios_0_0
      port map (
       aclk => processing_system7_0_FCLK_CLK0,
       aresetn => rst_ps7_0_50M_peripheral_aresetn(0),
       inSwitch(3 downto 0) => inSwitch_1(3 downto 0),
-      outLeds(3 downto 0) => ADVIOS_0_outLeds(3 downto 0),
+      outLeds(3 downto 0) => advios_0_outLeds(3 downto 0),
       s_axi_slv0_ARADDR(4 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(4 downto 0),
       s_axi_slv0_ARREADY => ps7_0_axi_periph_M00_AXI_ARREADY,
       s_axi_slv0_ARVALID => ps7_0_axi_periph_M00_AXI_ARVALID,

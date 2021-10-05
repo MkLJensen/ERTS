@@ -2,20 +2,20 @@
 target datalayout = "e-p:32:32:32-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-f80:128:128-v64:64:64-v128:128:128-a0:0:64-f80:32:32-n8:16:32-S32"
 target triple = "i686-pc-mingw32"
 
-@ssdm_ins_ADVIOS_0_0_9 = constant i4 0            ; [#uses=0 type=i4*]
-@ssdm_ins_ADVIOS_0_0_8 = constant i28 0           ; [#uses=0 type=i28*]
-@ssdm_ins_ADVIOS_0_0_7 = constant i4 0            ; [#uses=0 type=i4*]
-@ssdm_ins_ADVIOS_0_0_6 = constant i1 false        ; [#uses=0 type=i1*]
-@ssdm_ins_ADVIOS_0_0_5 = constant i1 false        ; [#uses=0 type=i1*]
-@ssdm_ins_ADVIOS_0_0_4 = constant i4 0            ; [#uses=0 type=i4*]
-@ssdm_ins_ADVIOS_0_0_3 = constant i1 false        ; [#uses=0 type=i1*]
-@ssdm_ins_ADVIOS_0_0_10 = constant i4 0           ; [#uses=0 type=i4*]
-@ssdm_ins_ADVIOS_0_0_1 = constant i4 0            ; [#uses=0 type=i4*]
-@ssdm_ins_ADVIOS_0_0_s = constant i4 0            ; [#uses=0 type=i4*]
+@ssdm_ins_advios_0_0_9 = constant i4 0            ; [#uses=0 type=i4*]
+@ssdm_ins_advios_0_0_8 = constant i28 0           ; [#uses=0 type=i28*]
+@ssdm_ins_advios_0_0_7 = constant i4 0            ; [#uses=0 type=i4*]
+@ssdm_ins_advios_0_0_6 = constant i1 false        ; [#uses=0 type=i1*]
+@ssdm_ins_advios_0_0_5 = constant i1 false        ; [#uses=0 type=i1*]
+@ssdm_ins_advios_0_0_4 = constant i4 0            ; [#uses=0 type=i4*]
+@ssdm_ins_advios_0_0_3 = constant i1 false        ; [#uses=0 type=i1*]
+@ssdm_ins_advios_0_0_10 = constant i4 0           ; [#uses=0 type=i4*]
+@ssdm_ins_advios_0_0_1 = constant i4 0            ; [#uses=0 type=i4*]
+@ssdm_ins_advios_0_0_s = constant i4 0            ; [#uses=0 type=i4*]
 @llvm_global_ctors_1 = appending global [1 x void ()*] [void ()* @_GLOBAL__I_a] ; [#uses=0 type=[1 x void ()*]*]
 @llvm_global_ctors_0 = appending global [1 x i32] [i32 65535] ; [#uses=0 type=[1 x i32]*]
-@ADVIOS_ssdm_thread_M_periodic_Incrementer = external global i1 ; [#uses=1 type=i1*]
-@ADVIOS_ssdm_thread_M_led_Controller = external global i1 ; [#uses=1 type=i1*]
+@advios_ssdm_thread_M_periodic_Incrementer = external global i1 ; [#uses=1 type=i1*]
+@advios_ssdm_thread_M_led_Controller = external global i1 ; [#uses=1 type=i1*]
 @p_str9 = private unnamed_addr constant [15 x i8] c"__ssdm_reset__\00", align 1 ; [#uses=4 type=[15 x i8]*]
 @p_str8 = private unnamed_addr constant [21 x i8] c"periodic_Incrementer\00", align 1 ; [#uses=4 type=[21 x i8]*]
 @p_str7 = private unnamed_addr constant [8 x i8] c"outLeds\00", align 1 ; [#uses=3 type=[8 x i8]*]
@@ -30,13 +30,233 @@ target triple = "i686-pc-mingw32"
 @p_str12 = private unnamed_addr constant [10 x i8] c"sec_pulse\00", align 1 ; [#uses=1 type=[10 x i8]*]
 @p_str10 = private unnamed_addr constant [1 x i8] zeroinitializer, align 1 ; [#uses=20 type=[1 x i8]*]
 @p_str1 = private unnamed_addr constant [7 x i8] c"\22bool\22\00", align 1 ; [#uses=7 type=[7 x i8]*]
-@p_str = private unnamed_addr constant [7 x i8] c"ADVIOS\00", align 1 ; [#uses=22 type=[7 x i8]*]
+@p_str = private unnamed_addr constant [7 x i8] c"advios\00", align 1 ; [#uses=22 type=[7 x i8]*]
 
 ; [#uses=44]
 declare void @llvm.dbg.value(metadata, i64, metadata) nounwind readnone
 
 ; [#uses=1]
 declare void @llvm.dbg.declare(metadata, metadata) nounwind readnone
+
+; [#uses=1]
+define void @"advios::periodic_Incrementer"(i1* %advios_clk_m_if_Val, i1* %advios_reset_m_if_Val, i4* %advios_ctrl_m_if_Val_V, i4* %advios_inSwitch_m_if_Val_V, i4* %advios_outLeds_m_if_Val_V, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %advios_sec_pulse_Val) {
+_ZN7_ap_sc_7sc_core4waitEi.exit2:
+  %t_V = alloca i28                               ; [#uses=4 type=i28*]
+  call void @llvm.dbg.declare(metadata !{i28* %t_V}, metadata !80) ; [debug variable = t.V]
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_clk_m_if_Val), !map !378
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_reset_m_if_Val), !map !382
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_ctrl_m_if_Val_V), !map !386
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_inSwitch_m_if_Val_V), !map !390
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_outLeds_m_if_Val_V), !map !394
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_switchs_V), !map !398
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_control_V), !map !402
+  call void (...)* @_ssdm_op_SpecBitsMap(i28* %advios_count_V), !map !406
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_sec_counter_V), !map !410
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_sec_pulse_Val), !map !414
+  call void @llvm.dbg.value(metadata !{i1* %advios_clk_m_if_Val}, i64 0, metadata !418), !dbg !1459 ; [debug line = 3:14] [debug variable = advios.clk.m_if.Val]
+  call void @llvm.dbg.value(metadata !{i1* %advios_reset_m_if_Val}, i64 0, metadata !1460), !dbg !1459 ; [debug line = 3:14] [debug variable = advios.reset.m_if.Val]
+  call void @llvm.dbg.value(metadata !{i4* %advios_ctrl_m_if_Val_V}, i64 0, metadata !1461), !dbg !1459 ; [debug line = 3:14] [debug variable = advios.ctrl.m_if.Val.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_inSwitch_m_if_Val_V}, i64 0, metadata !1477), !dbg !1459 ; [debug line = 3:14] [debug variable = advios.inSwitch.m_if.Val.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_outLeds_m_if_Val_V}, i64 0, metadata !1478), !dbg !1459 ; [debug line = 3:14] [debug variable = advios.outLeds.m_if.Val.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_switchs_V}, i64 0, metadata !1489), !dbg !1459 ; [debug line = 3:14] [debug variable = advios.switchs.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_control_V}, i64 0, metadata !1492), !dbg !1459 ; [debug line = 3:14] [debug variable = advios.control.V]
+  call void @llvm.dbg.value(metadata !{i28* %advios_count_V}, i64 0, metadata !1493), !dbg !1459 ; [debug line = 3:14] [debug variable = advios.count.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_sec_counter_V}, i64 0, metadata !1499), !dbg !1459 ; [debug line = 3:14] [debug variable = advios.sec_counter.V]
+  call void @llvm.dbg.value(metadata !{i1* %advios_sec_pulse_Val}, i64 0, metadata !1500), !dbg !1459 ; [debug line = 3:14] [debug variable = advios.sec_pulse.Val]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %advios_clk_m_if_Val) nounwind, !dbg !1507 ; [debug line = 4:4]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %advios_reset_m_if_Val) nounwind, !dbg !1509 ; [debug line = 5:3]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %advios_ctrl_m_if_Val_V) nounwind, !dbg !1510 ; [debug line = 6:3]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %advios_inSwitch_m_if_Val_V) nounwind, !dbg !1511 ; [debug line = 7:3]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %advios_outLeds_m_if_Val_V) nounwind, !dbg !1512 ; [debug line = 8:3]
+  call void (...)* @_ssdm_op_SpecProcessDef([7 x i8]* @p_str, i32 2, [21 x i8]* @p_str8) nounwind, !dbg !1513 ; [debug line = 9:3]
+  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str9), !dbg !1514 ; [#uses=1 type=i32] [debug line = 9:118]
+  call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str10) nounwind, !dbg !1515 ; [debug line = 9:202]
+  %p_ssdm_reset_v = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind, !dbg !1516 ; [#uses=1 type=i32] [debug line = 9:252]
+  call void @llvm.dbg.value(metadata !{i32 %p_ssdm_reset_v}, i64 0, metadata !1517), !dbg !1516 ; [debug line = 9:252] [debug variable = _ssdm_reset_v]
+  call void (...)* @_ssdm_op_SpecIFCore(i4* %advios_ctrl_m_if_Val_V, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18), !dbg !1518 ; [debug line = 4:1]
+  call void @_ssdm_op_Write.ap_auto.i28P(i28* %advios_count_V, i28 0), !dbg !1519 ; [debug line = 378:13@7:1]
+  %empty = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %p_ssdm_reset_v) nounwind, !dbg !1523 ; [#uses=0 type=i32] [debug line = 7:12]
+  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str9, i32 %tmp), !dbg !1524 ; [#uses=0 type=i32] [debug line = 7:50]
+  call void (...)* @_ssdm_op_Wait(i32 1) nounwind, !dbg !1525 ; [debug line = 803:19@8:1]
+  store i28 0, i28* %t_V
+  br label %_ZN7_ap_sc_7sc_core4waitEi.exit, !dbg !1532 ; [debug line = 9:5]
+
+_ZN7_ap_sc_7sc_core4waitEi.exit:                  ; preds = %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge, %_ZN7_ap_sc_7sc_core4waitEi.exit2
+  %t_V_1 = load i28* %t_V, !dbg !1533             ; [#uses=2 type=i28] [debug line = 1824:147@1854:9@13:7]
+  call void (...)* @_ssdm_op_Wait(i32 1) nounwind, !dbg !1790 ; [debug line = 803:19@11:3]
+  call void @llvm.dbg.value(metadata !{i28 %t_V_1}, i64 0, metadata !80), !dbg !1792 ; [debug line = 1853:30@13:7] [debug variable = t.V]
+  %advios_count_V_assig = add i28 %t_V_1, 1, !dbg !1533 ; [#uses=2 type=i28] [debug line = 1824:147@1854:9@13:7]
+  call void @_ssdm_op_Write.ap_auto.i28P(i28* %advios_count_V, i28 %advios_count_V_assig), !dbg !1533 ; [debug line = 1824:147@1854:9@13:7]
+  %tmp_1 = icmp ugt i28 %t_V_1, 99999999, !dbg !1793 ; [#uses=1 type=i1] [debug line = 1991:9@3577:144@13:7]
+  br i1 %tmp_1, label %0, label %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre, !dbg !1788 ; [debug line = 13:7]
+
+; <label>:0                                       ; preds = %_ZN7_ap_sc_7sc_core4waitEi.exit
+  call void @llvm.dbg.value(metadata !{i1* %advios_sec_pulse_Val}, i64 0, metadata !2344), !dbg !2351 ; [debug line = 128:96@207:13@15:4] [debug variable = P]
+  call void @_ssdm_op_Write.ap_auto.volatile.i1P(i1* %advios_sec_pulse_Val, i1 true), !dbg !2357 ; [debug line = 167:116@207:13@15:4]
+  call void @_ssdm_op_Write.ap_auto.i28P(i28* %advios_count_V, i28 0), !dbg !2360 ; [debug line = 378:13@16:4]
+  store i28 0, i28* %t_V
+  br label %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge, !dbg !2362 ; [debug line = 17:3]
+
+_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre:     ; preds = %_ZN7_ap_sc_7sc_core4waitEi.exit
+  store i28 %advios_count_V_assig, i28* %t_V
+  br label %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge
+
+_ZN7_ap_sc_7sc_core4waitEi.exit.backedge:         ; preds = %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre, %0
+  br label %_ZN7_ap_sc_7sc_core4waitEi.exit
+}
+
+; [#uses=1]
+define void @"advios::led_Controller"(i1* %advios_clk_m_if_Val, i1* %advios_reset_m_if_Val, i4* %advios_ctrl_m_if_Val_V, i4* %advios_inSwitch_m_if_Val_V, i4* %advios_outLeds_m_if_Val_V, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %advios_sec_pulse_Val) {
+_ZN7_ap_sc_7sc_core4waitEi.exit:
+  call void (...)* @_ssdm_op_SpecIFCore(i4* %advios_ctrl_m_if_Val_V, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_clk_m_if_Val), !map !378
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_reset_m_if_Val), !map !382
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_ctrl_m_if_Val_V), !map !386
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_inSwitch_m_if_Val_V), !map !390
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_outLeds_m_if_Val_V), !map !394
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_switchs_V), !map !398
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_control_V), !map !402
+  call void (...)* @_ssdm_op_SpecBitsMap(i28* %advios_count_V), !map !406
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_sec_counter_V), !map !410
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_sec_pulse_Val), !map !414
+  call void @llvm.dbg.value(metadata !{i1* %advios_clk_m_if_Val}, i64 0, metadata !2363), !dbg !2366 ; [debug line = 21:14] [debug variable = advios.clk.m_if.Val]
+  call void @llvm.dbg.value(metadata !{i1* %advios_reset_m_if_Val}, i64 0, metadata !2367), !dbg !2366 ; [debug line = 21:14] [debug variable = advios.reset.m_if.Val]
+  call void @llvm.dbg.value(metadata !{i4* %advios_ctrl_m_if_Val_V}, i64 0, metadata !2368), !dbg !2366 ; [debug line = 21:14] [debug variable = advios.ctrl.m_if.Val.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_inSwitch_m_if_Val_V}, i64 0, metadata !2369), !dbg !2366 ; [debug line = 21:14] [debug variable = advios.inSwitch.m_if.Val.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_outLeds_m_if_Val_V}, i64 0, metadata !2370), !dbg !2366 ; [debug line = 21:14] [debug variable = advios.outLeds.m_if.Val.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_switchs_V}, i64 0, metadata !2371), !dbg !2366 ; [debug line = 21:14] [debug variable = advios.switchs.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_control_V}, i64 0, metadata !2372), !dbg !2366 ; [debug line = 21:14] [debug variable = advios.control.V]
+  call void @llvm.dbg.value(metadata !{i28* %advios_count_V}, i64 0, metadata !2373), !dbg !2366 ; [debug line = 21:14] [debug variable = advios.count.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_sec_counter_V}, i64 0, metadata !2374), !dbg !2366 ; [debug line = 21:14] [debug variable = advios.sec_counter.V]
+  call void @llvm.dbg.value(metadata !{i1* %advios_sec_pulse_Val}, i64 0, metadata !2375), !dbg !2366 ; [debug line = 21:14] [debug variable = advios.sec_pulse.Val]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %advios_clk_m_if_Val) nounwind, !dbg !2376 ; [debug line = 22:4]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %advios_reset_m_if_Val) nounwind, !dbg !2378 ; [debug line = 23:3]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %advios_ctrl_m_if_Val_V) nounwind, !dbg !2379 ; [debug line = 24:3]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %advios_inSwitch_m_if_Val_V) nounwind, !dbg !2380 ; [debug line = 25:3]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %advios_outLeds_m_if_Val_V) nounwind, !dbg !2381 ; [debug line = 26:3]
+  call void (...)* @_ssdm_op_SpecProcessDef([7 x i8]* @p_str, i32 2, [15 x i8]* @p_str19) nounwind, !dbg !2382 ; [debug line = 27:3]
+  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str9), !dbg !2383 ; [#uses=1 type=i32] [debug line = 27:112]
+  call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str10) nounwind, !dbg !2384 ; [debug line = 27:196]
+  %p_ssdm_reset_v = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind, !dbg !2385 ; [#uses=1 type=i32] [debug line = 27:246]
+  call void @llvm.dbg.value(metadata !{i32 %p_ssdm_reset_v}, i64 0, metadata !2386), !dbg !2385 ; [debug line = 27:246] [debug variable = _ssdm_reset_v]
+  %empty = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %p_ssdm_reset_v) nounwind, !dbg !2387 ; [#uses=0 type=i32] [debug line = 38:45]
+  %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str9, i32 %tmp_1), !dbg !2388 ; [#uses=0 type=i32] [debug line = 38:83]
+  call void (...)* @_ssdm_op_Wait(i32 1) nounwind, !dbg !2389 ; [debug line = 803:19@22:1]
+  br label %0, !dbg !2391                         ; [debug line = 23:5]
+
+; <label>:0                                       ; preds = %_ZN7_ap_sc_7sc_core4waitEi.exit2, %_ZN7_ap_sc_7sc_core4waitEi.exit
+  %val_V = call i4 @_ssdm_op_Read.ap_auto.volatile.i4P(i4* %advios_inSwitch_m_if_Val_V), !dbg !2392 ; [#uses=3 type=i4] [debug line = 374:13@60:21@180:66@351:73@26:13]
+  call void @llvm.dbg.value(metadata !{i4 %val_V}, i64 0, metadata !2411), !dbg !2392 ; [debug line = 374:13@60:21@180:66@351:73@26:13] [debug variable = val.V]
+  call void @_ssdm_op_Write.ap_auto.i4P(i4* %advios_switchs_V, i4 %val_V), !dbg !2413 ; [debug line = 378:13@26:13]
+  %val_V_2 = call i4 @_ssdm_op_Read.ap_auto.volatile.i4P(i4* %advios_ctrl_m_if_Val_V), !dbg !2416 ; [#uses=3 type=i4] [debug line = 374:13@60:21@180:66@351:73@27:13]
+  call void @llvm.dbg.value(metadata !{i4 %val_V_2}, i64 0, metadata !2411), !dbg !2416 ; [debug line = 374:13@60:21@180:66@351:73@27:13] [debug variable = val.V]
+  call void @_ssdm_op_Write.ap_auto.i4P(i4* %advios_control_V, i4 %val_V_2), !dbg !2421 ; [debug line = 378:13@27:13]
+  call void @llvm.dbg.value(metadata !{i1* %advios_sec_pulse_Val}, i64 0, metadata !2422), !dbg !2428 ; [debug line = 166:90@180:66@29:6] [debug variable = P]
+  %tmp = call i1 @_ssdm_op_Read.ap_auto.volatile.i1P(i1* %advios_sec_pulse_Val), !dbg !2433 ; [#uses=1 type=i1] [debug line = 166:95@180:66@29:6]
+  call void @llvm.dbg.value(metadata !{i1 %tmp}, i64 0, metadata !2435), !dbg !2429 ; [debug line = 180:66@29:6] [debug variable = tmp]
+  br i1 %tmp, label %1, label %._crit_edge, !dbg !2432 ; [debug line = 29:6]
+
+; <label>:1                                       ; preds = %0
+  %advios_sec_counter_V_1 = call i4 @_ssdm_op_Read.ap_auto.i4P(i4* %advios_sec_counter_V), !dbg !2436 ; [#uses=1 type=i4] [debug line = 1853:30@30:4]
+  %tmp_2 = add i4 %advios_sec_counter_V_1, 1, !dbg !2441 ; [#uses=1 type=i4] [debug line = 1824:147@1854:9@30:4]
+  call void @_ssdm_op_Write.ap_auto.i4P(i4* %advios_sec_counter_V, i4 %tmp_2), !dbg !2441 ; [debug line = 1824:147@1854:9@30:4]
+  call void @llvm.dbg.value(metadata !{i1* %advios_sec_pulse_Val}, i64 0, metadata !2344), !dbg !2447 ; [debug line = 128:96@207:13@31:4] [debug variable = P]
+  call void @_ssdm_op_Write.ap_auto.volatile.i1P(i1* %advios_sec_pulse_Val, i1 false), !dbg !2450 ; [debug line = 167:116@207:13@31:4]
+  br label %._crit_edge, !dbg !2451               ; [debug line = 32:3]
+
+._crit_edge:                                      ; preds = %1, %0
+  %tmp_3 = icmp eq i4 %val_V_2, 0, !dbg !2452     ; [#uses=1 type=i1] [debug line = 1979:9@3571:144@34:7]
+  br i1 %tmp_3, label %2, label %6, !dbg !2463    ; [debug line = 34:7]
+
+; <label>:2                                       ; preds = %._crit_edge
+  %tmp_4 = icmp eq i4 %val_V, -8, !dbg !2464      ; [#uses=1 type=i1] [debug line = 1979:9@3571:144@36:8]
+  br i1 %tmp_4, label %3, label %4, !dbg !2466    ; [debug line = 36:8]
+
+; <label>:3                                       ; preds = %2
+  call void @_ssdm_op_Write.ap_auto.i4P(i4* %advios_sec_counter_V, i4 0), !dbg !2468 ; [debug line = 378:13@38:5]
+  call void @_ssdm_op_Write.ap_auto.volatile.i4P(i4* %advios_outLeds_m_if_Val_V, i4 0), !dbg !2471 ; [debug line = 365:13@56:100@207:13@427:73@39:5]
+  br label %5, !dbg !2492                         ; [debug line = 40:4]
+
+; <label>:4                                       ; preds = %2
+  %v_V_1 = call i4 @_ssdm_op_Read.ap_auto.i4P(i4* %advios_sec_counter_V), !dbg !2493 ; [#uses=1 type=i4] [debug line = 206:21@427:73@43:5]
+  call void @llvm.dbg.value(metadata !{i4 %v_V_1}, i64 0, metadata !2497), !dbg !2493 ; [debug line = 206:21@427:73@43:5] [debug variable = v.V]
+  call void @_ssdm_op_Write.ap_auto.volatile.i4P(i4* %advios_outLeds_m_if_Val_V, i4 %v_V_1), !dbg !2499 ; [debug line = 365:13@56:100@207:13@427:73@43:5]
+  br label %5
+
+; <label>:5                                       ; preds = %4, %3
+  br label %_ZN7_ap_sc_7sc_core4waitEi.exit2, !dbg !2502 ; [debug line = 45:3]
+
+; <label>:6                                       ; preds = %._crit_edge
+  call void @llvm.dbg.value(metadata !{i4 %val_V_2}, i64 0, metadata !2503), !dbg !2512 ; [debug line = 3374:0@48:18] [debug variable = lhs.V]
+  call void @llvm.dbg.value(metadata !{i4 %val_V}, i64 0, metadata !2515), !dbg !2512 ; [debug line = 3374:0@48:18] [debug variable = rhs.V]
+  %r_V = and i4 %val_V_2, %val_V, !dbg !2512      ; [#uses=1 type=i4] [debug line = 3374:0@48:18]
+  call void @llvm.dbg.value(metadata !{i4 %r_V}, i64 0, metadata !2517), !dbg !2512 ; [debug line = 3374:0@48:18] [debug variable = r.V]
+  call void @llvm.dbg.value(metadata !{i4 %r_V}, i64 0, metadata !2497), !dbg !2520 ; [debug line = 206:21@427:73@48:18] [debug variable = v.V]
+  call void @_ssdm_op_Write.ap_auto.volatile.i4P(i4* %advios_outLeds_m_if_Val_V, i4 %r_V), !dbg !2522 ; [debug line = 365:13@56:100@207:13@427:73@48:18]
+  br label %_ZN7_ap_sc_7sc_core4waitEi.exit2
+
+_ZN7_ap_sc_7sc_core4waitEi.exit2:                 ; preds = %6, %5
+  call void (...)* @_ssdm_op_Wait(i32 1) nounwind, !dbg !2525 ; [debug line = 803:19@50:3]
+  br label %0, !dbg !2527                         ; [debug line = 51:2]
+}
+
+; [#uses=0]
+define weak void @"advios::advios"(i1* %advios_clk_m_if_Val, i1* %advios_reset_m_if_Val, i4* %advios_ctrl_m_if_Val_V, i4* %advios_inSwitch_m_if_Val_V, i4* %advios_outLeds_m_if_Val_V, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %advios_sec_pulse_Val) {
+  call void (...)* @_ssdm_op_SpecIFCore(i4* %advios_ctrl_m_if_Val_V, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_clk_m_if_Val), !map !378
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_reset_m_if_Val), !map !382
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_ctrl_m_if_Val_V), !map !386
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_inSwitch_m_if_Val_V), !map !390
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_outLeds_m_if_Val_V), !map !394
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_switchs_V), !map !398
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_control_V), !map !402
+  call void (...)* @_ssdm_op_SpecBitsMap(i28* %advios_count_V), !map !406
+  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_sec_counter_V), !map !410
+  call void (...)* @_ssdm_op_SpecBitsMap(i1* %advios_sec_pulse_Val), !map !414
+  call void @llvm.dbg.value(metadata !{i1* %advios_clk_m_if_Val}, i64 0, metadata !2528), !dbg !2531 ; [debug line = 21:3] [debug variable = advios.clk.m_if.Val]
+  call void @llvm.dbg.value(metadata !{i1* %advios_reset_m_if_Val}, i64 0, metadata !2532), !dbg !2531 ; [debug line = 21:3] [debug variable = advios.reset.m_if.Val]
+  call void @llvm.dbg.value(metadata !{i4* %advios_ctrl_m_if_Val_V}, i64 0, metadata !2533), !dbg !2531 ; [debug line = 21:3] [debug variable = advios.ctrl.m_if.Val.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_inSwitch_m_if_Val_V}, i64 0, metadata !2534), !dbg !2531 ; [debug line = 21:3] [debug variable = advios.inSwitch.m_if.Val.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_outLeds_m_if_Val_V}, i64 0, metadata !2535), !dbg !2531 ; [debug line = 21:3] [debug variable = advios.outLeds.m_if.Val.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_switchs_V}, i64 0, metadata !2536), !dbg !2531 ; [debug line = 21:3] [debug variable = advios.switchs.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_control_V}, i64 0, metadata !2537), !dbg !2531 ; [debug line = 21:3] [debug variable = advios.control.V]
+  call void @llvm.dbg.value(metadata !{i28* %advios_count_V}, i64 0, metadata !2538), !dbg !2531 ; [debug line = 21:3] [debug variable = advios.count.V]
+  call void @llvm.dbg.value(metadata !{i4* %advios_sec_counter_V}, i64 0, metadata !2539), !dbg !2531 ; [debug line = 21:3] [debug variable = advios.sec_counter.V]
+  call void @llvm.dbg.value(metadata !{i1* %advios_sec_pulse_Val}, i64 0, metadata !2540), !dbg !2531 ; [debug line = 21:3] [debug variable = advios.sec_pulse.Val]
+  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @p_str, [7 x i8]* @p_str) nounwind, !dbg !2541 ; [debug line = 23:5]
+  %advios_ssdm_threa = load i1* @advios_ssdm_thread_M_led_Controller, align 1, !dbg !2543 ; [#uses=1 type=i1] [debug line = 24:5]
+  br i1 %advios_ssdm_threa, label %1, label %2, !dbg !2543 ; [debug line = 24:5]
+
+; <label>:1                                       ; preds = %0
+  call void @"advios::led_Controller"(i1* %advios_clk_m_if_Val, i1* %advios_reset_m_if_Val, i4* %advios_ctrl_m_if_Val_V, i4* %advios_inSwitch_m_if_Val_V, i4* %advios_outLeds_m_if_Val_V, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %advios_sec_pulse_Val), !dbg !2544 ; [debug line = 24:41]
+  br label %UnifiedUnreachableBlock
+
+; <label>:2                                       ; preds = %0
+  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [15 x i8]* @p_str19) nounwind, !dbg !2545 ; [debug line = 24:59]
+  call void (...)* @_ssdm_op_SpecSensitive([15 x i8]* @p_str19, [4 x i8]* @p_str2, i1* %advios_clk_m_if_Val, i32 1) nounwind, !dbg !2546 ; [debug line = 25:5]
+  call void (...)* @_ssdm_op_SpecSensitive([15 x i8]* @p_str19, [6 x i8]* @p_str3, i1* %advios_reset_m_if_Val, i32 3) nounwind, !dbg !2547 ; [debug line = 26:5]
+  %advios_ssdm_threa_1 = load i1* @advios_ssdm_thread_M_periodic_Incrementer, align 1, !dbg !2548 ; [#uses=1 type=i1] [debug line = 27:5]
+  br i1 %advios_ssdm_threa_1, label %3, label %4, !dbg !2548 ; [debug line = 27:5]
+
+; <label>:3                                       ; preds = %2
+  call void @"advios::periodic_Incrementer"(i1* %advios_clk_m_if_Val, i1* %advios_reset_m_if_Val, i4* %advios_ctrl_m_if_Val_V, i4* %advios_inSwitch_m_if_Val_V, i4* %advios_outLeds_m_if_Val_V, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %advios_sec_pulse_Val), !dbg !2549 ; [debug line = 27:47]
+  br label %UnifiedUnreachableBlock
+
+; <label>:4                                       ; preds = %2
+  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [21 x i8]* @p_str8) nounwind, !dbg !2550 ; [debug line = 27:71]
+  call void (...)* @_ssdm_op_SpecSensitive([21 x i8]* @p_str8, [4 x i8]* @p_str2, i1* %advios_clk_m_if_Val, i32 1) nounwind, !dbg !2551 ; [debug line = 28:5]
+  call void (...)* @_ssdm_op_SpecSensitive([21 x i8]* @p_str8, [6 x i8]* @p_str3, i1* %advios_reset_m_if_Val, i32 3) nounwind, !dbg !2552 ; [debug line = 29:5]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %advios_clk_m_if_Val) nounwind, !dbg !2553 ; [debug line = 30:5]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %advios_reset_m_if_Val) nounwind, !dbg !2554 ; [debug line = 31:5]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %advios_ctrl_m_if_Val_V) nounwind, !dbg !2555 ; [debug line = 32:5]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %advios_inSwitch_m_if_Val_V) nounwind, !dbg !2556 ; [debug line = 33:5]
+  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %advios_outLeds_m_if_Val_V) nounwind, !dbg !2557 ; [debug line = 34:5]
+  call void (...)* @_ssdm_op_SpecChannel([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [10 x i8]* @p_str12, i32 1, i32 0, i1* %advios_sec_pulse_Val) nounwind, !dbg !2558 ; [debug line = 35:5]
+  ret void, !dbg !2559                            ; [debug line = 34:1]
+
+UnifiedUnreachableBlock:                          ; preds = %3, %1
+  unreachable
+}
 
 ; [#uses=3]
 define weak void @_ssdm_op_Write.ap_auto.volatile.i4P(i4*, i4) {
@@ -174,226 +394,6 @@ entry:
 ; [#uses=1]
 declare void @_GLOBAL__I_a() nounwind
 
-; [#uses=1]
-define void @"ADVIOS::periodic_Incrementer"(i1* %ADVIOS_clk_m_if_Val, i1* %ADVIOS_reset_m_if_Val, i4* %ADVIOS_ctrl_m_if_Val_V, i4* %ADVIOS_inSwitch_m_if_Val_V, i4* %ADVIOS_outLeds_m_if_Val_V, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %ADVIOS_sec_pulse_Val) {
-_ZN7_ap_sc_7sc_core4waitEi.exit2:
-  %t_V = alloca i28                               ; [#uses=4 type=i28*]
-  call void @llvm.dbg.declare(metadata !{i28* %t_V}, metadata !80) ; [debug variable = t.V]
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %ADVIOS_clk_m_if_Val), !map !378
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %ADVIOS_reset_m_if_Val), !map !382
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_ctrl_m_if_Val_V), !map !386
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_inSwitch_m_if_Val_V), !map !390
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_outLeds_m_if_Val_V), !map !394
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_switchs_V), !map !398
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_control_V), !map !402
-  call void (...)* @_ssdm_op_SpecBitsMap(i28* %ADVIOS_count_V), !map !406
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_sec_counter_V), !map !410
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %ADVIOS_sec_pulse_Val), !map !414
-  call void @llvm.dbg.value(metadata !{i1* %ADVIOS_clk_m_if_Val}, i64 0, metadata !418), !dbg !1459 ; [debug line = 3:14] [debug variable = ADVIOS.clk.m_if.Val]
-  call void @llvm.dbg.value(metadata !{i1* %ADVIOS_reset_m_if_Val}, i64 0, metadata !1460), !dbg !1459 ; [debug line = 3:14] [debug variable = ADVIOS.reset.m_if.Val]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_ctrl_m_if_Val_V}, i64 0, metadata !1461), !dbg !1459 ; [debug line = 3:14] [debug variable = ADVIOS.ctrl.m_if.Val.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_inSwitch_m_if_Val_V}, i64 0, metadata !1477), !dbg !1459 ; [debug line = 3:14] [debug variable = ADVIOS.inSwitch.m_if.Val.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_outLeds_m_if_Val_V}, i64 0, metadata !1478), !dbg !1459 ; [debug line = 3:14] [debug variable = ADVIOS.outLeds.m_if.Val.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_switchs_V}, i64 0, metadata !1489), !dbg !1459 ; [debug line = 3:14] [debug variable = ADVIOS.switchs.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_control_V}, i64 0, metadata !1492), !dbg !1459 ; [debug line = 3:14] [debug variable = ADVIOS.control.V]
-  call void @llvm.dbg.value(metadata !{i28* %ADVIOS_count_V}, i64 0, metadata !1493), !dbg !1459 ; [debug line = 3:14] [debug variable = ADVIOS.count.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_sec_counter_V}, i64 0, metadata !1499), !dbg !1459 ; [debug line = 3:14] [debug variable = ADVIOS.sec_counter.V]
-  call void @llvm.dbg.value(metadata !{i1* %ADVIOS_sec_pulse_Val}, i64 0, metadata !1500), !dbg !1459 ; [debug line = 3:14] [debug variable = ADVIOS.sec_pulse.Val]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %ADVIOS_clk_m_if_Val) nounwind, !dbg !1507 ; [debug line = 4:4]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %ADVIOS_reset_m_if_Val) nounwind, !dbg !1509 ; [debug line = 5:3]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ADVIOS_ctrl_m_if_Val_V) nounwind, !dbg !1510 ; [debug line = 6:3]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %ADVIOS_inSwitch_m_if_Val_V) nounwind, !dbg !1511 ; [debug line = 7:3]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %ADVIOS_outLeds_m_if_Val_V) nounwind, !dbg !1512 ; [debug line = 8:3]
-  call void (...)* @_ssdm_op_SpecProcessDef([7 x i8]* @p_str, i32 2, [21 x i8]* @p_str8) nounwind, !dbg !1513 ; [debug line = 9:3]
-  %tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str9), !dbg !1514 ; [#uses=1 type=i32] [debug line = 9:118]
-  call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str10) nounwind, !dbg !1515 ; [debug line = 9:202]
-  %p_ssdm_reset_v = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind, !dbg !1516 ; [#uses=1 type=i32] [debug line = 9:252]
-  call void @llvm.dbg.value(metadata !{i32 %p_ssdm_reset_v}, i64 0, metadata !1517), !dbg !1516 ; [debug line = 9:252] [debug variable = _ssdm_reset_v]
-  call void (...)* @_ssdm_op_SpecIFCore(i4* %ADVIOS_ctrl_m_if_Val_V, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18), !dbg !1518 ; [debug line = 4:1]
-  call void @_ssdm_op_Write.ap_auto.i28P(i28* %ADVIOS_count_V, i28 0), !dbg !1519 ; [debug line = 378:13@7:1]
-  %empty = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %p_ssdm_reset_v) nounwind, !dbg !1523 ; [#uses=0 type=i32] [debug line = 7:12]
-  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str9, i32 %tmp), !dbg !1524 ; [#uses=0 type=i32] [debug line = 7:50]
-  call void (...)* @_ssdm_op_Wait(i32 1) nounwind, !dbg !1525 ; [debug line = 803:19@8:1]
-  store i28 0, i28* %t_V
-  br label %_ZN7_ap_sc_7sc_core4waitEi.exit, !dbg !1532 ; [debug line = 9:5]
-
-_ZN7_ap_sc_7sc_core4waitEi.exit:                  ; preds = %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge, %_ZN7_ap_sc_7sc_core4waitEi.exit2
-  %t_V_1 = load i28* %t_V, !dbg !1533             ; [#uses=2 type=i28] [debug line = 1824:147@1854:9@13:7]
-  call void (...)* @_ssdm_op_Wait(i32 1) nounwind, !dbg !1790 ; [debug line = 803:19@11:3]
-  call void @llvm.dbg.value(metadata !{i28 %t_V_1}, i64 0, metadata !80), !dbg !1792 ; [debug line = 1853:30@13:7] [debug variable = t.V]
-  %ADVIOS_count_V_assig = add i28 %t_V_1, 1, !dbg !1533 ; [#uses=2 type=i28] [debug line = 1824:147@1854:9@13:7]
-  call void @_ssdm_op_Write.ap_auto.i28P(i28* %ADVIOS_count_V, i28 %ADVIOS_count_V_assig), !dbg !1533 ; [debug line = 1824:147@1854:9@13:7]
-  %tmp_1 = icmp ugt i28 %t_V_1, 99999999, !dbg !1793 ; [#uses=1 type=i1] [debug line = 1991:9@3577:144@13:7]
-  br i1 %tmp_1, label %0, label %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre, !dbg !1788 ; [debug line = 13:7]
-
-; <label>:0                                       ; preds = %_ZN7_ap_sc_7sc_core4waitEi.exit
-  call void @llvm.dbg.value(metadata !{i1* %ADVIOS_sec_pulse_Val}, i64 0, metadata !2344), !dbg !2351 ; [debug line = 128:96@207:13@15:4] [debug variable = P]
-  call void @_ssdm_op_Write.ap_auto.volatile.i1P(i1* %ADVIOS_sec_pulse_Val, i1 true), !dbg !2357 ; [debug line = 167:116@207:13@15:4]
-  call void @_ssdm_op_Write.ap_auto.i28P(i28* %ADVIOS_count_V, i28 0), !dbg !2360 ; [debug line = 378:13@16:4]
-  store i28 0, i28* %t_V
-  br label %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge, !dbg !2362 ; [debug line = 17:3]
-
-_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre:     ; preds = %_ZN7_ap_sc_7sc_core4waitEi.exit
-  store i28 %ADVIOS_count_V_assig, i28* %t_V
-  br label %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge
-
-_ZN7_ap_sc_7sc_core4waitEi.exit.backedge:         ; preds = %_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre, %0
-  br label %_ZN7_ap_sc_7sc_core4waitEi.exit
-}
-
-; [#uses=1]
-define void @"ADVIOS::led_Controller"(i1* %ADVIOS_clk_m_if_Val, i1* %ADVIOS_reset_m_if_Val, i4* %ADVIOS_ctrl_m_if_Val_V, i4* %ADVIOS_inSwitch_m_if_Val_V, i4* %ADVIOS_outLeds_m_if_Val_V, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %ADVIOS_sec_pulse_Val) {
-_ZN7_ap_sc_7sc_core4waitEi.exit:
-  call void (...)* @_ssdm_op_SpecIFCore(i4* %ADVIOS_ctrl_m_if_Val_V, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %ADVIOS_clk_m_if_Val), !map !378
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %ADVIOS_reset_m_if_Val), !map !382
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_ctrl_m_if_Val_V), !map !386
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_inSwitch_m_if_Val_V), !map !390
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_outLeds_m_if_Val_V), !map !394
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_switchs_V), !map !398
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_control_V), !map !402
-  call void (...)* @_ssdm_op_SpecBitsMap(i28* %ADVIOS_count_V), !map !406
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_sec_counter_V), !map !410
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %ADVIOS_sec_pulse_Val), !map !414
-  call void @llvm.dbg.value(metadata !{i1* %ADVIOS_clk_m_if_Val}, i64 0, metadata !2363), !dbg !2366 ; [debug line = 21:14] [debug variable = ADVIOS.clk.m_if.Val]
-  call void @llvm.dbg.value(metadata !{i1* %ADVIOS_reset_m_if_Val}, i64 0, metadata !2367), !dbg !2366 ; [debug line = 21:14] [debug variable = ADVIOS.reset.m_if.Val]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_ctrl_m_if_Val_V}, i64 0, metadata !2368), !dbg !2366 ; [debug line = 21:14] [debug variable = ADVIOS.ctrl.m_if.Val.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_inSwitch_m_if_Val_V}, i64 0, metadata !2369), !dbg !2366 ; [debug line = 21:14] [debug variable = ADVIOS.inSwitch.m_if.Val.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_outLeds_m_if_Val_V}, i64 0, metadata !2370), !dbg !2366 ; [debug line = 21:14] [debug variable = ADVIOS.outLeds.m_if.Val.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_switchs_V}, i64 0, metadata !2371), !dbg !2366 ; [debug line = 21:14] [debug variable = ADVIOS.switchs.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_control_V}, i64 0, metadata !2372), !dbg !2366 ; [debug line = 21:14] [debug variable = ADVIOS.control.V]
-  call void @llvm.dbg.value(metadata !{i28* %ADVIOS_count_V}, i64 0, metadata !2373), !dbg !2366 ; [debug line = 21:14] [debug variable = ADVIOS.count.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_sec_counter_V}, i64 0, metadata !2374), !dbg !2366 ; [debug line = 21:14] [debug variable = ADVIOS.sec_counter.V]
-  call void @llvm.dbg.value(metadata !{i1* %ADVIOS_sec_pulse_Val}, i64 0, metadata !2375), !dbg !2366 ; [debug line = 21:14] [debug variable = ADVIOS.sec_pulse.Val]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %ADVIOS_clk_m_if_Val) nounwind, !dbg !2376 ; [debug line = 22:4]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %ADVIOS_reset_m_if_Val) nounwind, !dbg !2378 ; [debug line = 23:3]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ADVIOS_ctrl_m_if_Val_V) nounwind, !dbg !2379 ; [debug line = 24:3]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %ADVIOS_inSwitch_m_if_Val_V) nounwind, !dbg !2380 ; [debug line = 25:3]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %ADVIOS_outLeds_m_if_Val_V) nounwind, !dbg !2381 ; [debug line = 26:3]
-  call void (...)* @_ssdm_op_SpecProcessDef([7 x i8]* @p_str, i32 2, [15 x i8]* @p_str19) nounwind, !dbg !2382 ; [debug line = 27:3]
-  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str9), !dbg !2383 ; [#uses=1 type=i32] [debug line = 27:112]
-  call void (...)* @_ssdm_op_SpecProtocol(i32 1, [1 x i8]* @p_str10) nounwind, !dbg !2384 ; [debug line = 27:196]
-  %p_ssdm_reset_v = call i32 (...)* @_ssdm_op_SpecStateBegin(i32 0, i32 0, i32 1) nounwind, !dbg !2385 ; [#uses=1 type=i32] [debug line = 27:246]
-  call void @llvm.dbg.value(metadata !{i32 %p_ssdm_reset_v}, i64 0, metadata !2386), !dbg !2385 ; [debug line = 27:246] [debug variable = _ssdm_reset_v]
-  %empty = call i32 (...)* @_ssdm_op_SpecStateEnd(i32 %p_ssdm_reset_v) nounwind, !dbg !2387 ; [#uses=0 type=i32] [debug line = 38:45]
-  %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str9, i32 %tmp_1), !dbg !2388 ; [#uses=0 type=i32] [debug line = 38:83]
-  call void (...)* @_ssdm_op_Wait(i32 1) nounwind, !dbg !2389 ; [debug line = 803:19@22:1]
-  br label %0, !dbg !2391                         ; [debug line = 23:5]
-
-; <label>:0                                       ; preds = %_ZN7_ap_sc_7sc_core4waitEi.exit2, %_ZN7_ap_sc_7sc_core4waitEi.exit
-  %val_V = call i4 @_ssdm_op_Read.ap_auto.volatile.i4P(i4* %ADVIOS_inSwitch_m_if_Val_V), !dbg !2392 ; [#uses=3 type=i4] [debug line = 374:13@60:21@180:66@351:73@26:13]
-  call void @llvm.dbg.value(metadata !{i4 %val_V}, i64 0, metadata !2411), !dbg !2392 ; [debug line = 374:13@60:21@180:66@351:73@26:13] [debug variable = val.V]
-  call void @_ssdm_op_Write.ap_auto.i4P(i4* %ADVIOS_switchs_V, i4 %val_V), !dbg !2413 ; [debug line = 378:13@26:13]
-  %val_V_2 = call i4 @_ssdm_op_Read.ap_auto.volatile.i4P(i4* %ADVIOS_ctrl_m_if_Val_V), !dbg !2416 ; [#uses=3 type=i4] [debug line = 374:13@60:21@180:66@351:73@27:13]
-  call void @llvm.dbg.value(metadata !{i4 %val_V_2}, i64 0, metadata !2411), !dbg !2416 ; [debug line = 374:13@60:21@180:66@351:73@27:13] [debug variable = val.V]
-  call void @_ssdm_op_Write.ap_auto.i4P(i4* %ADVIOS_control_V, i4 %val_V_2), !dbg !2421 ; [debug line = 378:13@27:13]
-  call void @llvm.dbg.value(metadata !{i1* %ADVIOS_sec_pulse_Val}, i64 0, metadata !2422), !dbg !2428 ; [debug line = 166:90@180:66@29:6] [debug variable = P]
-  %tmp = call i1 @_ssdm_op_Read.ap_auto.volatile.i1P(i1* %ADVIOS_sec_pulse_Val), !dbg !2433 ; [#uses=1 type=i1] [debug line = 166:95@180:66@29:6]
-  call void @llvm.dbg.value(metadata !{i1 %tmp}, i64 0, metadata !2435), !dbg !2429 ; [debug line = 180:66@29:6] [debug variable = tmp]
-  br i1 %tmp, label %1, label %._crit_edge, !dbg !2432 ; [debug line = 29:6]
-
-; <label>:1                                       ; preds = %0
-  %ADVIOS_sec_counter_V_1 = call i4 @_ssdm_op_Read.ap_auto.i4P(i4* %ADVIOS_sec_counter_V), !dbg !2436 ; [#uses=1 type=i4] [debug line = 1853:30@30:4]
-  %tmp_2 = add i4 %ADVIOS_sec_counter_V_1, 1, !dbg !2441 ; [#uses=1 type=i4] [debug line = 1824:147@1854:9@30:4]
-  call void @_ssdm_op_Write.ap_auto.i4P(i4* %ADVIOS_sec_counter_V, i4 %tmp_2), !dbg !2441 ; [debug line = 1824:147@1854:9@30:4]
-  call void @llvm.dbg.value(metadata !{i1* %ADVIOS_sec_pulse_Val}, i64 0, metadata !2344), !dbg !2447 ; [debug line = 128:96@207:13@31:4] [debug variable = P]
-  call void @_ssdm_op_Write.ap_auto.volatile.i1P(i1* %ADVIOS_sec_pulse_Val, i1 false), !dbg !2450 ; [debug line = 167:116@207:13@31:4]
-  br label %._crit_edge, !dbg !2451               ; [debug line = 32:3]
-
-._crit_edge:                                      ; preds = %1, %0
-  %tmp_3 = icmp eq i4 %val_V_2, 0, !dbg !2452     ; [#uses=1 type=i1] [debug line = 1979:9@3571:144@34:7]
-  br i1 %tmp_3, label %2, label %6, !dbg !2463    ; [debug line = 34:7]
-
-; <label>:2                                       ; preds = %._crit_edge
-  %tmp_4 = icmp eq i4 %val_V, -8, !dbg !2464      ; [#uses=1 type=i1] [debug line = 1979:9@3571:144@36:8]
-  br i1 %tmp_4, label %3, label %4, !dbg !2466    ; [debug line = 36:8]
-
-; <label>:3                                       ; preds = %2
-  call void @_ssdm_op_Write.ap_auto.i4P(i4* %ADVIOS_sec_counter_V, i4 0), !dbg !2468 ; [debug line = 378:13@38:5]
-  call void @_ssdm_op_Write.ap_auto.volatile.i4P(i4* %ADVIOS_outLeds_m_if_Val_V, i4 0), !dbg !2471 ; [debug line = 365:13@56:100@207:13@427:73@39:5]
-  br label %5, !dbg !2492                         ; [debug line = 40:4]
-
-; <label>:4                                       ; preds = %2
-  %v_V_1 = call i4 @_ssdm_op_Read.ap_auto.i4P(i4* %ADVIOS_sec_counter_V), !dbg !2493 ; [#uses=1 type=i4] [debug line = 206:21@427:73@43:5]
-  call void @llvm.dbg.value(metadata !{i4 %v_V_1}, i64 0, metadata !2497), !dbg !2493 ; [debug line = 206:21@427:73@43:5] [debug variable = v.V]
-  call void @_ssdm_op_Write.ap_auto.volatile.i4P(i4* %ADVIOS_outLeds_m_if_Val_V, i4 %v_V_1), !dbg !2499 ; [debug line = 365:13@56:100@207:13@427:73@43:5]
-  br label %5
-
-; <label>:5                                       ; preds = %4, %3
-  br label %_ZN7_ap_sc_7sc_core4waitEi.exit2, !dbg !2502 ; [debug line = 45:3]
-
-; <label>:6                                       ; preds = %._crit_edge
-  call void @llvm.dbg.value(metadata !{i4 %val_V_2}, i64 0, metadata !2503), !dbg !2512 ; [debug line = 3374:0@48:18] [debug variable = lhs.V]
-  call void @llvm.dbg.value(metadata !{i4 %val_V}, i64 0, metadata !2515), !dbg !2512 ; [debug line = 3374:0@48:18] [debug variable = rhs.V]
-  %r_V = and i4 %val_V_2, %val_V, !dbg !2512      ; [#uses=1 type=i4] [debug line = 3374:0@48:18]
-  call void @llvm.dbg.value(metadata !{i4 %r_V}, i64 0, metadata !2517), !dbg !2512 ; [debug line = 3374:0@48:18] [debug variable = r.V]
-  call void @llvm.dbg.value(metadata !{i4 %r_V}, i64 0, metadata !2497), !dbg !2520 ; [debug line = 206:21@427:73@48:18] [debug variable = v.V]
-  call void @_ssdm_op_Write.ap_auto.volatile.i4P(i4* %ADVIOS_outLeds_m_if_Val_V, i4 %r_V), !dbg !2522 ; [debug line = 365:13@56:100@207:13@427:73@48:18]
-  br label %_ZN7_ap_sc_7sc_core4waitEi.exit2
-
-_ZN7_ap_sc_7sc_core4waitEi.exit2:                 ; preds = %6, %5
-  call void (...)* @_ssdm_op_Wait(i32 1) nounwind, !dbg !2525 ; [debug line = 803:19@50:3]
-  br label %0, !dbg !2527                         ; [debug line = 51:2]
-}
-
-; [#uses=0]
-define weak void @"ADVIOS::ADVIOS"(i1* %ADVIOS_clk_m_if_Val, i1* %ADVIOS_reset_m_if_Val, i4* %ADVIOS_ctrl_m_if_Val_V, i4* %ADVIOS_inSwitch_m_if_Val_V, i4* %ADVIOS_outLeds_m_if_Val_V, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %ADVIOS_sec_pulse_Val) {
-  call void (...)* @_ssdm_op_SpecIFCore(i4* %ADVIOS_ctrl_m_if_Val_V, [1 x i8]* @p_str10, [10 x i8]* @p_str17, [1 x i8]* @p_str10, i32 -1, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [1 x i8]* @p_str10, [17 x i8]* @p_str18)
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %ADVIOS_clk_m_if_Val), !map !378
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %ADVIOS_reset_m_if_Val), !map !382
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_ctrl_m_if_Val_V), !map !386
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_inSwitch_m_if_Val_V), !map !390
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_outLeds_m_if_Val_V), !map !394
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_switchs_V), !map !398
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_control_V), !map !402
-  call void (...)* @_ssdm_op_SpecBitsMap(i28* %ADVIOS_count_V), !map !406
-  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_sec_counter_V), !map !410
-  call void (...)* @_ssdm_op_SpecBitsMap(i1* %ADVIOS_sec_pulse_Val), !map !414
-  call void @llvm.dbg.value(metadata !{i1* %ADVIOS_clk_m_if_Val}, i64 0, metadata !2528), !dbg !2531 ; [debug line = 21:3] [debug variable = ADVIOS.clk.m_if.Val]
-  call void @llvm.dbg.value(metadata !{i1* %ADVIOS_reset_m_if_Val}, i64 0, metadata !2532), !dbg !2531 ; [debug line = 21:3] [debug variable = ADVIOS.reset.m_if.Val]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_ctrl_m_if_Val_V}, i64 0, metadata !2533), !dbg !2531 ; [debug line = 21:3] [debug variable = ADVIOS.ctrl.m_if.Val.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_inSwitch_m_if_Val_V}, i64 0, metadata !2534), !dbg !2531 ; [debug line = 21:3] [debug variable = ADVIOS.inSwitch.m_if.Val.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_outLeds_m_if_Val_V}, i64 0, metadata !2535), !dbg !2531 ; [debug line = 21:3] [debug variable = ADVIOS.outLeds.m_if.Val.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_switchs_V}, i64 0, metadata !2536), !dbg !2531 ; [debug line = 21:3] [debug variable = ADVIOS.switchs.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_control_V}, i64 0, metadata !2537), !dbg !2531 ; [debug line = 21:3] [debug variable = ADVIOS.control.V]
-  call void @llvm.dbg.value(metadata !{i28* %ADVIOS_count_V}, i64 0, metadata !2538), !dbg !2531 ; [debug line = 21:3] [debug variable = ADVIOS.count.V]
-  call void @llvm.dbg.value(metadata !{i4* %ADVIOS_sec_counter_V}, i64 0, metadata !2539), !dbg !2531 ; [debug line = 21:3] [debug variable = ADVIOS.sec_counter.V]
-  call void @llvm.dbg.value(metadata !{i1* %ADVIOS_sec_pulse_Val}, i64 0, metadata !2540), !dbg !2531 ; [debug line = 21:3] [debug variable = ADVIOS.sec_pulse.Val]
-  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @p_str, [7 x i8]* @p_str) nounwind, !dbg !2541 ; [debug line = 23:5]
-  %ADVIOS_ssdm_threa = load i1* @ADVIOS_ssdm_thread_M_led_Controller, align 1, !dbg !2543 ; [#uses=1 type=i1] [debug line = 24:5]
-  br i1 %ADVIOS_ssdm_threa, label %1, label %2, !dbg !2543 ; [debug line = 24:5]
-
-; <label>:1                                       ; preds = %0
-  call void @"ADVIOS::led_Controller"(i1* %ADVIOS_clk_m_if_Val, i1* %ADVIOS_reset_m_if_Val, i4* %ADVIOS_ctrl_m_if_Val_V, i4* %ADVIOS_inSwitch_m_if_Val_V, i4* %ADVIOS_outLeds_m_if_Val_V, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %ADVIOS_sec_pulse_Val), !dbg !2544 ; [debug line = 24:41]
-  br label %UnifiedUnreachableBlock
-
-; <label>:2                                       ; preds = %0
-  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [15 x i8]* @p_str19) nounwind, !dbg !2545 ; [debug line = 24:59]
-  call void (...)* @_ssdm_op_SpecSensitive([15 x i8]* @p_str19, [4 x i8]* @p_str2, i1* %ADVIOS_clk_m_if_Val, i32 1) nounwind, !dbg !2546 ; [debug line = 25:5]
-  call void (...)* @_ssdm_op_SpecSensitive([15 x i8]* @p_str19, [6 x i8]* @p_str3, i1* %ADVIOS_reset_m_if_Val, i32 3) nounwind, !dbg !2547 ; [debug line = 26:5]
-  %ADVIOS_ssdm_threa_1 = load i1* @ADVIOS_ssdm_thread_M_periodic_Incrementer, align 1, !dbg !2548 ; [#uses=1 type=i1] [debug line = 27:5]
-  br i1 %ADVIOS_ssdm_threa_1, label %3, label %4, !dbg !2548 ; [debug line = 27:5]
-
-; <label>:3                                       ; preds = %2
-  call void @"ADVIOS::periodic_Incrementer"(i1* %ADVIOS_clk_m_if_Val, i1* %ADVIOS_reset_m_if_Val, i4* %ADVIOS_ctrl_m_if_Val_V, i4* %ADVIOS_inSwitch_m_if_Val_V, i4* %ADVIOS_outLeds_m_if_Val_V, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %ADVIOS_sec_pulse_Val), !dbg !2549 ; [debug line = 27:47]
-  br label %UnifiedUnreachableBlock
-
-; <label>:4                                       ; preds = %2
-  call void (...)* @_ssdm_op_SpecProcessDecl([7 x i8]* @p_str, i32 2, [21 x i8]* @p_str8) nounwind, !dbg !2550 ; [debug line = 27:71]
-  call void (...)* @_ssdm_op_SpecSensitive([21 x i8]* @p_str8, [4 x i8]* @p_str2, i1* %ADVIOS_clk_m_if_Val, i32 1) nounwind, !dbg !2551 ; [debug line = 28:5]
-  call void (...)* @_ssdm_op_SpecSensitive([21 x i8]* @p_str8, [6 x i8]* @p_str3, i1* %ADVIOS_reset_m_if_Val, i32 3) nounwind, !dbg !2552 ; [debug line = 29:5]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [4 x i8]* @p_str2, i32 0, i32 0, i1* %ADVIOS_clk_m_if_Val) nounwind, !dbg !2553 ; [debug line = 30:5]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [6 x i8]* @p_str3, i32 0, i32 0, i1* %ADVIOS_reset_m_if_Val) nounwind, !dbg !2554 ; [debug line = 31:5]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [5 x i8]* @p_str5, i32 0, i32 0, i4* %ADVIOS_ctrl_m_if_Val_V) nounwind, !dbg !2555 ; [debug line = 32:5]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 0, [13 x i8]* @p_str4, [9 x i8]* @p_str6, i32 0, i32 0, i4* %ADVIOS_inSwitch_m_if_Val_V) nounwind, !dbg !2556 ; [debug line = 33:5]
-  call void (...)* @_ssdm_op_SpecPort([7 x i8]* @p_str, i32 1, [13 x i8]* @p_str4, [8 x i8]* @p_str7, i32 0, i32 0, i4* %ADVIOS_outLeds_m_if_Val_V) nounwind, !dbg !2557 ; [debug line = 34:5]
-  call void (...)* @_ssdm_op_SpecChannel([7 x i8]* @p_str, i32 0, [7 x i8]* @p_str1, [10 x i8]* @p_str12, i32 1, i32 0, i1* %ADVIOS_sec_pulse_Val) nounwind, !dbg !2558 ; [debug line = 35:5]
-  ret void, !dbg !2559                            ; [debug line = 34:1]
-
-UnifiedUnreachableBlock:                          ; preds = %3, %1
-  unreachable
-}
-
 !opencl.kernels = !{!0, !0, !7, !7, !0, !0, !13, !0, !19, !22, !24, !27, !29, !29, !31, !32, !31, !31, !0, !34, !36, !31, !31, !0, !38, !27, !0, !0, !40, !43, !0, !0, !45, !47, !49, !34, !36, !38, !29, !29, !31, !0, !51, !0, !53, !55, !55, !59, !59, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !0, !61}
 !hls.encrypted.func = !{}
 !llvm.map.gv = !{!63, !70, !75}
@@ -468,16 +468,16 @@ UnifiedUnreachableBlock:                          ; preds = %3, %1
 !67 = metadata !{metadata !"llvm.global_ctors.0", metadata !68, metadata !"", i32 0, i32 31}
 !68 = metadata !{metadata !69}
 !69 = metadata !{i32 0, i32 0, i32 1}
-!70 = metadata !{metadata !71, i1* @ADVIOS_ssdm_thread_M_periodic_Incrementer}
+!70 = metadata !{metadata !71, i1* @advios_ssdm_thread_M_periodic_Incrementer}
 !71 = metadata !{metadata !72}
 !72 = metadata !{i32 0, i32 0, metadata !73}
 !73 = metadata !{metadata !74}
-!74 = metadata !{metadata !"ADVIOS::__ssdm_thread_M_periodic_Incrementer", metadata !68, metadata !"bool", i32 0, i32 0}
-!75 = metadata !{metadata !76, i1* @ADVIOS_ssdm_thread_M_led_Controller}
+!74 = metadata !{metadata !"advios::__ssdm_thread_M_periodic_Incrementer", metadata !68, metadata !"bool", i32 0, i32 0}
+!75 = metadata !{metadata !76, i1* @advios_ssdm_thread_M_led_Controller}
 !76 = metadata !{metadata !77}
 !77 = metadata !{i32 0, i32 0, metadata !78}
 !78 = metadata !{metadata !79}
-!79 = metadata !{metadata !"ADVIOS::__ssdm_thread_M_led_Controller", metadata !68, metadata !"bool", i32 0, i32 0}
+!79 = metadata !{metadata !"advios::__ssdm_thread_M_led_Controller", metadata !68, metadata !"bool", i32 0, i32 0}
 !80 = metadata !{i32 790529, metadata !81, metadata !"t.V", null, i32 1853, metadata !374, i32 0, i32 0} ; [ DW_TAG_auto_variable_field ]
 !81 = metadata !{i32 786688, metadata !82, metadata !"t", metadata !84, i32 1853, metadata !204, i32 0, i32 0} ; [ DW_TAG_auto_variable ]
 !82 = metadata !{i32 786443, metadata !83, i32 1852, i32 78, metadata !84, i32 38} ; [ DW_TAG_lexical_block ]
@@ -779,52 +779,52 @@ UnifiedUnreachableBlock:                          ; preds = %3, %1
 !378 = metadata !{metadata !379}
 !379 = metadata !{i32 0, i32 0, metadata !380}
 !380 = metadata !{metadata !381}
-!381 = metadata !{metadata !"ADVIOS.clk.m_if.Val", metadata !68, metadata !"bool", i32 0, i32 0}
+!381 = metadata !{metadata !"advios.clk.m_if.Val", metadata !68, metadata !"bool", i32 0, i32 0}
 !382 = metadata !{metadata !383}
 !383 = metadata !{i32 0, i32 0, metadata !384}
 !384 = metadata !{metadata !385}
-!385 = metadata !{metadata !"ADVIOS.reset.m_if.Val", metadata !68, metadata !"bool", i32 0, i32 0}
+!385 = metadata !{metadata !"advios.reset.m_if.Val", metadata !68, metadata !"bool", i32 0, i32 0}
 !386 = metadata !{metadata !387}
 !387 = metadata !{i32 0, i32 3, metadata !388}
 !388 = metadata !{metadata !389}
-!389 = metadata !{metadata !"ADVIOS.ctrl.m_if.Val.V", metadata !68, metadata !"uint4", i32 0, i32 3}
+!389 = metadata !{metadata !"advios.ctrl.m_if.Val.V", metadata !68, metadata !"uint4", i32 0, i32 3}
 !390 = metadata !{metadata !391}
 !391 = metadata !{i32 0, i32 3, metadata !392}
 !392 = metadata !{metadata !393}
-!393 = metadata !{metadata !"ADVIOS.inSwitch.m_if.Val.V", metadata !68, metadata !"uint4", i32 0, i32 3}
+!393 = metadata !{metadata !"advios.inSwitch.m_if.Val.V", metadata !68, metadata !"uint4", i32 0, i32 3}
 !394 = metadata !{metadata !395}
 !395 = metadata !{i32 0, i32 3, metadata !396}
 !396 = metadata !{metadata !397}
-!397 = metadata !{metadata !"ADVIOS.outLeds.m_if.Val.V", metadata !68, metadata !"uint4", i32 0, i32 3}
+!397 = metadata !{metadata !"advios.outLeds.m_if.Val.V", metadata !68, metadata !"uint4", i32 0, i32 3}
 !398 = metadata !{metadata !399}
 !399 = metadata !{i32 0, i32 3, metadata !400}
 !400 = metadata !{metadata !401}
-!401 = metadata !{metadata !"ADVIOS.switchs.V", metadata !68, metadata !"uint4", i32 0, i32 3}
+!401 = metadata !{metadata !"advios.switchs.V", metadata !68, metadata !"uint4", i32 0, i32 3}
 !402 = metadata !{metadata !403}
 !403 = metadata !{i32 0, i32 3, metadata !404}
 !404 = metadata !{metadata !405}
-!405 = metadata !{metadata !"ADVIOS.control.V", metadata !68, metadata !"uint4", i32 0, i32 3}
+!405 = metadata !{metadata !"advios.control.V", metadata !68, metadata !"uint4", i32 0, i32 3}
 !406 = metadata !{metadata !407}
 !407 = metadata !{i32 0, i32 27, metadata !408}
 !408 = metadata !{metadata !409}
-!409 = metadata !{metadata !"ADVIOS.count.V", metadata !68, metadata !"uint28", i32 0, i32 27}
+!409 = metadata !{metadata !"advios.count.V", metadata !68, metadata !"uint28", i32 0, i32 27}
 !410 = metadata !{metadata !411}
 !411 = metadata !{i32 0, i32 3, metadata !412}
 !412 = metadata !{metadata !413}
-!413 = metadata !{metadata !"ADVIOS.sec_counter.V", metadata !68, metadata !"uint4", i32 0, i32 3}
+!413 = metadata !{metadata !"advios.sec_counter.V", metadata !68, metadata !"uint4", i32 0, i32 3}
 !414 = metadata !{metadata !415}
 !415 = metadata !{i32 0, i32 0, metadata !416}
 !416 = metadata !{metadata !417}
-!417 = metadata !{metadata !"ADVIOS.sec_pulse.Val", metadata !68, metadata !"bool", i32 0, i32 0}
-!418 = metadata !{i32 790531, metadata !419, metadata !"ADVIOS.clk.m_if.Val", null, i32 3, metadata !1450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!417 = metadata !{metadata !"advios.sec_pulse.Val", metadata !68, metadata !"bool", i32 0, i32 0}
+!418 = metadata !{i32 790531, metadata !419, metadata !"advios.clk.m_if.Val", null, i32 3, metadata !1450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
 !419 = metadata !{i32 786689, metadata !420, metadata !"this", metadata !421, i32 16777219, metadata !1449, i32 64, i32 0} ; [ DW_TAG_arg_variable ]
-!420 = metadata !{i32 786478, i32 0, null, metadata !"periodic_Incrementer", metadata !"periodic_Incrementer", metadata !"_ZN6ADVIOS20periodic_IncrementerEv", metadata !421, i32 3, metadata !422, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !1434, metadata !100, i32 4} ; [ DW_TAG_subprogram ]
-!421 = metadata !{i32 786473, metadata !"../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", null} ; [ DW_TAG_file_type ]
+!420 = metadata !{i32 786478, i32 0, null, metadata !"periodic_Incrementer", metadata !"periodic_Incrementer", metadata !"_ZN6advios20periodic_IncrementerEv", metadata !421, i32 3, metadata !422, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !1434, metadata !100, i32 4} ; [ DW_TAG_subprogram ]
+!421 = metadata !{i32 786473, metadata !"../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", null} ; [ DW_TAG_file_type ]
 !422 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !423, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !423 = metadata !{null, metadata !424}
 !424 = metadata !{i32 786447, i32 0, metadata !"", i32 0, i32 0, i64 32, i64 32, i64 0, i32 64, metadata !425} ; [ DW_TAG_pointer_type ]
-!425 = metadata !{i32 786434, null, metadata !"ADVIOS", metadata !426, i32 6, i64 128, i64 32, i32 0, i32 0, null, metadata !427, i32 0, null, null} ; [ DW_TAG_class_type ]
-!426 = metadata !{i32 786473, metadata !"../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", null} ; [ DW_TAG_file_type ]
+!425 = metadata !{i32 786434, null, metadata !"advios", metadata !426, i32 6, i64 128, i64 32, i32 0, i32 0, null, metadata !427, i32 0, null, null} ; [ DW_TAG_class_type ]
+!426 = metadata !{i32 786473, metadata !"../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h", metadata !"C:\5CUsers\5Cjespe\5CDesktop\5CUni_Civil_9_Semester\5CEmbedded_course\5CERTS\5CAssignment2\5CPart_7\5CVivado_HLS", null} ; [ DW_TAG_file_type ]
 !427 = metadata !{metadata !428, metadata !537, metadata !538, metadata !1213, metadata !1214, metadata !1313, metadata !1314, metadata !1315, metadata !1395, metadata !1396, metadata !1433, metadata !1434, metadata !1435}
 !428 = metadata !{i32 786445, metadata !425, metadata !"clk", metadata !426, i32 9, i64 8, i64 8, i64 0, i32 0, metadata !429} ; [ DW_TAG_member ]
 !429 = metadata !{i32 786434, metadata !430, metadata !"sc_in<bool>", metadata !432, i32 370, i64 8, i64 8, i32 0, i32 0, null, metadata !433, i32 0, null, metadata !475} ; [ DW_TAG_class_type ]
@@ -1831,9 +1831,9 @@ UnifiedUnreachableBlock:                          ; preds = %3, %1
 !1430 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !1431, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !1431 = metadata !{metadata !1432, metadata !1425, metadata !1416}
 !1432 = metadata !{i32 786448, null, null, null, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !1397} ; [ DW_TAG_reference_type ]
-!1433 = metadata !{i32 786478, i32 0, metadata !425, metadata !"led_Controller", metadata !"led_Controller", metadata !"_ZN6ADVIOS14led_ControllerEv", metadata !426, i32 19, metadata !422, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, metadata !100, i32 19} ; [ DW_TAG_subprogram ]
-!1434 = metadata !{i32 786478, i32 0, metadata !425, metadata !"periodic_Incrementer", metadata !"periodic_Incrementer", metadata !"_ZN6ADVIOS20periodic_IncrementerEv", metadata !426, i32 20, metadata !422, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, metadata !100, i32 20} ; [ DW_TAG_subprogram ]
-!1435 = metadata !{i32 786478, i32 0, metadata !425, metadata !"ADVIOS", metadata !"ADVIOS", metadata !"", metadata !426, i32 21, metadata !1436, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, metadata !100, i32 21} ; [ DW_TAG_subprogram ]
+!1433 = metadata !{i32 786478, i32 0, metadata !425, metadata !"led_Controller", metadata !"led_Controller", metadata !"_ZN6advios14led_ControllerEv", metadata !426, i32 19, metadata !422, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, metadata !100, i32 19} ; [ DW_TAG_subprogram ]
+!1434 = metadata !{i32 786478, i32 0, metadata !425, metadata !"periodic_Incrementer", metadata !"periodic_Incrementer", metadata !"_ZN6advios20periodic_IncrementerEv", metadata !426, i32 20, metadata !422, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, metadata !100, i32 20} ; [ DW_TAG_subprogram ]
+!1435 = metadata !{i32 786478, i32 0, metadata !425, metadata !"advios", metadata !"advios", metadata !"", metadata !426, i32 21, metadata !1436, i1 false, i1 false, i32 0, i32 0, null, i32 256, i1 false, null, null, i32 0, metadata !100, i32 21} ; [ DW_TAG_subprogram ]
 !1436 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !1437, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !1437 = metadata !{null, metadata !424, metadata !1438}
 !1438 = metadata !{i32 786434, metadata !430, metadata !"sc_module_name", metadata !432, i32 591, i64 8, i64 8, i32 0, i32 0, null, metadata !1439, i32 0, null, null} ; [ DW_TAG_class_type ]
@@ -1849,7 +1849,7 @@ UnifiedUnreachableBlock:                          ; preds = %3, %1
 !1448 = metadata !{i32 786470, null, metadata !"", null, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !1438} ; [ DW_TAG_const_type ]
 !1449 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 32, i64 32, i64 0, i32 0, metadata !425} ; [ DW_TAG_pointer_type ]
 !1450 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 32, i64 32, i64 0, i32 0, metadata !1451} ; [ DW_TAG_pointer_type ]
-!1451 = metadata !{i32 786438, null, metadata !"ADVIOS", metadata !426, i32 6, i64 8, i64 32, i32 0, i32 0, null, metadata !1452, i32 0, null, null} ; [ DW_TAG_class_field_type ]
+!1451 = metadata !{i32 786438, null, metadata !"advios", metadata !426, i32 6, i64 8, i64 32, i32 0, i32 0, null, metadata !1452, i32 0, null, null} ; [ DW_TAG_class_field_type ]
 !1452 = metadata !{metadata !1453}
 !1453 = metadata !{i32 786438, metadata !430, metadata !"sc_in<bool>", metadata !432, i32 370, i64 8, i64 8, i32 0, i32 0, null, metadata !1454, i32 0, null, metadata !475} ; [ DW_TAG_class_field_type ]
 !1454 = metadata !{metadata !1455}
@@ -1858,10 +1858,10 @@ UnifiedUnreachableBlock:                          ; preds = %3, %1
 !1457 = metadata !{i32 786438, metadata !430, metadata !"sc_signal_in_if<bool>", metadata !432, i32 172, i64 8, i64 8, i32 0, i32 0, null, metadata !1458, i32 0, null, metadata !475} ; [ DW_TAG_class_field_type ]
 !1458 = metadata !{metadata !454}
 !1459 = metadata !{i32 3, i32 14, metadata !420, null}
-!1460 = metadata !{i32 790531, metadata !419, metadata !"ADVIOS.reset.m_if.Val", null, i32 3, metadata !1450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!1461 = metadata !{i32 790531, metadata !419, metadata !"ADVIOS.ctrl.m_if.Val.V", null, i32 3, metadata !1462, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!1460 = metadata !{i32 790531, metadata !419, metadata !"advios.reset.m_if.Val", null, i32 3, metadata !1450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!1461 = metadata !{i32 790531, metadata !419, metadata !"advios.ctrl.m_if.Val.V", null, i32 3, metadata !1462, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
 !1462 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 32, i64 32, i64 0, i32 0, metadata !1463} ; [ DW_TAG_pointer_type ]
-!1463 = metadata !{i32 786438, null, metadata !"ADVIOS", metadata !426, i32 6, i64 4, i64 32, i32 0, i32 0, null, metadata !1464, i32 0, null, null} ; [ DW_TAG_class_field_type ]
+!1463 = metadata !{i32 786438, null, metadata !"advios", metadata !426, i32 6, i64 4, i64 32, i32 0, i32 0, null, metadata !1464, i32 0, null, null} ; [ DW_TAG_class_field_type ]
 !1464 = metadata !{metadata !1465}
 !1465 = metadata !{i32 786438, metadata !430, metadata !"sc_in<_ap_sc_::sc_dt::sc_uint<4> >", metadata !432, i32 342, i64 4, i64 8, i32 0, i32 0, null, metadata !1466, i32 0, null, metadata !1160} ; [ DW_TAG_class_field_type ]
 !1466 = metadata !{metadata !1467}
@@ -1875,10 +1875,10 @@ UnifiedUnreachableBlock:                          ; preds = %3, %1
 !1474 = metadata !{metadata !1475}
 !1475 = metadata !{i32 786438, null, metadata !"ssdm_int<4 + 1024 * 0, false>", metadata !92, i32 10, i64 4, i64 8, i32 0, i32 0, null, metadata !1476, i32 0, null, metadata !245} ; [ DW_TAG_class_field_type ]
 !1476 = metadata !{metadata !562}
-!1477 = metadata !{i32 790531, metadata !419, metadata !"ADVIOS.inSwitch.m_if.Val.V", null, i32 3, metadata !1462, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!1478 = metadata !{i32 790531, metadata !419, metadata !"ADVIOS.outLeds.m_if.Val.V", null, i32 3, metadata !1479, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!1477 = metadata !{i32 790531, metadata !419, metadata !"advios.inSwitch.m_if.Val.V", null, i32 3, metadata !1462, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!1478 = metadata !{i32 790531, metadata !419, metadata !"advios.outLeds.m_if.Val.V", null, i32 3, metadata !1479, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
 !1479 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 32, i64 32, i64 0, i32 0, metadata !1480} ; [ DW_TAG_pointer_type ]
-!1480 = metadata !{i32 786438, null, metadata !"ADVIOS", metadata !426, i32 6, i64 4, i64 32, i32 0, i32 0, null, metadata !1481, i32 0, null, null} ; [ DW_TAG_class_field_type ]
+!1480 = metadata !{i32 786438, null, metadata !"advios", metadata !426, i32 6, i64 4, i64 32, i32 0, i32 0, null, metadata !1481, i32 0, null, null} ; [ DW_TAG_class_field_type ]
 !1481 = metadata !{metadata !1482}
 !1482 = metadata !{i32 786438, metadata !430, metadata !"sc_out<_ap_sc_::sc_dt::sc_uint<4> >", metadata !432, i32 440, i64 4, i64 8, i32 0, i32 0, null, metadata !1483, i32 0, null, metadata !1297} ; [ DW_TAG_class_field_type ]
 !1483 = metadata !{metadata !1484}
@@ -1887,20 +1887,20 @@ UnifiedUnreachableBlock:                          ; preds = %3, %1
 !1486 = metadata !{i32 786438, metadata !430, metadata !"sc_port_b<_ap_sc_::sc_core::sc_signal_inout_if<_ap_sc_::sc_dt::sc_uint<4> > >", metadata !432, i32 281, i64 4, i64 8, i32 0, i32 0, null, metadata !1487, i32 0, null, metadata !1265} ; [ DW_TAG_class_field_type ]
 !1487 = metadata !{metadata !1488}
 !1488 = metadata !{i32 786438, metadata !430, metadata !"sc_signal_inout_if<_ap_sc_::sc_dt::sc_uint<4> >", metadata !432, i32 193, i64 4, i64 8, i32 0, i32 0, null, metadata !1468, i32 0, null, metadata !1160} ; [ DW_TAG_class_field_type ]
-!1489 = metadata !{i32 790531, metadata !419, metadata !"ADVIOS.switchs.V", null, i32 3, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!1489 = metadata !{i32 790531, metadata !419, metadata !"advios.switchs.V", null, i32 3, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
 !1490 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 32, i64 32, i64 0, i32 0, metadata !1491} ; [ DW_TAG_pointer_type ]
-!1491 = metadata !{i32 786438, null, metadata !"ADVIOS", metadata !426, i32 6, i64 4, i64 32, i32 0, i32 0, null, metadata !1470, i32 0, null, null} ; [ DW_TAG_class_field_type ]
-!1492 = metadata !{i32 790531, metadata !419, metadata !"ADVIOS.control.V", null, i32 3, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!1493 = metadata !{i32 790531, metadata !419, metadata !"ADVIOS.count.V", null, i32 3, metadata !1494, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!1491 = metadata !{i32 786438, null, metadata !"advios", metadata !426, i32 6, i64 4, i64 32, i32 0, i32 0, null, metadata !1470, i32 0, null, null} ; [ DW_TAG_class_field_type ]
+!1492 = metadata !{i32 790531, metadata !419, metadata !"advios.control.V", null, i32 3, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!1493 = metadata !{i32 790531, metadata !419, metadata !"advios.count.V", null, i32 3, metadata !1494, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
 !1494 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 32, i64 32, i64 0, i32 0, metadata !1495} ; [ DW_TAG_pointer_type ]
-!1495 = metadata !{i32 786438, null, metadata !"ADVIOS", metadata !426, i32 6, i64 28, i64 32, i32 0, i32 0, null, metadata !1496, i32 0, null, null} ; [ DW_TAG_class_field_type ]
+!1495 = metadata !{i32 786438, null, metadata !"advios", metadata !426, i32 6, i64 28, i64 32, i32 0, i32 0, null, metadata !1496, i32 0, null, null} ; [ DW_TAG_class_field_type ]
 !1496 = metadata !{metadata !1497}
 !1497 = metadata !{i32 786438, metadata !552, metadata !"sc_uint<28>", metadata !554, i32 269, i64 28, i64 32, i32 0, i32 0, null, metadata !1498, i32 0, null, metadata !1393} ; [ DW_TAG_class_field_type ]
 !1498 = metadata !{metadata !374}
-!1499 = metadata !{i32 790531, metadata !419, metadata !"ADVIOS.sec_counter.V", null, i32 3, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!1500 = metadata !{i32 790531, metadata !419, metadata !"ADVIOS.sec_pulse.Val", null, i32 3, metadata !1501, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!1499 = metadata !{i32 790531, metadata !419, metadata !"advios.sec_counter.V", null, i32 3, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!1500 = metadata !{i32 790531, metadata !419, metadata !"advios.sec_pulse.Val", null, i32 3, metadata !1501, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
 !1501 = metadata !{i32 786447, null, metadata !"", null, i32 0, i64 32, i64 32, i64 0, i32 0, metadata !1502} ; [ DW_TAG_pointer_type ]
-!1502 = metadata !{i32 786438, null, metadata !"ADVIOS", metadata !426, i32 6, i64 8, i64 32, i32 0, i32 0, null, metadata !1503, i32 0, null, null} ; [ DW_TAG_class_field_type ]
+!1502 = metadata !{i32 786438, null, metadata !"advios", metadata !426, i32 6, i64 8, i64 32, i32 0, i32 0, null, metadata !1503, i32 0, null, null} ; [ DW_TAG_class_field_type ]
 !1503 = metadata !{metadata !1504}
 !1504 = metadata !{i32 786438, metadata !430, metadata !"sc_signal<bool>", metadata !432, i32 322, i64 8, i64 8, i32 0, i32 0, null, metadata !1505, i32 0, null, metadata !475} ; [ DW_TAG_class_field_type ]
 !1505 = metadata !{metadata !1506}
@@ -2761,19 +2761,19 @@ UnifiedUnreachableBlock:                          ; preds = %3, %1
 !2360 = metadata !{i32 378, i32 13, metadata !1520, metadata !2361}
 !2361 = metadata !{i32 16, i32 4, metadata !2356, null}
 !2362 = metadata !{i32 17, i32 3, metadata !2356, null}
-!2363 = metadata !{i32 790531, metadata !2364, metadata !"ADVIOS.clk.m_if.Val", null, i32 21, metadata !1450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2363 = metadata !{i32 790531, metadata !2364, metadata !"advios.clk.m_if.Val", null, i32 21, metadata !1450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
 !2364 = metadata !{i32 786689, metadata !2365, metadata !"this", metadata !421, i32 16777237, metadata !1449, i32 64, i32 0} ; [ DW_TAG_arg_variable ]
-!2365 = metadata !{i32 786478, i32 0, null, metadata !"led_Controller", metadata !"led_Controller", metadata !"_ZN6ADVIOS14led_ControllerEv", metadata !421, i32 21, metadata !422, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !1433, metadata !100, i32 22} ; [ DW_TAG_subprogram ]
+!2365 = metadata !{i32 786478, i32 0, null, metadata !"led_Controller", metadata !"led_Controller", metadata !"_ZN6advios14led_ControllerEv", metadata !421, i32 21, metadata !422, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !1433, metadata !100, i32 22} ; [ DW_TAG_subprogram ]
 !2366 = metadata !{i32 21, i32 14, metadata !2365, null}
-!2367 = metadata !{i32 790531, metadata !2364, metadata !"ADVIOS.reset.m_if.Val", null, i32 21, metadata !1450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2368 = metadata !{i32 790531, metadata !2364, metadata !"ADVIOS.ctrl.m_if.Val.V", null, i32 21, metadata !1462, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2369 = metadata !{i32 790531, metadata !2364, metadata !"ADVIOS.inSwitch.m_if.Val.V", null, i32 21, metadata !1462, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2370 = metadata !{i32 790531, metadata !2364, metadata !"ADVIOS.outLeds.m_if.Val.V", null, i32 21, metadata !1479, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2371 = metadata !{i32 790531, metadata !2364, metadata !"ADVIOS.switchs.V", null, i32 21, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2372 = metadata !{i32 790531, metadata !2364, metadata !"ADVIOS.control.V", null, i32 21, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2373 = metadata !{i32 790531, metadata !2364, metadata !"ADVIOS.count.V", null, i32 21, metadata !1494, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2374 = metadata !{i32 790531, metadata !2364, metadata !"ADVIOS.sec_counter.V", null, i32 21, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2375 = metadata !{i32 790531, metadata !2364, metadata !"ADVIOS.sec_pulse.Val", null, i32 21, metadata !1501, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2367 = metadata !{i32 790531, metadata !2364, metadata !"advios.reset.m_if.Val", null, i32 21, metadata !1450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2368 = metadata !{i32 790531, metadata !2364, metadata !"advios.ctrl.m_if.Val.V", null, i32 21, metadata !1462, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2369 = metadata !{i32 790531, metadata !2364, metadata !"advios.inSwitch.m_if.Val.V", null, i32 21, metadata !1462, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2370 = metadata !{i32 790531, metadata !2364, metadata !"advios.outLeds.m_if.Val.V", null, i32 21, metadata !1479, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2371 = metadata !{i32 790531, metadata !2364, metadata !"advios.switchs.V", null, i32 21, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2372 = metadata !{i32 790531, metadata !2364, metadata !"advios.control.V", null, i32 21, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2373 = metadata !{i32 790531, metadata !2364, metadata !"advios.count.V", null, i32 21, metadata !1494, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2374 = metadata !{i32 790531, metadata !2364, metadata !"advios.sec_counter.V", null, i32 21, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2375 = metadata !{i32 790531, metadata !2364, metadata !"advios.sec_pulse.Val", null, i32 21, metadata !1501, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
 !2376 = metadata !{i32 22, i32 4, metadata !2377, null}
 !2377 = metadata !{i32 786443, metadata !2365, i32 22, i32 1, metadata !421, i32 3} ; [ DW_TAG_lexical_block ]
 !2378 = metadata !{i32 23, i32 3, metadata !2377, null}
@@ -2926,19 +2926,19 @@ UnifiedUnreachableBlock:                          ; preds = %3, %1
 !2525 = metadata !{i32 803, i32 19, metadata !1526, metadata !2526}
 !2526 = metadata !{i32 50, i32 3, metadata !2410, null}
 !2527 = metadata !{i32 51, i32 2, metadata !2410, null}
-!2528 = metadata !{i32 790531, metadata !2529, metadata !"ADVIOS.clk.m_if.Val", null, i32 21, metadata !1450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2528 = metadata !{i32 790531, metadata !2529, metadata !"advios.clk.m_if.Val", null, i32 21, metadata !1450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
 !2529 = metadata !{i32 786689, metadata !2530, metadata !"this", metadata !426, i32 16777237, metadata !1449, i32 64, i32 0} ; [ DW_TAG_arg_variable ]
-!2530 = metadata !{i32 786478, i32 0, null, metadata !"ADVIOS", metadata !"ADVIOS", metadata !"_ZN6ADVIOSC2EN7_ap_sc_7sc_core14sc_module_nameE", metadata !426, i32 21, metadata !1436, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !1435, metadata !100, i32 22} ; [ DW_TAG_subprogram ]
+!2530 = metadata !{i32 786478, i32 0, null, metadata !"advios", metadata !"advios", metadata !"_ZN6adviosC2EN7_ap_sc_7sc_core14sc_module_nameE", metadata !426, i32 21, metadata !1436, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, metadata !1435, metadata !100, i32 22} ; [ DW_TAG_subprogram ]
 !2531 = metadata !{i32 21, i32 3, metadata !2530, null}
-!2532 = metadata !{i32 790531, metadata !2529, metadata !"ADVIOS.reset.m_if.Val", null, i32 21, metadata !1450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2533 = metadata !{i32 790531, metadata !2529, metadata !"ADVIOS.ctrl.m_if.Val.V", null, i32 21, metadata !1462, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2534 = metadata !{i32 790531, metadata !2529, metadata !"ADVIOS.inSwitch.m_if.Val.V", null, i32 21, metadata !1462, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2535 = metadata !{i32 790531, metadata !2529, metadata !"ADVIOS.outLeds.m_if.Val.V", null, i32 21, metadata !1479, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2536 = metadata !{i32 790531, metadata !2529, metadata !"ADVIOS.switchs.V", null, i32 21, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2537 = metadata !{i32 790531, metadata !2529, metadata !"ADVIOS.control.V", null, i32 21, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2538 = metadata !{i32 790531, metadata !2529, metadata !"ADVIOS.count.V", null, i32 21, metadata !1494, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2539 = metadata !{i32 790531, metadata !2529, metadata !"ADVIOS.sec_counter.V", null, i32 21, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
-!2540 = metadata !{i32 790531, metadata !2529, metadata !"ADVIOS.sec_pulse.Val", null, i32 21, metadata !1501, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2532 = metadata !{i32 790531, metadata !2529, metadata !"advios.reset.m_if.Val", null, i32 21, metadata !1450, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2533 = metadata !{i32 790531, metadata !2529, metadata !"advios.ctrl.m_if.Val.V", null, i32 21, metadata !1462, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2534 = metadata !{i32 790531, metadata !2529, metadata !"advios.inSwitch.m_if.Val.V", null, i32 21, metadata !1462, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2535 = metadata !{i32 790531, metadata !2529, metadata !"advios.outLeds.m_if.Val.V", null, i32 21, metadata !1479, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2536 = metadata !{i32 790531, metadata !2529, metadata !"advios.switchs.V", null, i32 21, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2537 = metadata !{i32 790531, metadata !2529, metadata !"advios.control.V", null, i32 21, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2538 = metadata !{i32 790531, metadata !2529, metadata !"advios.count.V", null, i32 21, metadata !1494, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2539 = metadata !{i32 790531, metadata !2529, metadata !"advios.sec_counter.V", null, i32 21, metadata !1490, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
+!2540 = metadata !{i32 790531, metadata !2529, metadata !"advios.sec_pulse.Val", null, i32 21, metadata !1501, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
 !2541 = metadata !{i32 23, i32 5, metadata !2542, null}
 !2542 = metadata !{i32 786443, metadata !2530, i32 22, i32 2, metadata !426, i32 47} ; [ DW_TAG_lexical_block ]
 !2543 = metadata !{i32 24, i32 5, metadata !2542, null}

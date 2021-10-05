@@ -9,7 +9,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity ADVIOS_led_Controller is
+entity advios_led_Controller is
 port (
     ap_clk : IN STD_LOGIC;
     ap_rst : IN STD_LOGIC;
@@ -17,20 +17,20 @@ port (
     inSwitch : IN STD_LOGIC_VECTOR (3 downto 0);
     outLeds : OUT STD_LOGIC_VECTOR (3 downto 0);
     outLeds_ap_vld : OUT STD_LOGIC;
-    ADVIOS_switchs_V : OUT STD_LOGIC_VECTOR (3 downto 0);
-    ADVIOS_switchs_V_ap_vld : OUT STD_LOGIC;
-    ADVIOS_control_V : OUT STD_LOGIC_VECTOR (3 downto 0);
-    ADVIOS_control_V_ap_vld : OUT STD_LOGIC;
-    ADVIOS_sec_counter_V_i : IN STD_LOGIC_VECTOR (3 downto 0);
-    ADVIOS_sec_counter_V_o : OUT STD_LOGIC_VECTOR (3 downto 0);
-    ADVIOS_sec_counter_V_o_ap_vld : OUT STD_LOGIC;
+    advios_switchs_V : OUT STD_LOGIC_VECTOR (3 downto 0);
+    advios_switchs_V_ap_vld : OUT STD_LOGIC;
+    advios_control_V : OUT STD_LOGIC_VECTOR (3 downto 0);
+    advios_control_V_ap_vld : OUT STD_LOGIC;
+    advios_sec_counter_V_i : IN STD_LOGIC_VECTOR (3 downto 0);
+    advios_sec_counter_V_o : OUT STD_LOGIC_VECTOR (3 downto 0);
+    advios_sec_counter_V_o_ap_vld : OUT STD_LOGIC;
     sec_pulse_i : IN STD_LOGIC;
     sec_pulse_o : OUT STD_LOGIC;
     sec_pulse_o_ap_vld : OUT STD_LOGIC );
 end;
 
 
-architecture behav of ADVIOS_led_Controller is 
+architecture behav of advios_led_Controller is 
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state2 : STD_LOGIC_VECTOR (3 downto 0) := "0010";
@@ -108,59 +108,59 @@ begin
                 ap_NS_fsm <= "XXXX";
         end case;
     end process;
-    ADVIOS_control_V <= ctrl;
+    advios_control_V <= ctrl;
 
-    ADVIOS_control_V_ap_vld_assign_proc : process(ap_CS_fsm_state3)
+    advios_control_V_ap_vld_assign_proc : process(ap_CS_fsm_state3)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-            ADVIOS_control_V_ap_vld <= ap_const_logic_1;
+            advios_control_V_ap_vld <= ap_const_logic_1;
         else 
-            ADVIOS_control_V_ap_vld <= ap_const_logic_0;
+            advios_control_V_ap_vld <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    ADVIOS_sec_counter_V_o_assign_proc : process(tmp_3_reg_188, ap_CS_fsm_state3, tmp_4_reg_192, tmp_read_fu_122_p2, ap_CS_fsm_state4, tmp_2_fu_159_p2)
+    advios_sec_counter_V_o_assign_proc : process(tmp_3_reg_188, ap_CS_fsm_state3, tmp_4_reg_192, tmp_read_fu_122_p2, ap_CS_fsm_state4, tmp_2_fu_159_p2)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state4) and (tmp_3_reg_188 = ap_const_lv1_1) and (tmp_4_reg_192 = ap_const_lv1_1))) then 
-            ADVIOS_sec_counter_V_o <= ap_const_lv4_0;
+            advios_sec_counter_V_o <= ap_const_lv4_0;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state3) and (ap_const_lv1_1 = tmp_read_fu_122_p2))) then 
-            ADVIOS_sec_counter_V_o <= tmp_2_fu_159_p2;
+            advios_sec_counter_V_o <= tmp_2_fu_159_p2;
         else 
-            ADVIOS_sec_counter_V_o <= "XXXX";
+            advios_sec_counter_V_o <= "XXXX";
         end if; 
     end process;
 
 
-    ADVIOS_sec_counter_V_o_ap_vld_assign_proc : process(tmp_3_reg_188, ap_CS_fsm_state3, tmp_4_reg_192, tmp_read_fu_122_p2, ap_CS_fsm_state4)
+    advios_sec_counter_V_o_ap_vld_assign_proc : process(tmp_3_reg_188, ap_CS_fsm_state3, tmp_4_reg_192, tmp_read_fu_122_p2, ap_CS_fsm_state4)
     begin
         if ((((ap_const_logic_1 = ap_CS_fsm_state3) and (ap_const_lv1_1 = tmp_read_fu_122_p2)) or ((ap_const_logic_1 = ap_CS_fsm_state4) and (tmp_3_reg_188 = ap_const_lv1_1) and (tmp_4_reg_192 = ap_const_lv1_1)))) then 
-            ADVIOS_sec_counter_V_o_ap_vld <= ap_const_logic_1;
+            advios_sec_counter_V_o_ap_vld <= ap_const_logic_1;
         else 
-            ADVIOS_sec_counter_V_o_ap_vld <= ap_const_logic_0;
+            advios_sec_counter_V_o_ap_vld <= ap_const_logic_0;
         end if; 
     end process;
 
-    ADVIOS_switchs_V <= inSwitch;
+    advios_switchs_V <= inSwitch;
 
-    ADVIOS_switchs_V_ap_vld_assign_proc : process(ap_CS_fsm_state3)
+    advios_switchs_V_ap_vld_assign_proc : process(ap_CS_fsm_state3)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state3)) then 
-            ADVIOS_switchs_V_ap_vld <= ap_const_logic_1;
+            advios_switchs_V_ap_vld <= ap_const_logic_1;
         else 
-            ADVIOS_switchs_V_ap_vld <= ap_const_logic_0;
+            advios_switchs_V_ap_vld <= ap_const_logic_0;
         end if; 
     end process;
 
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
     ap_CS_fsm_state4 <= ap_CS_fsm(3);
 
-    outLeds_assign_proc : process(ADVIOS_sec_counter_V_i, tmp_3_fu_166_p2, tmp_3_reg_188, ap_CS_fsm_state3, tmp_4_reg_192, ap_CS_fsm_state4, r_V_fu_172_p2)
+    outLeds_assign_proc : process(advios_sec_counter_V_i, tmp_3_fu_166_p2, tmp_3_reg_188, ap_CS_fsm_state3, tmp_4_reg_192, ap_CS_fsm_state4, r_V_fu_172_p2)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state4) and (tmp_3_reg_188 = ap_const_lv1_1) and (tmp_4_reg_192 = ap_const_lv1_1))) then 
             outLeds <= ap_const_lv4_0;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state4) and (tmp_3_reg_188 = ap_const_lv1_1) and (tmp_4_reg_192 = ap_const_lv1_0))) then 
-            outLeds <= ADVIOS_sec_counter_V_i;
+            outLeds <= advios_sec_counter_V_i;
         elsif (((ap_const_logic_1 = ap_CS_fsm_state3) and (tmp_3_fu_166_p2 = ap_const_lv1_0))) then 
             outLeds <= r_V_fu_172_p2;
         else 
@@ -190,7 +190,7 @@ begin
         end if; 
     end process;
 
-    tmp_2_fu_159_p2 <= std_logic_vector(unsigned(ADVIOS_sec_counter_V_i) + unsigned(ap_const_lv4_1));
+    tmp_2_fu_159_p2 <= std_logic_vector(unsigned(advios_sec_counter_V_i) + unsigned(ap_const_lv4_1));
     tmp_3_fu_166_p2 <= "1" when (ctrl = ap_const_lv4_0) else "0";
     tmp_4_fu_179_p2 <= "1" when (inSwitch = ap_const_lv4_8) else "0";
     tmp_read_fu_122_p2 <= (0=>sec_pulse_i, others=>'-');

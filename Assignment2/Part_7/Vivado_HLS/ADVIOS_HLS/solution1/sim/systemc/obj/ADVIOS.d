@@ -1,4 +1,4 @@
-obj/ADVIOS.o: ADVIOS.cpp ADVIOS.h \
+obj/advios.o: advios.cpp advios.h \
  C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/systemc.h \
  c:\xilinx\vivado_hls\2017.2\msys\bin\../lib/gcc/mingw32/4.6.2/include/c++/cassert \
  c:\xilinx\vivado_hls\2017.2\msys\bin\../lib/gcc/mingw32/4.6.2/../../../../include/assert.h \
@@ -224,9 +224,9 @@ obj/ADVIOS.o: ADVIOS.cpp ADVIOS.h \
  C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/packages/boost/config/suffix.hpp \
  C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/packages/boost/utility/enable_if.hpp \
  C:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/SystemC/AESL_pkg.h \
- ADVIOS_periodic_Incrementer.h ADVIOS_led_Controller.h
+ advios_periodic_Incrementer.h advios_led_Controller.h
 
-ADVIOS.h:
+advios.h:
 
 C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/systemc.h:
 
@@ -678,6 +678,6 @@ C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/packages/boost/util
 
 C:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/SystemC/AESL_pkg.h:
 
-ADVIOS_periodic_Incrementer.h:
+advios_periodic_Incrementer.h:
 
-ADVIOS_led_Controller.h:
+advios_led_Controller.h:

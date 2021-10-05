@@ -42,19 +42,19 @@
 			<location>C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/.tcls</location>
 		</link>
 		<link>
-			<name>source/ADVIOS.cpp</name>
+			<name>source/advios.cpp</name>
 			<type>1</type>
-			<location>C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</location>
+			<location>C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</location>
 		</link>
 		<link>
-			<name>source/ADVIOS.h</name>
+			<name>source/advios.h</name>
 			<type>1</type>
-			<location>C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h</location>
+			<location>C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h</location>
 		</link>
 		<link>
-			<name>testbench/ADVIOS_testBench.cpp</name>
+			<name>testbench/advios_testBench.cpp</name>
 			<type>1</type>
-			<location>C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS_testBench.cpp</location>
+			<location>C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios_testBench.cpp</location>
 		</link>
 		<link>
 			<name>testbench/tb_driver.cpp</name>

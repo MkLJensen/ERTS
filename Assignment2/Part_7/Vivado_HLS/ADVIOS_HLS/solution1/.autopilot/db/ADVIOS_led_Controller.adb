@@ -5,7 +5,7 @@
     <userIPLatency>-1</userIPLatency>
     <userIPName/>
     <cdfg class_id="1" tracking_level="1" version="0" object_id="_0">
-      <name>ADVIOS_led_Controller</name>
+      <name>advios_led_Controller</name>
       <ret_bitwidth>0</ret_bitwidth>
       <ports class_id="2" tracking_level="0" version="0">
         <count>7</count>
@@ -24,7 +24,7 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>ADVIOS.ctrl.m_if.Val.V</originalName>
+              <originalName>advios.ctrl.m_if.Val.V</originalName>
               <rtlName/>
               <coreName>AXI4LiteS</coreName>
             </Obj>
@@ -52,7 +52,7 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>ADVIOS.inSwitch.m_if.Val.V</originalName>
+              <originalName>advios.inSwitch.m_if.Val.V</originalName>
               <rtlName/>
               <coreName/>
             </Obj>
@@ -80,7 +80,7 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>ADVIOS.outLeds.m_if.Val.V</originalName>
+              <originalName>advios.outLeds.m_if.Val.V</originalName>
               <rtlName/>
               <coreName/>
             </Obj>
@@ -99,7 +99,7 @@
             <Obj>
               <type>1</type>
               <id>6</id>
-              <name>ADVIOS_switchs_V</name>
+              <name>advios_switchs_V</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -108,7 +108,7 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>ADVIOS.switchs.V</originalName>
+              <originalName>advios.switchs.V</originalName>
               <rtlName/>
               <coreName/>
             </Obj>
@@ -127,7 +127,7 @@
             <Obj>
               <type>1</type>
               <id>7</id>
-              <name>ADVIOS_control_V</name>
+              <name>advios_control_V</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -136,7 +136,7 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>ADVIOS.control.V</originalName>
+              <originalName>advios.control.V</originalName>
               <rtlName/>
               <coreName/>
             </Obj>
@@ -155,7 +155,7 @@
             <Obj>
               <type>1</type>
               <id>9</id>
-              <name>ADVIOS_sec_counter_V</name>
+              <name>advios_sec_counter_V</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -164,7 +164,7 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>ADVIOS.sec_counter.V</originalName>
+              <originalName>advios.sec_counter.V</originalName>
               <rtlName/>
               <coreName/>
             </Obj>
@@ -192,7 +192,7 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>ADVIOS.sec_pulse.Val</originalName>
+              <originalName>advios.sec_pulse.Val</originalName>
               <rtlName/>
               <coreName/>
             </Obj>
@@ -216,7 +216,7 @@
               <type>0</type>
               <id>33</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>22</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -230,7 +230,7 @@
                     <item_version>0</item_version>
                     <item class_id="12" tracking_level="0" version="0">
                       <first class_id="13" tracking_level="0" version="0">
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>22</second>
@@ -259,7 +259,7 @@
               <type>0</type>
               <id>34</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>23</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -273,7 +273,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>23</second>
@@ -301,7 +301,7 @@
               <type>0</type>
               <id>36</id>
               <name>val_V</name>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>26</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -315,7 +315,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>26</second>
@@ -345,7 +345,7 @@
               <type>0</type>
               <id>37</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>26</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -359,7 +359,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>26</second>
@@ -390,7 +390,7 @@
               <type>0</type>
               <id>38</id>
               <name>val_V_2</name>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>27</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -404,7 +404,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>27</second>
@@ -434,7 +434,7 @@
               <type>0</type>
               <id>39</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>27</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -448,7 +448,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>27</second>
@@ -479,7 +479,7 @@
               <type>0</type>
               <id>40</id>
               <name>tmp</name>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>29</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -493,7 +493,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>29</second>
@@ -523,7 +523,7 @@
               <type>0</type>
               <id>41</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>29</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -537,7 +537,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>29</second>
@@ -566,8 +566,8 @@
             <Obj>
               <type>0</type>
               <id>43</id>
-              <name>ADVIOS_sec_counter_V_1</name>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <name>advios_sec_counter_V_1</name>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>30</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -581,7 +581,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>30</second>
@@ -611,7 +611,7 @@
               <type>0</type>
               <id>44</id>
               <name>tmp_2</name>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>30</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -625,7 +625,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>30</second>
@@ -654,7 +654,7 @@
               <type>0</type>
               <id>45</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>30</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -668,7 +668,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>30</second>
@@ -700,7 +700,7 @@
               <type>0</type>
               <id>46</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>31</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -714,7 +714,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>31</second>
@@ -746,7 +746,7 @@
               <type>0</type>
               <id>47</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>32</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -760,7 +760,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>32</second>
@@ -788,7 +788,7 @@
               <type>0</type>
               <id>49</id>
               <name>tmp_3</name>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>34</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -802,7 +802,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>34</second>
@@ -831,7 +831,7 @@
               <type>0</type>
               <id>50</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>34</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -845,7 +845,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>34</second>
@@ -875,7 +875,7 @@
               <type>0</type>
               <id>52</id>
               <name>r_V</name>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>48</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -889,7 +889,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>48</second>
@@ -918,7 +918,7 @@
               <type>0</type>
               <id>53</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>48</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -932,7 +932,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>48</second>
@@ -991,7 +991,7 @@
               <type>0</type>
               <id>56</id>
               <name>tmp_4</name>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>36</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -1005,7 +1005,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>36</second>
@@ -1034,7 +1034,7 @@
               <type>0</type>
               <id>57</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>36</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -1048,7 +1048,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>36</second>
@@ -1078,7 +1078,7 @@
               <type>0</type>
               <id>59</id>
               <name>v_V_1</name>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>43</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -1092,7 +1092,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>43</second>
@@ -1123,7 +1123,7 @@
               <type>0</type>
               <id>60</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>43</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -1137,7 +1137,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>43</second>
@@ -1196,7 +1196,7 @@
               <type>0</type>
               <id>63</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>38</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -1210,7 +1210,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>38</second>
@@ -1243,7 +1243,7 @@
               <type>0</type>
               <id>64</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>39</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -1257,7 +1257,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>39</second>
@@ -1288,7 +1288,7 @@
               <type>0</type>
               <id>65</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>40</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -1302,7 +1302,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>40</second>
@@ -1330,7 +1330,7 @@
               <type>0</type>
               <id>67</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>45</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -1344,7 +1344,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>45</second>
@@ -1372,7 +1372,7 @@
               <type>0</type>
               <id>69</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>50</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -1386,7 +1386,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>50</second>
@@ -1416,7 +1416,7 @@
               <type>0</type>
               <id>70</id>
               <name/>
-              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+              <fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>51</lineNumber>
               <contextFuncName>led_Controller</contextFuncName>
@@ -1430,7 +1430,7 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+                        <first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
                         <second>led_Controller</second>
                       </first>
                       <second>51</second>
@@ -2309,7 +2309,7 @@
       <item_version>0</item_version>
       <item class_id="22" tracking_level="1" version="0" object_id="_131">
         <mId>1</mId>
-        <mTag>ADVIOS::led_Controller</mTag>
+        <mTag>advios::led_Controller</mTag>
         <mType>0</mType>
         <sub_regions>
           <count>2</count>
@@ -2849,7 +2849,7 @@
         <count>3</count>
         <item_version>0</item_version>
         <item>
-          <first>ADVIOS_sec_counter_V_o</first>
+          <first>advios_sec_counter_V_o</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3626,7 +3626,7 @@
       <count>7</count>
       <item_version>0</item_version>
       <item class_id="56" tracking_level="0" version="0">
-        <first>ADVIOS_control_V</first>
+        <first>advios_control_V</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3641,7 +3641,7 @@
         </second>
       </item>
       <item>
-        <first>ADVIOS_sec_counter_V</first>
+        <first>advios_sec_counter_V</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
@@ -3666,7 +3666,7 @@
         </second>
       </item>
       <item>
-        <first>ADVIOS_switchs_V</first>
+        <first>advios_switchs_V</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

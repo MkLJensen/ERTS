@@ -1,6 +1,6 @@
 vhdl xil_defaultlib "AESL_sim_pkg.vhd"
-vhdl xil_defaultlib "ADVIOS.autotb.vhd"
-vhdl xil_defaultlib "ADVIOS.vhd"
-vhdl xil_defaultlib "ADVIOS_led_Controller.vhd"
-vhdl xil_defaultlib "ADVIOS_periodic_Incrementer.vhd"
+vhdl xil_defaultlib "advios.autotb.vhd"
+vhdl xil_defaultlib "advios.vhd"
+vhdl xil_defaultlib "advios_led_Controller.vhd"
+vhdl xil_defaultlib "advios_periodic_Incrementer.vhd"
 

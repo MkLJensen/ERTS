@@ -1,6 +1,6 @@
-#include "ADVIOS.h"
+#include "advios.h"
 
-void ADVIOS::periodic_Incrementer(void) {
+void advios::periodic_Incrementer(void) {
 #pragma HLS resource core=AXI4LiteS metadata="-bus_bundle slv0" variable=ctrl
 
 	// Init of Variables
@@ -18,7 +18,7 @@ void ADVIOS::periodic_Incrementer(void) {
 	}
 }
 
-void ADVIOS::led_Controller(void){
+void advios::led_Controller(void){
 	wait();
 
 	while(true) {

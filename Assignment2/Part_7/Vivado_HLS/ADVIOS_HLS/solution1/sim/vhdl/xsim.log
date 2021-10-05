@@ -2,23 +2,23 @@
 # xsim v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Oct  4 10:44:13 2021
-# Process ID: 13456
+# Start of session at: Mon Oct  4 14:02:08 2021
+# Process ID: 6184
 # Current directory: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl
-# Command line: xsim.exe -mode tcl -source {xsim.dir/ADVIOS/xsim_script.tcl}
+# Command line: xsim.exe -mode tcl -source {xsim.dir/advios/xsim_script.tcl}
 # Log file: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/xsim.log
 # Journal file: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl\xsim.jou
 #-----------------------------------------------------------
-source xsim.dir/ADVIOS/xsim_script.tcl
-# xsim {ADVIOS} -autoloadwcfg -tclbatch {ADVIOS.tcl}
+source xsim.dir/advios/xsim_script.tcl
+# xsim {advios} -autoloadwcfg -tclbatch {advios.tcl}
 Vivado Simulator 2017.2
 Time resolution is 1 ps
-source ADVIOS.tcl
+source advios.tcl
 ## run all
 Note: simulation done!
-Time: 156 ns  Iteration: 0  Process: /AUTOTB_TOP/proc_tv_out  File: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/ADVIOS.autotb.vhd
+Time: 156 ns  Iteration: 0  Process: /AUTOTB_TOP/proc_tv_out  File: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/advios.autotb.vhd
 Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
-Time: 156 ns  Iteration: 0  Process: /AUTOTB_TOP/proc_tv_out  File: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/ADVIOS.autotb.vhd
+Time: 156 ns  Iteration: 0  Process: /AUTOTB_TOP/proc_tv_out  File: C:/Users/jespe/Desktop/Uni_Civil_9_Semester/Embedded_course/ERTS/Assignment2/Part_7/Vivado_HLS/ADVIOS_HLS/solution1/sim/vhdl/advios.autotb.vhd
 $finish called at time : 156 ns
 ## quit
-INFO: [Common 17-206] Exiting xsim at Mon Oct  4 10:44:19 2021...
+INFO: [Common 17-206] Exiting xsim at Mon Oct  4 14:02:15 2021...

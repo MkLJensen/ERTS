@@ -1,5 +1,5 @@
-# 1 "../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp"
-# 1 "../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp" 1
+# 1 "../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp"
+# 1 "../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 153 "<built-in>" 3
@@ -203,8 +203,8 @@ extern "C" {
 // 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
 # 8 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp" 2
-# 1 "../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h" 1
+# 1 "../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp" 2
+# 1 "../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h" 1
 
 
 
@@ -35337,8 +35337,8 @@ typedef void****** __ap_sc_end__;
 # 2 "C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc\\systemc.h" 2
 
 // 67d7842dbbe25473c3c32b93c0da8047785f30d78e8a024de1b57352245f9689
-# 6 "../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.h" 2
-struct ADVIOS : ::sc_core::sc_module {
+# 6 "../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.h" 2
+struct advios : ::sc_core::sc_module {
  //Ports
  sc_in <bool> clk;
  sc_in <bool> reset;
@@ -35359,7 +35359,7 @@ struct ADVIOS : ::sc_core::sc_module {
  void periodic_Incrementer(void);
 
  //Constructor
- typedef ADVIOS SC_CURRENT_USER_MODULE; ADVIOS( ::sc_core::sc_module_name ) {
+ typedef advios SC_CURRENT_USER_MODULE; advios( ::sc_core::sc_module_name ) {
   //Process Registration
   { ::sc_core::sc_cthread_process* periodic_Incrementer_handle = simcontext()->register_cthread_process("periodic_Incrementer", (void (::sc_core::sc_process_host::*)())(&SC_CURRENT_USER_MODULE::periodic_Incrementer), this ); sensitive.operator() ( periodic_Incrementer_handle, clk.pos() ); };
   watching(reset.delayed() == true);
@@ -35368,9 +35368,9 @@ struct ADVIOS : ::sc_core::sc_module {
   watching(reset.delayed() == true);
  }
 };
-# 2 "../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp" 2
+# 2 "../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp" 2
 
-void ADVIOS::periodic_Incrementer(void) {
+void advios::periodic_Incrementer(void) {
 #pragma HLS resource core=AXI4LiteS metadata="-bus_bundle slv0" variable=ctrl
 
  // Init of Variables
@@ -35388,7 +35388,7 @@ void ADVIOS::periodic_Incrementer(void) {
  }
 }
 
-void ADVIOS::led_Controller(void){
+void advios::led_Controller(void){
  wait();
 
  while(true) {

@@ -8,7 +8,7 @@
 <unit>ns</unit>
 <ProductFamily>zynq</ProductFamily>
 <Part>xc7z010clg400-1</Part>
-<TopModelName>ADVIOS_periodic_Incrementer</TopModelName>
+<TopModelName>advios_periodic_Incrementer</TopModelName>
 <TargetClockPeriod>8.00</TargetClockPeriod>
 <ClockUncertainty>1.00</ClockUncertainty>
 </UserAssignments>
@@ -54,7 +54,7 @@
 <InterfaceSummary>
 <RtlPorts>
 <name>ap_clk</name>
-<Object>ADVIOS::periodic_Incrementer</Object>
+<Object>advios::periodic_Incrementer</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -65,7 +65,7 @@
 </RtlPorts>
 <RtlPorts>
 <name>ap_rst</name>
-<Object>ADVIOS::periodic_Incrementer</Object>
+<Object>advios::periodic_Incrementer</Object>
 <Type>return value</Type>
 <Scope></Scope>
 <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -75,8 +75,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>ADVIOS_count_V</name>
-<Object>ADVIOS_count_V</Object>
+<name>advios_count_V</name>
+<Object>advios_count_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>
@@ -86,8 +86,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>ADVIOS_count_V_ap_vld</name>
-<Object>ADVIOS_count_V</Object>
+<name>advios_count_V_ap_vld</name>
+<Object>advios_count_V</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_vld</IOProtocol>

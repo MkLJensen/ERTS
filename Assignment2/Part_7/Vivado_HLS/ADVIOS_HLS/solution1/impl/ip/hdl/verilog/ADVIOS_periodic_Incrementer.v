@@ -7,11 +7,11 @@
 
 `timescale 1 ns / 1 ps 
 
-module ADVIOS_periodic_Incrementer (
+module advios_periodic_Incrementer (
         ap_clk,
         ap_rst,
-        ADVIOS_count_V,
-        ADVIOS_count_V_ap_vld,
+        advios_count_V,
+        advios_count_V_ap_vld,
         sec_pulse,
         sec_pulse_ap_vld
 );
@@ -23,13 +23,13 @@ parameter    ap_ST_fsm_state4 = 4'd8;
 
 input   ap_clk;
 input   ap_rst;
-output  [27:0] ADVIOS_count_V;
-output   ADVIOS_count_V_ap_vld;
+output  [27:0] advios_count_V;
+output   advios_count_V_ap_vld;
 output   sec_pulse;
 output   sec_pulse_ap_vld;
 
-reg[27:0] ADVIOS_count_V;
-reg ADVIOS_count_V_ap_vld;
+reg[27:0] advios_count_V;
+reg advios_count_V_ap_vld;
 reg sec_pulse_ap_vld;
 
 wire   [0:0] tmp_1_fu_121_p2;
@@ -38,7 +38,7 @@ reg   [0:0] tmp_1_reg_139;
 wire    ap_CS_fsm_state3;
 reg   [27:0] t_V_fu_86;
 wire    ap_CS_fsm_state2;
-wire   [27:0] ADVIOS_count_V_assig_fu_114_p2;
+wire   [27:0] advios_count_V_assig_fu_114_p2;
 wire    ap_CS_fsm_state4;
 reg   [3:0] ap_NS_fsm;
 
@@ -57,7 +57,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state3) & (tmp_1_fu_121_p2 == 1'd0))) begin
-        t_V_fu_86 <= ADVIOS_count_V_assig_fu_114_p2;
+        t_V_fu_86 <= advios_count_V_assig_fu_114_p2;
     end else if (((1'b1 == ap_CS_fsm_state2) | ((1'b1 == ap_CS_fsm_state3) & (tmp_1_fu_121_p2 == 1'd1)))) begin
         t_V_fu_86 <= 28'd0;
     end
@@ -71,19 +71,19 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) & (tmp_1_reg_139 == 1'd1))) begin
-        ADVIOS_count_V = 28'd0;
+        advios_count_V = 28'd0;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        ADVIOS_count_V = ADVIOS_count_V_assig_fu_114_p2;
+        advios_count_V = advios_count_V_assig_fu_114_p2;
     end else begin
-        ADVIOS_count_V = 'bx;
+        advios_count_V = 'bx;
     end
 end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state3) | ((1'b1 == ap_CS_fsm_state4) & (tmp_1_reg_139 == 1'd1)))) begin
-        ADVIOS_count_V_ap_vld = 1'b1;
+        advios_count_V_ap_vld = 1'b1;
     end else begin
-        ADVIOS_count_V_ap_vld = 1'b0;
+        advios_count_V_ap_vld = 1'b0;
     end
 end
 
@@ -115,7 +115,7 @@ always @ (*) begin
     endcase
 end
 
-assign ADVIOS_count_V_assig_fu_114_p2 = (t_V_fu_86 + 28'd1);
+assign advios_count_V_assig_fu_114_p2 = (t_V_fu_86 + 28'd1);
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
@@ -127,4 +127,4 @@ assign sec_pulse = 1'd1;
 
 assign tmp_1_fu_121_p2 = ((t_V_fu_86 > 28'd99999999) ? 1'b1 : 1'b0);
 
-endmodule //ADVIOS_periodic_Incrementer
+endmodule //advios_periodic_Incrementer

@@ -47,13 +47,13 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:hls:ADVIOS:1.0
-// IP Revision: 2110011541
+// IP VLNV: xilinx.com:hls:advios:1.0
+// IP Revision: 2110041402
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module design_1_ADVIOS_0_0 (
+module design_1_advios_0_0 (
   inSwitch,
   outLeds,
   s_axi_slv0_AWADDR,

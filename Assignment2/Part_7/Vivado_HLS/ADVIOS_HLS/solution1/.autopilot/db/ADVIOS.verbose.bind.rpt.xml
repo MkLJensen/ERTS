@@ -1,7 +1,7 @@
 <profile>
 
-<section name = "Vivado HLS Report for 'ADVIOS'" level="0">
-<item name = "Date">Mon Oct  4 10:42:19 2021
+<section name = "Vivado HLS Report for 'advios'" level="0">
+<item name = "Date">Mon Oct  4 14:00:19 2021
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">ADVIOS_HLS</item>
@@ -31,8 +31,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_ADVIOS_periodic_Incrementer_fu_80">ADVIOS_periodic_Incrementer, 4, 4, 4, 4, none</column>
-<column name="grp_ADVIOS_led_Controller_fu_104">ADVIOS_led_Controller, 4, 4, 4, 4, none</column>
+<column name="grp_advios_periodic_Incrementer_fu_80">advios_periodic_Incrementer, 4, 4, 4, 4, none</column>
+<column name="grp_advios_led_Controller_fu_104">advios_led_Controller, 4, 4, 4, 4, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

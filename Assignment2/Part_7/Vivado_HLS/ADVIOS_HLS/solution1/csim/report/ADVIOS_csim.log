@@ -1,7 +1,7 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS_testBench.cpp in debug mode
-   Compiling ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/tb_driver.cpp in debug mode
+   Compiling ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios_testBench.cpp in debug mode
+   Compiling ../../../../../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp in debug mode
    Generating csim.exe
 INFO: Simulating
 

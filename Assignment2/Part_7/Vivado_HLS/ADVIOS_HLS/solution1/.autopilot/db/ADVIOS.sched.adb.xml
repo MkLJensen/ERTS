@@ -1,12 +1,12 @@
-<stg><name>ADVIOS::ADVIOS</name>
+<stg><name>advios::advios</name>
 
 
 <trans_list>
 
 <trans id="39" from="1" to="2">
 <condition id="14">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="1"/>
-</and_exp><and_exp><literal name="ADVIOS_ssdm_threa_1" val="1"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="1"/>
+</and_exp><and_exp><literal name="advios_ssdm_threa_1" val="1"/>
 </and_exp></or_exp>
 </condition>
 </trans>
@@ -117,7 +117,7 @@
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_switchs_V), !map !100
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_switchs_V), !map !100
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -132,7 +132,7 @@
 
 <Node id="20" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_control_V), !map !104
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_control_V), !map !104
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -147,7 +147,7 @@
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="28">
 <![CDATA[
-:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %ADVIOS_count_V), !map !108
+:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %advios_count_V), !map !108
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -162,7 +162,7 @@
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_sec_counter_V), !map !112
+:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_sec_counter_V), !map !112
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -207,10 +207,10 @@
 
 <Node id="25" bw="1" op_0_bw="1">
 <![CDATA[
-:12  %ADVIOS_ssdm_threa = load i1* @ADVIOS_ssdm_thread_M_led_Controller, align 1
+:12  %advios_ssdm_threa = load i1* @advios_ssdm_thread_M_led_Controller, align 1
 
 ]]></Node>
-<StgValue><ssdm name="ADVIOS_ssdm_threa"/></StgValue>
+<StgValue><ssdm name="advios_ssdm_threa"/></StgValue>
 </operation>
 
 <operation id="16" st_id="1" stage="1" lat="1">
@@ -222,7 +222,7 @@
 
 <Node id="26" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-:13  br i1 %ADVIOS_ssdm_threa, label %1, label %2
+:13  br i1 %advios_ssdm_threa, label %1, label %2
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -232,7 +232,7 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="2">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -248,7 +248,7 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="2">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -264,7 +264,7 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="2">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -280,29 +280,29 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="2">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="31" bw="1" op_0_bw="1">
 <![CDATA[
-:3  %ADVIOS_ssdm_threa_1 = load i1* @ADVIOS_ssdm_thread_M_periodic_Incrementer, align 1
+:3  %advios_ssdm_threa_1 = load i1* @advios_ssdm_thread_M_periodic_Incrementer, align 1
 
 ]]></Node>
-<StgValue><ssdm name="ADVIOS_ssdm_threa_1"/></StgValue>
+<StgValue><ssdm name="advios_ssdm_threa_1"/></StgValue>
 </operation>
 
 <operation id="21" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="2">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="32" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-:4  br i1 %ADVIOS_ssdm_threa_1, label %3, label %4
+:4  br i1 %advios_ssdm_threa_1, label %3, label %4
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -312,8 +312,8 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="4">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
-<literal name="ADVIOS_ssdm_threa_1" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
+<literal name="advios_ssdm_threa_1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -329,8 +329,8 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="4">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
-<literal name="ADVIOS_ssdm_threa_1" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
+<literal name="advios_ssdm_threa_1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -346,8 +346,8 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="4">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
-<literal name="ADVIOS_ssdm_threa_1" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
+<literal name="advios_ssdm_threa_1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -363,8 +363,8 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="4">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
-<literal name="ADVIOS_ssdm_threa_1" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
+<literal name="advios_ssdm_threa_1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -380,8 +380,8 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="4">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
-<literal name="ADVIOS_ssdm_threa_1" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
+<literal name="advios_ssdm_threa_1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -397,8 +397,8 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="4">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
-<literal name="ADVIOS_ssdm_threa_1" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
+<literal name="advios_ssdm_threa_1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -414,8 +414,8 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="4">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
-<literal name="ADVIOS_ssdm_threa_1" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
+<literal name="advios_ssdm_threa_1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -431,8 +431,8 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="4">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
-<literal name="ADVIOS_ssdm_threa_1" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
+<literal name="advios_ssdm_threa_1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -448,8 +448,8 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="4">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
-<literal name="ADVIOS_ssdm_threa_1" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
+<literal name="advios_ssdm_threa_1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -465,8 +465,8 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="4">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
-<literal name="ADVIOS_ssdm_threa_1" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
+<literal name="advios_ssdm_threa_1" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -482,14 +482,14 @@
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="6">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
-<literal name="ADVIOS_ssdm_threa_1" val="1"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
+<literal name="advios_ssdm_threa_1" val="1"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="45" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="4" op_4_bw="4" op_5_bw="4" op_6_bw="4" op_7_bw="4" op_8_bw="28" op_9_bw="4" op_10_bw="1">
 <![CDATA[
-:0  call void @"ADVIOS::periodic_Incrementer"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %sec_pulse)
+:0  call void @"advios::periodic_Incrementer"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %sec_pulse)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -499,13 +499,13 @@
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="8">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="1"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="1"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="48" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="4" op_4_bw="4" op_5_bw="4" op_6_bw="4" op_7_bw="4" op_8_bw="28" op_9_bw="4" op_10_bw="1">
 <![CDATA[
-:0  call void @"ADVIOS::led_Controller"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %sec_pulse)
+:0  call void @"advios::led_Controller"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %sec_pulse)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -518,13 +518,13 @@
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="9">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="45" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="4" op_4_bw="4" op_5_bw="4" op_6_bw="4" op_7_bw="4" op_8_bw="28" op_9_bw="4" op_10_bw="1">
 <![CDATA[
-:0  call void @"ADVIOS::periodic_Incrementer"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %sec_pulse)
+:0  call void @"advios::periodic_Incrementer"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %sec_pulse)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -534,7 +534,7 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="9">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="0"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -550,13 +550,13 @@
 <core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="10">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="1"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="1"/>
 </and_exp></or_exp>
 </condition>
 
 <Node id="48" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1" op_3_bw="4" op_4_bw="4" op_5_bw="4" op_6_bw="4" op_7_bw="4" op_8_bw="28" op_9_bw="4" op_10_bw="1">
 <![CDATA[
-:0  call void @"ADVIOS::led_Controller"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %ADVIOS_switchs_V, i4* %ADVIOS_control_V, i28* %ADVIOS_count_V, i4* %ADVIOS_sec_counter_V, i1* %sec_pulse)
+:0  call void @"advios::led_Controller"(i1* %clk, i1* %reset, i4* %ctrl, i4* %inSwitch, i4* %outLeds, i4* %advios_switchs_V, i4* %advios_control_V, i28* %advios_count_V, i4* %advios_sec_counter_V, i1* %sec_pulse)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -566,7 +566,7 @@
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="10">
-<or_exp><and_exp><literal name="ADVIOS_ssdm_threa" val="1"/>
+<or_exp><and_exp><literal name="advios_ssdm_threa" val="1"/>
 </and_exp></or_exp>
 </condition>
 

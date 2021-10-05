@@ -5,18 +5,18 @@
 // 
 // ===========================================================
 
-#ifndef _ADVIOS_HH_
-#define _ADVIOS_HH_
+#ifndef _advios_HH_
+#define _advios_HH_
 
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "ADVIOS_periodic_Incrementer.h"
-#include "ADVIOS_led_Controller.h"
+#include "advios_periodic_Incrementer.h"
+#include "advios_led_Controller.h"
 
 namespace ap_rtl {
 
-struct ADVIOS : public sc_module {
+struct advios : public sc_module {
     // Port declarations 5
     sc_in_clk clk;
     sc_in< sc_logic > reset;
@@ -26,36 +26,36 @@ struct ADVIOS : public sc_module {
 
 
     // Module declarations
-    ADVIOS(sc_module_name name);
-    SC_HAS_PROCESS(ADVIOS);
+    advios(sc_module_name name);
+    SC_HAS_PROCESS(advios);
 
-    ~ADVIOS();
+    ~advios();
 
     sc_trace_file* mVcdFile;
 
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
-    ADVIOS_periodic_Incrementer* grp_ADVIOS_periodic_Incrementer_fu_80;
-    ADVIOS_led_Controller* grp_ADVIOS_led_Controller_fu_104;
-    sc_signal< sc_lv<1> > ADVIOS_ssdm_threa_load_fu_128_p1;
+    advios_periodic_Incrementer* grp_advios_periodic_Incrementer_fu_80;
+    advios_led_Controller* grp_advios_led_Controller_fu_104;
+    sc_signal< sc_lv<1> > advios_ssdm_threa_load_fu_128_p1;
     sc_signal< sc_lv<2> > ap_CS_fsm;
-    sc_signal< sc_lv<28> > grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V;
-    sc_signal< sc_logic > grp_ADVIOS_periodic_Incrementer_fu_80_ADVIOS_count_V_ap_vld;
-    sc_signal< sc_logic > grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse;
-    sc_signal< sc_logic > grp_ADVIOS_periodic_Incrementer_fu_80_sec_pulse_ap_vld;
-    sc_signal< sc_lv<4> > grp_ADVIOS_led_Controller_fu_104_outLeds;
-    sc_signal< sc_logic > grp_ADVIOS_led_Controller_fu_104_outLeds_ap_vld;
-    sc_signal< sc_lv<4> > grp_ADVIOS_led_Controller_fu_104_ADVIOS_switchs_V;
-    sc_signal< sc_logic > grp_ADVIOS_led_Controller_fu_104_ADVIOS_switchs_V_ap_vld;
-    sc_signal< sc_lv<4> > grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V;
-    sc_signal< sc_logic > grp_ADVIOS_led_Controller_fu_104_ADVIOS_control_V_ap_vld;
-    sc_signal< sc_lv<4> > grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o;
-    sc_signal< sc_logic > grp_ADVIOS_led_Controller_fu_104_ADVIOS_sec_counter_V_o_ap_vld;
-    sc_signal< sc_logic > grp_ADVIOS_led_Controller_fu_104_sec_pulse_i;
-    sc_signal< sc_logic > grp_ADVIOS_led_Controller_fu_104_sec_pulse_o;
-    sc_signal< sc_logic > grp_ADVIOS_led_Controller_fu_104_sec_pulse_o_ap_vld;
+    sc_signal< sc_lv<28> > grp_advios_periodic_Incrementer_fu_80_advios_count_V;
+    sc_signal< sc_logic > grp_advios_periodic_Incrementer_fu_80_advios_count_V_ap_vld;
+    sc_signal< sc_logic > grp_advios_periodic_Incrementer_fu_80_sec_pulse;
+    sc_signal< sc_logic > grp_advios_periodic_Incrementer_fu_80_sec_pulse_ap_vld;
+    sc_signal< sc_lv<4> > grp_advios_led_Controller_fu_104_outLeds;
+    sc_signal< sc_logic > grp_advios_led_Controller_fu_104_outLeds_ap_vld;
+    sc_signal< sc_lv<4> > grp_advios_led_Controller_fu_104_advios_switchs_V;
+    sc_signal< sc_logic > grp_advios_led_Controller_fu_104_advios_switchs_V_ap_vld;
+    sc_signal< sc_lv<4> > grp_advios_led_Controller_fu_104_advios_control_V;
+    sc_signal< sc_logic > grp_advios_led_Controller_fu_104_advios_control_V_ap_vld;
+    sc_signal< sc_lv<4> > grp_advios_led_Controller_fu_104_advios_sec_counter_V_o;
+    sc_signal< sc_logic > grp_advios_led_Controller_fu_104_advios_sec_counter_V_o_ap_vld;
+    sc_signal< sc_logic > grp_advios_led_Controller_fu_104_sec_pulse_i;
+    sc_signal< sc_logic > grp_advios_led_Controller_fu_104_sec_pulse_o;
+    sc_signal< sc_logic > grp_advios_led_Controller_fu_104_sec_pulse_o_ap_vld;
     sc_signal< sc_logic > ap_CS_fsm_state2;
-    sc_signal< sc_lv<4> > ADVIOS_sec_counter_V;
+    sc_signal< sc_lv<4> > advios_sec_counter_V;
     sc_signal< sc_lv<1> > sec_pulse;
     static const sc_logic ap_const_logic_1;
     static const sc_lv<1> ap_const_lv1_0;
@@ -65,13 +65,13 @@ struct ADVIOS : public sc_module {
     static const sc_logic ap_const_logic_0;
     static const bool ap_const_boolean_1;
     // Thread declarations
-    void thread_ADVIOS_sec_counter_V();
+    void thread_advios_sec_counter_V();
     void thread_outLeds();
     void thread_sec_pulse();
-    void thread_ADVIOS_ssdm_threa_load_fu_128_p1();
+    void thread_advios_ssdm_threa_load_fu_128_p1();
     void thread_ap_CS_fsm();
     void thread_ap_CS_fsm_state2();
-    void thread_grp_ADVIOS_led_Controller_fu_104_sec_pulse_i();
+    void thread_grp_advios_led_Controller_fu_104_sec_pulse_i();
     void thread_hdltv_gen();
 };
 

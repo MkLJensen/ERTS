@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Fri Oct  1 17:01:41 2021
+--Date        : Mon Oct  4 15:20:50 2021
 --Host        : DESKTOP-IFL7HB3 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -63,8 +63,8 @@ architecture STRUCTURE of design_1_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    inSwitch : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    outLeds : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    outLeds : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    inSwitch : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1;
 begin

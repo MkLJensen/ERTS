@@ -1,4 +1,4 @@
-<stg><name>ADVIOS::periodic_Incrementer</name>
+<stg><name>advios::periodic_Incrementer</name>
 
 
 <trans_list>
@@ -133,7 +133,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit2:5  call void (...)* @_ssdm_op_SpecBitsMap(i4* %
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit2:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_switchs_V), !map !100
+_ZN7_ap_sc_7sc_core4waitEi.exit2:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_switchs_V), !map !100
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -148,7 +148,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit2:6  call void (...)* @_ssdm_op_SpecBitsMap(i4* %
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit2:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_control_V), !map !104
+_ZN7_ap_sc_7sc_core4waitEi.exit2:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_control_V), !map !104
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -163,7 +163,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit2:7  call void (...)* @_ssdm_op_SpecBitsMap(i4* %
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="28">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit2:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %ADVIOS_count_V), !map !108
+_ZN7_ap_sc_7sc_core4waitEi.exit2:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* %advios_count_V), !map !108
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -178,7 +178,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit2:8  call void (...)* @_ssdm_op_SpecBitsMap(i28* 
 
 <Node id="20" bw="0" op_0_bw="0" op_1_bw="4">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit2:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %ADVIOS_sec_counter_V), !map !112
+_ZN7_ap_sc_7sc_core4waitEi.exit2:9  call void (...)* @_ssdm_op_SpecBitsMap(i4* %advios_sec_counter_V), !map !112
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -358,7 +358,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit2:20  call void (...)* @_ssdm_op_SpecIFCore(i4* %
 
 <Node id="32" bw="0" op_0_bw="0" op_1_bw="28" op_2_bw="28">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit2:21  call void @_ssdm_op_Write.ap_auto.i28P(i28* %ADVIOS_count_V, i28 0)
+_ZN7_ap_sc_7sc_core4waitEi.exit2:21  call void @_ssdm_op_Write.ap_auto.i28P(i28* %advios_count_V, i28 0)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -484,10 +484,10 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:1  call void (...)* @_ssdm_op_Wait(i32 1) nounwi
 
 <Node id="41" bw="28" op_0_bw="28" op_1_bw="28">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit:2  %ADVIOS_count_V_assig = add i28 %t_V_1, 1
+_ZN7_ap_sc_7sc_core4waitEi.exit:2  %advios_count_V_assig = add i28 %t_V_1, 1
 
 ]]></Node>
-<StgValue><ssdm name="ADVIOS_count_V_assig"/></StgValue>
+<StgValue><ssdm name="advios_count_V_assig"/></StgValue>
 </operation>
 
 <operation id="35" st_id="3" stage="1" lat="1">
@@ -499,7 +499,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:2  %ADVIOS_count_V_assig = add i28 %t_V_1, 1
 
 <Node id="42" bw="0" op_0_bw="0" op_1_bw="28" op_2_bw="28">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit:3  call void @_ssdm_op_Write.ap_auto.i28P(i28* %ADVIOS_count_V, i28 %ADVIOS_count_V_assig)
+_ZN7_ap_sc_7sc_core4waitEi.exit:3  call void @_ssdm_op_Write.ap_auto.i28P(i28* %advios_count_V, i28 %advios_count_V_assig)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -545,7 +545,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit:5  br i1 %tmp_1, label %0, label %_ZN7_ap_sc_7sc
 
 <Node id="46" bw="0" op_0_bw="28" op_1_bw="28">
 <![CDATA[
-_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre:0  store i28 %ADVIOS_count_V_assig, i28* %t_V
+_ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre:0  store i28 %advios_count_V_assig, i28* %t_V
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -612,7 +612,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit.backedge.pre:1  br label %_ZN7_ap_sc_7sc_core4wa
 
 <Node id="50" bw="0" op_0_bw="0" op_1_bw="28" op_2_bw="28">
 <![CDATA[
-:1  call void @_ssdm_op_Write.ap_auto.i28P(i28* %ADVIOS_count_V, i28 0)
+:1  call void @_ssdm_op_Write.ap_auto.i28P(i28* %advios_count_V, i28 0)
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -668,17 +668,17 @@ _ZN7_ap_sc_7sc_core4waitEi.exit.backedge:0  br label %_ZN7_ap_sc_7sc_core4waitEi
 <port id="55" name="outLeds" dir="1" iftype="0">
 <core>NULL</core><StgValue><ssdm name="outLeds"/></StgValue>
 </port>
-<port id="56" name="ADVIOS_switchs_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="ADVIOS_switchs_V"/></StgValue>
+<port id="56" name="advios_switchs_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="advios_switchs_V"/></StgValue>
 </port>
-<port id="57" name="ADVIOS_control_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="ADVIOS_control_V"/></StgValue>
+<port id="57" name="advios_control_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="advios_control_V"/></StgValue>
 </port>
-<port id="58" name="ADVIOS_count_V" dir="1" iftype="0">
-<core>NULL</core><StgValue><ssdm name="ADVIOS_count_V"/></StgValue>
+<port id="58" name="advios_count_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="advios_count_V"/></StgValue>
 </port>
-<port id="59" name="ADVIOS_sec_counter_V" dir="0" iftype="0">
-<core>NULL</core><StgValue><ssdm name="ADVIOS_sec_counter_V"/></StgValue>
+<port id="59" name="advios_sec_counter_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="advios_sec_counter_V"/></StgValue>
 </port>
 <port id="60" name="sec_pulse" dir="1" iftype="0">
 <core>NULL</core><StgValue><ssdm name="sec_pulse"/></StgValue>
@@ -711,19 +711,19 @@ _ZN7_ap_sc_7sc_core4waitEi.exit.backedge:0  br label %_ZN7_ap_sc_7sc_core4waitEi
 </dataflow>
 <dataflow id="74" from="_ssdm_op_SpecBitsMap" to="StgValue_11" fromId="63" toId="11">
 </dataflow>
-<dataflow id="75" from="ADVIOS_switchs_V" to="StgValue_11" fromId="56" toId="11">
+<dataflow id="75" from="advios_switchs_V" to="StgValue_11" fromId="56" toId="11">
 </dataflow>
 <dataflow id="76" from="_ssdm_op_SpecBitsMap" to="StgValue_12" fromId="63" toId="12">
 </dataflow>
-<dataflow id="77" from="ADVIOS_control_V" to="StgValue_12" fromId="57" toId="12">
+<dataflow id="77" from="advios_control_V" to="StgValue_12" fromId="57" toId="12">
 </dataflow>
 <dataflow id="78" from="_ssdm_op_SpecBitsMap" to="StgValue_13" fromId="63" toId="13">
 </dataflow>
-<dataflow id="79" from="ADVIOS_count_V" to="StgValue_13" fromId="58" toId="13">
+<dataflow id="79" from="advios_count_V" to="StgValue_13" fromId="58" toId="13">
 </dataflow>
 <dataflow id="80" from="_ssdm_op_SpecBitsMap" to="StgValue_14" fromId="63" toId="14">
 </dataflow>
-<dataflow id="81" from="ADVIOS_sec_counter_V" to="StgValue_14" fromId="59" toId="14">
+<dataflow id="81" from="advios_sec_counter_V" to="StgValue_14" fromId="59" toId="14">
 </dataflow>
 <dataflow id="82" from="_ssdm_op_SpecBitsMap" to="StgValue_15" fromId="63" toId="15">
 </dataflow>
@@ -859,7 +859,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit.backedge:0  br label %_ZN7_ap_sc_7sc_core4waitEi
 </dataflow>
 <dataflow id="171" from="_ssdm_op_Write.ap_auto.i28P" to="StgValue_26" fromId="170" toId="26">
 </dataflow>
-<dataflow id="172" from="ADVIOS_count_V" to="StgValue_26" fromId="58" toId="26">
+<dataflow id="172" from="advios_count_V" to="StgValue_26" fromId="58" toId="26">
 </dataflow>
 <dataflow id="174" from="StgValue_173" to="StgValue_26" fromId="173" toId="26">
 </dataflow>
@@ -887,15 +887,15 @@ _ZN7_ap_sc_7sc_core4waitEi.exit.backedge:0  br label %_ZN7_ap_sc_7sc_core4waitEi
 </dataflow>
 <dataflow id="189" from="StgValue_61" to="StgValue_33" fromId="61" toId="33">
 </dataflow>
-<dataflow id="190" from="t_V_1" to="ADVIOS_count_V_assig" fromId="32" toId="34">
+<dataflow id="190" from="t_V_1" to="advios_count_V_assig" fromId="32" toId="34">
 </dataflow>
-<dataflow id="192" from="StgValue_191" to="ADVIOS_count_V_assig" fromId="191" toId="34">
+<dataflow id="192" from="StgValue_191" to="advios_count_V_assig" fromId="191" toId="34">
 </dataflow>
 <dataflow id="193" from="_ssdm_op_Write.ap_auto.i28P" to="StgValue_35" fromId="170" toId="35">
 </dataflow>
-<dataflow id="194" from="ADVIOS_count_V" to="StgValue_35" fromId="58" toId="35">
+<dataflow id="194" from="advios_count_V" to="StgValue_35" fromId="58" toId="35">
 </dataflow>
-<dataflow id="195" from="ADVIOS_count_V_assig" to="StgValue_35" fromId="34" toId="35">
+<dataflow id="195" from="advios_count_V_assig" to="StgValue_35" fromId="34" toId="35">
 </dataflow>
 <dataflow id="196" from="t_V_1" to="tmp_1" fromId="32" toId="36">
 </dataflow>
@@ -903,7 +903,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit.backedge:0  br label %_ZN7_ap_sc_7sc_core4waitEi
 </dataflow>
 <dataflow id="199" from="tmp_1" to="StgValue_37" fromId="36" toId="37">
 </dataflow>
-<dataflow id="200" from="ADVIOS_count_V_assig" to="StgValue_38" fromId="34" toId="38">
+<dataflow id="200" from="advios_count_V_assig" to="StgValue_38" fromId="34" toId="38">
 </dataflow>
 <dataflow id="201" from="t_V" to="StgValue_38" fromId="5" toId="38">
 </dataflow>
@@ -919,7 +919,7 @@ _ZN7_ap_sc_7sc_core4waitEi.exit.backedge:0  br label %_ZN7_ap_sc_7sc_core4waitEi
 </dataflow>
 <dataflow id="209" from="_ssdm_op_Write.ap_auto.i28P" to="StgValue_42" fromId="170" toId="42">
 </dataflow>
-<dataflow id="210" from="ADVIOS_count_V" to="StgValue_42" fromId="58" toId="42">
+<dataflow id="210" from="advios_count_V" to="StgValue_42" fromId="58" toId="42">
 </dataflow>
 <dataflow id="211" from="StgValue_173" to="StgValue_42" fromId="173" toId="42">
 </dataflow>

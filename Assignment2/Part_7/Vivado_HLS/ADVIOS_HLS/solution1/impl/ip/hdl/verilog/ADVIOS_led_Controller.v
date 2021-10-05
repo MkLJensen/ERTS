@@ -7,20 +7,20 @@
 
 `timescale 1 ns / 1 ps 
 
-module ADVIOS_led_Controller (
+module advios_led_Controller (
         ap_clk,
         ap_rst,
         ctrl,
         inSwitch,
         outLeds,
         outLeds_ap_vld,
-        ADVIOS_switchs_V,
-        ADVIOS_switchs_V_ap_vld,
-        ADVIOS_control_V,
-        ADVIOS_control_V_ap_vld,
-        ADVIOS_sec_counter_V_i,
-        ADVIOS_sec_counter_V_o,
-        ADVIOS_sec_counter_V_o_ap_vld,
+        advios_switchs_V,
+        advios_switchs_V_ap_vld,
+        advios_control_V,
+        advios_control_V_ap_vld,
+        advios_sec_counter_V_i,
+        advios_sec_counter_V_o,
+        advios_sec_counter_V_o_ap_vld,
         sec_pulse_i,
         sec_pulse_o,
         sec_pulse_o_ap_vld
@@ -36,23 +36,23 @@ input  [3:0] ctrl;
 input  [3:0] inSwitch;
 output  [3:0] outLeds;
 output   outLeds_ap_vld;
-output  [3:0] ADVIOS_switchs_V;
-output   ADVIOS_switchs_V_ap_vld;
-output  [3:0] ADVIOS_control_V;
-output   ADVIOS_control_V_ap_vld;
-input  [3:0] ADVIOS_sec_counter_V_i;
-output  [3:0] ADVIOS_sec_counter_V_o;
-output   ADVIOS_sec_counter_V_o_ap_vld;
+output  [3:0] advios_switchs_V;
+output   advios_switchs_V_ap_vld;
+output  [3:0] advios_control_V;
+output   advios_control_V_ap_vld;
+input  [3:0] advios_sec_counter_V_i;
+output  [3:0] advios_sec_counter_V_o;
+output   advios_sec_counter_V_o_ap_vld;
 input   sec_pulse_i;
 output   sec_pulse_o;
 output   sec_pulse_o_ap_vld;
 
 reg[3:0] outLeds;
 reg outLeds_ap_vld;
-reg ADVIOS_switchs_V_ap_vld;
-reg ADVIOS_control_V_ap_vld;
-reg[3:0] ADVIOS_sec_counter_V_o;
-reg ADVIOS_sec_counter_V_o_ap_vld;
+reg advios_switchs_V_ap_vld;
+reg advios_control_V_ap_vld;
+reg[3:0] advios_sec_counter_V_o;
+reg advios_sec_counter_V_o_ap_vld;
 reg sec_pulse_o_ap_vld;
 
 wire   [0:0] tmp_3_fu_166_p2;
@@ -94,35 +94,35 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        ADVIOS_control_V_ap_vld = 1'b1;
+        advios_control_V_ap_vld = 1'b1;
     end else begin
-        ADVIOS_control_V_ap_vld = 1'b0;
+        advios_control_V_ap_vld = 1'b0;
     end
 end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) & (tmp_3_reg_188 == 1'd1) & (tmp_4_reg_192 == 1'd1))) begin
-        ADVIOS_sec_counter_V_o = 4'd0;
+        advios_sec_counter_V_o = 4'd0;
     end else if (((1'b1 == ap_CS_fsm_state3) & (1'd1 == tmp_read_fu_122_p2))) begin
-        ADVIOS_sec_counter_V_o = tmp_2_fu_159_p2;
+        advios_sec_counter_V_o = tmp_2_fu_159_p2;
     end else begin
-        ADVIOS_sec_counter_V_o = 'bx;
+        advios_sec_counter_V_o = 'bx;
     end
 end
 
 always @ (*) begin
     if ((((1'b1 == ap_CS_fsm_state3) & (1'd1 == tmp_read_fu_122_p2)) | ((1'b1 == ap_CS_fsm_state4) & (tmp_3_reg_188 == 1'd1) & (tmp_4_reg_192 == 1'd1)))) begin
-        ADVIOS_sec_counter_V_o_ap_vld = 1'b1;
+        advios_sec_counter_V_o_ap_vld = 1'b1;
     end else begin
-        ADVIOS_sec_counter_V_o_ap_vld = 1'b0;
+        advios_sec_counter_V_o_ap_vld = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        ADVIOS_switchs_V_ap_vld = 1'b1;
+        advios_switchs_V_ap_vld = 1'b1;
     end else begin
-        ADVIOS_switchs_V_ap_vld = 1'b0;
+        advios_switchs_V_ap_vld = 1'b0;
     end
 end
 
@@ -130,7 +130,7 @@ always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state4) & (tmp_3_reg_188 == 1'd1) & (tmp_4_reg_192 == 1'd1))) begin
         outLeds = 4'd0;
     end else if (((1'b1 == ap_CS_fsm_state4) & (tmp_3_reg_188 == 1'd1) & (tmp_4_reg_192 == 1'd0))) begin
-        outLeds = ADVIOS_sec_counter_V_i;
+        outLeds = advios_sec_counter_V_i;
     end else if (((1'b1 == ap_CS_fsm_state3) & (tmp_3_fu_166_p2 == 1'd0))) begin
         outLeds = r_V_fu_172_p2;
     end else begin
@@ -171,9 +171,9 @@ always @ (*) begin
     endcase
 end
 
-assign ADVIOS_control_V = ctrl;
+assign advios_control_V = ctrl;
 
-assign ADVIOS_switchs_V = inSwitch;
+assign advios_switchs_V = inSwitch;
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
@@ -183,7 +183,7 @@ assign r_V_fu_172_p2 = (ctrl & inSwitch);
 
 assign sec_pulse_o = 1'd0;
 
-assign tmp_2_fu_159_p2 = (ADVIOS_sec_counter_V_i + 4'd1);
+assign tmp_2_fu_159_p2 = (advios_sec_counter_V_i + 4'd1);
 
 assign tmp_3_fu_166_p2 = ((ctrl == 4'd0) ? 1'b1 : 1'b0);
 
@@ -191,4 +191,4 @@ assign tmp_4_fu_179_p2 = ((inSwitch == 4'd8) ? 1'b1 : 1'b0);
 
 assign tmp_read_fu_122_p2 = sec_pulse_i;
 
-endmodule //ADVIOS_led_Controller
+endmodule //advios_led_Controller

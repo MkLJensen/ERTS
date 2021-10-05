@@ -1,6 +1,6 @@
 set clock_constraint { \
     name clk \
-    module ADVIOS::ADVIOS \
+    module advios::advios \
     port ap_clk \
     period 8 \
     uncertainty 1 \

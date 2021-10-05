@@ -1,7 +1,7 @@
 <profile>
 
-<section name = "Vivado HLS Report for 'ADVIOS_periodic_Incrementer'" level="0">
-<item name = "Date">Mon Oct  4 10:42:19 2021
+<section name = "Vivado HLS Report for 'advios_periodic_Incrementer'" level="0">
+<item name = "Date">Mon Oct  4 14:00:18 2021
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">ADVIOS_HLS</item>
@@ -78,13 +78,13 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="ADVIOS_count_V_assig_fu_114_p2">+, 0, 89, 33, 28, 1</column>
+<column name="advios_count_V_assig_fu_114_p2">+, 0, 89, 33, 28, 1</column>
 <column name="tmp_1_fu_121_p2">icmp, 0, 0, 16, 28, 27</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ADVIOS_count_V">15, 3, 28, 84</column>
+<column name="advios_count_V">15, 3, 28, 84</column>
 <column name="ap_NS_fsm">27, 5, 1, 5</column>
 <column name="t_V_fu_86">9, 2, 28, 56</column>
 </table>
@@ -103,10 +103,10 @@
 <section name = "Interface" level="0">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
-<column name="ap_clk">in, 1, ap_ctrl_hs, ADVIOS::periodic_Incrementer, return value</column>
-<column name="ap_rst">in, 1, ap_ctrl_hs, ADVIOS::periodic_Incrementer, return value</column>
-<column name="ADVIOS_count_V">out, 28, ap_vld, ADVIOS_count_V, pointer</column>
-<column name="ADVIOS_count_V_ap_vld">out, 1, ap_vld, ADVIOS_count_V, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, advios::periodic_Incrementer, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, advios::periodic_Incrementer, return value</column>
+<column name="advios_count_V">out, 28, ap_vld, advios_count_V, pointer</column>
+<column name="advios_count_V_ap_vld">out, 1, ap_vld, advios_count_V, pointer</column>
 <column name="sec_pulse">out, 1, ap_vld, sec_pulse, pointer</column>
 <column name="sec_pulse_ap_vld">out, 1, ap_vld, sec_pulse, pointer</column>
 </table>

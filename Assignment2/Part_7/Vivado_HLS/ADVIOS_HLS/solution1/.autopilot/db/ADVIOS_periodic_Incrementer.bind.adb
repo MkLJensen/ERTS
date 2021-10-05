@@ -5,7 +5,7 @@
 	<userIPLatency>-1</userIPLatency>
 	<userIPName></userIPName>
 	<cdfg class_id="1" tracking_level="1" version="0" object_id="_0">
-		<name>ADVIOS_periodic_Incrementer</name>
+		<name>advios_periodic_Incrementer</name>
 		<ret_bitwidth>0</ret_bitwidth>
 		<ports class_id="2" tracking_level="0" version="0">
 			<count>2</count>
@@ -15,7 +15,7 @@
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>8</id>
-						<name>ADVIOS_count_V</name>
+						<name>advios_count_V</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -24,7 +24,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>ADVIOS.count.V</originalName>
+						<originalName>advios.count.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -52,7 +52,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>ADVIOS.sec_pulse.Val</originalName>
+						<originalName>advios.sec_pulse.Val</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -104,7 +104,7 @@
 						<type>0</type>
 						<id>32</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>7</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -118,7 +118,7 @@
 									<item_version>0</item_version>
 									<item class_id="13" tracking_level="0" version="0">
 										<first class_id="14" tracking_level="0" version="0">
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>7</second>
@@ -148,7 +148,7 @@
 						<type>0</type>
 						<id>35</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>8</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -162,7 +162,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>8</second>
@@ -221,7 +221,7 @@
 						<type>0</type>
 						<id>37</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>9</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -235,7 +235,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>9</second>
@@ -263,7 +263,7 @@
 						<type>0</type>
 						<id>39</id>
 						<name>t_V_1</name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>13</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -277,7 +277,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>13</second>
@@ -306,7 +306,7 @@
 						<type>0</type>
 						<id>40</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>11</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -320,7 +320,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>11</second>
@@ -349,8 +349,8 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>ADVIOS_count_V_assig</name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<name>advios_count_V_assig</name>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>13</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -364,7 +364,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>13</second>
@@ -393,7 +393,7 @@
 						<type>0</type>
 						<id>42</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>13</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -407,7 +407,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>13</second>
@@ -439,7 +439,7 @@
 						<type>0</type>
 						<id>43</id>
 						<name>tmp_1</name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>13</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -453,7 +453,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>13</second>
@@ -482,7 +482,7 @@
 						<type>0</type>
 						<id>44</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>13</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -496,7 +496,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>13</second>
@@ -526,7 +526,7 @@
 						<type>0</type>
 						<id>46</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>13</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -540,7 +540,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>13</second>
@@ -599,7 +599,7 @@
 						<type>0</type>
 						<id>49</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>15</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -613,7 +613,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>15</second>
@@ -644,7 +644,7 @@
 						<type>0</type>
 						<id>50</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>16</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -658,7 +658,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>16</second>
@@ -722,7 +722,7 @@
 						<type>0</type>
 						<id>52</id>
 						<name></name>
-						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</fileName>
+						<fileName>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</fileName>
 						<fileDirectory>C:\Users\jespe\Desktop\Uni_Civil_9_Semester\Embedded_course\ERTS\Assignment2\Part_7\Vivado_HLS</fileDirectory>
 						<lineNumber>17</lineNumber>
 						<contextFuncName>periodic_Incrementer</contextFuncName>
@@ -736,7 +736,7 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/ADVIOS.cpp</first>
+											<first>../SystemC_IPCORE_Part7/SystemC_IPCORE_Part7/advios.cpp</first>
 											<second>periodic_Incrementer</second>
 										</first>
 										<second>17</second>
@@ -1336,7 +1336,7 @@
 		<item_version>0</item_version>
 		<item class_id="22" tracking_level="1" version="0" object_id="_79">
 			<mId>1</mId>
-			<mTag>ADVIOS::periodic_Incrementer</mTag>
+			<mTag>advios::periodic_Incrementer</mTag>
 			<mType>0</mType>
 			<sub_regions>
 				<count>2</count>
@@ -1975,7 +1975,7 @@
 		<count>3</count>
 		<item_version>0</item_version>
 		<item class_id="47" tracking_level="0" version="0">
-			<first>ADVIOS_count_V_assig_fu_114</first>
+			<first>advios_count_V_assig_fu_114</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2110,7 +2110,7 @@
 		<count>2</count>
 		<item_version>0</item_version>
 		<item class_id="50" tracking_level="0" version="0">
-			<first>ADVIOS_count_V</first>
+			<first>advios_count_V</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

@@ -3,7 +3,7 @@
 #define MAX_FREQ 100000000
 
 #include <systemc.h>
-SC_MODULE(ADVIOS) {
+SC_MODULE(advios) {
 	//Ports
 	sc_in <bool> clk;
 	sc_in <bool> reset;
@@ -24,7 +24,7 @@ SC_MODULE(ADVIOS) {
 	void periodic_Incrementer(void);
 
 	//Constructor
-	SC_CTOR(ADVIOS) {
+	SC_CTOR(advios) {
 		//Process Registration
 		SC_CTHREAD(periodic_Incrementer, clk.pos());
 		reset_signal_is(reset, true);

@@ -1,9 +1,9 @@
 
 
 ================================================================
-== Vivado HLS Report for 'ADVIOS'
+== Vivado HLS Report for 'advios'
 ================================================================
-* Date:           Mon Oct  4 10:42:20 2021
+* Date:           Mon Oct  4 14:00:19 2021
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        ADVIOS_HLS
@@ -38,8 +38,8 @@
         |                                       |                             |  Latency  |  Interval | Pipeline|
         |                Instance               |            Module           | min | max | min | max |   Type  |
         +---------------------------------------+-----------------------------+-----+-----+-----+-----+---------+
-        |grp_ADVIOS_periodic_Incrementer_fu_80  |ADVIOS_periodic_Incrementer  |    4|    4|    4|    4|   none  |
-        |grp_ADVIOS_led_Controller_fu_104       |ADVIOS_led_Controller        |    4|    4|    4|    4|   none  |
+        |grp_advios_periodic_Incrementer_fu_80  |advios_periodic_Incrementer  |    4|    4|    4|    4|   none  |
+        |grp_advios_led_Controller_fu_104       |advios_led_Controller        |    4|    4|    4|    4|   none  |
         +---------------------------------------+-----------------------------+-----+-----+-----+-----+---------+
 
         * Loop: 
@@ -74,8 +74,8 @@
     +---------------------------------------+-----------------------------+---------+-------+-----+-----+
     |                Instance               |            Module           | BRAM_18K| DSP48E|  FF | LUT |
     +---------------------------------------+-----------------------------+---------+-------+-----+-----+
-    |grp_ADVIOS_led_Controller_fu_104       |ADVIOS_led_Controller        |        0|      0|   23|   74|
-    |grp_ADVIOS_periodic_Incrementer_fu_80  |ADVIOS_periodic_Incrementer  |        0|      0|  122|  100|
+    |grp_advios_led_Controller_fu_104       |advios_led_Controller        |        0|      0|   23|   74|
+    |grp_advios_periodic_Incrementer_fu_80  |advios_periodic_Incrementer  |        0|      0|  122|  100|
     +---------------------------------------+-----------------------------+---------+-------+-----+-----+
     |Total                                  |                             |        0|      0|  145|  174|
     +---------------------------------------+-----------------------------+---------+-------+-----+-----+
@@ -105,7 +105,7 @@
     +----------------------+---+----+-----+-----------+
     |         Name         | FF| LUT| Bits| Const Bits|
     +----------------------+---+----+-----+-----------+
-    |ADVIOS_sec_counter_V  |  4|   0|    4|          0|
+    |advios_sec_counter_V  |  4|   0|    4|          0|
     |outLeds               |  4|   0|    4|          0|
     |sec_pulse             |  1|   0|    1|          0|
     +----------------------+---+----+-----+-----------+
@@ -121,8 +121,8 @@
 +----------+-----+-----+------------+----------------+--------------+
 | RTL Ports| Dir | Bits|  Protocol  |  Source Object |    C Type    |
 +----------+-----+-----+------------+----------------+--------------+
-|clk       |  in |    1| ap_ctrl_hs | ADVIOS::ADVIOS | return value |
-|reset     |  in |    1| ap_ctrl_hs | ADVIOS::ADVIOS | return value |
+|clk       |  in |    1| ap_ctrl_hs | advios::advios | return value |
+|reset     |  in |    1| ap_ctrl_hs | advios::advios | return value |
 |ctrl      |  in |    4|   ap_none  |      ctrl      |    pointer   |
 |inSwitch  |  in |    4|   ap_none  |    inSwitch    |    pointer   |
 |outLeds   | out |    4|   ap_vld   |     outLeds    |    pointer   |
