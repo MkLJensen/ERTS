@@ -9,7 +9,6 @@ SC_MODULE(advios) {
 	sc_in <bool> reset;
 	sc_in<sc_uint<NUM_BITS> > ctrl;
 	sc_in<sc_uint<NUM_BITS> > inSwitch;
-
 	sc_out<sc_uint<NUM_BITS> > outLeds;
 
 	//Variables
